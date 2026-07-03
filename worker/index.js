@@ -15,6 +15,10 @@ export default {
     const url = new URL(request.url);
     const q = (name) => url.searchParams.get(name);
 
+    const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+    const { success } = await env.RATE_LIMITER.limit({ key: ip });
+    if (!success) return json({ error: 'rate limited' }, 429);
+
     if (url.pathname === '/v1/prices' || url.pathname === '/v1/price') {
       const game = q('game'), set = q('set');
       if (!GAMES.has(game) || !set) return json({ error: 'game and set required' }, 400);

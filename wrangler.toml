@@ -10,6 +10,13 @@ compatibility_date = "2026-07-01"
 
 # routes = [{ pattern = "prices.lavailabs.com", custom_domain = true }]  # enable at launch
 
+# Per-IP rate limit (best-effort, per-colo). 200/min lets the bundle pipeline pull all
+# ~172 sets in one burst while capping what any single IP can cost us.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 200, period = 60 }
+
 [[kv_namespaces]]
 binding = "PRICES"
 id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
