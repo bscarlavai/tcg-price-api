@@ -12,9 +12,9 @@ compatibility_date = "2026-07-01"
 
 [[kv_namespaces]]
 binding = "PRICES"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
 
 [[d1_databases]]
 binding = "HISTORY"
 database_name = "tcg-price-history"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "6a8750db-5159-45a0-92ec-dd8fe0509009"
