@@ -9,6 +9,6 @@ contract, many clients.
 - **Prime directive:** sources are swappable behind per-game adapters; the API contract
   contains zero source vocabulary, so callers never notice a swap.
 
-**Status:** design complete, nothing built yet. Read [docs/DESIGN.md](docs/DESIGN.md) —
+**Status:** design complete, nothing built yet. Read [DESIGN.md](docs/DESIGN.md) —
 all decisions are resolved there, including rollout order (Pokémon first, validated
 against ME03's Spinarak = $0.08).
