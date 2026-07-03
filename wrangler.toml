@@ -7,8 +7,10 @@
 name = "tcg-price-api"
 main = "worker/index.js"
 compatibility_date = "2026-07-01"
+# prices.lavailabs.com is the ONLY URL that ever ships in an app binary.
+workers_dev = false
 
-# routes = [{ pattern = "prices.lavailabs.com", custom_domain = true }]  # enable at launch
+routes = [{ pattern = "prices.lavailabs.com", custom_domain = true }]
 
 # Per-IP rate limit (best-effort, per-colo). 200/min lets the bundle pipeline pull all
 # ~172 sets in one burst while capping what any single IP can cost us.
