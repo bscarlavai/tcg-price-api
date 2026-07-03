@@ -1,0 +1,20 @@
+# Read API worker. Ingest does NOT run here (see DESIGN.md D6) — it runs in GitHub
+# Actions and writes to KV/D1 via the REST API.
+#
+# One-time setup (see SETUP.md): create the KV namespace + D1 database, then replace
+# the placeholder ids below.
+
+name = "tcg-price-api"
+main = "worker/index.js"
+compatibility_date = "2026-07-01"
+
+# routes = [{ pattern = "prices.lavailabs.com", custom_domain = true }]  # enable at launch
+
+[[kv_namespaces]]
+binding = "PRICES"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[[d1_databases]]
+binding = "HISTORY"
+database_name = "tcg-price-history"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"

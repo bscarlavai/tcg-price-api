@@ -1,0 +1,10 @@
+[
+  { "set": "me3", "number": "1", "name": "Spinarak", "finish": "headline", "min": 0.01, "max": 0.75,
+    "why": "THE acceptance test — the card pokemontcg.io served blank for weeks" },
+  { "set": "me3", "number": "1", "name": "Spinarak", "finish": "reverseHolo", "min": 0.02, "max": 2.0,
+    "why": "finish variants present and canonically named" },
+  { "set": "me3", "number": "121", "name": "Meowth ex", "finish": "headline", "min": 30, "max": 800,
+    "why": "secret rare above printed set size; holo-only card headlines as holo" },
+  { "set": "base1", "number": "4", "name": "Charizard", "finish": "headline", "min": 150, "max": 4000,
+    "why": "vintage set mapping + big price magnitude (catches cents/dollars slips)" }
+]

@@ -1,0 +1,690 @@
+{
+ "me4": {
+  "tcgcsv": 24655,
+  "name": "ME04: Chaos Rising"
+ },
+ "me3": {
+  "tcgcsv": 24587,
+  "name": "ME03: Perfect Order"
+ },
+ "me2pt5": {
+  "tcgcsv": 24541,
+  "name": "ME: Ascended Heroes"
+ },
+ "me2": {
+  "tcgcsv": 24448,
+  "name": "ME02: Phantasmal Flames"
+ },
+ "me1": {
+  "tcgcsv": 24380,
+  "name": "ME01: Mega Evolution"
+ },
+ "rsv10pt5": {
+  "tcgcsv": 24326,
+  "name": "SV: White Flare"
+ },
+ "zsv10pt5": {
+  "tcgcsv": 24325,
+  "name": "SV: Black Bolt"
+ },
+ "sv10": {
+  "tcgcsv": 24269,
+  "name": "SV10: Destined Rivals"
+ },
+ "sv9": {
+  "tcgcsv": 24073,
+  "name": "SV09: Journey Together"
+ },
+ "sv8pt5": {
+  "tcgcsv": 23821,
+  "name": "SV: Prismatic Evolutions"
+ },
+ "sv8": {
+  "tcgcsv": 23651,
+  "name": "SV08: Surging Sparks"
+ },
+ "sv7": {
+  "tcgcsv": 23537,
+  "name": "SV07: Stellar Crown"
+ },
+ "sv6pt5": {
+  "tcgcsv": 23529,
+  "name": "SV: Shrouded Fable"
+ },
+ "sv6": {
+  "tcgcsv": 23473,
+  "name": "SV06: Twilight Masquerade"
+ },
+ "sv5": {
+  "tcgcsv": 23381,
+  "name": "SV05: Temporal Forces"
+ },
+ "sv4pt5": {
+  "tcgcsv": 23353,
+  "name": "SV: Paldean Fates"
+ },
+ "sv4": {
+  "tcgcsv": 23286,
+  "name": "SV04: Paradox Rift"
+ },
+ "sv3pt5": {
+  "tcgcsv": 23237,
+  "name": "SV: Scarlet & Violet 151"
+ },
+ "sv3": {
+  "tcgcsv": 23228,
+  "name": "SV03: Obsidian Flames"
+ },
+ "sv2": {
+  "tcgcsv": 23120,
+  "name": "SV02: Paldea Evolved"
+ },
+ "sve": {
+  "tcgcsv": 24382,
+  "name": "SVE: Scarlet & Violet Energies"
+ },
+ "sv1": {
+  "tcgcsv": 22873,
+  "name": "SV01: Scarlet & Violet Base Set"
+ },
+ "swsh12pt5gg": {
+  "tcgcsv": 17689,
+  "name": "SWSH: Crown Zenith: Galarian Gallery"
+ },
+ "swsh12pt5": {
+  "tcgcsv": 17688,
+  "name": "SWSH: Crown Zenith"
+ },
+ "swsh12tg": {
+  "tcgcsv": 17674,
+  "name": "SWSH12: Silver Tempest Trainer Gallery"
+ },
+ "swsh12": {
+  "tcgcsv": 3170,
+  "name": "SWSH12: Silver Tempest"
+ },
+ "swsh11tg": {
+  "tcgcsv": 3172,
+  "name": "SWSH11: Lost Origin Trainer Gallery"
+ },
+ "swsh11": {
+  "tcgcsv": 3118,
+  "name": "SWSH11: Lost Origin"
+ },
+ "pgo": {
+  "tcgcsv": 3064,
+  "name": "Pokemon GO"
+ },
+ "swsh10tg": {
+  "tcgcsv": 3068,
+  "name": "SWSH10: Astral Radiance Trainer Gallery"
+ },
+ "swsh10": {
+  "tcgcsv": 3040,
+  "name": "SWSH10: Astral Radiance"
+ },
+ "swsh9tg": {
+  "tcgcsv": 3020,
+  "name": "SWSH09: Brilliant Stars Trainer Gallery"
+ },
+ "swsh9": {
+  "tcgcsv": 2948,
+  "name": "SWSH09: Brilliant Stars"
+ },
+ "swsh8": {
+  "tcgcsv": 2906,
+  "name": "SWSH08: Fusion Strike"
+ },
+ "cel25": {
+  "tcgcsv": 2867,
+  "name": "Celebrations"
+ },
+ "cel25c": {
+  "tcgcsv": 2931,
+  "name": "Celebrations: Classic Collection"
+ },
+ "swsh7": {
+  "tcgcsv": 2848,
+  "name": "SWSH07: Evolving Skies"
+ },
+ "swsh6": {
+  "tcgcsv": 2807,
+  "name": "SWSH06: Chilling Reign"
+ },
+ "swsh5": {
+  "tcgcsv": 2765,
+  "name": "SWSH05: Battle Styles"
+ },
+ "swsh45sv": {
+  "tcgcsv": 2781,
+  "name": "Shining Fates: Shiny Vault"
+ },
+ "swsh45": {
+  "tcgcsv": 2754,
+  "name": "Shining Fates"
+ },
+ "swsh4": {
+  "tcgcsv": 2701,
+  "name": "SWSH04: Vivid Voltage"
+ },
+ "swsh35": {
+  "tcgcsv": 2685,
+  "name": "Champion's Path"
+ },
+ "swsh3": {
+  "tcgcsv": 2675,
+  "name": "SWSH03: Darkness Ablaze"
+ },
+ "swsh2": {
+  "tcgcsv": 2626,
+  "name": "SWSH02: Rebel Clash"
+ },
+ "swsh1": {
+  "tcgcsv": 2585,
+  "name": "SWSH01: Sword & Shield Base Set"
+ },
+ "sm12": {
+  "tcgcsv": 2534,
+  "name": "SM - Cosmic Eclipse"
+ },
+ "sm115": {
+  "tcgcsv": 2480,
+  "name": "Hidden Fates"
+ },
+ "sma": {
+  "tcgcsv": 2594,
+  "name": "Hidden Fates: Shiny Vault"
+ },
+ "sm11": {
+  "tcgcsv": 2464,
+  "name": "SM - Unified Minds"
+ },
+ "sm10": {
+  "tcgcsv": 2420,
+  "name": "SM - Unbroken Bonds"
+ },
+ "det1": {
+  "tcgcsv": 2409,
+  "name": "Detective Pikachu"
+ },
+ "sm9": {
+  "tcgcsv": 2377,
+  "name": "SM - Team Up"
+ },
+ "sm8": {
+  "tcgcsv": 2328,
+  "name": "SM - Lost Thunder"
+ },
+ "sm75": {
+  "tcgcsv": 2295,
+  "name": "Dragon Majesty"
+ },
+ "sm7": {
+  "tcgcsv": 2278,
+  "name": "SM - Celestial Storm"
+ },
+ "sm6": {
+  "tcgcsv": 2209,
+  "name": "SM - Forbidden Light"
+ },
+ "sm5": {
+  "tcgcsv": 2178,
+  "name": "SM - Ultra Prism"
+ },
+ "sm4": {
+  "tcgcsv": 2071,
+  "name": "SM - Crimson Invasion"
+ },
+ "sm35": {
+  "tcgcsv": 2054,
+  "name": "Shining Legends"
+ },
+ "sm3": {
+  "tcgcsv": 1957,
+  "name": "SM - Burning Shadows"
+ },
+ "sm2": {
+  "tcgcsv": 1919,
+  "name": "SM - Guardians Rising"
+ },
+ "xy12": {
+  "tcgcsv": 1842,
+  "name": "XY - Evolutions"
+ },
+ "xy11": {
+  "tcgcsv": 1815,
+  "name": "XY - Steam Siege"
+ },
+ "xy10": {
+  "tcgcsv": 1780,
+  "name": "XY - Fates Collide"
+ },
+ "g1": {
+  "tcgcsv": 1728,
+  "name": "Generations"
+ },
+ "xy9": {
+  "tcgcsv": 1701,
+  "name": "XY - BREAKpoint"
+ },
+ "xy8": {
+  "tcgcsv": 1661,
+  "name": "XY - BREAKthrough"
+ },
+ "xy7": {
+  "tcgcsv": 1576,
+  "name": "XY - Ancient Origins"
+ },
+ "xy6": {
+  "tcgcsv": 1534,
+  "name": "XY - Roaring Skies"
+ },
+ "dc1": {
+  "tcgcsv": 1525,
+  "name": "Double Crisis"
+ },
+ "xy5": {
+  "tcgcsv": 1509,
+  "name": "XY - Primal Clash"
+ },
+ "xy4": {
+  "tcgcsv": 1494,
+  "name": "XY - Phantom Forces"
+ },
+ "xy3": {
+  "tcgcsv": 1481,
+  "name": "XY - Furious Fists"
+ },
+ "xy2": {
+  "tcgcsv": 1464,
+  "name": "XY - Flashfire"
+ },
+ "xy1": {
+  "tcgcsv": 1387,
+  "name": "XY Base Set"
+ },
+ "xy0": {
+  "tcgcsv": 1522,
+  "name": "Kalos Starter Set"
+ },
+ "bw11": {
+  "tcgcsv": 1409,
+  "name": "Legendary Treasures"
+ },
+ "bw10": {
+  "tcgcsv": 1370,
+  "name": "Plasma Blast"
+ },
+ "bw9": {
+  "tcgcsv": 1382,
+  "name": "Plasma Freeze"
+ },
+ "bw8": {
+  "tcgcsv": 1413,
+  "name": "Plasma Storm"
+ },
+ "bw7": {
+  "tcgcsv": 1408,
+  "name": "Boundaries Crossed"
+ },
+ "dv1": {
+  "tcgcsv": 1426,
+  "name": "Dragon Vault"
+ },
+ "bw6": {
+  "tcgcsv": 1394,
+  "name": "Dragons Exalted"
+ },
+ "bw5": {
+  "tcgcsv": 1386,
+  "name": "Dark Explorers"
+ },
+ "bw4": {
+  "tcgcsv": 1412,
+  "name": "Next Destinies"
+ },
+ "bw3": {
+  "tcgcsv": 1385,
+  "name": "Noble Victories"
+ },
+ "bw2": {
+  "tcgcsv": 1424,
+  "name": "Emerging Powers"
+ },
+ "bw1": {
+  "tcgcsv": 1400,
+  "name": "Black and White"
+ },
+ "col1": {
+  "tcgcsv": 1415,
+  "name": "Call of Legends"
+ },
+ "hgss4": {
+  "tcgcsv": 1381,
+  "name": "Triumphant"
+ },
+ "hgss3": {
+  "tcgcsv": 1403,
+  "name": "Undaunted"
+ },
+ "hgss2": {
+  "tcgcsv": 1399,
+  "name": "Unleashed"
+ },
+ "hgss1": {
+  "tcgcsv": 1402,
+  "name": "HeartGold SoulSilver"
+ },
+ "pl4": {
+  "tcgcsv": 1391,
+  "name": "Arceus"
+ },
+ "pl3": {
+  "tcgcsv": 1384,
+  "name": "Supreme Victors"
+ },
+ "pl2": {
+  "tcgcsv": 1367,
+  "name": "Rising Rivals"
+ },
+ "pop9": {
+  "tcgcsv": 1446,
+  "name": "POP Series 9"
+ },
+ "pl1": {
+  "tcgcsv": 1406,
+  "name": "Platinum"
+ },
+ "dp7": {
+  "tcgcsv": 1369,
+  "name": "Stormfront"
+ },
+ "pop8": {
+  "tcgcsv": 1450,
+  "name": "POP Series 8"
+ },
+ "dp6": {
+  "tcgcsv": 1417,
+  "name": "Legends Awakened"
+ },
+ "dp5": {
+  "tcgcsv": 1390,
+  "name": "Majestic Dawn"
+ },
+ "pop7": {
+  "tcgcsv": 1414,
+  "name": "POP Series 7"
+ },
+ "dp4": {
+  "tcgcsv": 1405,
+  "name": "Great Encounters"
+ },
+ "dp3": {
+  "tcgcsv": 1380,
+  "name": "Secret Wonders"
+ },
+ "pop6": {
+  "tcgcsv": 1432,
+  "name": "POP Series 6"
+ },
+ "dp2": {
+  "tcgcsv": 1368,
+  "name": "Mysterious Treasures"
+ },
+ "dp1": {
+  "tcgcsv": 1430,
+  "name": "Diamond and Pearl"
+ },
+ "pop5": {
+  "tcgcsv": 1439,
+  "name": "POP Series 5"
+ },
+ "ex16": {
+  "tcgcsv": 1383,
+  "name": "Power Keepers"
+ },
+ "ex15": {
+  "tcgcsv": 1411,
+  "name": "Dragon Frontiers"
+ },
+ "pop4": {
+  "tcgcsv": 1452,
+  "name": "POP Series 4"
+ },
+ "ex14": {
+  "tcgcsv": 1395,
+  "name": "Crystal Guardians"
+ },
+ "ex13": {
+  "tcgcsv": 1379,
+  "name": "Holon Phantoms"
+ },
+ "pop3": {
+  "tcgcsv": 1442,
+  "name": "POP Series 3"
+ },
+ "tk2a": {
+  "tcgcsv": 1542,
+  "name": "EX Trainer Kit 2: Plusle & Minun"
+ },
+ "tk2b": {
+  "tcgcsv": 1542,
+  "name": "EX Trainer Kit 2: Plusle & Minun"
+ },
+ "ex12": {
+  "tcgcsv": 1378,
+  "name": "Legend Maker"
+ },
+ "ex11": {
+  "tcgcsv": 1429,
+  "name": "Delta Species"
+ },
+ "ex10": {
+  "tcgcsv": 1398,
+  "name": "Unseen Forces"
+ },
+ "pop2": {
+  "tcgcsv": 1447,
+  "name": "POP Series 2"
+ },
+ "ex9": {
+  "tcgcsv": 1410,
+  "name": "Emerald"
+ },
+ "ex8": {
+  "tcgcsv": 1404,
+  "name": "Deoxys"
+ },
+ "ex7": {
+  "tcgcsv": 1428,
+  "name": "Team Rocket Returns"
+ },
+ "pop1": {
+  "tcgcsv": 1422,
+  "name": "POP Series 1"
+ },
+ "ex6": {
+  "tcgcsv": 1419,
+  "name": "FireRed & LeafGreen"
+ },
+ "ex5": {
+  "tcgcsv": 1416,
+  "name": "Hidden Legends"
+ },
+ "tk1b": {
+  "tcgcsv": 1543,
+  "name": "EX Trainer Kit 1: Latias & Latios"
+ },
+ "tk1a": {
+  "tcgcsv": 1543,
+  "name": "EX Trainer Kit 1: Latias & Latios"
+ },
+ "ex4": {
+  "tcgcsv": 1377,
+  "name": "Team Magma vs Team Aqua"
+ },
+ "ex3": {
+  "tcgcsv": 1376,
+  "name": "Dragon"
+ },
+ "ex2": {
+  "tcgcsv": 1392,
+  "name": "Sandstorm"
+ },
+ "ex1": {
+  "tcgcsv": 1393,
+  "name": "Ruby and Sapphire"
+ },
+ "ecard3": {
+  "tcgcsv": 1372,
+  "name": "Skyridge"
+ },
+ "ecard2": {
+  "tcgcsv": 1397,
+  "name": "Aquapolis"
+ },
+ "ecard1": {
+  "tcgcsv": 1375,
+  "name": "Expedition"
+ },
+ "base6": {
+  "tcgcsv": 1374,
+  "name": "Legendary Collection"
+ },
+ "neo4": {
+  "tcgcsv": 1444,
+  "name": "Neo Destiny"
+ },
+ "neo3": {
+  "tcgcsv": 1389,
+  "name": "Neo Revelation"
+ },
+ "si1": {
+  "tcgcsv": 648,
+  "name": "Southern Islands"
+ },
+ "neo2": {
+  "tcgcsv": 1434,
+  "name": "Neo Discovery"
+ },
+ "neo1": {
+  "tcgcsv": 1396,
+  "name": "Neo Genesis"
+ },
+ "gym2": {
+  "tcgcsv": 1440,
+  "name": "Gym Challenge"
+ },
+ "gym1": {
+  "tcgcsv": 1441,
+  "name": "Gym Heroes"
+ },
+ "base5": {
+  "tcgcsv": 1373,
+  "name": "Team Rocket"
+ },
+ "base4": {
+  "tcgcsv": 605,
+  "name": "Base Set 2"
+ },
+ "base3": {
+  "tcgcsv": 630,
+  "name": "Fossil"
+ },
+ "basep": {
+  "tcgcsv": 1418,
+  "name": "WoTC Promo"
+ },
+ "base2": {
+  "tcgcsv": 635,
+  "name": "Jungle"
+ },
+ "base1": {
+  "tcgcsv": 604,
+  "name": "Base Set"
+ },
+ "svp": {
+  "tcgcsv": 22872,
+  "name": "SV: Scarlet & Violet Promo Cards"
+ },
+ "swshp": {
+  "tcgcsv": 2545,
+  "name": "SWSH: Sword & Shield Promo Cards"
+ },
+ "smp": {
+  "tcgcsv": 1861,
+  "name": "SM Promos"
+ },
+ "sm1": {
+  "tcgcsv": 1863,
+  "name": "SM Base Set"
+ },
+ "xyp": {
+  "tcgcsv": 1451,
+  "name": "XY Promos"
+ },
+ "bwp": {
+  "tcgcsv": 1407,
+  "name": "Black and White Promos"
+ },
+ "hsp": {
+  "tcgcsv": 1453,
+  "name": "HGSS Promos"
+ },
+ "dpp": {
+  "tcgcsv": 1421,
+  "name": "Diamond and Pearl Promos"
+ },
+ "np": {
+  "tcgcsv": 1423,
+  "name": "Nintendo Promos"
+ },
+ "bp": {
+  "tcgcsv": 1455,
+  "name": "Best of Promos"
+ },
+ "ru1": {
+  "tcgcsv": 1433,
+  "name": "Rumble"
+ },
+ "mcd11": {
+  "tcgcsv": 1401,
+  "name": "McDonald's Promos 2011"
+ },
+ "mcd12": {
+  "tcgcsv": 1427,
+  "name": "McDonald's Promos 2012"
+ },
+ "mcd14": {
+  "tcgcsv": 1692,
+  "name": "McDonald's Promos 2014"
+ },
+ "mcd15": {
+  "tcgcsv": 1694,
+  "name": "McDonald's Promos 2015"
+ },
+ "mcd16": {
+  "tcgcsv": 3087,
+  "name": "McDonald's Promos 2016"
+ },
+ "mcd17": {
+  "tcgcsv": 2148,
+  "name": "McDonald's Promos 2017"
+ },
+ "mcd18": {
+  "tcgcsv": 2364,
+  "name": "McDonald's Promos 2018"
+ },
+ "mcd19": {
+  "tcgcsv": 2555,
+  "name": "McDonald's Promos 2019"
+ },
+ "mcd21": {
+  "tcgcsv": 2782,
+  "name": "McDonald's 25th Anniversary Promos"
+ },
+ "mcd22": {
+  "tcgcsv": 3150,
+  "name": "McDonald's Promos 2022"
+ }
+}

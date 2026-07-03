@@ -1,0 +1,27 @@
+# Daily ingest (DESIGN.md D6): TCGCSV refreshes ~20:00 UTC; we pull at 21:30.
+# Failure (including the coverage ratchet refusing to promote) fails the run → email.
+name: ingest
+on:
+  schedule:
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "override coverage ratchet"
+        type: boolean
+        default: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Ingest pokemon
+        run: node ingest/run.js --game pokemon --push ${{ inputs.force && '--force' || '' }}
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}

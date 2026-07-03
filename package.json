@@ -1,0 +1,13 @@
+{
+  "name": "tcg-price-api",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "ingest": "node ingest/run.js",
+    "mapping:pokemon": "node tools/build-mapping.js pokemon ../poke-rip/PokeRip/Resources/Bundled/sets.json",
+    "golden": "node --test tests/*.test.js",
+    "dev": "wrangler dev worker/index.js",
+    "deploy": "wrangler deploy"
+  }
+}
