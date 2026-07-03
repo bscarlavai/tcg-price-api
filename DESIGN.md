@@ -161,6 +161,22 @@ GET /v1/history?game=&set=&number=&window=90d                      (v1.1)
   → 200 { points: [ {date, market}, ... ] }   // sparklines, collection backfill
 ```
 
+Card entry extensions (all game vocabulary, never source vocabulary):
+- **`variants`** — same collector number, different printing, as separate upstream
+  products: yugioh rarity reprints keyed by Konami's rarity name ("Quarter Century
+  Secret Rare"), one piece parallel arts keyed by descriptor ("Parallel", "Alternate
+  Art"). Headline market/low always comes from the base printing.
+- **`byName`** — pre-2002 Magic sets have no collector numbers upstream; those cards are
+  keyed by normalized name, and `/v1/price` accepts `&name=` as fallback. Same-name art
+  variants (Alpha basic lands) resolve to the cheapest.
+- **Absent ≠ missing set**: a card absent from a 200 response is *known but unpriced*
+  (TCGPlayer has no market aggregate — e.g. Alpha Black Lotus). 404 means the set is
+  unmapped. Clients render unpriced cards; a missing price never hides a card.
+- **No per-user batch endpoint**: whole-set blobs are the batch primitive, and they are
+  edge-cacheable across ALL users; per-user id-list batches are cache-poison and would
+  invite productId (source vocabulary) into the contract. A collection refresh is one
+  cached GET per owned set.
+
 Contract rules (these are what guarantee swap invisibility):
 1. **No source vocabulary in any response** — no source names, IDs, or subtype strings.
 2. **Finish keys are the canonical enum** (D9).
@@ -255,6 +271,24 @@ holdings server-side, no PII/GDPR surface. Value is computed in-app.
   every new user-data field appears in the archive or the round-trip test fails).
 
 ---
+
+## 8c. Upstream sharp edges (from riplist's catalog work — docs/riplist-catalog-learnings.md)
+
+Adopted into the ingest layer:
+- Trailing parens carry BOTH number disambiguators and variant descriptors
+  ("Charlotte Katakuri (067) (Alternate Art)") — number-only parens are stripped before
+  descriptor detection.
+- Same number appears across product contexts (tokens vs cards, event/demo groups) —
+  magic tokens are denylisted; mapping targets exactly the main group per set, with
+  multi-group refs (arrays) for folded subsets (Radiant Collection / Shiny Vault style).
+- Denylist for stamped same-number reprints ([Winner]/[Staff]), jumbos, and World
+  Championship decks — they explode rows without being collectable.
+- Group abbreviations are a matching *hint*, never parsed for identity.
+- Set-name vocabulary differs per source — the mapping stays an explicit reviewed table.
+
+Deliberately NOT adopted: batch-by-productId endpoint (see §5 — cacheability + source
+vocabulary would break the swap guarantee), request-time fuzzy matching (mapping is a
+build-time concern).
 
 ## 9. Risks
 

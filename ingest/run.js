@@ -38,9 +38,12 @@ async function workOne() {
   if (!next) return;
   const [setCode, refs] = next;
   try {
-    const rows = await fetchSetRows(game, refs[SOURCE], { unknownSubtypes });
+    // A ref may be an array: some app sets fold multiple upstream groups (e.g. a host
+    // set + its Radiant Collection / Shiny Vault subset). Distinct number ranges.
+    const groupIds = [refs[SOURCE]].flat();
+    const rows = (await Promise.all(groupIds.map((id) => fetchSetRows(game, id, { unknownSubtypes })))).flat();
     if (rows.length) {
-      blobs.push({ setCode, blob: buildSetBlob(game, setCode, rows, { [SOURCE]: refs[SOURCE] }, updatedAt), rows });
+      blobs.push({ setCode, blob: buildSetBlob(game, setCode, rows, { [SOURCE]: groupIds }, updatedAt), rows });
       cardCount += new Set(rows.map((r) => r.number)).size;
     }
   } catch (e) {

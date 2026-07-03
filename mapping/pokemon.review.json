@@ -2,8 +2,10 @@
  {
   "id": "fut20",
   "name": "Pokémon Futsal Collection",
-  "ptcgoCode": "FUT20",
-  "releaseDate": "2020/09/11",
+  "abbrevs": [
+   "FUT20"
+  ],
+  "date": "2020-09-11",
   "bestGuess": {
    "groupId": 2685,
    "name": "Champion's Path",

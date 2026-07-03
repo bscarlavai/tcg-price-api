@@ -1,0 +1,2170 @@
+{
+ "LOB": {
+  "tcgcsv": 330,
+  "name": "The Legend of Blue Eyes White Dragon"
+ },
+ "DDS": {
+  "tcgcsv": 166,
+  "name": "Dark Duel Stories"
+ },
+ "SDK": {
+  "tcgcsv": 294,
+  "name": "Starter Deck: Kaiba"
+ },
+ "SDY": {
+  "tcgcsv": 298,
+  "name": "Starter Deck: Yugi"
+ },
+ "MRD": {
+  "tcgcsv": 255,
+  "name": "Metal Raiders"
+ },
+ "TP1": {
+  "tcgcsv": 333,
+  "name": "Tournament Pack 1"
+ },
+ "MRL": {
+  "tcgcsv": 249,
+  "name": "Magic Ruler"
+ },
+ "SRL": {
+  "tcgcsv": 1819,
+  "name": "Spell Ruler"
+ },
+ "TP2": {
+  "tcgcsv": 334,
+  "name": "Tournament Pack 2"
+ },
+ "BPT": {
+  "tcgcsv": 1341,
+  "name": "2002 Collectors Tin"
+ },
+ "EDS": {
+  "tcgcsv": 202,
+  "name": "Eternal Duelist Soul"
+ },
+ "PSV": {
+  "tcgcsv": 259,
+  "name": "Pharaoh's Servant"
+ },
+ "FMR": {
+  "tcgcsv": 207,
+  "name": "Forbidden Memories"
+ },
+ "MP1": {
+  "tcgcsv": 253,
+  "name": "McDonald's Promo"
+ },
+ "DOR": {
+  "tcgcsv": 183,
+  "name": "Duelist of the Roses"
+ },
+ "LON": {
+  "tcgcsv": 241,
+  "name": "Labyrinth of Nightmare"
+ },
+ "TP3": {
+  "tcgcsv": 335,
+  "name": "Tournament Pack 3"
+ },
+ "SDJ": {
+  "tcgcsv": 293,
+  "name": "Starter Deck: Joey"
+ },
+ "SDP": {
+  "tcgcsv": 296,
+  "name": "Starter Deck: Pegasus"
+ },
+ "SDD": {
+  "tcgcsv": 287,
+  "name": "Stairway to the Destined Duel"
+ },
+ "LOD": {
+  "tcgcsv": 243,
+  "name": "Legacy of Darkness"
+ },
+ "PGD": {
+  "tcgcsv": 260,
+  "name": "Pharaonic Guardian"
+ },
+ "TP4": {
+  "tcgcsv": 336,
+  "name": "Tournament Pack 4"
+ },
+ "MFC": {
+  "tcgcsv": 250,
+  "name": "Magician's Force"
+ },
+ "DMG": {
+  "tcgcsv": 178,
+  "name": "Duel Master's Guide"
+ },
+ "TFK": {
+  "tcgcsv": 329,
+  "name": "The Falsebound Kingdom"
+ },
+ "TSC": {
+  "tcgcsv": 331,
+  "name": "The Sacred Cards"
+ },
+ "PCY": {
+  "tcgcsv": 264,
+  "name": "Power of Chaos: Yugi the Destiny"
+ },
+ "DCR": {
+  "tcgcsv": 165,
+  "name": "Dark Crisis"
+ },
+ "WC4": {
+  "tcgcsv": 345,
+  "name": "World Championship 2004: GBA Promo"
+ },
+ "IOC": {
+  "tcgcsv": 237,
+  "name": "Invasion of Chaos"
+ },
+ "SKE": {
+  "tcgcsv": 295,
+  "name": "Starter Deck: Kaiba Evolution"
+ },
+ "SYE": {
+  "tcgcsv": 299,
+  "name": "Starter Deck: Yugi Evolution"
+ },
+ "DOD": {
+  "tcgcsv": 175,
+  "name": "Dawn of Destiny Xbox"
+ },
+ "PCK": {
+  "tcgcsv": 263,
+  "name": "Power of Chaos: Kaiba the Revenge"
+ },
+ "AST": {
+  "tcgcsv": 146,
+  "name": "Ancient Sanctuary"
+ },
+ "PCJ": {
+  "tcgcsv": 262,
+  "name": "Power of Chaos: Joey the Passion"
+ },
+ "ROD": {
+  "tcgcsv": 272,
+  "name": "Reshef of Destruction"
+ },
+ "EP1": {
+  "tcgcsv": 357,
+  "name": "Yu-Gi-Oh! Movie Exclusive Pack"
+ },
+ "MOV": {
+  "tcgcsv": 359,
+  "name": "Yu-Gi-Oh! The Movie Promo Set"
+ },
+ "CT1": {
+  "tcgcsv": 127,
+  "name": "2004 Collectors Tin"
+ },
+ "HL1": {
+  "tcgcsv": 232,
+  "name": "Hobby League 1"
+ },
+ "SOD": {
+  "tcgcsv": 285,
+  "name": "Soul of the Duelist"
+ },
+ "DB1": {
+  "tcgcsv": 163,
+  "name": "Dark Beginning 1"
+ },
+ "DBT": {
+  "tcgcsv": 176,
+  "name": "Destiny Board Traveler Promo"
+ },
+ "TP5": {
+  "tcgcsv": 337,
+  "name": "Tournament Pack 5"
+ },
+ "RDS": {
+  "tcgcsv": 274,
+  "name": "Rise of Destiny"
+ },
+ "CMC": {
+  "tcgcsv": 148,
+  "name": "Capsule Monster Coliseum"
+ },
+ "MC1": {
+  "tcgcsv": 251,
+  "name": "Master Collection Volume 1"
+ },
+ "SD1": {
+  "tcgcsv": 307,
+  "name": "Structure Deck: Dragon's Roar"
+ },
+ "SD2": {
+  "tcgcsv": 315,
+  "name": "Structure Deck: Zombie Madness"
+ },
+ "WC5": {
+  "tcgcsv": 346,
+  "name": "World Championship 2005: 7 Trials to Glory"
+ },
+ "FET": {
+  "tcgcsv": 204,
+  "name": "Flaming Eternity"
+ },
+ "DR1": {
+  "tcgcsv": 172,
+  "name": "Dark Revelation Volume 1"
+ },
+ "SD3": {
+  "tcgcsv": 305,
+  "name": "Structure Deck: Blaze of Destruction"
+ },
+ "SD4": {
+  "tcgcsv": 308,
+  "name": "Structure Deck: Fury from the Deep"
+ },
+ "TLM": {
+  "tcgcsv": 248,
+  "name": "The Lost Millennium"
+ },
+ "TP6": {
+  "tcgcsv": 338,
+  "name": "Tournament Pack 6"
+ },
+ "DB2": {
+  "tcgcsv": 164,
+  "name": "Dark Beginning 2"
+ },
+ "SP1": {
+  "tcgcsv": 282,
+  "name": "Sneak Preview Series 1"
+ },
+ "CRV": {
+  "tcgcsv": 160,
+  "name": "Cybernetic Revolution"
+ },
+ "NTR": {
+  "tcgcsv": 256,
+  "name": "Nintendo DS Nightmare of Troubadour"
+ },
+ "CT2": {
+  "tcgcsv": 128,
+  "name": "2005 Collectors Tin"
+ },
+ "FL1": {
+  "tcgcsv": 205,
+  "name": "Forbidden Legacy"
+ },
+ "MC2": {
+  "tcgcsv": 252,
+  "name": "Master Collection Volume 2"
+ },
+ "DR2": {
+  "tcgcsv": 173,
+  "name": "Dark Revelation Volume 2"
+ },
+ "SD5": {
+  "tcgcsv": 314,
+  "name": "Structure Deck: Warrior's Triumph"
+ },
+ "TP7": {
+  "tcgcsv": 339,
+  "name": "Tournament Pack 7"
+ },
+ "EEN": {
+  "tcgcsv": 200,
+  "name": "Elemental Energy"
+ },
+ "HL03": {
+  "tcgcsv": 234,
+  "name": "Hobby League 3"
+ },
+ "HL2": {
+  "tcgcsv": 233,
+  "name": "Hobby League 2"
+ },
+ "MF01": {
+  "tcgcsv": 1323,
+  "name": "Mattel Action Figure Promos: Series 1"
+ },
+ "MF02": {
+  "tcgcsv": 1317,
+  "name": "Mattel Action Figure Promos: Series 2"
+ },
+ "MF03": {
+  "tcgcsv": 2197,
+  "name": "Mattel Action Figure Promos: Series 3"
+ },
+ "GX1": {
+  "tcgcsv": 218,
+  "name": "GX Duel Academy GBA Promo"
+ },
+ "SD6": {
+  "tcgcsv": 313,
+  "name": "Structure Deck: Spellcaster's Judgment"
+ },
+ "DP1": {
+  "tcgcsv": 193,
+  "name": "Duelist Pack 1: Jaden Yuki"
+ },
+ "DP2": {
+  "tcgcsv": 191,
+  "name": "Duelist Pack 2: Chazz Princeton"
+ },
+ "SOI": {
+  "tcgcsv": 277,
+  "name": "Shadow of Infinity"
+ },
+ "DPK": {
+  "tcgcsv": 195,
+  "name": "Duelist Pack Special Edition"
+ },
+ "WC6": {
+  "tcgcsv": 347,
+  "name": "World Championship 2006: Ultimate Masters"
+ },
+ "YSD": {
+  "tcgcsv": 291,
+  "name": "Starter Deck 2006"
+ },
+ "TP8": {
+  "tcgcsv": 340,
+  "name": "Tournament Pack 8"
+ },
+ "SD7": {
+  "tcgcsv": 309,
+  "name": "Structure Deck: Invincible Fortress"
+ },
+ "EOJ": {
+  "tcgcsv": 201,
+  "name": "Enemy of Justice"
+ },
+ "SD8": {
+  "tcgcsv": 310,
+  "name": "Structure Deck: Lord of the Storm"
+ },
+ "UBP1": {
+  "tcgcsv": 223,
+  "name": "GX Ultimate Beginner's Pack 1"
+ },
+ "POTD": {
+  "tcgcsv": 265,
+  "name": "Power of the Duelist"
+ },
+ "CT03": {
+  "tcgcsv": 129,
+  "name": "2006 Collectors Tin"
+ },
+ "SD09": {
+  "tcgcsv": 306,
+  "name": "Structure Deck: Dinosaur's Rage"
+ },
+ "CP01": {
+  "tcgcsv": 149,
+  "name": "Champion Pack 1"
+ },
+ "UE02": {
+  "tcgcsv": 343,
+  "name": "Ultimate Edition 2"
+ },
+ "CDIP": {
+  "tcgcsv": 159,
+  "name": "Cyberdark Impact"
+ },
+ "GX02": {
+  "tcgcsv": 222,
+  "name": "GX Tag Force Promo"
+ },
+ "DR3": {
+  "tcgcsv": 174,
+  "name": "Dark Revelation Volume 3"
+ },
+ "MDP2": {
+  "tcgcsv": 254,
+  "name": "McDonald's Promo Series 2"
+ },
+ "HL04": {
+  "tcgcsv": 235,
+  "name": "Hobby League 4"
+ },
+ "HL05": {
+  "tcgcsv": 236,
+  "name": "Hobby League 5"
+ },
+ "GX03": {
+  "tcgcsv": 220,
+  "name": "GX Spirit Caller Promo"
+ },
+ "SD10": {
+  "tcgcsv": 311,
+  "name": "Structure Deck: Machine Re-Volt"
+ },
+ "SJCS": {
+  "tcgcsv": 279,
+  "name": "Shonen Jump Championship Series Prize Cards"
+ },
+ "CP02": {
+  "tcgcsv": 150,
+  "name": "Champion Pack 2"
+ },
+ "DP03": {
+  "tcgcsv": 194,
+  "name": "Duelist Pack 3: Jaden Yuki 2"
+ },
+ "DP05": {
+  "tcgcsv": 190,
+  "name": "Duelist Pack 5: Aster Phoenix"
+ },
+ "STON": {
+  "tcgcsv": 304,
+  "name": "Strike of Neos"
+ },
+ "DP04": {
+  "tcgcsv": 196,
+  "name": "Duelist Pack 4: Zane Truesdale"
+ },
+ "WC07": {
+  "tcgcsv": 348,
+  "name": "World Championship 2007"
+ },
+ "CP03": {
+  "tcgcsv": 151,
+  "name": "Champion Pack 3"
+ },
+ "FOTB": {
+  "tcgcsv": 208,
+  "name": "Force of the Breaker"
+ },
+ "YSDJ": {
+  "tcgcsv": 292,
+  "name": "Starter Deck: Jaden Yuki"
+ },
+ "YSDS": {
+  "tcgcsv": 297,
+  "name": "Starter Deck: Syrus Truesdale"
+ },
+ "PP01": {
+  "tcgcsv": 266,
+  "name": "Premium Pack 1"
+ },
+ "TAEV": {
+  "tcgcsv": 325,
+  "name": "Tactical Evolution"
+ },
+ "CT04": {
+  "tcgcsv": 130,
+  "name": "2007 Collectors Tin"
+ },
+ "CP04": {
+  "tcgcsv": 152,
+  "name": "Champion Pack 4"
+ },
+ "GX04": {
+  "tcgcsv": 221,
+  "name": "GX Tag Force 2 Promo"
+ },
+ "SDRL": {
+  "tcgcsv": 312,
+  "name": "Structure Deck: Rise of the Dragon Lords"
+ },
+ "GXNG": {
+  "tcgcsv": 1280,
+  "name": "GX Next Generation Blister Pack Promo"
+ },
+ "EHC1": {
+  "tcgcsv": 1302,
+  "name": "Elemental Hero Collection 1"
+ },
+ "EHC2": {
+  "tcgcsv": 1303,
+  "name": "Elemental Hero Collection 2"
+ },
+ "DR04": {
+  "tcgcsv": 1279,
+  "name": "Dark Revelation Volume 4"
+ },
+ "GLAS": {
+  "tcgcsv": 210,
+  "name": "Gladiator's Assault"
+ },
+ "LDPP": {
+  "tcgcsv": 246,
+  "name": "Light and Darkness Power Pack"
+ },
+ "WC08": {
+  "tcgcsv": 349,
+  "name": "World Championship 2008"
+ },
+ "GX05": {
+  "tcgcsv": 268,
+  "name": "PS2 Yugioh GX The Beginning of Destiny"
+ },
+ "HL07": {
+  "tcgcsv": 583,
+  "name": "Hobby League 7"
+ },
+ "CP05": {
+  "tcgcsv": 153,
+  "name": "Champion Pack 5"
+ },
+ "HL06": {
+  "tcgcsv": 582,
+  "name": "Hobby League 6"
+ },
+ "DP06": {
+  "tcgcsv": 238,
+  "name": "Duelist Pack 6: Jaden Yuki 3"
+ },
+ "DP07": {
+  "tcgcsv": 239,
+  "name": "Duelist Pack 7: Jesse Anderson"
+ },
+ "PTDN": {
+  "tcgcsv": 258,
+  "name": "Phantom Darkness"
+ },
+ "GLD1": {
+  "tcgcsv": 214,
+  "name": "Gold Series 2008"
+ },
+ "SDDE": {
+  "tcgcsv": 322,
+  "name": "Structure Deck: The Dark Emperor"
+ },
+ "CP06": {
+  "tcgcsv": 154,
+  "name": "Champion Pack 6"
+ },
+ "LODT": {
+  "tcgcsv": 247,
+  "name": "Light of Destruction"
+ },
+ "RP01": {
+  "tcgcsv": 1291,
+  "name": "Retro Pack"
+ },
+ "PP02": {
+  "tcgcsv": 267,
+  "name": "Premium Pack 2"
+ },
+ "DTP1": {
+  "tcgcsv": 179,
+  "name": "Duel Terminal - Preview"
+ },
+ "5DS1": {
+  "tcgcsv": 139,
+  "name": "5D's 2008 Starter Deck"
+ },
+ "CP07": {
+  "tcgcsv": 155,
+  "name": "Champion Pack 7"
+ },
+ "TDGS": {
+  "tcgcsv": 328,
+  "name": "The Duelist Genesis"
+ },
+ "CT05": {
+  "tcgcsv": 131,
+  "name": "2008 Collectors Tin"
+ },
+ "SDZW": {
+  "tcgcsv": 324,
+  "name": "Structure Deck: Zombie World"
+ },
+ "CSOC": {
+  "tcgcsv": 158,
+  "name": "Crossroads of Chaos"
+ },
+ "DLG1": {
+  "tcgcsv": 167,
+  "name": "Dark Legends"
+ },
+ "YAP1": {
+  "tcgcsv": 1304,
+  "name": "Anniversary Pack"
+ },
+ "CP08": {
+  "tcgcsv": 156,
+  "name": "Champion Pack 8"
+ },
+ "DP08": {
+  "tcgcsv": 188,
+  "name": "Duelist Pack 8: Yusei Fudo"
+ },
+ "CRMS": {
+  "tcgcsv": 157,
+  "name": "Crimson Crisis"
+ },
+ "SDSC": {
+  "tcgcsv": 286,
+  "name": "Structure Deck: Spellcaster's Command"
+ },
+ "GLD2": {
+  "tcgcsv": 215,
+  "name": "Gold Series 2009"
+ },
+ "RGBT": {
+  "tcgcsv": 270,
+  "name": "Raging Battle"
+ },
+ "WB01": {
+  "tcgcsv": 1337,
+  "name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards"
+ },
+ "WC09": {
+  "tcgcsv": 288,
+  "name": "Stardust Accelerator Promos"
+ },
+ "5DS2": {
+  "tcgcsv": 140,
+  "name": "5D's Starter Deck 2009"
+ },
+ "DPYG": {
+  "tcgcsv": 184,
+  "name": "Duelist Pack: Yugi"
+ },
+ "RP02": {
+  "tcgcsv": 1292,
+  "name": "Retro Pack 2"
+ },
+ "DLDI": {
+  "tcgcsv": 1684,
+  "name": "Duelist League Demo 2010"
+ },
+ "DL09": {
+  "tcgcsv": 1684,
+  "name": "Duelist League Demo 2010"
+ },
+ "TU01": {
+  "tcgcsv": 341,
+  "name": "Turbo Pack Booster One Pack"
+ },
+ "ANPR": {
+  "tcgcsv": 144,
+  "name": "Ancient Prophecy"
+ },
+ "CT06": {
+  "tcgcsv": 132,
+  "name": "2009 Collectors Tin"
+ },
+ "SDWS": {
+  "tcgcsv": 323,
+  "name": "Structure Deck: Warriors' Strike"
+ },
+ "DDY1": {
+  "tcgcsv": 1343,
+  "name": "Duel Disk - Yusei Version"
+ },
+ "HA01": {
+  "tcgcsv": 224,
+  "name": "Hidden Arsenal"
+ },
+ "SOVR": {
+  "tcgcsv": 289,
+  "name": "Stardust Overdrive"
+ },
+ "TF04": {
+  "tcgcsv": 1318,
+  "name": "Yu-Gi-Oh! 5D's Tag Force 4 Promo"
+ },
+ "TWED": {
+  "tcgcsv": 1285,
+  "name": "Twilight Edition"
+ },
+ "TU02": {
+  "tcgcsv": 598,
+  "name": "Turbo Pack: Booster Two"
+ },
+ "DP09": {
+  "tcgcsv": 189,
+  "name": "Duelist Pack 9: Yusei 2"
+ },
+ "DT01": {
+  "tcgcsv": 1327,
+  "name": "Duel Terminal 1"
+ },
+ "ABPF": {
+  "tcgcsv": 141,
+  "name": "Absolute Powerforce"
+ },
+ "SDMM": {
+  "tcgcsv": 320,
+  "name": "Structure Deck: Machina Mayhem"
+ },
+ "DPCT": {
+  "tcgcsv": 134,
+  "name": "2010 Duelist Pack Collection Tin"
+ },
+ "DPKB": {
+  "tcgcsv": 197,
+  "name": "Duelist Pack: Kaiba"
+ },
+ "TSHD": {
+  "tcgcsv": 332,
+  "name": "The Shining Darkness"
+ },
+ "YCSW": {
+  "tcgcsv": 1347,
+  "name": "Yu-Gi-Oh! Championship Series Prize Cards"
+ },
+ "DT02": {
+  "tcgcsv": 1328,
+  "name": "Duel Terminal 2"
+ },
+ "5DS3": {
+  "tcgcsv": 301,
+  "name": "Starter Deck: Duelist Toolbox"
+ },
+ "GLD3": {
+  "tcgcsv": 216,
+  "name": "Gold Series 3"
+ },
+ "TU03": {
+  "tcgcsv": 597,
+  "name": "Turbo Pack: Booster Three"
+ },
+ "HA02": {
+  "tcgcsv": 225,
+  "name": "Hidden Arsenal 2"
+ },
+ "WCPP": {
+  "tcgcsv": 2227,
+  "name": "World Championship 2010 Card Pack"
+ },
+ "DREV": {
+  "tcgcsv": 198,
+  "name": "Duelist Revolution"
+ },
+ "CT07": {
+  "tcgcsv": 133,
+  "name": "2010 Collectors Tins"
+ },
+ "DT03": {
+  "tcgcsv": 1329,
+  "name": "Duel Terminal 3"
+ },
+ "LC01": {
+  "tcgcsv": 1290,
+  "name": "Legendary Collection 1"
+ },
+ "SDMA": {
+  "tcgcsv": 321,
+  "name": "Structure Deck: Marik"
+ },
+ "TF05": {
+  "tcgcsv": 353,
+  "name": "Yu-Gi-Oh! 5D's Tag Force Promotional Cards"
+ },
+ "STBL": {
+  "tcgcsv": 290,
+  "name": "Starstrike Blast"
+ },
+ "TU04": {
+  "tcgcsv": 342,
+  "name": "Turbo Pack: Booster Four"
+ },
+ "XSPU": {
+  "tcgcsv": 1320,
+  "name": "X-Saber Power-Up"
+ },
+ "HA03": {
+  "tcgcsv": 226,
+  "name": "Hidden Arsenal 3"
+ },
+ "YDT1": {
+  "tcgcsv": 180,
+  "name": "Duel Transer Promo Cards"
+ },
+ "DP10": {
+  "tcgcsv": 185,
+  "name": "Duelist Pack 10: Yusei 3"
+ },
+ "DT04": {
+  "tcgcsv": 1330,
+  "name": "Duel Terminal 4"
+ },
+ "STOR": {
+  "tcgcsv": 302,
+  "name": "Storm of Ragnarok"
+ },
+ "DEM1": {
+  "tcgcsv": 1474,
+  "name": "Demo Pack"
+ },
+ "YMP1": {
+  "tcgcsv": 147,
+  "name": "Bonds Beyond Time Movie Pack"
+ },
+ "SDDL": {
+  "tcgcsv": 317,
+  "name": "Structure Deck: Dragunity Legion"
+ },
+ "DPC5": {
+  "tcgcsv": 136,
+  "name": "2011 Duelist Pack Tin"
+ },
+ "TU05": {
+  "tcgcsv": 594,
+  "name": "Turbo Pack: Booster Five"
+ },
+ "HA04": {
+  "tcgcsv": 227,
+  "name": "Hidden Arsenal 4"
+ },
+ "EXVC": {
+  "tcgcsv": 203,
+  "name": "Extreme Victory"
+ },
+ "WC11": {
+  "tcgcsv": 1363,
+  "name": "Yu-Gi-Oh! 5D's Over the Nexus Promo Cards"
+ },
+ "DP11": {
+  "tcgcsv": 186,
+  "name": "Duelist Pack 11: Crow"
+ },
+ "DT05": {
+  "tcgcsv": 1331,
+  "name": "Duel Terminal 5"
+ },
+ "SDLS": {
+  "tcgcsv": 319,
+  "name": "Structure Deck: Lost Sanctuary"
+ },
+ "GLD4": {
+  "tcgcsv": 217,
+  "name": "Gold Series 4: Pyramids Edition"
+ },
+ "YS11": {
+  "tcgcsv": 300,
+  "name": "Starter Deck: Dawn of the Xyz"
+ },
+ "HASE": {
+  "tcgcsv": 231,
+  "name": "Hidden Arsenal: Special Edition"
+ },
+ "WP11": {
+  "tcgcsv": 1929,
+  "name": "World Championship 2011 Card Pack"
+ },
+ "TU06": {
+  "tcgcsv": 596,
+  "name": "Turbo Pack: Booster Six"
+ },
+ "GENF": {
+  "tcgcsv": 209,
+  "name": "Generation Force"
+ },
+ "CT08": {
+  "tcgcsv": 135,
+  "name": "2011 Collectors Tins"
+ },
+ "LC02": {
+  "tcgcsv": 245,
+  "name": "Legendary Collection 2"
+ },
+ "SDGU": {
+  "tcgcsv": 318,
+  "name": "Structure Deck: Gates of the Underworld"
+ },
+ "PHSW": {
+  "tcgcsv": 261,
+  "name": "Photon Shockwave"
+ },
+ "HA05": {
+  "tcgcsv": 228,
+  "name": "Hidden Arsenal 5: Steelswarm Invasion"
+ },
+ "SAAS": {
+  "tcgcsv": 276,
+  "name": "Samurai Assault"
+ },
+ "TU07": {
+  "tcgcsv": 595,
+  "name": "Turbo Pack: Booster Seven"
+ },
+ "ORCS": {
+  "tcgcsv": 257,
+  "name": "Order of Chaos"
+ },
+ "DT06": {
+  "tcgcsv": 1332,
+  "name": "Duel Terminal 6"
+ },
+ "SDDC": {
+  "tcgcsv": 316,
+  "name": "Structure Deck: Dragons Collide"
+ },
+ "RYMP": {
+  "tcgcsv": 269,
+  "name": "Ra Yellow Mega Pack"
+ },
+ "PRC1": {
+  "tcgcsv": 137,
+  "name": "2012 Premium Collection Tin"
+ },
+ "YS12": {
+  "tcgcsv": 589,
+  "name": "Starter Deck: Xyz Symphony"
+ },
+ "GAOV": {
+  "tcgcsv": 578,
+  "name": "Galactic Overlord"
+ },
+ "BP01": {
+  "tcgcsv": 575,
+  "name": "Battle Pack: Epic Dawn"
+ },
+ "BATT": {
+  "tcgcsv": 1340,
+  "name": "Battle Pack Tournament Prize Cards"
+ },
+ "TU08": {
+  "tcgcsv": 593,
+  "name": "Turbo Pack: Booster Eight"
+ },
+ "GLD5": {
+  "tcgcsv": 580,
+  "name": "Gold Series: Haunted Mine"
+ },
+ "SDWA": {
+  "tcgcsv": 592,
+  "name": "Structure Deck: Samurai Warlords"
+ },
+ "HA06": {
+  "tcgcsv": 581,
+  "name": "Hidden Arsenal 6: Omega Xyz"
+ },
+ "CT09": {
+  "tcgcsv": 571,
+  "name": "2012 Collectors Tin"
+ },
+ "REDU": {
+  "tcgcsv": 587,
+  "name": "Return of the Duelist"
+ },
+ "LC03": {
+  "tcgcsv": 584,
+  "name": "Legendary Collection 3: Yugi's World"
+ },
+ "DT07": {
+  "tcgcsv": 1333,
+  "name": "Duel Terminal 7"
+ },
+ "LCYW": {
+  "tcgcsv": 584,
+  "name": "Legendary Collection 3: Yugi's World"
+ },
+ "SDRE": {
+  "tcgcsv": 591,
+  "name": "Structure Deck: Realm of the Sea Emperor"
+ },
+ "ABYR": {
+  "tcgcsv": 573,
+  "name": "Abyss Rising"
+ },
+ "AP01": {
+  "tcgcsv": 1287,
+  "name": "Astral Pack 1"
+ },
+ "CBLZ": {
+  "tcgcsv": 576,
+  "name": "Cosmo Blazer"
+ },
+ "SDOK": {
+  "tcgcsv": 590,
+  "name": "Structure Deck: Onslaught of the Fire Kings"
+ },
+ "SP13": {
+  "tcgcsv": 1281,
+  "name": "Star Pack 2013"
+ },
+ "ZTIN": {
+  "tcgcsv": 572,
+  "name": "2013 Zexal Collection Tin"
+ },
+ "AP02": {
+  "tcgcsv": 1288,
+  "name": "Astral Pack 2"
+ },
+ "HA07": {
+  "tcgcsv": 1110,
+  "name": "Hidden Arsenal 7: Knight of Stars"
+ },
+ "LTGY": {
+  "tcgcsv": 1112,
+  "name": "Lord of the Tachyon Galaxy"
+ },
+ "YS13": {
+  "tcgcsv": 1128,
+  "name": "Super Starter: V for Victory"
+ },
+ "BP02": {
+  "tcgcsv": 1130,
+  "name": "Battle Pack 2: War of the Giants"
+ },
+ "NUMH": {
+  "tcgcsv": 1131,
+  "name": "Number Hunters"
+ },
+ "JOTL": {
+  "tcgcsv": 1142,
+  "name": "Judgment of the Light"
+ },
+ "CT10": {
+  "tcgcsv": 1149,
+  "name": "2013 Collectors Tins"
+ },
+ "SDBE": {
+  "tcgcsv": 1153,
+  "name": "Structure Deck: Saga of Blue-Eyes White Dragon"
+ },
+ "AP03": {
+  "tcgcsv": 1289,
+  "name": "Astral Pack 3"
+ },
+ "LC04": {
+  "tcgcsv": 1157,
+  "name": "Legendary Collection 4: Joey's World"
+ },
+ "LCJW": {
+  "tcgcsv": 1157,
+  "name": "Legendary Collection 4: Joey's World"
+ },
+ "SHSP": {
+  "tcgcsv": 1156,
+  "name": "Shadow Specters"
+ },
+ "YSKR": {
+  "tcgcsv": 1282,
+  "name": "Starter Deck: Kaiba Reloaded"
+ },
+ "YSYR": {
+  "tcgcsv": 1283,
+  "name": "Starter Deck: Yugi Reloaded"
+ },
+ "BPW2": {
+  "tcgcsv": 1300,
+  "name": "Battle Pack 2: War of the Giants Round 2"
+ },
+ "LVAL": {
+  "tcgcsv": 1286,
+  "name": "Legacy of the Valiant"
+ },
+ "SDCR": {
+  "tcgcsv": 1307,
+  "name": "Structure Deck: Cyber Dragon Revolution"
+ },
+ "AP04": {
+  "tcgcsv": 1309,
+  "name": "Astral Pack 4"
+ },
+ "SP14": {
+  "tcgcsv": 1319,
+  "name": "Star Pack 2014"
+ },
+ "PGLD": {
+  "tcgcsv": 1310,
+  "name": "Premium Gold"
+ },
+ "FFSE": {
+  "tcgcsv": 1339,
+  "name": "Fire Fists Special Editon"
+ },
+ "DRLG": {
+  "tcgcsv": 1354,
+  "name": "Dragons of Legend"
+ },
+ "PRIO": {
+  "tcgcsv": 1353,
+  "name": "Primal Origin"
+ },
+ "ZDC1": {
+  "tcgcsv": 1743,
+  "name": "Yu-Gi-Oh! ZEXAL World Duel Carnival Promos"
+ },
+ "SDLI": {
+  "tcgcsv": 1462,
+  "name": "Structure Deck: Realm of Light"
+ },
+ "YS14": {
+  "tcgcsv": 1466,
+  "name": "Super Starter: Space-Time Showdown"
+ },
+ "AP05": {
+  "tcgcsv": 1479,
+  "name": "Astral Pack 5"
+ },
+ "BP03": {
+  "tcgcsv": 1470,
+  "name": "Battle Pack 3: Monster League"
+ },
+ "DUEA": {
+  "tcgcsv": 1480,
+  "name": "Duelist Alliance"
+ },
+ "CT11": {
+  "tcgcsv": 1484,
+  "name": "2014 Mega-Tins"
+ },
+ "MP14": {
+  "tcgcsv": 1485,
+  "name": "2014 Mega-Tins Mega Pack"
+ },
+ "SDGR": {
+  "tcgcsv": 1489,
+  "name": "Structure Deck: Geargia Rampage"
+ },
+ "LC05": {
+  "tcgcsv": 1491,
+  "name": "Legendary Collection 5D's"
+ },
+ "NECH": {
+  "tcgcsv": 1493,
+  "name": "The New Challengers"
+ },
+ "NKRT": {
+  "tcgcsv": 1492,
+  "name": "Noble Knights of the Round Table Box Set"
+ },
+ "AP06": {
+  "tcgcsv": 1506,
+  "name": "Astral Pack 6"
+ },
+ "SECE": {
+  "tcgcsv": 1505,
+  "name": "Secrets of Eternity"
+ },
+ "SDHS": {
+  "tcgcsv": 1495,
+  "name": "Structure Deck: HERO Strike"
+ },
+ "THSF": {
+  "tcgcsv": 1513,
+  "name": "The Secret Forces"
+ },
+ "PGL2": {
+  "tcgcsv": 1523,
+  "name": "Premium Gold: Return of the Bling"
+ },
+ "DEM2": {
+  "tcgcsv": 2051,
+  "name": "Demo Deck 2015"
+ },
+ "WSUP": {
+  "tcgcsv": 1529,
+  "name": "World Superstars"
+ },
+ "CROS": {
+  "tcgcsv": 1537,
+  "name": "Crossed Souls"
+ },
+ "AP07": {
+  "tcgcsv": 1572,
+  "name": "Astral Pack 7"
+ },
+ "SP15": {
+  "tcgcsv": 1547,
+  "name": "Star Pack ARC-V"
+ },
+ "DPBC": {
+  "tcgcsv": 1550,
+  "name": "Duelist Pack: Battle City"
+ },
+ "DRL2": {
+  "tcgcsv": 1574,
+  "name": "Dragons of Legend 2"
+ },
+ "CORE": {
+  "tcgcsv": 1600,
+  "name": "Clash of Rebellions"
+ },
+ "SDSE": {
+  "tcgcsv": 1648,
+  "name": "Structure Deck: Synchron Extreme"
+ },
+ "CT12": {
+  "tcgcsv": 1652,
+  "name": "2015 Mega-Tins"
+ },
+ "MP15": {
+  "tcgcsv": 1653,
+  "name": "2015 Mega-Tins Mega Pack"
+ },
+ "HSRD": {
+  "tcgcsv": 1659,
+  "name": "High-Speed Riders"
+ },
+ "AP08": {
+  "tcgcsv": 1671,
+  "name": "Astral Pack 8"
+ },
+ "DOCS": {
+  "tcgcsv": 1660,
+  "name": "Dimension of Chaos"
+ },
+ "YGLD": {
+  "tcgcsv": 1672,
+  "name": "King of Games: Yugi's Legendary Decks"
+ },
+ "SDMP": {
+  "tcgcsv": 1674,
+  "name": "Structure Deck: Master of Pendulum"
+ },
+ "BOSH": {
+  "tcgcsv": 1698,
+  "name": "Breakers of Shadow"
+ },
+ "DEM3": {
+  "tcgcsv": 2682,
+  "name": "Demo Deck 2016"
+ },
+ "SR01": {
+  "tcgcsv": 1704,
+  "name": "Structure Deck: Emperor of Darkness"
+ },
+ "WIRA": {
+  "tcgcsv": 1707,
+  "name": "Wing Raiders"
+ },
+ "PGL3": {
+  "tcgcsv": 1745,
+  "name": "Premium Gold: Infinite Gold"
+ },
+ "OP01": {
+  "tcgcsv": 1759,
+  "name": "OTS Tournament Pack 1"
+ },
+ "MIL1": {
+  "tcgcsv": 1760,
+  "name": "Millennium Pack"
+ },
+ "SHVI": {
+  "tcgcsv": 1761,
+  "name": "Shining Victories"
+ },
+ "YS16": {
+  "tcgcsv": 1795,
+  "name": "Starter Deck: Yuya"
+ },
+ "SR02": {
+  "tcgcsv": 1802,
+  "name": "Structure Deck: Rise of the True Dragons"
+ },
+ "OP02": {
+  "tcgcsv": 1822,
+  "name": "OTS Tournament Pack 2"
+ },
+ "TDIL": {
+  "tcgcsv": 1807,
+  "name": "The Dark Illusion"
+ },
+ "DRL3": {
+  "tcgcsv": 1828,
+  "name": "Dragons of Legend: Unleashed"
+ },
+ "CT13": {
+  "tcgcsv": 1833,
+  "name": "2016 Mega-Tins"
+ },
+ "MP16": {
+  "tcgcsv": 1834,
+  "name": "2016 Mega-Tins Mega Pack"
+ },
+ "DPRP": {
+  "tcgcsv": 1838,
+  "name": "Duelist Pack: Rivals of the Pharaoh"
+ },
+ "LDK2": {
+  "tcgcsv": 1841,
+  "name": "Legendary Decks II"
+ },
+ "SDKS": {
+  "tcgcsv": 1845,
+  "name": "Structure Deck: Seto Kaiba"
+ },
+ "SDMY": {
+  "tcgcsv": 1846,
+  "name": "Structure Deck: Yugi Muto"
+ },
+ "INOV": {
+  "tcgcsv": 1849,
+  "name": "Invasion: Vengeance"
+ },
+ "DESO": {
+  "tcgcsv": 1854,
+  "name": "Destiny Soldiers"
+ },
+ "OP03": {
+  "tcgcsv": 1855,
+  "name": "OTS Tournament Pack 3"
+ },
+ "SDPD": {
+  "tcgcsv": 1878,
+  "name": "Structure Deck: Pendulum Domination"
+ },
+ "RATE": {
+  "tcgcsv": 1880,
+  "name": "Raging Tempest"
+ },
+ "FUEN": {
+  "tcgcsv": 1890,
+  "name": "Fusion Enforcers"
+ },
+ "SP17": {
+  "tcgcsv": 1903,
+  "name": "Star Pack - Battle Royal"
+ },
+ "DUSA": {
+  "tcgcsv": 1917,
+  "name": "Duelist Saga"
+ },
+ "YA01": {
+  "tcgcsv": 1918,
+  "name": "Yu-Gi-Oh! ARC-V Promo Cards"
+ },
+ "OP04": {
+  "tcgcsv": 1920,
+  "name": "OTS Tournament Pack 4"
+ },
+ "SR03": {
+  "tcgcsv": 1912,
+  "name": "Structure Deck: Machine Reactor"
+ },
+ "SR04": {
+  "tcgcsv": 1911,
+  "name": "Structure Deck: Dinosmasher's Fury"
+ },
+ "MACR": {
+  "tcgcsv": 1922,
+  "name": "Maximum Crisis"
+ },
+ "DPDG": {
+  "tcgcsv": 1931,
+  "name": "Duelist Pack: Dimensional Guardians"
+ },
+ "PEVO": {
+  "tcgcsv": 1936,
+  "name": "Pendulum Evolution"
+ },
+ "BLLR": {
+  "tcgcsv": 1948,
+  "name": "Battles of Legend: Light's Revenge"
+ },
+ "YS17": {
+  "tcgcsv": 1954,
+  "name": "Starter Deck: Link Strike"
+ },
+ "COTD": {
+  "tcgcsv": 1989,
+  "name": "Code of the Duelist"
+ },
+ "OP05": {
+  "tcgcsv": 2019,
+  "name": "OTS Tournament Pack 5"
+ },
+ "CT14": {
+  "tcgcsv": 1990,
+  "name": "2017 Mega-Tins"
+ },
+ "MP17": {
+  "tcgcsv": 1991,
+  "name": "2017 Mega-Tins Mega Pack"
+ },
+ "LEDU": {
+  "tcgcsv": 2049,
+  "name": "Legendary Duelists"
+ },
+ "LEDD": {
+  "tcgcsv": 2055,
+  "name": "Legendary Dragon Decks"
+ },
+ "CIBR": {
+  "tcgcsv": 2056,
+  "name": "Circuit Break"
+ },
+ "SDCL": {
+  "tcgcsv": 2072,
+  "name": "Structure Deck: Cyberse Link"
+ },
+ "SPWA": {
+  "tcgcsv": 2073,
+  "name": "Spirit Warriors"
+ },
+ "OP06": {
+  "tcgcsv": 2157,
+  "name": "OTS Tournament Pack 6"
+ },
+ "DEM4": {
+  "tcgcsv": 2558,
+  "name": "Advanced Demo Deck Extra Pack"
+ },
+ "SR05": {
+  "tcgcsv": 2146,
+  "name": "Structure Deck: Wave of Light"
+ },
+ "EXFO": {
+  "tcgcsv": 2151,
+  "name": "Extreme Force"
+ },
+ "LED2": {
+  "tcgcsv": 2179,
+  "name": "Legendary Duelists: Ancient Millennium"
+ },
+ "LC06": {
+  "tcgcsv": 2195,
+  "name": "Legendary Collection Kaiba"
+ },
+ "LCKC": {
+  "tcgcsv": 24506,
+  "name": "Legendary Collection Kaiba (2020 Date Reprint)"
+ },
+ "SP18": {
+  "tcgcsv": 2194,
+  "name": "Star Pack VRAINS"
+ },
+ "OP07": {
+  "tcgcsv": 2228,
+  "name": "OTS Tournament Pack 7"
+ },
+ "SR06": {
+  "tcgcsv": 2211,
+  "name": "Structure Deck: Lair of Darkness"
+ },
+ "FLOD": {
+  "tcgcsv": 2212,
+  "name": "Flames of Destruction"
+ },
+ "DASA": {
+  "tcgcsv": 2231,
+  "name": "Dark Saviors"
+ },
+ "BLRR": {
+  "tcgcsv": 2253,
+  "name": "Battles of Legend: Relentless Revenge"
+ },
+ "YS18": {
+  "tcgcsv": 2266,
+  "name": "Starter Deck: Codebreaker"
+ },
+ "CYHO": {
+  "tcgcsv": 2267,
+  "name": "Cybernetic Horizon"
+ },
+ "SDPL": {
+  "tcgcsv": 2291,
+  "name": "Structure Deck: Powercode Link"
+ },
+ "SHVA": {
+  "tcgcsv": 2292,
+  "name": "Shadows in Valhalla"
+ },
+ "OP08": {
+  "tcgcsv": 2312,
+  "name": "OTS Tournament Pack 8"
+ },
+ "CT15": {
+  "tcgcsv": 2284,
+  "name": "2018 Mega-Tins"
+ },
+ "MP18": {
+  "tcgcsv": 2317,
+  "name": "2018 Mega-Tins Mega Pack"
+ },
+ "LED3": {
+  "tcgcsv": 2300,
+  "name": "Legendary Duelists: White Dragon Abyss"
+ },
+ "LEHD": {
+  "tcgcsv": 2336,
+  "name": "Legendary Hero Decks"
+ },
+ "SOFU": {
+  "tcgcsv": 2327,
+  "name": "Soul Fusion"
+ },
+ "AC18": {
+  "tcgcsv": 2337,
+  "name": "Advent Calendar 2018"
+ },
+ "SR07": {
+  "tcgcsv": 2339,
+  "name": "Structure Deck: Zombie Horde"
+ },
+ "HISU": {
+  "tcgcsv": 2343,
+  "name": "Hidden Summoners"
+ },
+ "OP09": {
+  "tcgcsv": 2378,
+  "name": "OTS Tournament Pack 9"
+ },
+ "LED4": {
+  "tcgcsv": 2365,
+  "name": "Legendary Duelists: Sisters of the Rose"
+ },
+ "SS01": {
+  "tcgcsv": 2372,
+  "name": "Speed Duel Decks: Destiny Masters"
+ },
+ "SS02": {
+  "tcgcsv": 2371,
+  "name": "Speed Duel Decks: Duelists of Tomorrow"
+ },
+ "SAST": {
+  "tcgcsv": 2380,
+  "name": "Savage Strike"
+ },
+ "SDSB": {
+  "tcgcsv": 2389,
+  "name": "Structure Deck: Soulburner"
+ },
+ "INCH": {
+  "tcgcsv": 2398,
+  "name": "The Infinity Chasers"
+ },
+ "SBLS": {
+  "tcgcsv": 2399,
+  "name": "Speed Duel: Arena of Lost Souls"
+ },
+ "DUPO": {
+  "tcgcsv": 2400,
+  "name": "Duel Power"
+ },
+ "YDPR": {
+  "tcgcsv": 2443,
+  "name": "Yu-Gi-Oh! Day Promos"
+ },
+ "OP10": {
+  "tcgcsv": 2445,
+  "name": "OTS Tournament Pack 10"
+ },
+ "STP1": {
+  "tcgcsv": 2446,
+  "name": "Speed Duel: Tournament Pack 1"
+ },
+ "SR08": {
+  "tcgcsv": 2401,
+  "name": "Structure Deck: Order of the Spellcasters"
+ },
+ "DANE": {
+  "tcgcsv": 2421,
+  "name": "Dark Neostorm"
+ },
+ "SBAD": {
+  "tcgcsv": 2425,
+  "name": "Speed Duel: Attack from the Deep"
+ },
+ "DEM5": {
+  "tcgcsv": 2681,
+  "name": "Speed Duel Demo Deck"
+ },
+ "BLHR": {
+  "tcgcsv": 2459,
+  "name": "Battles of Legend: Hero's Revenge"
+ },
+ "RIRA": {
+  "tcgcsv": 2462,
+  "name": "Rising Rampage"
+ },
+ "EVSD": {
+  "tcgcsv": 2561,
+  "name": "Event Pack Speed Duel"
+ },
+ "SBSC": {
+  "tcgcsv": 2468,
+  "name": "Speed Duel: Scars of Battle"
+ },
+ "SS03": {
+  "tcgcsv": 2469,
+  "name": "Speed Duel Decks: Ultimate Predators"
+ },
+ "OP11": {
+  "tcgcsv": 2512,
+  "name": "OTS Tournament Pack 11"
+ },
+ "SDRR": {
+  "tcgcsv": 2470,
+  "name": "Structure Deck: Rokket Revolt"
+ },
+ "FIGA": {
+  "tcgcsv": 2471,
+  "name": "Fists of the Gadgets"
+ },
+ "MP19": {
+  "tcgcsv": 2489,
+  "name": "2019 Gold Sarcophagus Tin Mega Pack"
+ },
+ "TN19": {
+  "tcgcsv": 2488,
+  "name": "2019 Gold Sarcophagus Tin"
+ },
+ "AC19": {
+  "tcgcsv": 2518,
+  "name": "Advent Calendar 2019"
+ },
+ "LED5": {
+  "tcgcsv": 2519,
+  "name": "Legendary Duelists: Immortal Destiny"
+ },
+ "DUDE": {
+  "tcgcsv": 2505,
+  "name": "Duel Devastator"
+ },
+ "STP2": {
+  "tcgcsv": 2559,
+  "name": "Speed Duel: Tournament Pack 2"
+ },
+ "CHIM": {
+  "tcgcsv": 2527,
+  "name": "Chaos Impact"
+ },
+ "MYFI": {
+  "tcgcsv": 2528,
+  "name": "Mystic Fighters"
+ },
+ "OP12": {
+  "tcgcsv": 2582,
+  "name": "OTS Tournament Pack 12"
+ },
+ "SBTK": {
+  "tcgcsv": 2514,
+  "name": "Speed Duel: Trials of the Kingdom"
+ },
+ "DEM6": {
+  "tcgcsv": 23225,
+  "name": "Speed Duel Demo Deck 2020"
+ },
+ "LED6": {
+  "tcgcsv": 2567,
+  "name": "Legendary Duelists: Magical Hero"
+ },
+ "MVP1": {
+  "tcgcsv": 1820,
+  "name": "The Dark Side of Dimensions Movie Pack"
+ },
+ "IGAS": {
+  "tcgcsv": 2578,
+  "name": "Ignition Assault"
+ },
+ "SDSH": {
+  "tcgcsv": 2591,
+  "name": "Structure Deck: Shaddoll Showdown"
+ },
+ "DUOV": {
+  "tcgcsv": 2610,
+  "name": "Duel Overload"
+ },
+ "SESL": {
+  "tcgcsv": 2613,
+  "name": "Secret Slayers"
+ },
+ "SR10": {
+  "tcgcsv": 2617,
+  "name": "Structure Deck: Mechanized Madness"
+ },
+ "ETCO": {
+  "tcgcsv": 2625,
+  "name": "Eternity Code"
+ },
+ "SS04": {
+  "tcgcsv": 2637,
+  "name": "Speed Duel Decks: Match of the Millennium"
+ },
+ "SS05": {
+  "tcgcsv": 2638,
+  "name": "Speed Duel Decks: Twisted Nightmares"
+ },
+ "OP13": {
+  "tcgcsv": 2672,
+  "name": "OTS Tournament Pack 13"
+ },
+ "TOCH": {
+  "tcgcsv": 2652,
+  "name": "Toon Chaos"
+ },
+ "LDS1": {
+  "tcgcsv": 2658,
+  "name": "Legendary Duelists: Season 1"
+ },
+ "SDSA": {
+  "tcgcsv": 2659,
+  "name": "Structure Deck: Sacred Beasts"
+ },
+ "BLAR": {
+  "tcgcsv": 2660,
+  "name": "Battles of Legend: Armageddon"
+ },
+ "ROTD": {
+  "tcgcsv": 2674,
+  "name": "Rise of the Duelist"
+ },
+ "MP20": {
+  "tcgcsv": 2680,
+  "name": "2020 Tin of Lost Memories"
+ },
+ "DLCS": {
+  "tcgcsv": 2689,
+  "name": "Dragons of Legend: The Complete Series"
+ },
+ "LED7": {
+  "tcgcsv": 2690,
+  "name": "Legendary Duelists: Rage of Ra"
+ },
+ "OP14": {
+  "tcgcsv": 2723,
+  "name": "OTS Tournament Pack 14"
+ },
+ "SDCH": {
+  "tcgcsv": 2695,
+  "name": "Structure Deck: Spirit Charmers"
+ },
+ "PHRA": {
+  "tcgcsv": 2694,
+  "name": "Phantom Rage"
+ },
+ "MAGO": {
+  "tcgcsv": 2693,
+  "name": "Maximum Gold"
+ },
+ "SBCB": {
+  "tcgcsv": 2700,
+  "name": "Speed Duel: Battle City Box"
+ },
+ "GEIM": {
+  "tcgcsv": 2679,
+  "name": "Genesis Impact"
+ },
+ "LDS2": {
+  "tcgcsv": 2743,
+  "name": "Legendary Duelists: Season 2"
+ },
+ "BLVO": {
+  "tcgcsv": 2749,
+  "name": "Blazing Vortex"
+ },
+ "OP15": {
+  "tcgcsv": 2790,
+  "name": "OTS Tournament Pack 15"
+ },
+ "SDFC": {
+  "tcgcsv": 2751,
+  "name": "Structure Deck: Freezing Chains"
+ },
+ "GFTP": {
+  "tcgcsv": 2752,
+  "name": "Ghosts From the Past"
+ },
+ "ANGU": {
+  "tcgcsv": 2767,
+  "name": "Ancient Guardians"
+ },
+ "LIOV": {
+  "tcgcsv": 2779,
+  "name": "Lightning Overdrive"
+ },
+ "OP16": {
+  "tcgcsv": 2850,
+  "name": "OTS Tournament Pack 16"
+ },
+ "EGO1": {
+  "tcgcsv": 2810,
+  "name": "Egyptian God Deck: Obelisk the Tormentor"
+ },
+ "EGS1": {
+  "tcgcsv": 2811,
+  "name": "Egyptian God Deck: Slifer the Sky Dragon"
+ },
+ "KICO": {
+  "tcgcsv": 2808,
+  "name": "King's Court"
+ },
+ "DAMA": {
+  "tcgcsv": 2843,
+  "name": "Dawn of Majesty"
+ },
+ "MP21": {
+  "tcgcsv": 2847,
+  "name": "2021 Tin of Ancient Battles"
+ },
+ "OP17": {
+  "tcgcsv": 2934,
+  "name": "OTS Tournament Pack 17"
+ },
+ "SDCS": {
+  "tcgcsv": 2830,
+  "name": "Structure Deck: Cyber Strike"
+ },
+ "LED8": {
+  "tcgcsv": 2829,
+  "name": "Legendary Duelists: Synchro Storm"
+ },
+ "BODE": {
+  "tcgcsv": 2879,
+  "name": "Burst of Destiny"
+ },
+ "MGED": {
+  "tcgcsv": 2896,
+  "name": "Maximum Gold: El Dorado"
+ },
+ "BROL": {
+  "tcgcsv": 2877,
+  "name": "Brothers of Legend"
+ },
+ "GRCR": {
+  "tcgcsv": 2964,
+  "name": "The Grand Creators"
+ },
+ "BACH": {
+  "tcgcsv": 2969,
+  "name": "Battle of Chaos"
+ },
+ "OP18": {
+  "tcgcsv": 3000,
+  "name": "OTS Tournament Pack 18"
+ },
+ "HAC1": {
+  "tcgcsv": 2941,
+  "name": "Hidden Arsenal: Chapter 1"
+ },
+ "SGX1": {
+  "tcgcsv": 2970,
+  "name": "Speed Duel GX: Duel Academy Box"
+ },
+ "STP3": {
+  "tcgcsv": 3050,
+  "name": "Speed Duel: Tournament Pack 3"
+ },
+ "SDAZ": {
+  "tcgcsv": 2961,
+  "name": "Structure Deck: Albaz Strike"
+ },
+ "GFP2": {
+  "tcgcsv": 3011,
+  "name": "Ghosts From the Past: The 2nd Haunting"
+ },
+ "DIFO": {
+  "tcgcsv": 3029,
+  "name": "Dimension Force"
+ },
+ "OP19": {
+  "tcgcsv": 3073,
+  "name": "OTS Tournament Pack 19"
+ },
+ "LED9": {
+  "tcgcsv": 3013,
+  "name": "Legendary Duelists: Duels From the Deep"
+ },
+ "LDS3": {
+  "tcgcsv": 3076,
+  "name": "Legendary Duelists: Season 3"
+ },
+ "POTE": {
+  "tcgcsv": 3104,
+  "name": "Power of the Elements"
+ },
+ "TAMA": {
+  "tcgcsv": 3066,
+  "name": "Tactical Masters"
+ },
+ "MP22": {
+  "tcgcsv": 3101,
+  "name": "2022 Tin of the Pharaoh's Gods"
+ },
+ "SDCB": {
+  "tcgcsv": 3096,
+  "name": "Structure Deck: Legend of the Crystal Beasts"
+ },
+ "STP4": {
+  "tcgcsv": 3180,
+  "name": "Speed Duel: Tournament Pack 4"
+ },
+ "SGX2": {
+  "tcgcsv": 3098,
+  "name": "Speed Duel GX: Midterm Paradox"
+ },
+ "DABL": {
+  "tcgcsv": 3111,
+  "name": "Darkwing Blast"
+ },
+ "OP20": {
+  "tcgcsv": 17657,
+  "name": "OTS Tournament Pack 20"
+ },
+ "MAMA": {
+  "tcgcsv": 3154,
+  "name": "Magnificent Mavens"
+ },
+ "BLCR": {
+  "tcgcsv": 3155,
+  "name": "Battles of Legend: Crystal Revenge"
+ },
+ "SR13": {
+  "tcgcsv": 3156,
+  "name": "Structure Deck: Dark World"
+ },
+ "AMDE": {
+  "tcgcsv": 17663,
+  "name": "Amazing Defenders"
+ },
+ "OP21": {
+  "tcgcsv": 22936,
+  "name": "OTS Tournament Pack 21"
+ },
+ "PHHY": {
+  "tcgcsv": 17680,
+  "name": "Photon Hypernova"
+ },
+ "SDBT": {
+  "tcgcsv": 17682,
+  "name": "Structure Deck: Beware of Traptrix"
+ },
+ "MAZE": {
+  "tcgcsv": 17701,
+  "name": "Maze of Memories"
+ },
+ "STP5": {
+  "tcgcsv": 23058,
+  "name": "Speed Duel: Tournament Pack 5"
+ },
+ "SGX3": {
+  "tcgcsv": 17700,
+  "name": "Speed Duel GX: Duelists of Shadows"
+ },
+ "CYAC": {
+  "tcgcsv": 22896,
+  "name": "Cyberstorm Access"
+ },
+ "WISU": {
+  "tcgcsv": 22955,
+  "name": "Wild Survivors"
+ },
+ "BLMR": {
+  "tcgcsv": 23031,
+  "name": "Battles of Legend: Monstrous Revenge"
+ },
+ "OP22": {
+  "tcgcsv": 23260,
+  "name": "OTS Tournament Pack 22"
+ },
+ "DUNE": {
+  "tcgcsv": 23086,
+  "name": "Duelist Nexus"
+ },
+ "LD10": {
+  "tcgcsv": 23111,
+  "name": "Legendary Duelists: Soulburning Volcano"
+ },
+ "SBC1": {
+  "tcgcsv": 23073,
+  "name": "Speed Duel: Streets of Battle City"
+ },
+ "TBC1": {
+  "tcgcsv": 23068,
+  "name": "The Pot Collection"
+ },
+ "STP6": {
+  "tcgcsv": 23292,
+  "name": "Speed Duel: Tournament Pack 6"
+ },
+ "MP23": {
+  "tcgcsv": 23291,
+  "name": "25th Anniversary Tin: Dueling Heroes Mega Pack"
+ },
+ "TN23": {
+  "tcgcsv": 23110,
+  "name": "25th Anniversary Tin: Dueling Heroes"
+ },
+ "SDCK": {
+  "tcgcsv": 23207,
+  "name": "Structure Deck: The Crimson King"
+ },
+ "AGOV": {
+  "tcgcsv": 23231,
+  "name": "Age of Overlord"
+ },
+ "OP23": {
+  "tcgcsv": 23334,
+  "name": "OTS Tournament Pack 23"
+ },
+ "RA01": {
+  "tcgcsv": 23233,
+  "name": "25th Anniversary Rarity Collection"
+ },
+ "VASM": {
+  "tcgcsv": 23284,
+  "name": "Valiant Smashers"
+ },
+ "SR14": {
+  "tcgcsv": 23310,
+  "name": "Structure Deck: Fire Kings"
+ },
+ "MZMI": {
+  "tcgcsv": 23315,
+  "name": "Maze of Millennia"
+ },
+ "STAS": {
+  "tcgcsv": 23269,
+  "name": "2-Player Starter Set"
+ },
+ "PHNI": {
+  "tcgcsv": 23321,
+  "name": "Phantom Nightmare"
+ },
+ "LART": {
+  "tcgcsv": 2196,
+  "name": "The Lost Art Promotion"
+ },
+ "OP24": {
+  "tcgcsv": 23427,
+  "name": "OTS Tournament Pack 24"
+ },
+ "BLC1": {
+  "tcgcsv": 23314,
+  "name": "Battles of Legend: Chapter 1"
+ },
+ "KC01": {
+  "tcgcsv": 23366,
+  "name": "25th Anniversary Ultimate Kaiba Set"
+ },
+ "LEDE": {
+  "tcgcsv": 23383,
+  "name": "Legacy of Destruction"
+ },
+ "RA02": {
+  "tcgcsv": 23416,
+  "name": "25th Anniversary Rarity Collection II"
+ },
+ "OP25": {
+  "tcgcsv": 23535,
+  "name": "OTS Tournament Pack 25"
+ },
+ "BLTR": {
+  "tcgcsv": 23441,
+  "name": "Battles of Legend: Terminal Revenge"
+ },
+ "INFO": {
+  "tcgcsv": 23458,
+  "name": "The Infinite Forbidden"
+ },
+ "MP24": {
+  "tcgcsv": 23481,
+  "name": "25th Anniversary Tin: Dueling Mirrors"
+ },
+ "ROTA": {
+  "tcgcsv": 23539,
+  "name": "Rage of the Abyss"
+ },
+ "OP26": {
+  "tcgcsv": 23657,
+  "name": "OTS Tournament Pack 26"
+ },
+ "RA03": {
+  "tcgcsv": 23656,
+  "name": "Quarter Century Bonanza"
+ },
+ "CRBR": {
+  "tcgcsv": 23653,
+  "name": "Crossover Breakers"
+ },
+ "SUDA": {
+  "tcgcsv": 23758,
+  "name": "Supreme Darkness"
+ },
+ "SDWD": {
+  "tcgcsv": 23768,
+  "name": "Structure Deck: Blue-Eyes White Destiny"
+ },
+ "OP27": {
+  "tcgcsv": 23786,
+  "name": "OTS Tournament Pack 27"
+ },
+ "MZTM": {
+  "tcgcsv": 23849,
+  "name": "Maze of the Master"
+ },
+ "RA04": {
+  "tcgcsv": 23891,
+  "name": "Quarter Century Stampede"
+ },
+ "ALIN": {
+  "tcgcsv": 23995,
+  "name": "Alliance Insight"
+ },
+ "OP28": {
+  "tcgcsv": 24264,
+  "name": "OTS Tournament Pack 28"
+ },
+ "DUAD": {
+  "tcgcsv": 24265,
+  "name": "Duelist's Advance"
+ },
+ "JUSH": {
+  "tcgcsv": 24320,
+  "name": "Justice Hunters"
+ },
+ "BLMM": {
+  "tcgcsv": 24263,
+  "name": "Battles of Legend: Monster Mayhem"
+ },
+ "25LP": {
+  "tcgcsv": 24353,
+  "name": "Limited Pack World Championship 2025"
+ },
+ "MP25": {
+  "tcgcsv": 24308,
+  "name": "2025 Mega-Pack"
+ },
+ "DOOD": {
+  "tcgcsv": 24357,
+  "name": "Doom of Dimensions"
+ },
+ "OP29": {
+  "tcgcsv": 24358,
+  "name": "OTS Tournament Pack 29"
+ },
+ "CH01": {
+  "tcgcsv": 24392,
+  "name": "THE CHRONICLES DECK: The Fallen & The Virtuous (All-Foil Edition)"
+ },
+ "L5DD": {
+  "tcgcsv": 24396,
+  "name": "Legendary 5D's Decks"
+ },
+ "PHRE": {
+  "tcgcsv": 24475,
+  "name": "Phantom Revenge"
+ },
+ "CH02": {
+  "tcgcsv": 24486,
+  "name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)"
+ },
+ "BPRO": {
+  "tcgcsv": 24558,
+  "name": "Burst Protocol"
+ },
+ "OP30": {
+  "tcgcsv": 24542,
+  "name": "OTS Tournament Pack 30"
+ },
+ "MZMU": {
+  "tcgcsv": 24559,
+  "name": "Maze of Muertos"
+ },
+ "RA05": {
+  "tcgcsv": 24555,
+  "name": "Rarity Collection 5"
+ },
+ "L26D": {
+  "tcgcsv": 24549,
+  "name": "Legendary Modern Decks 2026"
+ },
+ "BLZD": {
+  "tcgcsv": 24581,
+  "name": "Blazing Dominion"
+ },
+ "MAMO": {
+  "tcgcsv": 24707,
+  "name": "Magnificent Monsters"
+ }
+}

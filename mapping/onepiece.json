@@ -1,0 +1,206 @@
+{
+ "PRB02": {
+  "tcgcsv": 24305,
+  "name": "Premium Booster -The Best- Vol. 2"
+ },
+ "PRB01": {
+  "tcgcsv": 23496,
+  "name": "Premium Booster -The Best-"
+ },
+ "EB03": {
+  "tcgcsv": 24545,
+  "name": "Extra Booster: One Piece Heroines Edition"
+ },
+ "EB02": {
+  "tcgcsv": 23834,
+  "name": "Extra Booster: Anime 25th Collection"
+ },
+ "EB01": {
+  "tcgcsv": 23333,
+  "name": "Extra Booster: Memorial Collection"
+ },
+ "OP16": {
+  "tcgcsv": 24664,
+  "name": "The Time of Battle"
+ },
+ "OP15": {
+  "tcgcsv": 24637,
+  "name": "Adventure on Kami's Island"
+ },
+ "OP14": {
+  "tcgcsv": 24537,
+  "name": "The Azure Sea's Seven"
+ },
+ "OP13": {
+  "tcgcsv": 24303,
+  "name": "Carrying On His Will"
+ },
+ "OP12": {
+  "tcgcsv": 24302,
+  "name": "Legacy of the Master"
+ },
+ "OP11": {
+  "tcgcsv": 24241,
+  "name": "A Fist of Divine Speed"
+ },
+ "OP10": {
+  "tcgcsv": 23766,
+  "name": "Royal Blood"
+ },
+ "OP09": {
+  "tcgcsv": 23589,
+  "name": "Emperors in the New World"
+ },
+ "OP08": {
+  "tcgcsv": 23462,
+  "name": "Two Legends"
+ },
+ "OP07": {
+  "tcgcsv": 23387,
+  "name": "500 Years in the Future"
+ },
+ "OP06": {
+  "tcgcsv": 23272,
+  "name": "Wings of the Captain"
+ },
+ "OP05": {
+  "tcgcsv": 23213,
+  "name": "Awakening of the New Era"
+ },
+ "OP04": {
+  "tcgcsv": 23024,
+  "name": "Kingdoms of Intrigue"
+ },
+ "OP03": {
+  "tcgcsv": 22890,
+  "name": "Pillars of Strength"
+ },
+ "OP02": {
+  "tcgcsv": 17698,
+  "name": "Paramount War"
+ },
+ "OP01": {
+  "tcgcsv": 3188,
+  "name": "Romance Dawn"
+ },
+ "ST30": {
+  "tcgcsv": 24678,
+  "name": "Starter Deck EX: Luffy & Ace"
+ },
+ "ST29": {
+  "tcgcsv": 24575,
+  "name": "Starter Deck 29: Egghead"
+ },
+ "ST28": {
+  "tcgcsv": 24287,
+  "name": "Starter Deck 28: GREEN/YELLOW Yamato"
+ },
+ "ST27": {
+  "tcgcsv": 24286,
+  "name": "Starter Deck 27: BLACK Marshall.D.Teach"
+ },
+ "ST26": {
+  "tcgcsv": 24285,
+  "name": "Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy"
+ },
+ "ST25": {
+  "tcgcsv": 24284,
+  "name": "Starter Deck 25: BLUE Buggy"
+ },
+ "ST24": {
+  "tcgcsv": 24283,
+  "name": "Starter Deck 24: GREEN Jewelry Bonney"
+ },
+ "ST23": {
+  "tcgcsv": 24282,
+  "name": "Starter Deck 23: RED Shanks"
+ },
+ "ST22": {
+  "tcgcsv": 24304,
+  "name": "Starter Deck 22: Ace & Newgate"
+ },
+ "ST21": {
+  "tcgcsv": 23991,
+  "name": "Starter Deck EX: Gear 5"
+ },
+ "ST20": {
+  "tcgcsv": 23495,
+  "name": "Starter Deck 20: YELLOW Charlotte Katakuri"
+ },
+ "ST19": {
+  "tcgcsv": 23494,
+  "name": "Starter Deck 19: BLACK Smoker"
+ },
+ "ST18": {
+  "tcgcsv": 23493,
+  "name": "Starter Deck 18: PURPLE Monkey.D.Luffy"
+ },
+ "ST17": {
+  "tcgcsv": 23492,
+  "name": "Starter Deck 17: BLUE Donquixote Doflamingo"
+ },
+ "ST16": {
+  "tcgcsv": 23491,
+  "name": "Starter Deck 16: GREEN Uta"
+ },
+ "ST15": {
+  "tcgcsv": 23490,
+  "name": "Starter Deck 15: RED Edward.Newgate"
+ },
+ "ST14": {
+  "tcgcsv": 23489,
+  "name": "Starter Deck 14: 3D2Y"
+ },
+ "ST13": {
+  "tcgcsv": 23349,
+  "name": "Ultra Deck: The Three Brothers"
+ },
+ "ST12": {
+  "tcgcsv": 23348,
+  "name": "Starter Deck 12: Zoro and Sanji"
+ },
+ "ST11": {
+  "tcgcsv": 23250,
+  "name": "Starter Deck 11: Uta"
+ },
+ "ST10": {
+  "tcgcsv": 23243,
+  "name": "Ultra Deck: The Three Captains"
+ },
+ "ST09": {
+  "tcgcsv": 22957,
+  "name": "Starter Deck 9: Yamato"
+ },
+ "ST08": {
+  "tcgcsv": 22956,
+  "name": "Starter Deck 8: Monkey.D.Luffy"
+ },
+ "ST07": {
+  "tcgcsv": 22930,
+  "name": "Starter Deck 7: Big Mom Pirates"
+ },
+ "ST06": {
+  "tcgcsv": 17699,
+  "name": "Starter Deck 6: Absolute Justice"
+ },
+ "ST05": {
+  "tcgcsv": 17687,
+  "name": "Starter Deck 5: Film Edition"
+ },
+ "ST04": {
+  "tcgcsv": 3190,
+  "name": "Starter Deck 4: Animal Kingdom Pirates"
+ },
+ "ST03": {
+  "tcgcsv": 3192,
+  "name": "Starter Deck 3: The Seven Warlords of The Sea"
+ },
+ "ST02": {
+  "tcgcsv": 3191,
+  "name": "Starter Deck 2: Worst Generation"
+ },
+ "ST01": {
+  "tcgcsv": 3189,
+  "name": "Starter Deck 1: Straw Hat Crew"
+ }
+}

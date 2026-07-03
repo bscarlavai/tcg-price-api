@@ -1,0 +1,8 @@
+[
+  { "set": "PHNI", "number": "PHNI-EN008", "name": "Goblin Biker Dugg Charger", "finish": "headline", "min": 0.1, "max": 15,
+    "why": "base printing (Ultra Rare) headlines, not the chase variant" },
+  { "set": "PHNI", "number": "PHNI-EN008", "name": "Goblin Biker Dugg Charger QCSR", "variant": "Quarter Century Secret Rare", "min": 3, "max": 150,
+    "why": "rarity-variant printing served via `variants` map" },
+  { "set": "PHNI", "number": "PHNI-EN059", "name": "common", "finish": "headline", "min": 0.01, "max": 1.5,
+    "why": "verbatim set-prefixed number format (would catch zero-stripping regressions)" }
+]

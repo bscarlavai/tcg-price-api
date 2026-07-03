@@ -1,0 +1,678 @@
+{
+ "LEA": {
+  "tcgcsv": 7,
+  "name": "Alpha Edition"
+ },
+ "LEB": {
+  "tcgcsv": 17,
+  "name": "Beta Edition"
+ },
+ "2ED": {
+  "tcgcsv": 115,
+  "name": "Unlimited Edition"
+ },
+ "ARN": {
+  "tcgcsv": 11,
+  "name": "Arabian Nights"
+ },
+ "ATQ": {
+  "tcgcsv": 8,
+  "name": "Antiquities"
+ },
+ "3ED": {
+  "tcgcsv": 97,
+  "name": "Revised Edition"
+ },
+ "LEG": {
+  "tcgcsv": 65,
+  "name": "Legends"
+ },
+ "SUM": {
+  "tcgcsv": 2642,
+  "name": "Summer Magic"
+ },
+ "DRK": {
+  "tcgcsv": 109,
+  "name": "The Dark"
+ },
+ "FEM": {
+  "tcgcsv": 41,
+  "name": "Fallen Empires"
+ },
+ "4ED": {
+  "tcgcsv": 46,
+  "name": "Fourth Edition"
+ },
+ "ICE": {
+  "tcgcsv": 58,
+  "name": "Ice Age"
+ },
+ "CHR": {
+  "tcgcsv": 22,
+  "name": "Chronicles"
+ },
+ "REN": {
+  "tcgcsv": 2379,
+  "name": "Renaissance"
+ },
+ "HML": {
+  "tcgcsv": 57,
+  "name": "Homelands"
+ },
+ "ALL": {
+  "tcgcsv": 6,
+  "name": "Alliances"
+ },
+ "MIR": {
+  "tcgcsv": 74,
+  "name": "Mirage"
+ },
+ "VIS": {
+  "tcgcsv": 120,
+  "name": "Visions"
+ },
+ "5ED": {
+  "tcgcsv": 44,
+  "name": "Fifth Edition"
+ },
+ "POR": {
+  "tcgcsv": 86,
+  "name": "Portal"
+ },
+ "WTH": {
+  "tcgcsv": 121,
+  "name": "Weatherlight"
+ },
+ "TMP": {
+  "tcgcsv": 108,
+  "name": "Tempest"
+ },
+ "STH": {
+  "tcgcsv": 107,
+  "name": "Stronghold"
+ },
+ "EXO": {
+  "tcgcsv": 40,
+  "name": "Exodus"
+ },
+ "P02": {
+  "tcgcsv": 87,
+  "name": "Portal Second Age"
+ },
+ "UGL": {
+  "tcgcsv": 113,
+  "name": "Unglued"
+ },
+ "USG": {
+  "tcgcsv": 118,
+  "name": "Urza's Saga"
+ },
+ "ULG": {
+  "tcgcsv": 117,
+  "name": "Urza's Legacy"
+ },
+ "6ED": {
+  "tcgcsv": 23,
+  "name": "Classic Sixth Edition"
+ },
+ "PTK": {
+  "tcgcsv": 88,
+  "name": "Portal Three Kingdoms"
+ },
+ "UDS": {
+  "tcgcsv": 116,
+  "name": "Urza's Destiny"
+ },
+ "S99": {
+  "tcgcsv": 105,
+  "name": "Starter 1999"
+ },
+ "MMQ": {
+  "tcgcsv": 73,
+  "name": "Mercadian Masques"
+ },
+ "NEM": {
+  "tcgcsv": 78,
+  "name": "Nemesis"
+ },
+ "PCY": {
+  "tcgcsv": 94,
+  "name": "Prophecy"
+ },
+ "INV": {
+  "tcgcsv": 60,
+  "name": "Invasion"
+ },
+ "PLS": {
+  "tcgcsv": 85,
+  "name": "Planeshift"
+ },
+ "7ED": {
+  "tcgcsv": 2,
+  "name": "7th Edition"
+ },
+ "APC": {
+  "tcgcsv": 10,
+  "name": "Apocalypse"
+ },
+ "ODY": {
+  "tcgcsv": 80,
+  "name": "Odyssey"
+ },
+ "TOR": {
+  "tcgcsv": 112,
+  "name": "Torment"
+ },
+ "JUD": {
+  "tcgcsv": 63,
+  "name": "Judgment"
+ },
+ "ONS": {
+  "tcgcsv": 81,
+  "name": "Onslaught"
+ },
+ "LGN": {
+  "tcgcsv": 66,
+  "name": "Legions"
+ },
+ "SCG": {
+  "tcgcsv": 101,
+  "name": "Scourge"
+ },
+ "8ED": {
+  "tcgcsv": 3,
+  "name": "8th Edition"
+ },
+ "MRD": {
+  "tcgcsv": 75,
+  "name": "Mirrodin"
+ },
+ "DST": {
+  "tcgcsv": 27,
+  "name": "Darksteel"
+ },
+ "5DN": {
+  "tcgcsv": 43,
+  "name": "Fifth Dawn"
+ },
+ "CHK": {
+  "tcgcsv": 20,
+  "name": "Champions of Kamigawa"
+ },
+ "UNH": {
+  "tcgcsv": 114,
+  "name": "Unhinged"
+ },
+ "BOK": {
+  "tcgcsv": 18,
+  "name": "Betrayers of Kamigawa"
+ },
+ "SOK": {
+  "tcgcsv": 99,
+  "name": "Saviors of Kamigawa"
+ },
+ "9ED": {
+  "tcgcsv": 4,
+  "name": "9th Edition"
+ },
+ "RAV": {
+  "tcgcsv": 95,
+  "name": "Ravnica: City of Guilds"
+ },
+ "GPT": {
+  "tcgcsv": 55,
+  "name": "Guildpact"
+ },
+ "DIS": {
+  "tcgcsv": 28,
+  "name": "Dissension"
+ },
+ "CSP": {
+  "tcgcsv": 24,
+  "name": "Coldsnap"
+ },
+ "TSP": {
+  "tcgcsv": 110,
+  "name": "Time Spiral"
+ },
+ "PLC": {
+  "tcgcsv": 83,
+  "name": "Planar Chaos"
+ },
+ "FUT": {
+  "tcgcsv": 51,
+  "name": "Future Sight"
+ },
+ "10E": {
+  "tcgcsv": 1,
+  "name": "10th Edition"
+ },
+ "LRW": {
+  "tcgcsv": 67,
+  "name": "Lorwyn"
+ },
+ "MOR": {
+  "tcgcsv": 77,
+  "name": "Morningtide"
+ },
+ "SHM": {
+  "tcgcsv": 102,
+  "name": "Shadowmoor"
+ },
+ "EVE": {
+  "tcgcsv": 39,
+  "name": "Eventide"
+ },
+ "ALA": {
+  "tcgcsv": 103,
+  "name": "Shards of Alara"
+ },
+ "CON": {
+  "tcgcsv": 26,
+  "name": "Conflux"
+ },
+ "ARB": {
+  "tcgcsv": 5,
+  "name": "Alara Reborn"
+ },
+ "M10": {
+  "tcgcsv": 68,
+  "name": "Magic 2010 (M10)"
+ },
+ "ZEN": {
+  "tcgcsv": 124,
+  "name": "Zendikar"
+ },
+ "WWK": {
+  "tcgcsv": 122,
+  "name": "Worldwake"
+ },
+ "ROE": {
+  "tcgcsv": 98,
+  "name": "Rise of the Eldrazi"
+ },
+ "M11": {
+  "tcgcsv": 69,
+  "name": "Magic 2011 (M11)"
+ },
+ "SOM": {
+  "tcgcsv": 100,
+  "name": "Scars of Mirrodin"
+ },
+ "MBS": {
+  "tcgcsv": 76,
+  "name": "Mirrodin Besieged"
+ },
+ "NPH": {
+  "tcgcsv": 79,
+  "name": "New Phyrexia"
+ },
+ "M12": {
+  "tcgcsv": 70,
+  "name": "Magic 2012 (M12)"
+ },
+ "ISD": {
+  "tcgcsv": 59,
+  "name": "Innistrad"
+ },
+ "DKA": {
+  "tcgcsv": 125,
+  "name": "Dark Ascension"
+ },
+ "AVR": {
+  "tcgcsv": 362,
+  "name": "Avacyn Restored"
+ },
+ "M13": {
+  "tcgcsv": 364,
+  "name": "Magic 2013 (M13)"
+ },
+ "RTR": {
+  "tcgcsv": 370,
+  "name": "Return to Ravnica"
+ },
+ "GTC": {
+  "tcgcsv": 569,
+  "name": "Gatecrash"
+ },
+ "DGM": {
+  "tcgcsv": 570,
+  "name": "Dragon's Maze"
+ },
+ "MMA": {
+  "tcgcsv": 1111,
+  "name": "Modern Masters"
+ },
+ "M14": {
+  "tcgcsv": 1113,
+  "name": "Magic 2014 (M14)"
+ },
+ "THS": {
+  "tcgcsv": 1144,
+  "name": "Theros"
+ },
+ "BNG": {
+  "tcgcsv": 1276,
+  "name": "Born of the Gods"
+ },
+ "JOU": {
+  "tcgcsv": 1277,
+  "name": "Journey Into Nyx"
+ },
+ "CNS": {
+  "tcgcsv": 1312,
+  "name": "Conspiracy"
+ },
+ "M15": {
+  "tcgcsv": 1293,
+  "name": "Magic 2015 (M15)"
+ },
+ "KTK": {
+  "tcgcsv": 1356,
+  "name": "Khans of Tarkir"
+ },
+ "FRF": {
+  "tcgcsv": 1497,
+  "name": "Fate Reforged"
+ },
+ "DTK": {
+  "tcgcsv": 1515,
+  "name": "Dragons of Tarkir"
+ },
+ "MM2": {
+  "tcgcsv": 1503,
+  "name": "Modern Masters 2015"
+ },
+ "ORI": {
+  "tcgcsv": 1512,
+  "name": "Magic Origins"
+ },
+ "BFZ": {
+  "tcgcsv": 1645,
+  "name": "Battle for Zendikar"
+ },
+ "OGW": {
+  "tcgcsv": 1693,
+  "name": "Oath of the Gatewatch"
+ },
+ "SOI": {
+  "tcgcsv": 1708,
+  "name": "Shadows over Innistrad"
+ },
+ "EMA": {
+  "tcgcsv": 1740,
+  "name": "Eternal Masters"
+ },
+ "EMN": {
+  "tcgcsv": 1790,
+  "name": "Eldritch Moon"
+ },
+ "CN2": {
+  "tcgcsv": 1794,
+  "name": "Conspiracy: Take the Crown"
+ },
+ "KLD": {
+  "tcgcsv": 1791,
+  "name": "Kaladesh"
+ },
+ "AER": {
+  "tcgcsv": 1857,
+  "name": "Aether Revolt"
+ },
+ "MM3": {
+  "tcgcsv": 1879,
+  "name": "Modern Masters 2017"
+ },
+ "AKH": {
+  "tcgcsv": 1882,
+  "name": "Amonkhet"
+ },
+ "HOU": {
+  "tcgcsv": 1934,
+  "name": "Hour of Devastation"
+ },
+ "XLN": {
+  "tcgcsv": 2043,
+  "name": "Ixalan"
+ },
+ "IMA": {
+  "tcgcsv": 2050,
+  "name": "Iconic Masters"
+ },
+ "UST": {
+  "tcgcsv": 2092,
+  "name": "Unstable"
+ },
+ "RIX": {
+  "tcgcsv": 2098,
+  "name": "Rivals of Ixalan"
+ },
+ "A25": {
+  "tcgcsv": 2189,
+  "name": "Masters 25"
+ },
+ "DOM": {
+  "tcgcsv": 2199,
+  "name": "Dominaria"
+ },
+ "BBD": {
+  "tcgcsv": 2245,
+  "name": "Battlebond"
+ },
+ "M19": {
+  "tcgcsv": 2250,
+  "name": "Core Set 2019"
+ },
+ "GRN": {
+  "tcgcsv": 2290,
+  "name": "Guilds of Ravnica"
+ },
+ "UMA": {
+  "tcgcsv": 2360,
+  "name": "Ultimate Masters"
+ },
+ "RNA": {
+  "tcgcsv": 2366,
+  "name": "Ravnica Allegiance"
+ },
+ "WAR": {
+  "tcgcsv": 2418,
+  "name": "War of the Spark"
+ },
+ "MH1": {
+  "tcgcsv": 2422,
+  "name": "Modern Horizons"
+ },
+ "M20": {
+  "tcgcsv": 2441,
+  "name": "Core Set 2020"
+ },
+ "ELD": {
+  "tcgcsv": 2494,
+  "name": "Throne of Eldraine"
+ },
+ "THB": {
+  "tcgcsv": 2568,
+  "name": "Theros Beyond Death"
+ },
+ "IKO": {
+  "tcgcsv": 2603,
+  "name": "Ikoria: Lair of Behemoths"
+ },
+ "M21": {
+  "tcgcsv": 2653,
+  "name": "Core Set 2021"
+ },
+ "JMP": {
+  "tcgcsv": 2654,
+  "name": "Jumpstart"
+ },
+ "2XM": {
+  "tcgcsv": 2655,
+  "name": "Double Masters"
+ },
+ "ZNR": {
+  "tcgcsv": 2648,
+  "name": "Zendikar Rising"
+ },
+ "CMR": {
+  "tcgcsv": 2708,
+  "name": "Commander Legends"
+ },
+ "KHM": {
+  "tcgcsv": 2750,
+  "name": "Kaldheim"
+ },
+ "TSR": {
+  "tcgcsv": 2772,
+  "name": "Time Spiral: Remastered"
+ },
+ "STX": {
+  "tcgcsv": 2773,
+  "name": "Strixhaven: School of Mages"
+ },
+ "MH2": {
+  "tcgcsv": 2809,
+  "name": "Modern Horizons 2"
+ },
+ "AFR": {
+  "tcgcsv": 2823,
+  "name": "Adventures in the Forgotten Realms"
+ },
+ "MID": {
+  "tcgcsv": 2864,
+  "name": "Innistrad: Midnight Hunt"
+ },
+ "VOW": {
+  "tcgcsv": 2862,
+  "name": "Innistrad: Crimson Vow"
+ },
+ "DBL": {
+  "tcgcsv": 2942,
+  "name": "Innistrad: Double Feature"
+ },
+ "NEO": {
+  "tcgcsv": 2965,
+  "name": "Kamigawa: Neon Dynasty"
+ },
+ "SNC": {
+  "tcgcsv": 3026,
+  "name": "Streets of New Capenna"
+ },
+ "CLB": {
+  "tcgcsv": 3047,
+  "name": "Commander Legends: Battle for Baldur's Gate"
+ },
+ "2X2": {
+  "tcgcsv": 3070,
+  "name": "Double Masters 2022"
+ },
+ "DMU": {
+  "tcgcsv": 3102,
+  "name": "Dominaria United"
+ },
+ "UNF": {
+  "tcgcsv": 2958,
+  "name": "Unfinity"
+ },
+ "BRO": {
+  "tcgcsv": 3157,
+  "name": "The Brothers' War"
+ },
+ "J22": {
+  "tcgcsv": 3185,
+  "name": "Jumpstart 2022"
+ },
+ "DMR": {
+  "tcgcsv": 17670,
+  "name": "Dominaria Remastered"
+ },
+ "ONE": {
+  "tcgcsv": 17684,
+  "name": "Phyrexia: All Will Be One"
+ },
+ "MOM": {
+  "tcgcsv": 22875,
+  "name": "March of the Machine"
+ },
+ "MAT": {
+  "tcgcsv": 22876,
+  "name": "March of the Machine: The Aftermath"
+ },
+ "CMM": {
+  "tcgcsv": 23020,
+  "name": "Commander Masters"
+ },
+ "WOE": {
+  "tcgcsv": 23163,
+  "name": "Wilds of Eldraine"
+ },
+ "LCI": {
+  "tcgcsv": 23312,
+  "name": "The Lost Caverns of Ixalan"
+ },
+ "RVR": {
+  "tcgcsv": 23319,
+  "name": "Ravnica Remastered"
+ },
+ "MKM": {
+  "tcgcsv": 23361,
+  "name": "Murders at Karlov Manor"
+ },
+ "CLU": {
+  "tcgcsv": 23362,
+  "name": "Ravnica: Clue Edition"
+ },
+ "OTJ": {
+  "tcgcsv": 23439,
+  "name": "Outlaws of Thunder Junction"
+ },
+ "MH3": {
+  "tcgcsv": 23444,
+  "name": "Modern Horizons 3"
+ },
+ "BLB": {
+  "tcgcsv": 23447,
+  "name": "Bloomburrow"
+ },
+ "MB2": {
+  "tcgcsv": 23580,
+  "name": "Mystery Booster 2"
+ },
+ "DSK": {
+  "tcgcsv": 23550,
+  "name": "Duskmourn: House of Horror"
+ },
+ "FDN": {
+  "tcgcsv": 23556,
+  "name": "Foundations"
+ },
+ "J25": {
+  "tcgcsv": 23792,
+  "name": "Foundations Jumpstart"
+ },
+ "INR": {
+  "tcgcsv": 23848,
+  "name": "Innistrad Remastered"
+ },
+ "DFT": {
+  "tcgcsv": 23874,
+  "name": "Aetherdrift"
+ },
+ "TDM": {
+  "tcgcsv": 24232,
+  "name": "Tarkir: Dragonstorm"
+ },
+ "EOE": {
+  "tcgcsv": 24233,
+  "name": "Edge of Eternities"
+ },
+ "ECL": {
+  "tcgcsv": 24463,
+  "name": "Lorwyn Eclipsed"
+ },
+ "SOS": {
+  "tcgcsv": 24601,
+  "name": "Secrets of Strixhaven"
+ }
+}

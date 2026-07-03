@@ -10,6 +10,7 @@ export const FINISHES = [
   'firstEditionHolo',
   'unlimited',
   'unlimitedHolo',
+  'limited',
   'foil',
 ];
 
@@ -25,14 +26,16 @@ export const TCGCSV_SUBTYPES = {
   'Unlimited': 'unlimited',
   'Unlimited Normal': 'unlimited',
   'Unlimited Holofoil': 'unlimitedHolo',
+  'Limited': 'limited',
   'Foil': 'foil',
+  'Cold Foil': 'foil',
 };
 
 // Which finish is the headline (top-level market/low in the set blob) when an app shows
 // one number. First present wins.
 export const DEFAULT_FINISH_ORDER = {
   pokemon:  ['normal', 'holo', 'reverseHolo', 'unlimited', 'unlimitedHolo', 'firstEdition', 'firstEditionHolo'],
-  yugioh:   ['normal', 'unlimited', 'firstEdition', 'foil'],
+  yugioh:   ['normal', 'unlimited', 'firstEdition', 'limited', 'foil'],
   magic:    ['normal', 'foil'],
   onepiece: ['normal', 'foil'],
   lorcana:  ['normal', 'foil'],

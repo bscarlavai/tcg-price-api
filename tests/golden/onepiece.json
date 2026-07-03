@@ -1,0 +1,8 @@
+[
+  { "set": "ST05", "number": "ST05-001", "name": "Shanks (Leader)", "finish": "headline", "min": 0.05, "max": 30,
+    "why": "verbatim dash number format; starter-deck leader" },
+  { "set": "OP01", "number": "OP01-001", "name": "Roronoa Zoro (Leader)", "finish": "headline", "min": 0.05, "max": 50,
+    "why": "main-set mapping" },
+  { "set": "OP01", "number": "OP01-003", "name": "Monkey.D.Luffy Parallel", "variant": "Parallel", "min": 20, "max": 5000,
+    "why": "parallel-art printing served via `variants` (number-paren stripped from name)" }
+]

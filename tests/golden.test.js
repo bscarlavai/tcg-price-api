@@ -1,26 +1,41 @@
 // Golden contract tests (DESIGN.md §6): any active source adapter must reproduce these
 // known cards within tolerances. Network test against the live source — run via
 // `npm run golden`. Ranges are deliberately wide; they catch mapping/normalization
-// breakage (wrong set, wrong number, wrong finish, cents/dollars slip), not market drift.
+// breakage (wrong set, wrong number, wrong finish/variant, cents/dollars slip), not
+// market drift.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fetchSetRows } from '../ingest/sources/tcgcsv.js';
 import { buildSetBlob } from '../ingest/lib/normalize.js';
 
-const GOLDEN = JSON.parse(readFileSync(new URL('./golden/pokemon.json', import.meta.url), 'utf8'));
-const mapping = JSON.parse(readFileSync(new URL('../mapping/pokemon.json', import.meta.url), 'utf8'));
+const goldenDir = new URL('./golden/', import.meta.url);
+const blobCache = new Map();
+async function blobFor(game, set) {
+  const key = `${game}:${set}`;
+  if (!blobCache.has(key)) {
+    const mapping = JSON.parse(readFileSync(new URL(`../mapping/${game}.json`, import.meta.url), 'utf8'));
+    const groupIds = [mapping[set].tcgcsv].flat();
+    const rows = (await Promise.all(groupIds.map((id) => fetchSetRows(game, id, {})))).flat();
+    blobCache.set(key, buildSetBlob(game, set, rows, {}, 'test'));
+  }
+  return blobCache.get(key);
+}
 
-for (const g of GOLDEN) {
-  test(`pokemon ${g.set} #${g.number} ${g.name} (${g.finish})`, async () => {
-    const rows = await fetchSetRows('pokemon', mapping[g.set].tcgcsv, {});
-    const blob = buildSetBlob('pokemon', g.set, rows, {}, 'test');
-    const card = blob.cards[g.number];
-    assert.ok(card, `card ${g.number} missing from ${g.set}`);
-    const price = g.finish === 'headline' ? card : card.finishes?.[g.finish];
-    assert.ok(price, `finish ${g.finish} missing on ${g.set}#${g.number}`);
-    assert.ok(price.market >= g.min && price.market <= g.max,
-      `market ${price.market} outside [${g.min}, ${g.max}]`);
-  });
+for (const file of readdirSync(goldenDir).filter((f) => f.endsWith('.json'))) {
+  const game = file.replace('.json', '');
+  for (const g of JSON.parse(readFileSync(new URL(file, goldenDir), 'utf8'))) {
+    test(`${game} ${g.set} ${g.number ?? g.byName} ${g.name} (${g.variant ?? g.finish})`, async () => {
+      const blob = await blobFor(game, g.set);
+      const card = g.byName ? blob.byName?.[g.byName] : blob.cards[g.number];
+      assert.ok(card, `card ${g.number ?? g.byName} missing from ${game}:${g.set}`);
+      const price = g.variant ? card.variants?.[g.variant]
+        : g.finish === 'headline' ? card
+        : card.finishes?.[g.finish];
+      assert.ok(price, `${g.variant ?? g.finish} missing on ${game}:${g.set} ${g.number ?? g.byName}`);
+      assert.ok(price.market >= g.min && price.market <= g.max,
+        `market ${price.market} outside [${g.min}, ${g.max}]`);
+    });
+  }
 }

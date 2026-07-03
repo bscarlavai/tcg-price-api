@@ -1,0 +1,6 @@
+[
+  { "set": "1", "number": "42", "name": "The First Chapter #42", "finish": "headline", "min": 0.2, "max": 40,
+    "why": "slash-suffix number normalization (157/204 → 157 style)" },
+  { "set": "1", "number": "42", "name": "The First Chapter #42 foil", "finish": "foil", "min": 2, "max": 400,
+    "why": "Cold Foil subtype mapped to canonical `foil` (riplist scanner needs this)" }
+]

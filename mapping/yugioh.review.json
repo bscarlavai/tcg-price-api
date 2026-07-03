@@ -1,0 +1,1159 @@
+[
+ {
+  "id": "JMP",
+  "name": "Shonen Jump Vol. 1, Issue 1 promotional card",
+  "abbrevs": [
+   "JMP"
+  ],
+  "date": "2002-11-26",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL1",
+  "name": "Duelist League Series 1 participation cards",
+  "abbrevs": [
+   "DL1"
+  ],
+  "date": "2003-01-01",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 2
+  }
+ },
+ {
+  "id": "EM1",
+  "name": "Yu-Gi-Oh! Trading Card Game Tour 2004 promotional card",
+  "abbrevs": [
+   "EM1"
+  ],
+  "date": "2004-06-19",
+  "bestGuess": {
+   "groupId": 357,
+   "name": "Yu-Gi-Oh! Movie Exclusive Pack",
+   "score": 1
+  }
+ },
+ {
+  "id": "WCS",
+  "name": "Yu-Gi-Oh! World Championship 2004 prize cards",
+  "abbrevs": [
+   "WCS"
+  ],
+  "date": "2004-07-25",
+  "bestGuess": {
+   "groupId": 279,
+   "name": "Shonen Jump Championship Series Prize Cards",
+   "score": 1.57
+  }
+ },
+ {
+  "id": "DL6",
+  "name": "Duelist League Series 6 participation card",
+  "abbrevs": [
+   "DL6"
+  ],
+  "date": "2004-12-01",
+  "bestGuess": {
+   "groupId": 280,
+   "name": "Shonen Jump Championship Series Promos",
+   "score": 1.25
+  }
+ },
+ {
+  "id": "SJC",
+  "name": "Shonen Jump Championship 2004 Prize Card",
+  "abbrevs": [
+   "SJC"
+  ],
+  "date": "2004-12-04",
+  "bestGuess": {
+   "groupId": 280,
+   "name": "Shonen Jump Championship Series Promos",
+   "score": 1.86
+  }
+ },
+ {
+  "id": "DL7",
+  "name": "Duelist League Series 7 participation card",
+  "abbrevs": [
+   "DL7"
+  ],
+  "date": "2005-04-01",
+  "bestGuess": {
+   "groupId": 282,
+   "name": "Sneak Preview Series 1",
+   "score": 1.29
+  }
+ },
+ {
+  "id": "DL8",
+  "name": "Duelist League Series 8 participation card",
+  "abbrevs": [
+   "DL8"
+  ],
+  "date": "2005-06-30",
+  "bestGuess": {
+   "groupId": 164,
+   "name": "Dark Beginning 2",
+   "score": 1
+  }
+ },
+ {
+  "id": "TYL",
+  "name": "Make-A-Wish Foundation promotional card",
+  "abbrevs": [
+   "TYL"
+  ],
+  "date": "2005-08-05",
+  "bestGuess": {
+   "groupId": 128,
+   "name": "2005 Collectors Tin",
+   "score": 1
+  }
+ },
+ {
+  "id": "PT1",
+  "name": "Pharaoh Tour 2005 promotional cards",
+  "abbrevs": [
+   "PT1"
+  ],
+  "date": "2005-12-17",
+  "bestGuess": {
+   "groupId": 313,
+   "name": "Structure Deck: Spellcaster's Judgment",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL9",
+  "name": "Duelist League Series 9 participation card",
+  "abbrevs": [
+   "DL9"
+  ],
+  "date": "2006-01-03",
+  "bestGuess": {
+   "groupId": 233,
+   "name": "Hobby League 2",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "GSE",
+  "name": "Yu-Gi-Oh! GX Special Edition",
+  "abbrevs": [
+   "GSE"
+  ],
+  "date": "2006-04-01",
+  "bestGuess": {
+   "groupId": 195,
+   "name": "Duelist Pack Special Edition",
+   "score": 1.8
+  }
+ },
+ {
+  "id": "DL10",
+  "name": "Duelist League Series 10 participation card",
+  "abbrevs": [
+   "DL10"
+  ],
+  "date": "2006-04-28",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL2",
+  "name": "Duelist League Series 2 participation cards",
+  "abbrevs": [
+   "DL2"
+  ],
+  "date": "2006-04-28",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL3",
+  "name": "Duelist League Series 3 participation card",
+  "abbrevs": [
+   "DL3"
+  ],
+  "date": "2006-04-28",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL4",
+  "name": "Duelist League Series 4 participation card",
+  "abbrevs": [
+   "DL4"
+  ],
+  "date": "2006-04-28",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL5",
+  "name": "Duelist League Series 5 participation card",
+  "abbrevs": [
+   "DL5"
+  ],
+  "date": "2006-04-28",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 1
+  }
+ },
+ {
+  "id": "SP2",
+  "name": "Enemy of Justice Sneak Peek Participation Card",
+  "abbrevs": [
+   "SP2"
+  ],
+  "date": "2006-05-13",
+  "bestGuess": {
+   "groupId": 201,
+   "name": "Enemy of Justice",
+   "score": 2.2
+  }
+ },
+ {
+  "id": "TKN1",
+  "name": "San Diego Comic-Con promotional cards",
+  "abbrevs": [
+   "TKN1"
+  ],
+  "date": "2006-07-20",
+  "bestGuess": {
+   "groupId": 1317,
+   "name": "Mattel Action Figure Promos: Series 2",
+   "score": 1
+  }
+ },
+ {
+  "id": "PT02",
+  "name": "Pharaoh Tour 2006 promotional cards",
+  "abbrevs": [
+   "PT02"
+  ],
+  "date": "2006-10-28",
+  "bestGuess": {
+   "groupId": 254,
+   "name": "McDonald's Promo Series 2",
+   "score": 1
+  }
+ },
+ {
+  "id": "SP02",
+  "name": "Cyberdark Impact Sneak Peek Participation Card",
+  "abbrevs": [
+   "SP02"
+  ],
+  "date": "2006-11-04",
+  "bestGuess": {
+   "groupId": 159,
+   "name": "Cyberdark Impact",
+   "score": 2
+  }
+ },
+ {
+  "id": "WCPS",
+  "name": "Yu-Gi-Oh! World Championship 2007 prize cards",
+  "abbrevs": [
+   "WCPS"
+  ],
+  "date": "2007-07-28",
+  "bestGuess": {
+   "groupId": 348,
+   "name": "World Championship 2007",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "PT03",
+  "name": "Pharaoh Tour 2007 promotional cards",
+  "abbrevs": [
+   "PT03"
+  ],
+  "date": "2007-10-13",
+  "bestGuess": {
+   "groupId": 130,
+   "name": "2007 Collectors Tin",
+   "score": 1.4
+  }
+ },
+ {
+  "id": "YG01",
+  "name": "Yu-Gi-Oh! GX Volume 1 promotional card",
+  "abbrevs": [
+   "YG01"
+  ],
+  "date": "2007-11-06",
+  "bestGuess": {
+   "groupId": 266,
+   "name": "Premium Pack 1",
+   "score": 1.4
+  }
+ },
+ {
+  "id": "YDB1",
+  "name": "Yu-Gi-Oh! GX Card Almanac promotional cards",
+  "abbrevs": [
+   "YDB1"
+  ],
+  "date": "2007-11-30",
+  "bestGuess": {
+   "groupId": 1280,
+   "name": "GX Next Generation Blister Pack Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "JUMP",
+  "name": "Limited Edition 1",
+  "abbrevs": [
+   "JUMP"
+  ],
+  "date": "2008-01-16",
+  "bestGuess": {
+   "groupId": 247,
+   "name": "Light of Destruction",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG02",
+  "name": "Yu-Gi-Oh! GX Volume 2 promotional card",
+  "abbrevs": [
+   "YG02"
+  ],
+  "date": "2008-11-04",
+  "bestGuess": {
+   "groupId": 1304,
+   "name": "Anniversary Pack",
+   "score": 1
+  }
+ },
+ {
+  "id": "GX06",
+  "name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+  "abbrevs": [
+   "GX06"
+  ],
+  "date": "2008-11-28",
+  "bestGuess": {
+   "groupId": 222,
+   "name": "GX Tag Force Promo",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "YG03",
+  "name": "Yu-Gi-Oh! GX Volume 3 promotional card",
+  "abbrevs": [
+   "YG03"
+  ],
+  "date": "2009-06-02",
+  "bestGuess": {
+   "groupId": 184,
+   "name": "Duelist Pack: Yugi",
+   "score": 1
+  }
+ },
+ {
+  "id": "YR01",
+  "name": "Yu-Gi-Oh! R Volume 1 promotional card",
+  "abbrevs": [
+   "YR01"
+  ],
+  "date": "2009-06-10",
+  "bestGuess": {
+   "groupId": 184,
+   "name": "Duelist Pack: Yugi",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG04",
+  "name": "Yu-Gi-Oh! GX Volume 4 promotional card",
+  "abbrevs": [
+   "YG04"
+  ],
+  "date": "2010-01-05",
+  "bestGuess": {
+   "groupId": 141,
+   "name": "Absolute Powerforce",
+   "score": 1
+  }
+ },
+ {
+  "id": "WC10",
+  "name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+  "abbrevs": [
+   "WC10"
+  ],
+  "date": "2010-02-23",
+  "bestGuess": {
+   "groupId": 134,
+   "name": "2010 Duelist Pack Collection Tin",
+   "score": 1.17
+  }
+ },
+ {
+  "id": "YR04",
+  "name": "Yu-Gi-Oh! R Volume 4 promotional card",
+  "abbrevs": [
+   "YR04"
+  ],
+  "date": "2010-04-29",
+  "bestGuess": {
+   "groupId": 301,
+   "name": "Starter Deck: Duelist Toolbox",
+   "score": 1
+  }
+ },
+ {
+  "id": "YR05",
+  "name": "Yu-Gi-Oh! R Volume 5 promotional card",
+  "abbrevs": [
+   "YR05"
+  ],
+  "date": "2010-06-02",
+  "bestGuess": {
+   "groupId": 597,
+   "name": "Turbo Pack: Booster Three",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG05",
+  "name": "Yu-Gi-Oh! GX Volume 5 promotional card",
+  "abbrevs": [
+   "YG05"
+  ],
+  "date": "2010-10-05",
+  "bestGuess": {
+   "groupId": 290,
+   "name": "Starstrike Blast",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL11",
+  "name": "Duelist League 2 participation cards",
+  "abbrevs": [
+   "DL11"
+  ],
+  "date": "2010-12-01",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "JMPS",
+  "name": "Shonen Jump Scholastic Edition Vol. 9, Issue 1 promotional card",
+  "abbrevs": [
+   "JMPS"
+  ],
+  "date": "2011-01-01",
+  "bestGuess": {
+   "groupId": 1474,
+   "name": "Demo Pack",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG06",
+  "name": "Yu-Gi-Oh! GX Volume 6 promotional card",
+  "abbrevs": [
+   "YG06"
+  ],
+  "date": "2011-03-01",
+  "bestGuess": {
+   "groupId": 594,
+   "name": "Turbo Pack: Booster Five",
+   "score": 1
+  }
+ },
+ {
+  "id": "WQ11",
+  "name": "Yu-Gi-Oh! World Championship Qualifier National Championships 2011 prize cards",
+  "abbrevs": [
+   "WQ11"
+  ],
+  "date": "2011-05-01",
+  "bestGuess": {
+   "groupId": 136,
+   "name": "2011 Duelist Pack Tin",
+   "score": 1.2
+  }
+ },
+ {
+  "id": "DL12",
+  "name": "Duelist League 3 participation cards",
+  "abbrevs": [
+   "DL12"
+  ],
+  "date": "2011-06-01",
+  "bestGuess": {
+   "groupId": 186,
+   "name": "Duelist Pack 11: Crow",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YF01",
+  "name": "Yu-Gi-Oh! 5D's Volume 1 promotional card",
+  "abbrevs": [
+   "YF01"
+  ],
+  "date": "2011-07-06",
+  "bestGuess": {
+   "groupId": 352,
+   "name": "Yu-Gi-Oh! 5D's Manga Promotional Cards",
+   "score": 1.8
+  }
+ },
+ {
+  "id": "MOV2",
+  "name": "Yu-Gi-Oh! 3D Bonds Beyond Time DVD promotional card",
+  "abbrevs": [
+   "MOV2"
+  ],
+  "date": "2011-07-25",
+  "bestGuess": {
+   "groupId": 135,
+   "name": "2011 Collectors Tins",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG09",
+  "name": "Yu-Gi-Oh! GX Volume 9 promotional card",
+  "abbrevs": [
+   "YG09"
+  ],
+  "date": "2011-08-07",
+  "bestGuess": {
+   "groupId": 135,
+   "name": "2011 Collectors Tins",
+   "score": 1
+  }
+ },
+ {
+  "id": "YG07",
+  "name": "Yu-Gi-Oh! GX Volume 7 promotional card",
+  "abbrevs": [
+   "YG07"
+  ],
+  "date": "2011-08-18",
+  "bestGuess": {
+   "groupId": 135,
+   "name": "2011 Collectors Tins",
+   "score": 1
+  }
+ },
+ {
+  "id": "LCGX",
+  "name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+  "abbrevs": [
+   "LCGX"
+  ],
+  "date": "2011-10-04",
+  "bestGuess": {
+   "groupId": 318,
+   "name": "Structure Deck: Gates of the Underworld",
+   "score": 1.14
+  }
+ },
+ {
+  "id": "DL13",
+  "name": "Duelist League 13 participation cards",
+  "abbrevs": [
+   "DL13"
+  ],
+  "date": "2011-12-01",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YG08",
+  "name": "Yu-Gi-Oh! GX Volume 8 promotional card",
+  "abbrevs": [
+   "YG08"
+  ],
+  "date": "2012-01-03",
+  "bestGuess": {
+   "groupId": 1332,
+   "name": "Duel Terminal 6",
+   "score": 1
+  }
+ },
+ {
+  "id": "YF02",
+  "name": "Yu-Gi-Oh! 5D's Volume 2 promotional card",
+  "abbrevs": [
+   "YF02"
+  ],
+  "date": "2012-02-07",
+  "bestGuess": {
+   "groupId": 137,
+   "name": "2012 Premium Collection Tin",
+   "score": 1
+  }
+ },
+ {
+  "id": "H5SE",
+  "name": "Hidden Arsenal 5: Steelswarm Invasion: Special Edition",
+  "abbrevs": [
+   "H5SE"
+  ],
+  "date": "2012-03-30",
+  "bestGuess": {
+   "groupId": 228,
+   "name": "Hidden Arsenal 5: Steelswarm Invasion",
+   "score": 1.43
+  }
+ },
+ {
+  "id": "DL14",
+  "name": "Duelist League 14 participation cards",
+  "abbrevs": [
+   "DL14"
+  ],
+  "date": "2012-06-01",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YZ01",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 1 promotional card",
+  "abbrevs": [
+   "YZ01"
+  ],
+  "date": "2012-06-05",
+  "bestGuess": {
+   "groupId": 600,
+   "name": "Yu-Gi-Oh! ZEXAL Manga Promotional Cards",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "YF03",
+  "name": "Yu-Gi-Oh! 5D's Volume 3 promotional card",
+  "abbrevs": [
+   "YF03"
+  ],
+  "date": "2012-10-02",
+  "bestGuess": {
+   "groupId": 584,
+   "name": "Legendary Collection 3: Yugi's World",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "YZ02",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 2 promotional card",
+  "abbrevs": [
+   "YZ02"
+  ],
+  "date": "2012-12-04",
+  "bestGuess": {
+   "groupId": 1287,
+   "name": "Astral Pack 1",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL15",
+  "name": "Duelist League 15 participation cards",
+  "abbrevs": [
+   "DL15"
+  ],
+  "date": "2012-12-15",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YF04",
+  "name": "Yu-Gi-Oh! 5D's Volume 4 promotional card",
+  "abbrevs": [
+   "YF04"
+  ],
+  "date": "2013-04-02",
+  "bestGuess": {
+   "groupId": 1110,
+   "name": "Hidden Arsenal 7: Knight of Stars",
+   "score": 1
+  }
+ },
+ {
+  "id": "YZ03",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 3 promotional card",
+  "abbrevs": [
+   "YZ03"
+  ],
+  "date": "2013-06-04",
+  "bestGuess": {
+   "groupId": 1131,
+   "name": "Number Hunters",
+   "score": 1
+  }
+ },
+ {
+  "id": "DL16",
+  "name": "Duelist League 16 participation cards",
+  "abbrevs": [
+   "DL16"
+  ],
+  "date": "2013-07-01",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YF05",
+  "name": "Yu-Gi-Oh! 5D's Volume 5 promotional card",
+  "abbrevs": [
+   "YF05"
+  ],
+  "date": "2013-11-05",
+  "bestGuess": {
+   "groupId": 1157,
+   "name": "Legendary Collection 4: Joey's World",
+   "score": 1.22
+  }
+ },
+ {
+  "id": "DL17",
+  "name": "Duelist League 17 participation cards",
+  "abbrevs": [
+   "DL17"
+  ],
+  "date": "2013-12-13",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YZ04",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 4 promotional card",
+  "abbrevs": [
+   "YZ04"
+  ],
+  "date": "2014-01-07",
+  "bestGuess": {
+   "groupId": 1309,
+   "name": "Astral Pack 4",
+   "score": 1.4
+  }
+ },
+ {
+  "id": "WGRT",
+  "name": "War of the Giants Reinforcements",
+  "abbrevs": [
+   "WGRT"
+  ],
+  "date": "2014-01-17",
+  "bestGuess": {
+   "groupId": 1300,
+   "name": "Battle Pack 2: War of the Giants Round 2",
+   "score": 1.89
+  }
+ },
+ {
+  "id": "DL18",
+  "name": "Duelist League 18 participation cards",
+  "abbrevs": [
+   "DL18"
+  ],
+  "date": "2014-06-27",
+  "bestGuess": {
+   "groupId": 182,
+   "name": "Duelist League Promo",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YZ05",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 5 promotional card",
+  "abbrevs": [
+   "YZ05"
+  ],
+  "date": "2014-07-01",
+  "bestGuess": {
+   "groupId": 1479,
+   "name": "Astral Pack 5",
+   "score": 1.4
+  }
+ },
+ {
+  "id": "YF06",
+  "name": "Yu-Gi-Oh! 5D's Volume 6 promotional card",
+  "abbrevs": [
+   "YF06"
+  ],
+  "date": "2014-09-02",
+  "bestGuess": {
+   "groupId": 23186,
+   "name": "Advent Calendar 2014 (Adventskalender ZEXAL-Edition)",
+   "score": 1
+  }
+ },
+ {
+  "id": "LC5D",
+  "name": "Legendary Collection 5D's Mega Pack",
+  "abbrevs": [
+   "LC5D"
+  ],
+  "date": "2014-10-23",
+  "bestGuess": {
+   "groupId": 1491,
+   "name": "Legendary Collection 5D's",
+   "score": 2.33
+  }
+ },
+ {
+  "id": "YZ06",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 6 promotional card",
+  "abbrevs": [
+   "YZ06"
+  ],
+  "date": "2015-02-03",
+  "bestGuess": {
+   "groupId": 1513,
+   "name": "The Secret Forces",
+   "score": 1
+  }
+ },
+ {
+  "id": "YF07",
+  "name": "Yu-Gi-Oh! 5D's Volume 7 promotional card",
+  "abbrevs": [
+   "YF07"
+  ],
+  "date": "2015-03-03",
+  "bestGuess": {
+   "groupId": 2051,
+   "name": "Demo Deck 2015",
+   "score": 1
+  }
+ },
+ {
+  "id": "YS15",
+  "name": "2-Player Starter Deck: Yuya & Declan",
+  "abbrevs": [
+   "YS15"
+  ],
+  "date": "2015-05-28",
+  "bestGuess": {
+   "groupId": 1544,
+   "name": "Starter Deck: Dark Legion",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "YZ07",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 7 promotional card",
+  "abbrevs": [
+   "YZ07"
+  ],
+  "date": "2015-09-01",
+  "bestGuess": {
+   "groupId": 1659,
+   "name": "High-Speed Riders",
+   "score": 1
+  }
+ },
+ {
+  "id": "YF08",
+  "name": "Yu-Gi-Oh! 5D's volume 8 promotional card",
+  "abbrevs": [
+   "YF08"
+  ],
+  "date": "2015-10-06",
+  "bestGuess": {
+   "groupId": 1671,
+   "name": "Astral Pack 8",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YZ08",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 8 promotional card",
+  "abbrevs": [
+   "YZ08"
+  ],
+  "date": "2016-03-01",
+  "bestGuess": {
+   "groupId": 1743,
+   "name": "Yu-Gi-Oh! ZEXAL World Duel Carnival Promos",
+   "score": 1.29
+  }
+ },
+ {
+  "id": "YF09",
+  "name": "Yu-Gi-Oh! 5D's Volume 9 promotional card",
+  "abbrevs": [
+   "YF09"
+  ],
+  "date": "2016-04-05",
+  "bestGuess": {
+   "groupId": 1761,
+   "name": "Shining Victories",
+   "score": 1
+  }
+ },
+ {
+  "id": "YZ09",
+  "name": "Yu-Gi-Oh! ZEXAL Volume 9 promotional card",
+  "abbrevs": [
+   "YZ09"
+  ],
+  "date": "2016-09-06",
+  "bestGuess": {
+   "groupId": 1844,
+   "name": "The Dark Illusion: Special Edition (EU)",
+   "score": 1
+  }
+ },
+ {
+  "id": "MVPC",
+  "name": "Yu-Gi-Oh! The Dark Side of Dimensions Blu-ray & DVD promotional card",
+  "abbrevs": [
+   "MVPC"
+  ],
+  "date": "2017-05-29",
+  "bestGuess": {
+   "groupId": 1948,
+   "name": "Battles of Legend: Light's Revenge",
+   "score": 1.15
+  }
+ },
+ {
+  "id": "2017",
+  "name": "Yu-Gi-Oh! World Championship 2017 prize cards",
+  "abbrevs": [
+   "2017"
+  ],
+  "date": "2017-08-13",
+  "bestGuess": {
+   "groupId": 1990,
+   "name": "2017 Mega-Tins",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YA02",
+  "name": "Yu-Gi-Oh! ARC-V Volume 2 promotional card",
+  "abbrevs": [
+   "YA02"
+  ],
+  "date": "2017-09-05",
+  "bestGuess": {
+   "groupId": 2055,
+   "name": "Legendary Dragon Decks",
+   "score": 1
+  }
+ },
+ {
+  "id": "YA03",
+  "name": "Yu-Gi-Oh! ARC-V Volume 3 promotional card",
+  "abbrevs": [
+   "YA03"
+  ],
+  "date": "2018-03-06",
+  "bestGuess": {
+   "groupId": 2228,
+   "name": "OTS Tournament Pack 7",
+   "score": 1
+  }
+ },
+ {
+  "id": "2018",
+  "name": "Yu-Gi-Oh! World Championship 2018 prize cards",
+  "abbrevs": [
+   "2018"
+  ],
+  "date": "2018-08-05",
+  "bestGuess": {
+   "groupId": 2284,
+   "name": "2018 Mega-Tins",
+   "score": 1.33
+  }
+ },
+ {
+  "id": "YA04",
+  "name": "Yu-Gi-Oh! ARC-V Volume 4 promotional card",
+  "abbrevs": [
+   "YA04"
+  ],
+  "date": "2018-11-06",
+  "bestGuess": {
+   "groupId": 2378,
+   "name": "OTS Tournament Pack 9",
+   "score": 1
+  }
+ },
+ {
+  "id": "2019",
+  "name": "Yu-Gi-Oh! World Championship 2019 Japanese National Qualifiers prize cards",
+  "abbrevs": [
+   "2019"
+  ],
+  "date": "2019-02-01",
+  "bestGuess": {
+   "groupId": 2389,
+   "name": "Structure Deck: Soulburner",
+   "score": 1
+  }
+ },
+ {
+  "id": "YA05",
+  "name": "Yu-Gi-Oh! ARC-V Volume 5 promotional card",
+  "abbrevs": [
+   "YA05"
+  ],
+  "date": "2019-03-05",
+  "bestGuess": {
+   "groupId": 2446,
+   "name": "Speed Duel: Tournament Pack 1",
+   "score": 1
+  }
+ },
+ {
+  "id": "LOD2",
+  "name": "Yu-Gi-Oh! Legacy of the Duelist: Link Evolution promotional cards",
+  "abbrevs": [
+   "LOD2"
+  ],
+  "date": "2019-08-20",
+  "bestGuess": {
+   "groupId": 2471,
+   "name": "Fists of the Gadgets",
+   "score": 1.5
+  }
+ },
+ {
+  "id": "YA06",
+  "name": "Yu-Gi-Oh! ARC-V Volume 6 promotional card",
+  "abbrevs": [
+   "YA06"
+  ],
+  "date": "2019-09-03",
+  "bestGuess": {
+   "groupId": 2505,
+   "name": "Duel Devastator",
+   "score": 1
+  }
+ },
+ {
+  "id": "YA07",
+  "name": "Yu-Gi-Oh! ARC-V Volume 7 promotional card",
+  "abbrevs": [
+   "YA07"
+  ],
+  "date": "2020-06-02",
+  "bestGuess": {
+   "groupId": 2659,
+   "name": "Structure Deck: Sacred Beasts",
+   "score": 1
+  }
+ },
+ {
+  "id": "OPTP",
+  "name": "Trials of the Pharaoh - Match of the Millennium & Twisted Nightmares promotional card",
+  "abbrevs": [
+   "OPTP"
+  ],
+  "date": "2020-08-01",
+  "bestGuess": {
+   "groupId": 2674,
+   "name": "Rise of the Duelist",
+   "score": 1.4
+  }
+ },
+ {
+  "id": "2020",
+  "name": "KC Grand Tournament prize card",
+  "abbrevs": [
+   "2020"
+  ],
+  "date": "2020-08-29",
+  "bestGuess": {
+   "groupId": 2723,
+   "name": "OTS Tournament Pack 14",
+   "score": 1.29
+  }
+ },
+ {
+  "id": "21CC",
+  "name": "Yu-Gi-Oh! TCG Remote Duel Extravaganza participation card",
+  "abbrevs": [
+   "21CC"
+  ],
+  "date": "2021-05-22",
+  "bestGuess": {
+   "groupId": 24189,
+   "name": "King of Games: Yugi's Legendary Decks (2020 Date Reprint)",
+   "score": 1
+  }
+ },
+ {
+  "id": "2021",
+  "name": "KC Grand Tournament 2021 prize card",
+  "abbrevs": [
+   "2021"
+  ],
+  "date": "2021-08-28",
+  "bestGuess": {
+   "groupId": 2847,
+   "name": "2021 Tin of Ancient Battles",
+   "score": 1.22
+  }
+ },
+ {
+  "id": "SBPR",
+  "name": "Blue-Eyes Alternative White Dragon Sweepstakes",
+  "abbrevs": [
+   "SBPR"
+  ],
+  "date": "2021-12-01",
+  "bestGuess": {
+   "groupId": 2896,
+   "name": "Maximum Gold: El Dorado",
+   "score": 1
+  }
+ }
+]

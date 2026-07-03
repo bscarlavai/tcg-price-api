@@ -48,15 +48,16 @@ export async function d1Query(sql, params = []) {
   });
 }
 
-// History rows in batches; D1 caps bound params at 100 per statement → 12 rows/stmt (8 cols).
+// History rows with inline (escaped) values rather than bound params: D1 caps params at
+// 100/statement but statements at 100KB, so inlining gets ~500 rows per REST call —
+// the difference between minutes and hours at five-game scale.
+const sqlVal = (v) => (v == null ? 'NULL' : typeof v === 'number' ? String(v) : `'${String(v).replaceAll("'", "''")}'`);
+
 export async function d1InsertHistory(rows) {
-  const cols = ['game', 'set_code', 'number', 'finish', 'date', 'market_cents', 'low_cents', 'source'];
-  for (let i = 0; i < rows.length; i += 12) {
-    const chunk = rows.slice(i, i + 12);
-    const placeholders = chunk.map(() => `(${cols.map(() => '?').join(',')})`).join(',');
-    await d1Query(
-      `INSERT OR REPLACE INTO price_history (${cols.join(',')}) VALUES ${placeholders}`,
-      chunk.flatMap((r) => cols.map((c) => r[c] ?? null)),
-    );
+  const cols = ['game', 'set_code', 'number', 'finish', 'variant', 'date', 'market_cents', 'low_cents', 'source'];
+  for (let i = 0; i < rows.length; i += 500) {
+    const values = rows.slice(i, i + 500)
+      .map((r) => `(${cols.map((c) => sqlVal(r[c])).join(',')})`).join(',');
+    await d1Query(`INSERT OR REPLACE INTO price_history (${cols.join(',')}) VALUES ${values}`);
   }
 }

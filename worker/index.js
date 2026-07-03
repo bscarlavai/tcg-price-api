@@ -30,14 +30,18 @@ export default {
       if (url.pathname === '/v1/prices') return json(publicBlob);
 
       const number = q('number');
-      const card = number != null ? publicBlob.cards[number] : null;
+      // Pre-2002 Magic has no collector numbers upstream; clients fall back to `name`.
+      const nameKey = q('name')?.toLowerCase().replace(/\s*\(.*\)$/, '').trim();
+      const card = (number != null ? publicBlob.cards[number] : null)
+        ?? (nameKey ? publicBlob.byName?.[nameKey] : null);
       if (!card) return json({ error: 'unknown card' }, 404);
       return json({ game, set, number, ...card, currency: publicBlob.currency, updatedAt: publicBlob.updatedAt });
     }
 
     if (url.pathname === '/v1/health') {
-      const coverage = await env.PRICES.get('meta:coverage:pokemon', 'json');
-      return json({ ok: true, pokemon: coverage ?? 'no ingest yet' }, 200, 'no-store');
+      const games = [...GAMES];
+      const coverage = await Promise.all(games.map((g) => env.PRICES.get(`meta:coverage:${g}`, 'json')));
+      return json({ ok: true, ...Object.fromEntries(games.map((g, i) => [g, coverage[i] ?? 'no ingest yet'])) }, 200, 'no-store');
     }
 
     return json({ error: 'not found' }, 404);

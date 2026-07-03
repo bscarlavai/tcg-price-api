@@ -1,0 +1,15 @@
+[
+ {
+  "id": "RIN",
+  "name": "Rinascimento",
+  "abbrevs": [
+   "RIN"
+  ],
+  "date": "1995-08-01",
+  "bestGuess": {
+   "groupId": 2379,
+   "name": "Renaissance",
+   "score": 1
+  }
+ }
+]
