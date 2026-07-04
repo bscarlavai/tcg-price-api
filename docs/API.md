@@ -24,7 +24,7 @@ All prices are **USD dollars** (floats, 2dp); every priced payload carries
 | pokemon | `me3`, `base1`, `svp` | `1`, `121`, `TG1` | leading zeros + `/total` suffix normalized away |
 | yugioh | `PHNI`, `LOB` | `PHNI-EN059` | full printed code, verbatim |
 | magic | `EMN`, `LEA` | `6` | Scryfall collector number; pre-2002 sets have none → use `name` |
-| onepiece | `OP01`, `ST05`, `EB01` | `OP01-001` | dashes kept, verbatim |
+| onepiece | `OP12` *or* `OP-12` (both accepted), `ST05`/`ST-05`, `PRB02`, `OP14-EB04`, `OP15-EB04`, `PROMO` | `OP01-001` | set accepts both the dashless (one-rip) and dashed (Bandai/riplist) vocabulary; card `number` keeps its dash verbatim. `OTHER` is intentionally unmapped (demo-deck products reuse main-set numbers — wrong-price risk) and 404s. |
 | lorcana | `1` … `12` | `42` | `/204`-style suffix normalized away |
 
 ## Semantics that matter

@@ -202,5 +202,23 @@
  "ST01": {
   "tcgcsv": 3189,
   "name": "Starter Deck 1: Straw Hat Crew"
+ },
+ "OP14-EB04": {
+  "tcgcsv": [
+   24537,
+   24637
+  ],
+  "name": "The Azure Sea's Seven + Adventure on Kami's Island"
+ },
+ "OP15-EB04": {
+  "tcgcsv": [
+   24637,
+   24537
+  ],
+  "name": "Adventure on Kami's Island + The Azure Sea's Seven"
+ },
+ "PROMO": {
+  "tcgcsv": 17675,
+  "name": "One Piece Promotion Cards"
  }
 }

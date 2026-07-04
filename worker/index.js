@@ -27,8 +27,14 @@ export default {
     if (!success) return json({ error: 'rate limited' }, 429);
 
     if (url.pathname === '/v1/prices' || url.pathname === '/v1/price') {
-      const game = q('game'), set = q('set');
+      const game = q('game');
+      let set = q('set');
       if (!GAMES.has(game) || !set) return json({ error: 'game and set required' }, 400);
+      // One piece has two app vocabularies for the same sets: dashless "OP12" (Bandai
+      // card codes, one-rip) and dashed "OP-12" (Bandai set codes, riplist). Canonical
+      // KV keys are dashless; collapse a dash between the leading letters and digits.
+      // Combined-set codes like "OP14-EB04" don't match the pattern and pass through.
+      if (game === 'onepiece') set = set.toUpperCase().replace(/^([A-Z]+)-(?=\d)/, '$1');
 
       const blob = await env.PRICES.get(`${game}:${set}`, 'json');
       if (!blob) return json({ error: 'unknown set' }, 404);
