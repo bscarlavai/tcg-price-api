@@ -26,6 +26,7 @@ jobs:
           for game in pokemon yugioh magic onepiece lorcana; do
             node ingest/run.js --game "$game" --push ${{ inputs.force && '--force' || '' }} || failed=1
           done
+          node ingest/movers.js || failed=1
           exit $failed
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

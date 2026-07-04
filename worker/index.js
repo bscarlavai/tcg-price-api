@@ -1,8 +1,15 @@
-// Read API (DESIGN.md §5). Pure KV reads; no upstream calls; no source vocabulary in
-// responses (sourceRefs is stripped). Edge + client cache 24h.
+// Read API (DESIGN.md §5). KV reads for current prices + movers, D1 for per-card
+// history; no upstream calls; no source vocabulary in responses (sourceRefs stripped).
+// Set blobs cache 24h; market endpoints cache 1h (they change once per daily ingest,
+// and an hour bounds how stale a just-computed board can look).
+
+import { DEFAULT_FINISH_ORDER } from '../ingest/lib/finishes.js';
 
 const CACHE = 'public, max-age=86400';
+const CACHE_MARKET = 'public, max-age=3600';
 const GAMES = new Set(['pokemon', 'yugioh', 'magic', 'onepiece', 'lorcana', 'fab']);
+const WINDOWS = new Set(['7d', '30d']);
+const HISTORY_WINDOWS = { '7d': 7, '30d': 30, '90d': 90, '180d': 180 };
 
 const json = (body, status = 200, cache = CACHE) =>
   new Response(JSON.stringify(body), {
@@ -36,6 +43,35 @@ export default {
         ?? (nameKey ? publicBlob.byName?.[nameKey] : null);
       if (!card) return json({ error: 'unknown card' }, 404);
       return json({ game, set, number, ...card, currency: publicBlob.currency, updatedAt: publicBlob.updatedAt });
+    }
+
+    if (url.pathname === '/v1/movers') {
+      const game = q('game') ?? 'all', window = q('window') ?? '7d', dir = q('dir');
+      if ((game !== 'all' && !GAMES.has(game)) || !WINDOWS.has(window))
+        return json({ error: 'game (or "all") and window=7d|30d required' }, 400);
+      const board = await env.PRICES.get(`movers:${game}:${window}`, 'json');
+      if (!board) return json({ window, computedAt: null, gainers: [], losers: [] }, 200, CACHE_MARKET);
+      if (dir === 'gainers' || dir === 'losers')
+        return json({ window: board.window, computedAt: board.computedAt, [dir]: board[dir] }, 200, CACHE_MARKET);
+      return json(board, 200, CACHE_MARKET);
+    }
+
+    if (url.pathname === '/v1/history') {
+      const game = q('game'), set = q('set'), number = q('number');
+      const days = HISTORY_WINDOWS[q('window') ?? '90d'];
+      if (!GAMES.has(game) || !set || !number || !days)
+        return json({ error: 'game, set, number required; window=7d|30d|90d|180d' }, 400);
+      const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+      const { results } = await env.HISTORY.prepare(
+        `SELECT date, finish, market_cents FROM price_history
+         WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
+      ).bind(game, set, number, q('variant') ?? '', since).all();
+      if (!results.length) return json({ error: 'no history for card' }, 404);
+      const finishes = new Set(results.map((r) => r.finish));
+      const finish = q('finish') ?? (DEFAULT_FINISH_ORDER[game] ?? ['normal']).find((f) => finishes.has(f)) ?? results[0].finish;
+      const points = results.filter((r) => r.finish === finish)
+        .map((r) => ({ date: r.date, market: r.market_cents / 100 }));
+      return json({ game, set, number, finish, window: q('window') ?? '90d', points }, 200, CACHE_MARKET);
     }
 
     if (url.pathname === '/v1/health') {

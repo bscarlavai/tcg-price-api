@@ -154,11 +154,17 @@ GET /v1/prices?game=pokemon&set=me3
 GET /v1/price?game=pokemon&set=me3&number=1
   → 200 { game, set, number, market, low, finishes?, currency, updatedAt }
 
-GET /v1/movers?game=pokemon|all&window=7d|30d&dir=gainers|losers   (v1.1)
-  → 200 [ { game, set, number, name, market, pctChange, absChange }, ... ]
+GET /v1/movers?game=pokemon|all&window=7d|30d[&dir=gainers|losers]          (LIVE)
+  → 200 { window, computedAt, gainers: [ {game,set,number,finish,market,pctChange,absChange} ], losers: [...] }
+  // precomputed daily after ingest; no `name` — clients resolve names from their own
+  // bundled catalogs (keeps payloads small, names app-native). Base printings only in
+  // v1. Strict windows: a board is empty until history covers both endpoints, so 7d
+  // lights up 7 days after first ingest (or instantly once the archive backfill runs).
 
-GET /v1/history?game=&set=&number=&window=90d                      (v1.1)
-  → 200 { points: [ {date, market}, ... ] }   // sparklines, collection backfill
+GET /v1/history?game=&set=&number=[&finish=][&variant=][&window=7d|30d|90d|180d]  (LIVE)
+  → 200 { game, set, number, finish, window, points: [ {date, market}, ... ] }
+  // per-card sparkline / collection-value backfill; finish defaults to the game's
+  // headline; 404 = no history rows for that card
 ```
 
 Card entry extensions (all game vocabulary, never source vocabulary):
