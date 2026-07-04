@@ -9,6 +9,10 @@ contract, many clients.
 - **Prime directive:** sources are swappable behind per-game adapters; the API contract
   contains zero source vocabulary, so callers never notice a swap.
 
-**Status:** design complete, nothing built yet. Read [DESIGN.md](DESIGN.md) —
-all decisions are resolved there, including rollout order (Pokémon first, validated
-against ME03's Spinarak = $0.08).
+**Status:** LIVE at `https://prices.lavailabs.com` with five games (~107k cards):
+pokemon, yugioh, magic, onepiece, lorcana. Daily ingest 21:30 UTC via GitHub Actions.
+
+- **[docs/API.md](docs/API.md)** — endpoint reference: params, valid values, shapes, semantics
+- **[DESIGN.md](DESIGN.md)** — architecture + every resolved decision
+- **[SETUP.md](SETUP.md)** — one-time Cloudflare/GitHub provisioning (done)
+- **[docs/riplist-catalog-learnings.md](docs/riplist-catalog-learnings.md)** — upstream sharp edges, adopted in §8c of the design
