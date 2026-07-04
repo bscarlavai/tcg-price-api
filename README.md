@@ -13,6 +13,7 @@ contract, many clients.
 pokemon, yugioh, magic, onepiece, lorcana. Daily ingest 21:37 UTC via GitHub Actions.
 
 - **[docs/API.md](docs/API.md)** — endpoint reference: params, valid values, shapes, semantics
+- **[docs/client-migration.md](docs/client-migration.md)** — how each rip app swaps its in-app pricing onto this API (the uniform client; poke-rip = reference impl)
 - **[DESIGN.md](DESIGN.md)** — architecture + every resolved decision
 - **[SETUP.md](SETUP.md)** — one-time Cloudflare/GitHub provisioning (done)
 - **[docs/riplist-catalog-learnings.md](docs/riplist-catalog-learnings.md)** — upstream sharp edges, adopted in §8c of the design

@@ -250,8 +250,9 @@ that span a source change.
 3. ⏸ D1 backfill from TCGCSV historical archives (2024-02 →) — deferred; until it runs,
    movers/history light up only as live ingest accumulates.
 4. ☐ Point **poke-rip** at it (on-device refresh + build-time bundle fill from this API).
+   Client migration runbook: [`docs/client-migration.md`](docs/client-migration.md) (poke-rip = reference impl).
 5. ✅ Add remaining games (fab still pending set data + category check); ☐ drop the
-   uniform client into ygo/mtg/one/lor/fab-rip.
+   uniform client (per `docs/client-migration.md`) into ygo/mtg/one/lor/fab-rip.
 6. ☐ **riplist (scanner)** consumes the same endpoints — needs per-finish prices (D9)
    and whole-set blobs for scan-session pricing; both already in the shape.
 7. ✅ v1.1: movers + history endpoints (boards empty until history spans the windows).

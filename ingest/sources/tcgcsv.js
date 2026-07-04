@@ -49,27 +49,12 @@ export async function listGroups(game) {
   return getJSON(`${BASE}/${CATEGORY_IDS[game]}/groups`);
 }
 
-// Align TCGCSV's printed number with each app's native card key. Verified against the
-// actual bundles: pokemon "001/088"→"1"; lorcana "157/204"→"157"; yugioh/onepiece/magic
-// print exactly what the apps use ("PHNI-EN059", "ST05-001", "6") — leave verbatim.
-// Mismatches surface in the coverage audit, not silently.
-export function normalizeNumber(game, raw) {
-  if (!raw) return null;
-  const head = String(raw).split('/')[0].trim();
-  if (game === 'pokemon') {
-    const m = head.toUpperCase().match(/^([^0-9]*)0*(\d+)(.*)$/);
-    return m ? `${m[1]}${m[2]}${m[3]}` : head.toUpperCase();
-  }
-  return head;
-}
+import { normalizeNumber } from '../lib/normalize.js';
+export { normalizeNumber };
 
-export async function fetchSetRows(game, groupId, { unknownSubtypes } = {}) {
-  const cat = CATEGORY_IDS[game];
-  const [products, prices] = await Promise.all([
-    getJSON(`${BASE}/${cat}/${groupId}/products`),
-    getJSON(`${BASE}/${cat}/${groupId}/prices`),
-  ]);
-
+// productId → card identity. Split out from fetchSetRows so the archive backfill can
+// join historical price files (productId-keyed, no metadata) against current products.
+export function parseProducts(game, products) {
   const numberById = new Map();
   for (const p of products) {
     const ext = Object.fromEntries((p.extendedData ?? []).map((e) => [e.name, e.value]));
@@ -96,7 +81,11 @@ export async function fetchSetRows(game, groupId, { unknownSubtypes } = {}) {
       isBase: descriptor == null,
     });
   }
+  return numberById;
+}
 
+// Price records (live endpoint or archive — same shape) × product identity → canonical rows.
+export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
   const rows = [];
   for (const pr of prices) {
     const card = numberById.get(pr.productId);
@@ -117,4 +106,16 @@ export async function fetchSetRows(game, groupId, { unknownSubtypes } = {}) {
     });
   }
   return rows;
+}
+
+export async function fetchProducts(game, groupId) {
+  return parseProducts(game, await getJSON(`${BASE}/${CATEGORY_IDS[game]}/${groupId}/products`));
+}
+
+export async function fetchSetRows(game, groupId, opts = {}) {
+  const [numberById, prices] = await Promise.all([
+    fetchProducts(game, groupId),
+    getJSON(`${BASE}/${CATEGORY_IDS[game]}/${groupId}/prices`),
+  ]);
+  return joinPrices(numberById, prices, opts);
 }

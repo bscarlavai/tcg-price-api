@@ -4,6 +4,7 @@
 // and an hour bounds how stale a just-computed board can look).
 
 import { DEFAULT_FINISH_ORDER } from '../ingest/lib/finishes.js';
+import { normalizeNumber } from '../ingest/lib/normalize.js';
 
 const CACHE = 'public, max-age=86400';
 const CACHE_MARKET = 'public, max-age=3600';
@@ -42,7 +43,10 @@ export default {
 
       if (url.pathname === '/v1/prices') return json(publicBlob);
 
-      const number = q('number');
+      // Blob keys use the canonical number form (pokemon: zeros stripped — "DP06"→"DP6");
+      // normalize the lookup too so padded app-native forms resolve. /v1/prices callers
+      // apply the same rule client-side when joining (docs/API.md).
+      const number = normalizeNumber(game, q('number'));
       // Pre-2002 Magic has no collector numbers upstream; clients fall back to `name`.
       const nameKey = q('name')?.toLowerCase().replace(/\s*\(.*\)$/, '').trim();
       const card = (number != null ? publicBlob.cards[number] : null)

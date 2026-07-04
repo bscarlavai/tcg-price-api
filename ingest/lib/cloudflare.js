@@ -53,11 +53,19 @@ export async function d1Query(sql, params = []) {
 // the difference between minutes and hours at five-game scale.
 const sqlVal = (v) => (v == null ? 'NULL' : typeof v === 'number' ? String(v) : `'${String(v).replaceAll("'", "''")}'`);
 
-export async function d1InsertHistory(rows) {
+// Shared by the daily push (REST, statement-at-a-time) and the archive backfill
+// (bulk .sql files imported via `wrangler d1 execute --file`).
+export function historyInsertStatements(rows, chunk = 500) {
   const cols = ['game', 'set_code', 'number', 'finish', 'variant', 'date', 'market_cents', 'low_cents', 'source'];
-  for (let i = 0; i < rows.length; i += 500) {
-    const values = rows.slice(i, i + 500)
+  const statements = [];
+  for (let i = 0; i < rows.length; i += chunk) {
+    const values = rows.slice(i, i + chunk)
       .map((r) => `(${cols.map((c) => sqlVal(r[c])).join(',')})`).join(',');
-    await d1Query(`INSERT OR REPLACE INTO price_history (${cols.join(',')}) VALUES ${values}`);
+    statements.push(`INSERT OR REPLACE INTO price_history (${cols.join(',')}) VALUES ${values}`);
   }
+  return statements;
+}
+
+export async function d1InsertHistory(rows) {
+  for (const sql of historyInsertStatements(rows)) await d1Query(sql);
 }
