@@ -29,8 +29,18 @@ const DENYLIST = {
   magic: /\bToken\b/i,
 };
 
+// tcgcsv.com/docs usage guidelines: versioned User-Agent, ~100ms between requests
+// (they throttle bursty clients for 10 min and may ban >10k req/day). The chain paces
+// request *starts* globally, so run.js's concurrent workers still overlap responses.
+const UA = 'lavailabs-tcg-price-api/1.0 (github.com/bscarlavai/tcg-price-api)';
+const PACE_MS = 100;
+let paceChain = Promise.resolve();
+
 async function getJSON(url) {
-  const res = await fetch(url, { headers: { 'user-agent': 'lavailabs-tcg-price-api' } });
+  const turn = paceChain.then(() => new Promise((r) => setTimeout(r, PACE_MS)));
+  paceChain = turn;
+  await turn;
+  const res = await fetch(url, { headers: { 'user-agent': UA } });
   if (!res.ok) throw new Error(`${res.status} ${url}`);
   return (await res.json()).results;
 }

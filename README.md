@@ -5,7 +5,7 @@ mtg-rip, one-rip, lor-rip, fab-rip) and riplist (the scanner). One backend, one
 contract, many clients.
 
 - **Read API:** Cloudflare Worker → `prices.lavailabs.com` (KV-backed, edge-cached 24h)
-- **Ingest:** daily GitHub Actions cron → TCGCSV archive → KV (current) + D1 (history) + R2 (raw copies)
+- **Ingest:** daily GitHub Actions cron → TCGCSV → KV (current) + D1 (history); R2 raw copies come with the archive backfill
 - **Prime directive:** sources are swappable behind per-game adapters; the API contract
   contains zero source vocabulary, so callers never notice a swap.
 
