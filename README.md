@@ -10,7 +10,7 @@ contract, many clients.
   contains zero source vocabulary, so callers never notice a swap.
 
 **Status:** LIVE at `https://prices.lavailabs.com` with five games (~107k cards):
-pokemon, yugioh, magic, onepiece, lorcana. Daily ingest 21:30 UTC via GitHub Actions.
+pokemon, yugioh, magic, onepiece, lorcana. Daily ingest 21:37 UTC via GitHub Actions.
 
 - **[docs/API.md](docs/API.md)** — endpoint reference: params, valid values, shapes, semantics
 - **[DESIGN.md](DESIGN.md)** — architecture + every resolved decision

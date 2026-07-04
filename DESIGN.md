@@ -1,6 +1,7 @@
 # TCG Price API — Design Doc
 
-> **Status:** DECIDED, not yet built. All open questions resolved 2026-07-03.
+> **Status:** LIVE at `prices.lavailabs.com` (5 games; fab pending). Decisions resolved
+> 2026-07-03; server side built and deployed. Rollout progress tracked in §7.
 > **Recurring cost budget:** $5/mo Cloudflare Workers Paid (already paying). **No paid APIs, ever, as part of the plan.**
 
 A shared, self-hosted pricing service serving live-ish card prices to every Lavai Labs
@@ -244,14 +245,16 @@ that span a source change.
 
 ## 7. Rollout
 
-1. Repo scaffold: Worker (read API) + Actions ingest + mapping/ + golden tests.
-2. **Pokémon only.** Validate: ME03/ME04/Ascended Heroes; Spinarak returns $0.08.
-3. D1 backfill from TCGCSV historical archives (2024-02 →) for mapped Pokémon sets.
-4. Point **poke-rip** at it (on-device refresh + build-time bundle fill from this API).
-5. Add remaining games; drop the uniform client into ygo/mtg/one/lor/fab-rip.
-6. **riplist (scanner)** consumes the same endpoints — needs per-finish prices (D9)
+1. ✅ Repo scaffold: Worker (read API) + Actions ingest + mapping/ + golden tests.
+2. ✅ **Pokémon only.** Validate: ME03/ME04/Ascended Heroes; Spinarak returns $0.08.
+3. ⏸ D1 backfill from TCGCSV historical archives (2024-02 →) — deferred; until it runs,
+   movers/history light up only as live ingest accumulates.
+4. ☐ Point **poke-rip** at it (on-device refresh + build-time bundle fill from this API).
+5. ✅ Add remaining games (fab still pending set data + category check); ☐ drop the
+   uniform client into ygo/mtg/one/lor/fab-rip.
+6. ☐ **riplist (scanner)** consumes the same endpoints — needs per-finish prices (D9)
    and whole-set blobs for scan-session pricing; both already in the shape.
-7. v1.1: movers + history endpoints.
+7. ✅ v1.1: movers + history endpoints (boards empty until history spans the windows).
 
 ---
 
@@ -300,7 +303,7 @@ build-time concern).
 
 | Risk | Mitigation |
 |---|---|
-| TCGCSV is one person's free service | Adapter machinery (§6); R2 raw-archive copies (history never hostage); graceful staleness; be a good citizen (one archive pull/day); optional Patreon tip. |
+| TCGCSV is one person's free service | Adapter machinery (§6); R2 raw-archive copies (history never hostage); graceful staleness; comply with their published usage guidelines (tcgcsv.com/docs: last-updated.txt guard before sync, 100ms request pacing, versioned User-Agent, one pull/day — all implemented 2026-07-04); optional Patreon tip. They've signaled API keys / a premium tier are coming — watch for the key rollout. |
 | Set/card mapping errors (biggest) | In-repo versioned mapping + auto-matcher + override file; coverage ratchet gates every ingest; golden-card tests; per-game audit à la ygo rarity audit. |
 | GH Actions cron slips | Staleness alarm at 36h; data is daily anyway — hours of slip are invisible. |
 | Cloudflare limits | Paid plan ($5/mo, already paid) — quotas are far above our volume; reads fit even free tier. |
