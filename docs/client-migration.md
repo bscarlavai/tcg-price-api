@@ -55,22 +55,28 @@ thing this migration removes.
 
 ### 1a. Temporarily-unpriced vs permanently-unpriceable (don't let a seed rot)
 
-The bundle is a **seed**, valid only because a live price soon replaces it. That assumption breaks
-for cards the API can *never* price — an unmapped set (`404`) or a card the source doesn't carry
-(absent from a `200`). Their seed will never be refreshed, so it only gets staler; a frozen 2026
-price shown in 2029 looks authoritative and is silently wrong. **That is worse than showing nothing.**
+The bundle is a **seed**, valid only because a live price soon replaces it. That assumption fully
+breaks only for a set the API can *never* price — an unmapped set (`404`). Its seed will never be
+refreshed, so it only gets staler; a frozen 2026 price shown in 2029 looks authoritative and is
+silently wrong. **That is worse than showing nothing.** A single card *absent from an otherwise
+priced set* is murkier and must be treated more gently (see below).
 
-So branch on *why* a price is missing:
+So branch on *why* a price is missing — the `404`-vs-`absent-in-200` line is load-bearing:
 
-- **Definitive no-price signal** (`404` on the set, or card absent from a `200`): this is
-  deterministic (a mapped set never un-maps; a transient failure is a 5xx/network error, not a
-  `404`). **Clear any seeded price to `nil` and stamp the "resolved" timestamp** → the card renders
-  the terminal **"No market price"** state (§8). Do *not* keep showing a stale seed you can never refresh.
+- **`404` — unmapped set (definitive, whole set):** nothing carries it (e.g. `fut20`).
+  **Clear any seeded price to `nil` and stamp the "resolved" timestamp** for every card → terminal
+  **"No market price"** state (§8). Don't keep serving a seed you can never refresh.
+- **Card absent from a *priced* `200` (ambiguous, per card):** the set *is* priced, so this card is
+  either genuinely unpriced upstream (e.g. Alpha Black Lotus) **or** keyed under a different number
+  scheme the API hasn't aliased yet (see §3b — ~40 promo cards whose seed is a *real* price that will
+  go live once aliases land). You can't tell which at runtime, so **keep any price you already hold**
+  and only stamp-resolved (→ "No market price") when you hold **nothing**. Clearing a real bundled
+  price here would be actively wrong for the aliasable cards.
 - **Transient failure** (`429` / 5xx / offline / not-yet-fetched): keep the last-known value (seed
   or last live). Never clear on a transient — that's the "never blank" rule.
 
-This also keeps aggregate collection value honest: unpriceable cards contribute `$0` rather than a
-decaying estimate (sum only cards with a real `market > 0`).
+This keeps aggregate collection value honest without over-blanking: a truly-unmapped set contributes
+`$0`, but a mis-keyed promo keeps its real-ish bundled value until the alias lands.
 
 ---
 
@@ -103,8 +109,8 @@ Full reference: [`docs/API.md`](./API.md). What the client needs:
 | Code | Meaning | Client action |
 |---|---|---|
 | `200`, card **present** | priced | write live price to disk |
-| `200`, card **absent from `cards`** | known but **unpriced upstream** (no market aggregate, e.g. Alpha Black Lotus) | **definitive**: clear any stale seed → `nil`, stamp resolved, render "No market price" (§1a, §8). **Never hide the card itself** — only its price is unknown. |
-| `404` | **unmapped set** — no source carries it | **definitive**: same as above for every card in the set. Don't keep serving an unrefreshable seed; log the set for the API team in case it becomes mappable. |
+| `200`, card **absent from `cards`** | either **unpriced upstream** (e.g. Alpha Black Lotus) **or** keyed under a different number scheme not yet aliased (§3b) — indistinguishable at runtime | **keep any price you hold** (seed/last live); stamp-resolved → "No market price" only if you hold nothing. Don't clear a real bundled price. **Never hide the card.** |
+| `404` | **unmapped set** — no source carries it | **definitive, whole set**: clear any seed → `nil`, stamp resolved, "No market price" for every card. Log the set for the API team in case it becomes mappable. |
 | `400` | bad params (client bug) | fix the request; never ship |
 | `429` / 5xx / network | transient | keep cached/bundled, retry later |
 
@@ -148,17 +154,29 @@ key verbatim (yugioh `PHNI-EN059`, magic `6`, one-piece `OP01-001`) pass through
 app *sources its bundle from this API* (§5), bundle and blob keys are identical and the question
 disappears entirely.
 
-### 3b. Promo / subset sets need a verification pass
-The normalization line (§3a) resolves the *bulk* of promo/subset cards, but a small tail can still
-miss because TCGPlayer sometimes numbered individual promos on a different scheme than the app's
-bundle — not just padding. **Worked example (poke-rip `dpp`, 2026-07):** 51/56 cards resolve after
-normalization; 5 (`DP05 DP25 DP48 DP54 DP55`) don't, because TCGPlayer carries them under plain
-numbers (`42 48 49 53`). Those 5 keep their bundled price. This is expected, not a defect.
+### 3b. Promo sets: a cross-set numbering pattern, not a per-set quirk
+The normalization line (§3a) resolves the *bulk* of promo/subset cards, but a consistent tail misses
+on a *different axis than padding*: TCGPlayer numbers a stamped promo (Prerelease, Cosmos Holo) by
+its **origin set's** collector number (`11/108` Charizard) while the app bundle files it under a
+**promo-series** number (`XY121`-style). No normalization rule can bridge two different numbering
+schemes — only a hand-curated per-card alias can.
 
-**Client behavior when a card doesn't resolve: keep its bundled/nil price. Never blank it.** A
-whole-set `404` (see below) means keep bundled prices for the entire set. Genuine per-card scheme
-mismatches are a data-mapping concern owned by `tcg-price-api` (`mapping/<game>.overrides.json`,
-`.review.json`) — worth reporting if a set's miss rate is high, but not something to block a ship on.
+**Scope (pokemon, 2026-07):** ~40 cards total across every promo group — `dpp` 5, `hsp` 3, `bwp` 4,
+`xyp` 18, `smp` 8, `svp` 3. Example `dpp`: 51/56 resolve; `DP05 DP25 DP48 DP54 DP55` are carried by
+TCGPlayer as `42 48 49 53`.
+
+**Fix (deferred, low priority):** *not* `mapping/<game>.overrides.json` (that's set→group; this is a
+card-level identity mismatch *inside* an already-mapped set). It's a new per-set alias table
+(`mapping/pokemon.card-aliases.json`, e.g. `{"dpp": {"48": "DP48"}}`) applied in the adapter *after*
+number normalization — a ~10-line mechanism; the real work is the pairing data, matched by **card
+name against the bundle**. Worth doing eventually because these cards' upstream prices are the
+*stamped* versions' real prices (a Prerelease Charizard trades differently than the regular), so
+aliasing gives them true market values instead of frozen bundled ones. Parked until app integration
+is otherwise done.
+
+**Client behavior meanwhile:** these cards are absent from the priced `200`, so per §1a/§2 the client
+**keeps its bundled price** (a real stamped-promo value, not garbage) rather than blanking — and they
+go live automatically once the alias table lands. No client change needed; don't block a ship on it.
 
 **Permanently-unmapped sets are a real, terminal state — not "waiting on the API team."** If
 TCGPlayer never carried a set, no source can price it. Example: Pokémon `fut20` (Futsal Collection,
@@ -311,10 +329,11 @@ Phase 2 replaces the `prices` sub-object with an API-sourced `market`/`low` snap
 **Coverage note (2026-07):** the API prices **172 / 173** poke-rip bundled sets. The one exception,
 `fut20` (Futsal Collection), is **permanently** unmapped — TCGPlayer never carried this UK-only set,
 so no source can price it; it `404`s by design. poke-rip currently ships a frozen pokemontcg.io
-price for its 5 cards; the migration **deliberately drops that** (§1a/§8) and renders "No market
-price," because an unrefreshable seed only rots. The genuinely-priceless tail inside mapped promo
-sets gets the same treatment (§3b `dpp`: 51/56 resolve; `DP05 DP25 DP48 DP54 DP55` → "No market
-price"). Both are expected steady state, not gaps to wait on.
+price for its 5 cards; because `fut20` `404`s (whole set unmapped), the migration **deliberately
+drops that** (§1a/§8) and renders "No market price" — an unrefreshable seed only rots. The promo tail
+inside *mapped* sets is different (§3b): those cards are absent from a priced `200`, so the client
+**keeps their bundled price** (a real stamped-promo value) and they go live once the card-alias table
+lands. `fut20` is a gap to stop waiting on; the promo tail resolves itself later.
 
 **Level 2 (later, migration-gated):** `PullRecord` gains a persisted finish (the transient
 `isReverseHolo` on `PulledCard`/`PackPrefetcher` already exists — make it durable); store the
