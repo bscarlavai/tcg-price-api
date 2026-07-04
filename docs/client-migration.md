@@ -53,6 +53,25 @@ refresh, its bundled prices are never shown again.
 A price fetched but not saved means the user drops back to the bundle on next launch — the exact
 thing this migration removes.
 
+### 1a. Temporarily-unpriced vs permanently-unpriceable (don't let a seed rot)
+
+The bundle is a **seed**, valid only because a live price soon replaces it. That assumption breaks
+for cards the API can *never* price — an unmapped set (`404`) or a card the source doesn't carry
+(absent from a `200`). Their seed will never be refreshed, so it only gets staler; a frozen 2026
+price shown in 2029 looks authoritative and is silently wrong. **That is worse than showing nothing.**
+
+So branch on *why* a price is missing:
+
+- **Definitive no-price signal** (`404` on the set, or card absent from a `200`): this is
+  deterministic (a mapped set never un-maps; a transient failure is a 5xx/network error, not a
+  `404`). **Clear any seeded price to `nil` and stamp the "resolved" timestamp** → the card renders
+  the terminal **"No market price"** state (§8). Do *not* keep showing a stale seed you can never refresh.
+- **Transient failure** (`429` / 5xx / offline / not-yet-fetched): keep the last-known value (seed
+  or last live). Never clear on a transient — that's the "never blank" rule.
+
+This also keeps aggregate collection value honest: unpriceable cards contribute `$0` rather than a
+decaying estimate (sum only cards with a real `market > 0`).
+
 ---
 
 ## 2. The contract you're integrating against
@@ -84,8 +103,8 @@ Full reference: [`docs/API.md`](./API.md). What the client needs:
 | Code | Meaning | Client action |
 |---|---|---|
 | `200`, card **present** | priced | write live price to disk |
-| `200`, card **absent from `cards`** | known but **unpriced upstream** (no market aggregate, e.g. Alpha Black Lotus) | **keep bundled/nil — do NOT hide the card** |
-| `404` | **unmapped set** | keep bundled prices for the whole set; log for the API team |
+| `200`, card **absent from `cards`** | known but **unpriced upstream** (no market aggregate, e.g. Alpha Black Lotus) | **definitive**: clear any stale seed → `nil`, stamp resolved, render "No market price" (§1a, §8). **Never hide the card itself** — only its price is unknown. |
+| `404` | **unmapped set** — no source carries it | **definitive**: same as above for every card in the set. Don't keep serving an unrefreshable seed; log the set for the API team in case it becomes mappable. |
 | `400` | bad params (client bug) | fix the request; never ship |
 | `429` / 5xx / network | transient | keep cached/bundled, retry later |
 
@@ -105,28 +124,48 @@ The API keys card numbers with **leading zeros stripped after any letter prefix*
 ```
 
 If your bundle stores the **padded** form (poke-rip stores `DP01`, `TG01`), a raw lookup of
-`blob.cards["DP01"]` misses (the key is `DP1`). **Mirror the API's normalization on the client
-before matching.** The exact rule (from `ingest/sources/tcgcsv.js::normalizeNumber`):
+`blob.cards["DP01"]` misses (the key is `DP1`). Two facts settle this:
 
-```swift
-// Strip "/total" suffix, uppercase, drop leading zeros that follow the optional letter prefix.
-func normalizedNumber(_ raw: String) -> String {
-    let head = raw.split(separator: "/").first.map(String.init) ?? raw
-    let s = head.trimmingCharacters(in: .whitespaces).uppercased()
-    // ^(letters)(zeros)(digits)(rest)$  →  letters + digits + rest
-    guard let m = s.wholeMatch(of: /^([^0-9]*)0*([0-9]+)(.*)$/) else { return s }
-    return "\(m.1)\(m.2)\(m.3)"
-}
-```
+- **`/v1/price` (single card) normalizes the incoming number server-side** — send `DP01`, `DP1`,
+  `SWSH001`, `TG01`, or `017` and it resolves. No client work needed.
+- **`/v1/prices` (batch) is a raw key join against a bundle, so the client normalizes before
+  matching.** Use the *canonical documented line* from [`docs/API.md`](./API.md) — the single source
+  of truth, keep it byte-identical to avoid drift:
+
+  ```
+  n.toUpperCase().replace(/^([^0-9]*)0+(?=[0-9])/, '$1')   // DP01→DP1, SWSH001→SWSH1, 017→17, 121→121
+  ```
+  ```swift
+  // Swift port of the canonical line (poke-rip stores no "/total" suffix; add a split if yours does).
+  func normalizedNumber(_ raw: String) -> String {
+      let s = raw.uppercased()
+      guard let m = s.firstMatch(of: /^([^0-9]*)0+(?=[0-9])/) else { return s }
+      return String(m.1) + s[m.range.upperBound...]
+  }
+  ```
 Match by `blob.cards[normalizedNumber(card.number)]`. Games whose numbers are already the app-native
-key verbatim (yugioh `PHNI-EN059`, magic `6`, one-piece `OP01-001`) still pass through this cleanly.
+key verbatim (yugioh `PHNI-EN059`, magic `6`, one-piece `OP01-001`) pass through unchanged. Once an
+app *sources its bundle from this API* (§5), bundle and blob keys are identical and the question
+disappears entirely.
 
 ### 3b. Promo / subset sets need a verification pass
-Non-numeric and promo sets (Pokémon `dpp`, `svp`, Trainer Gallery `*tg`, Shiny Vault) have messier
-upstream keying — a normalized number may still not line up 1:1 with the blob. This is a data-mapping
-concern owned by `tcg-price-api` (`mapping/<game>.overrides.json`, `.review.json`). **Client
-behavior when a card doesn't resolve: keep its bundled/nil price. Never blank it.** Track unresolved
-sets and hand them to the API team rather than papering over on-device.
+The normalization line (§3a) resolves the *bulk* of promo/subset cards, but a small tail can still
+miss because TCGPlayer sometimes numbered individual promos on a different scheme than the app's
+bundle — not just padding. **Worked example (poke-rip `dpp`, 2026-07):** 51/56 cards resolve after
+normalization; 5 (`DP05 DP25 DP48 DP54 DP55`) don't, because TCGPlayer carries them under plain
+numbers (`42 48 49 53`). Those 5 keep their bundled price. This is expected, not a defect.
+
+**Client behavior when a card doesn't resolve: keep its bundled/nil price. Never blank it.** A
+whole-set `404` (see below) means keep bundled prices for the entire set. Genuine per-card scheme
+mismatches are a data-mapping concern owned by `tcg-price-api` (`mapping/<game>.overrides.json`,
+`.review.json`) — worth reporting if a set's miss rate is high, but not something to block a ship on.
+
+**Permanently-unmapped sets are a real, terminal state — not "waiting on the API team."** If
+TCGPlayer never carried a set, no source can price it. Example: Pokémon `fut20` (Futsal Collection,
+UK GAME-store exclusive) `404`s **by design**. Treat it as §1a definitive: render "No market price,"
+don't poll it, don't treat the `404` as an outage — **and don't keep showing a stale bundled price
+you can never refresh.** (Your app may currently ship a frozen pokemontcg.io price for such a set;
+the migration deliberately drops it — see §8. A number that never updates is worse than none.)
 
 ### 3c. Per-game key formats (send verbatim; API normalizes)
 | game | `set` example | `number` example |
@@ -204,13 +243,38 @@ The blob carries per-finish prices (`normal`, `reverseHolo`, `holo`, `firstEditi
 - [ ] Rewire set-open / pack-summary / inspect / owned-backfill to the **batch** path.
 - [ ] Delete the old per-card third-party price fetch + variant-selection code.
 - [ ] On success: write prices to card records **and save to disk**.
-- [ ] On any failure: leave existing prices untouched (never blank).
+- [ ] On a **transient** failure (429/5xx/offline): leave existing prices untouched (never blank).
+- [ ] On a **definitive** no-price signal (404 set / card absent in 200): clear the seed → `nil`,
+      stamp resolved, render "No market price" (§1a, §8).
 - [ ] Confirm every render path still reads the same stored price field (no display changes).
 - [ ] Keep the buy/affiliate URL source intact.
 - [ ] (Optional) Add a shared currency formatter if `$%.2f` is duplicated across sites.
 - [ ] (Phase 2) Regenerate the bundled price snapshot from this API; strip unused price fields.
 - [ ] Verify promo/subset sets resolve or fall back cleanly (§3b); report gaps to `tcg-price-api`.
 - [ ] Sanity-check a known card end-to-end (e.g. pokemon `me3`/`121` ≈ headline market).
+
+---
+
+## 8. Unpriced-card UX (tri-state)
+
+Distinguish three states on the card-detail price line — **using only the existing
+`price` + `resolvedAt` fields**, no schema change:
+
+| stored price | resolved timestamp | render |
+|---|---|---|
+| present (live or seed) | — | `$X.XX` |
+| `nil` | **set** (a fetch confirmed no price) | **"No market price"** — terminal, honest |
+| `nil` | `nil` (never fetched) | loading spinner / `——` |
+
+The middle row is reached only via a **definitive** signal (§1a): the price service stamps the
+timestamp — and clears any stale seed — on a `404` or card-absent-in-200. Two implementation notes:
+
+- **Seeding a bundle-priceless card must leave the timestamp `nil`**, so it reads as "not yet
+  resolved" and we still try the live API before declaring it unavailable (don't let a bundle gap
+  masquerade as a confirmed no-price).
+- **Copy:** frame it as a property of the card, not an app fault — "No market price" or "Not tracked
+  by TCGPlayer" (optionally an info tap-target). Avoid "pricing unavailable / not working."
+- **Never hide the card** from checklists/collection because it's unpriced — only the price line changes.
 
 ---
 
@@ -244,9 +308,13 @@ Phase 2 replaces the `prices` sub-object with an API-sourced `market`/`low` snap
 - `Views/Stats/ShareStatsCard.swift` (share value)
 - `Services/CollectionStats.swift::priceRefreshTick` (bump it after a batch write so StatsView recomputes)
 
-**Coverage note (2026-07):** the API prices **172 / 173** poke-rip bundled sets. Only `fut20`
-(Futsal Collection) is unmapped and already flagged in `mapping/pokemon.review.json` — it falls
-back to bundled prices until the API team maps it.
+**Coverage note (2026-07):** the API prices **172 / 173** poke-rip bundled sets. The one exception,
+`fut20` (Futsal Collection), is **permanently** unmapped — TCGPlayer never carried this UK-only set,
+so no source can price it; it `404`s by design. poke-rip currently ships a frozen pokemontcg.io
+price for its 5 cards; the migration **deliberately drops that** (§1a/§8) and renders "No market
+price," because an unrefreshable seed only rots. The genuinely-priceless tail inside mapped promo
+sets gets the same treatment (§3b `dpp`: 51/56 resolve; `DP05 DP25 DP48 DP54 DP55` → "No market
+price"). Both are expected steady state, not gaps to wait on.
 
 **Level 2 (later, migration-gated):** `PullRecord` gains a persisted finish (the transient
 `isReverseHolo` on `PulledCard`/`PackPrefetcher` already exists — make it durable); store the
