@@ -154,10 +154,35 @@ If your bundle stores the **padded** form (poke-rip stores `DP01`, `TG01`), a ra
       return String(m.1) + s[m.range.upperBound...]
   }
   ```
-Match by `blob.cards[normalizedNumber(card.number)]`. Games whose numbers are already the app-native
-key verbatim (yugioh `PHNI-EN059`, magic `6`, one-piece `OP01-001`) pass through unchanged. Once an
-app *sources its bundle from this API* (§5), bundle and blob keys are identical and the question
-disappears entirely.
+Match by `blob.cards[normalizedNumber(card.number)]`. Magic (`6`) and one-piece (`OP01-001`)
+numbers are already the app-native key and pass through unchanged. **Yugioh does *not*** — see §3a-ygo
+below. Once an app *sources its bundle from this API* (§5), bundle and blob keys are identical and the
+question disappears entirely.
+
+### 3a-ygo. Yugioh: region code drifts across eras (normalize BOTH sides)
+Yugioh looks verbatim but isn't. The `/v1/prices` blob keys come straight from TCGCSV, and TCGPlayer
+numbers **pre-region-code sets without the region code** (`LOB-001`, `MRD-144`, `PSV-…`, the LOB-era
+classics) while numbering **newer sets with it** (`25LP-EN001`, `PHNI-EN059`). App bundles (YGOPRODeck
+`set_code`) **always** carry it (`LOB-EN001`). So a raw `blob.cards[card.number]` join returns **zero
+matches for every classic LOB-era set** — silently blanking all those cards on refresh.
+
+Unlike pokemon (where the API pre-normalizes its keys and the client normalizes only its own number),
+the yugioh blob keys are **un-normalized**, so the client must normalize **both** the blob keys *and*
+`card.number` through one function — strip a TCG region code between the set-code dash and the number,
+then strip the number's leading zeros:
+
+```swift
+// Validated 100% key overlap across every era (LOB/MRD/PSV classics → 25LP/PHNI/RA04).
+static func normalizedNumber(_ raw: String) -> String {
+    var s = raw.uppercased()
+    s = s.replacingOccurrences(of: "-(EN|FR|DE|IT|PT|SP)(?=[0-9])", with: "-", options: .regularExpression)
+    s = s.replacingOccurrences(of: "-0+(?=[0-9])", with: "-", options: .regularExpression)
+    return s
+}
+```
+Build the lookup as `[normalizedNumber(blobKey): price]` and match `normalizedNumber(card.number)`.
+(A future ingest-side fix could canonicalize yugioh keys so only the card side needs normalizing, like
+pokemon; until then, normalize both.)
 
 ### 3b. Promo sets: a cross-set numbering pattern, not a per-set quirk
 The normalization line (§3a) resolves the *bulk* of promo/subset cards, but a consistent tail misses
@@ -194,7 +219,7 @@ the migration deliberately drops it — see §8. A number that never updates is 
 | game | `set` example | `number` example |
 |---|---|---|
 | pokemon | `me3`, `base1`, `svp`, `dpp` | `1`, `121`, `TG1` |
-| yugioh | `PHNI`, `LOB` | `PHNI-EN059` |
+| yugioh | `PHNI`, `LOB` | `PHNI-EN059` (blob keys drop the region code on classic sets — `LOB-001`; normalize both sides, §3a-ygo) |
 | magic | `EMN`, `LEA` | `6` (pre-2002: none → `name` fallback via `byName`) |
 | onepiece | `OP12`/`OP-12`, `ST05`, `PRB02` | `OP01-001` |
 | lorcana | `1` … `12` | `42` |

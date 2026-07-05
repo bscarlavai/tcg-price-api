@@ -23,7 +23,7 @@ All prices are **USD dollars** (floats, 2dp); every priced payload carries
 | game | `set` example | `number` example | notes |
 |---|---|---|---|
 | pokemon | `me3`, `base1`, `svp` | `1`, `121`, `TG1`, `DP6`, `SWSH1` | canonical form strips leading zeros (`DP06`→`DP6`, `SWSH001`→`SWSH1`, `017`→`17`) + drops any `/total` suffix. `/v1/price` accepts padded forms and normalizes for you; when joining `/v1/prices` keys against a padded bundle, apply `n.toUpperCase().replace(/^([^0-9]*)0+(?=[0-9])/, '$1')`. Zero-stripping is deliberate: padding is source-dependent presentation, so the stripped form is the only key that survives a source swap. Sets TCGPlayer never carried (e.g. `fut20`, the UK-only Futsal Collection) 404 — keep bundled prices. |
-| yugioh | `PHNI`, `LOB` | `PHNI-EN059` | full printed code, verbatim |
+| yugioh | `PHNI`, `LOB` | `PHNI-EN059` | printed code — but **batch keys are un-normalized**: TCGPlayer drops the region code on pre-region-code sets (`LOB-001` vs the bundle's `LOB-EN001`) and padding varies. Joining `/v1/prices` keys against a bundle: normalize **both** sides — strip a region code (`EN`/`FR`/`DE`/`IT`/`PT`/`SP`) after the set-code dash, then strip leading zeros. `/v1/price` (single) normalizes server-side. |
 | magic | `EMN`, `LEA` | `6` | Scryfall collector number; pre-2002 sets have none → use `name` |
 | onepiece | `OP12` *or* `OP-12` (both accepted), `ST05`/`ST-05`, `PRB02`, `OP14-EB04`, `OP15-EB04`, `PROMO` | `OP01-001` | set accepts both the dashless (one-rip) and dashed (Bandai/riplist) vocabulary; card `number` keeps its dash verbatim. `OTHER` is intentionally unmapped (demo-deck products reuse main-set numbers — wrong-price risk) and 404s. |
 | lorcana | `1` … `12` | `42` | `/204`-style suffix normalized away |
