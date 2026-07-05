@@ -1,6 +1,7 @@
 # API Reference
 
-Base URL: **`https://prices.lavailabs.com`** (the only URL that ships in app binaries).
+Base URL: **`https://rip-prices.lavailabs.com`** (the only URL that ships in app
+binaries — e.g. `GET https://rip-prices.lavailabs.com/v1/prices?...`).
 All endpoints are `GET`, return JSON, and are open (no auth). Per-IP rate limit:
 **200 requests / 60s** → `429 {"error":"rate limited"}`.
 

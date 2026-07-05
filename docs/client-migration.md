@@ -84,7 +84,7 @@ This keeps aggregate collection value honest without over-blanking: a truly-unma
 
 Full reference: [`docs/API.md`](./API.md). What the client needs:
 
-- **Base URL:** `https://prices.lavailabs.com` — the *only* URL that ships in a binary. Never a
+- **Base URL:** `https://rip-prices.lavailabs.com` — the *only* URL that ships in a binary. Never a
   `workers.dev` URL (D13: changing it costs an App Store review cycle × every app).
 - **Batch primitive:** `GET /v1/prices?game=<game>&set=<set>` → whole set, one request, edge-cached
   24h. **Always prefer this over per-card `/v1/price`.** One call prices every card the user could
@@ -256,7 +256,7 @@ The blob carries per-finish prices (`normal`, `reverseHolo`, `holo`, `firstEditi
 
 ## 7. Rollout checklist (per app)
 
-- [ ] Add `PriceService` (base `https://prices.lavailabs.com`, `game=<yours>`) + `fetchSetPrices`.
+- [ ] Add `PriceService` (base `https://rip-prices.lavailabs.com`, `game=<yours>`) + `fetchSetPrices`.
 - [ ] Add `normalizedNumber` (§3a) and match blob cards by it.
 - [ ] Rewire set-open / pack-summary / inspect / owned-backfill to the **batch** path.
 - [ ] Delete the old per-card third-party price fetch + variant-selection code.

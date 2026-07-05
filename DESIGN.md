@@ -1,6 +1,6 @@
 # TCG Price API — Design Doc
 
-> **Status:** LIVE at `prices.lavailabs.com` (5 games; fab pending). Decisions resolved
+> **Status:** LIVE at `rip-prices.lavailabs.com` (5 games; fab pending). Decisions resolved
 > 2026-07-03; server side built and deployed. Rollout progress tracked in §7.
 > **Recurring cost budget:** $5/mo Cloudflare Workers Paid (already paying). **No paid APIs, ever, as part of the plan.**
 
@@ -52,7 +52,7 @@ our data hostage.
 | D10 | **USD-only v1, but `currency:"USD"` field in responses now** (EUR later is additive, not breaking). |
 | D11 | **History in D1**: `price_history(game, set, number, finish, date, market_cents, low_cents, source)`, PK (game,set,number,finish,date). Mapped sets only. 180-day hot retention. **Backfill at launch by replaying TCGCSV archives (available since 2024-02-08)** — movers/sparklines ship with real history on day one. |
 | D12 | **Auth: none.** Open endpoint + Cloudflare rate limits + edge cache (24h). Non-secret `X-App` header for telemetry only. Revisit only if abused. |
-| D13 | **Domain: `prices.lavailabs.com` from day one.** Never ship a `workers.dev` URL in a client (URL changes cost App Store review cycles × 7 apps). workers.dev is dev-only. |
+| D13 | **Domain: `rip-prices.lavailabs.com` from day one** (renamed 2026-07-04 from `prices.lavailabs.com`, before any client shipped; the worker also tolerates an `/api` path prefix in case the API is ever mounted under another host). Never ship a `workers.dev` URL in a client (URL changes cost App Store review cycles × 7 apps). workers.dev is dev-only. |
 | D14 | **Free-tier math (7–8k active users):** reads fit easily (worst case ~40k req/day vs 100k free; 24h client cache per set). Writes are what need the paid plan (KV 1k writes/day free vs ~1,200 set keys; D1 snapshot volume). Paid plan already in place — stop optimizing for free limits. |
 
 ### Rejected

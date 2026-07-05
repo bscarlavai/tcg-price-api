@@ -26,5 +26,5 @@ npm run golden
 ```
 
 ## 5. At launch
-Uncomment the `routes` line in wrangler.toml to attach `prices.lavailabs.com`
+The `routes` entry in wrangler.toml attaches `rip-prices.lavailabs.com`
 (the only URL that ever ships inside an app), then `npx wrangler deploy`.

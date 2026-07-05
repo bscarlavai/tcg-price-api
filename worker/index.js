@@ -21,6 +21,10 @@ const json = (body, status = 200, cache = CACHE) =>
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // Canonical: rip-prices.lavailabs.com/v1/*. An optional /api prefix also works,
+    // so the API can be mounted under some host's /api later without breaking clients.
+    if (url.pathname === '/api' || url.pathname.startsWith('/api/'))
+      url.pathname = url.pathname.slice(4) || '/';
     const q = (name) => url.searchParams.get(name);
 
     const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
@@ -72,10 +76,17 @@ export default {
       if (!GAMES.has(game) || !set || !number || !days)
         return json({ error: 'game, set, number required; window=7d|30d|90d|180d' }, 400);
       const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
-      const { results } = await env.HISTORY.prepare(
-        `SELECT date, finish, market_cents FROM price_history
-         WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
-      ).bind(game, set, number, q('variant') ?? '', since).all();
+      let results;
+      try {
+        ({ results } = await env.HISTORY.prepare(
+          `SELECT date, finish, market_cents FROM price_history
+           WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
+        ).bind(game, set, number, q('variant') ?? '', since).all());
+      } catch {
+        // D1 is briefly unavailable during bulk imports/maintenance. Clients treat
+        // this like any failure: keep cached values, retry later.
+        return json({ error: 'history temporarily unavailable' }, 503);
+      }
       if (!results.length) return json({ error: 'no history for card' }, 404);
       const finishes = new Set(results.map((r) => r.finish));
       const finish = q('finish') ?? (DEFAULT_FINISH_ORDER[game] ?? ['normal']).find((f) => finishes.has(f)) ?? results[0].finish;
