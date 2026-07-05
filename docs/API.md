@@ -31,8 +31,13 @@ All prices are **USD dollars** (floats, 2dp); every priced payload carries
 ## Semantics that matter
 
 - **404 on a set = unmapped set.** **Absent card in a 200 = known but unpriced**
-  (TCGPlayer publishes no market aggregate — e.g. Alpha Black Lotus). Never hide a card
+  (upstream has no price data of any kind — e.g. Alpha Black Lotus). Never hide a card
   because it has no price.
+- **`market` is nullable.** `market: null` with a non-null `low` = no recent sales to
+  compute a market average; `low` is the cheapest current **listing** (an asking price,
+  any condition — common on thin-market vintage). Decode `market` as optional. Display
+  rule: show `low` labeled as a listing/asking price, never as the market price. These
+  cards never appear in movers or history (both are strictly sale-derived).
 - **Headline `market`/`low`** on a card = the game's default finish (first present in
   the finish order above, e.g. pokemon prefers `normal`). The same finish also appears
   inside `finishes` when more than one exists, so finish-keyed clients need no
@@ -118,4 +123,6 @@ ingest is stale — keep serving cached/bundled prices.
 2. At runtime: `fetchSetPrices(game, set)` via `/v1/prices` when the local copy is
    >24h old; on ANY failure keep bundled/cached values. The API being down must never
    blank a price.
-3. Data refreshes daily ~21:45 UTC; polling more often than daily gains nothing.
+3. Model `market` as optional/nullable everywhere (see the nullable-market rule above);
+   a non-optional decoder breaks on listing-only vintage cards.
+4. Data refreshes daily ~21:45 UTC; polling more often than daily gains nothing.

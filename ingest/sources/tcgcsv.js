@@ -89,7 +89,10 @@ export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
   const rows = [];
   for (const pr of prices) {
     const card = numberById.get(pr.productId);
-    if (!card || pr.marketPrice == null) continue;
+    // Thin-market vintage often has a lowPrice (cheapest ask) but no marketPrice (no
+    // recent sales to average). Keep those rows — the blob carries market:null + low —
+    // and drop only cards with no price signal at all.
+    if (!card || (pr.marketPrice == null && pr.lowPrice == null)) continue;
     const finish = TCGCSV_SUBTYPES[pr.subTypeName];
     if (!finish) {
       unknownSubtypes?.add(pr.subTypeName);
@@ -101,7 +104,7 @@ export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
       finish,
       variant: card.variant,
       isBase: card.isBase,
-      marketCents: Math.round(pr.marketPrice * 100),
+      marketCents: pr.marketPrice != null ? Math.round(pr.marketPrice * 100) : null,
       lowCents: pr.lowPrice != null ? Math.round(pr.lowPrice * 100) : null,
     });
   }

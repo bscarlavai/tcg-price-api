@@ -572,19 +572,6 @@
   }
  },
  {
-  "id": "LCGX",
-  "name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
-  "abbrevs": [
-   "LCGX"
-  ],
-  "date": "2011-10-04",
-  "bestGuess": {
-   "groupId": 318,
-   "name": "Structure Deck: Gates of the Underworld",
-   "score": 1.14
-  }
- },
- {
   "id": "DL13",
   "name": "Duelist League 13 participation cards",
   "abbrevs": [
@@ -829,19 +816,6 @@
    "groupId": 23186,
    "name": "Advent Calendar 2014 (Adventskalender ZEXAL-Edition)",
    "score": 1
-  }
- },
- {
-  "id": "LC5D",
-  "name": "Legendary Collection 5D's Mega Pack",
-  "abbrevs": [
-   "LC5D"
-  ],
-  "date": "2014-10-23",
-  "bestGuess": {
-   "groupId": 1491,
-   "name": "Legendary Collection 5D's",
-   "score": 2.33
   }
  },
  {

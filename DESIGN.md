@@ -54,6 +54,7 @@ our data hostage.
 | D12 | **Auth: none.** Open endpoint + Cloudflare rate limits + edge cache (24h). Non-secret `X-App` header for telemetry only. Revisit only if abused. |
 | D13 | **Domain: `rip-prices.lavailabs.com` from day one** (renamed 2026-07-04 from `prices.lavailabs.com`, before any client shipped; the worker also tolerates an `/api` path prefix in case the API is ever mounted under another host). Never ship a `workers.dev` URL in a client (URL changes cost App Store review cycles × 7 apps). workers.dev is dev-only. |
 | D14 | **Free-tier math (7–8k active users):** reads fit easily (worst case ~40k req/day vs 100k free; 24h client cache per set). Writes are what need the paid plan (KV 1k writes/day free vs ~1,200 set keys; D1 snapshot volume). Paid plan already in place — stop optimizing for free limits. |
+| D15 | **`market` is nullable; listing-only cards ship as `market:null, low:<ask>`** (2026-07-05, found by mtg-rip migration). Thin-market vintage often has a cheapest ask but no sales-derived market; dropping those cards hid real prices (LEA: 79 cards incl. $1,374-ask Balance), while `market ← low` would silently put the least trustworthy asks in the most trusted field exactly where markets are thinnest — and pollute movers/history. So: blob carries both honestly; movers + D1 history stay strictly sale-derived (null-market rows never inserted); clients decode `market` as optional and label `low` as an asking price. |
 
 ### Rejected
 - **Direct TCGPlayer API** — closed to new developers (~2024, eBay-owned).

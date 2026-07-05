@@ -2,5 +2,7 @@
   { "set": "EMN", "number": "6", "name": "Emrakul, the Promised End", "finish": "headline", "min": 2, "max": 80,
     "why": "modern set, plain Scryfall collector number" },
   { "set": "LEA", "byName": "forest", "name": "Alpha Forest", "finish": "headline", "min": 3, "max": 300,
-    "why": "pre-2002 set with no upstream numbers → byName fallback; cheapest art variant wins" }
+    "why": "pre-2002 set with no upstream numbers → byName fallback; cheapest art variant wins" },
+  { "set": "LEA", "byName": "animate wall", "name": "Alpha Animate Wall", "finish": "headline", "field": "low", "min": 20, "max": 5000,
+    "why": "thin-market vintage: upstream has lowPrice but no marketPrice — must be present with low, not dropped" }
 ]

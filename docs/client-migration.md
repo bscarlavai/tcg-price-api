@@ -101,6 +101,11 @@ Full reference: [`docs/API.md`](./API.md). What the client needs:
   ```
 - **Headline `market`/`low`** on each card is already the game's default finish — a single-price
   client needs zero finish logic; just read `card.market` / `card.low`.
+- **`market` is nullable** (added 2026-07-05): `{"market":null,"low":289.99}` = no recent sales,
+  `low` is the cheapest current **listing** (asking price, any condition — thin-market vintage).
+  Decode `market` as optional or set decoding breaks on these cards. Display `low` labeled as a
+  listing/asking price ("Lowest listing $289.99"), never as the market price. Such cards never
+  appear in movers or `/v1/history`.
 - **`currency` is always `"USD"`.** Prices are dollars, floats, 2dp.
 - **Rate limit:** 200 req / 60s per IP → `429`. With per-set batching + 24h cache you'll never
   approach it; still, treat `429` as "keep cached/bundled," same as any other failure.

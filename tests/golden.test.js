@@ -34,8 +34,11 @@ for (const file of readdirSync(goldenDir).filter((f) => f.endsWith('.json'))) {
         : g.finish === 'headline' ? card
         : card.finishes?.[g.finish];
       assert.ok(price, `${g.variant ?? g.finish} missing on ${game}:${g.set} ${g.number ?? g.byName}`);
-      assert.ok(price.market >= g.min && price.market <= g.max,
-        `market ${price.market} outside [${g.min}, ${g.max}]`);
+      // field:"low" pins listing-only cards (market:null upstream): presence + a sane
+      // low is the contract; a market may legitimately appear later, so don't forbid it.
+      const field = g.field ?? 'market';
+      assert.ok(price[field] >= g.min && price[field] <= g.max,
+        `${field} ${price[field]} outside [${g.min}, ${g.max}]`);
     });
   }
 }
