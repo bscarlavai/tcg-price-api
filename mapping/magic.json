@@ -674,5 +674,88 @@
  "SOS": {
   "tcgcsv": 24601,
   "name": "Secrets of Strixhaven"
+ },
+ "WHO": {
+  "tcgcsv": [
+   23165,
+   23166
+  ],
+  "name": "Universes Beyond: Doctor Who"
+ },
+ "PIP": {
+  "tcgcsv": 23337,
+  "name": "Universes Beyond: Fallout"
+ },
+ "MSC": {
+  "tcgcsv": 24554,
+  "name": "Marvel Super Heroes Commander"
+ },
+ "LTR": {
+  "tcgcsv": 23019,
+  "name": "The Lord of the Rings: Tales of Middle-earth"
+ },
+ "40K": {
+  "tcgcsv": 3079,
+  "name": "Warhammer 40,000 Commander"
+ },
+ "FIN": {
+  "tcgcsv": 24219,
+  "name": "Final Fantasy"
+ },
+ "LTC": {
+  "tcgcsv": 23071,
+  "name": "Tales of Middle-earth Commander"
+ },
+ "FIC": {
+  "tcgcsv": 24220,
+  "name": "Final Fantasy Commander"
+ },
+ "MSH": {
+  "tcgcsv": 24553,
+  "name": "Marvel Super Heroes"
+ },
+ "TLA": {
+  "tcgcsv": 24421,
+  "name": "Avatar: The Last Airbender"
+ },
+ "ACR": {
+  "tcgcsv": 23446,
+  "name": "Assassin's Creed"
+ },
+ "SPM": {
+  "tcgcsv": 24245,
+  "name": "Marvel's Spider-Man"
+ },
+ "TMT": {
+  "tcgcsv": 24495,
+  "name": "Teenage Mutant Ninja Turtles"
+ },
+ "TLE": {
+  "tcgcsv": 24422,
+  "name": "Avatar: The Last Airbender Eternal"
+ },
+ "BOT": {
+  "tcgcsv": 17664,
+  "name": "Transformers"
+ },
+ "REX": {
+  "tcgcsv": 23317,
+  "name": "Jurassic World Collection"
+ },
+ "SPG": {
+  "tcgcsv": 23318,
+  "name": "Special Guests"
+ },
+ "MAR": {
+  "tcgcsv": 24432,
+  "name": "Marvel Universe"
+ },
+ "FCA": {
+  "tcgcsv": 24226,
+  "name": "Final Fantasy: Through the Ages"
+ },
+ "PTG": {
+  "tcgcsv": 2552,
+  "name": "Ponies: The Galloping"
  }
 }
