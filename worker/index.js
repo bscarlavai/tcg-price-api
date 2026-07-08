@@ -78,8 +78,13 @@ export default {
       const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
       let results;
       try {
+        // INDEXED BY forces a direct seek on the PK prefix (game, set_code, number). Without the
+        // hint the planner picks idx_history_date and scans every row for the game in the window —
+        // ~7.5s / millions of rows for a 180d Magic lookup (past the client's 8s timeout). With it,
+        // ~80ms / ~700 rows. A dedicated composite index would be cleaner but D1 OOMs building one
+        // over a table this size; the PK's autoindex already covers the equality prefix.
         ({ results } = await env.HISTORY.prepare(
-          `SELECT date, finish, market_cents FROM price_history
+          `SELECT date, finish, market_cents FROM price_history INDEXED BY sqlite_autoindex_price_history_1
            WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
         ).bind(game, set, number, q('variant') ?? '', since).all());
       } catch {
