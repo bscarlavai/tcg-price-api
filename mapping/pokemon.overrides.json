@@ -1,23 +1,114 @@
 {
-  "svp":   { "tcgcsv": 22872, "name": "SV: Scarlet & Violet Promo Cards" },
-  "swshp": { "tcgcsv": 2545,  "name": "SWSH: Sword & Shield Promo Cards" },
-  "smp":   { "tcgcsv": 1861,  "name": "SM Promos" },
-  "sm1":   { "tcgcsv": 1863,  "name": "SM Base Set" },
-  "xyp":   { "tcgcsv": 1451,  "name": "XY Promos" },
-  "bwp":   { "tcgcsv": 1407,  "name": "Black and White Promos" },
-  "hsp":   { "tcgcsv": 1453,  "name": "HGSS Promos" },
-  "dpp":   { "tcgcsv": 1421,  "name": "Diamond and Pearl Promos" },
-  "np":    { "tcgcsv": 1423,  "name": "Nintendo Promos" },
-  "bp":    { "tcgcsv": 1455,  "name": "Best of Promos" },
-  "ru1":   { "tcgcsv": 1433,  "name": "Rumble" },
-  "mcd11": { "tcgcsv": 1401,  "name": "McDonald's Promos 2011" },
-  "mcd12": { "tcgcsv": 1427,  "name": "McDonald's Promos 2012" },
-  "mcd14": { "tcgcsv": 1692,  "name": "McDonald's Promos 2014" },
-  "mcd15": { "tcgcsv": 1694,  "name": "McDonald's Promos 2015" },
-  "mcd16": { "tcgcsv": 3087,  "name": "McDonald's Promos 2016" },
-  "mcd17": { "tcgcsv": 2148,  "name": "McDonald's Promos 2017" },
-  "mcd18": { "tcgcsv": 2364,  "name": "McDonald's Promos 2018" },
-  "mcd19": { "tcgcsv": 2555,  "name": "McDonald's Promos 2019" },
-  "mcd21": { "tcgcsv": 2782,  "name": "McDonald's 25th Anniversary Promos" },
-  "mcd22": { "tcgcsv": 3150,  "name": "McDonald's Promos 2022" }
+ "svp": {
+  "tcgcsv": 22872,
+  "name": "SV: Scarlet & Violet Promo Cards"
+ },
+ "swshp": {
+  "tcgcsv": 2545,
+  "name": "SWSH: Sword & Shield Promo Cards"
+ },
+ "smp": {
+  "tcgcsv": 1861,
+  "name": "SM Promos"
+ },
+ "sm1": {
+  "tcgcsv": 1863,
+  "name": "SM Base Set"
+ },
+ "xyp": {
+  "tcgcsv": 1451,
+  "name": "XY Promos"
+ },
+ "bwp": {
+  "tcgcsv": 1407,
+  "name": "Black and White Promos"
+ },
+ "hsp": {
+  "tcgcsv": 1453,
+  "name": "HGSS Promos"
+ },
+ "dpp": {
+  "tcgcsv": 1421,
+  "name": "Diamond and Pearl Promos"
+ },
+ "np": {
+  "tcgcsv": 1423,
+  "name": "Nintendo Promos"
+ },
+ "bp": {
+  "tcgcsv": 1455,
+  "name": "Best of Promos"
+ },
+ "ru1": {
+  "tcgcsv": 1433,
+  "name": "Rumble"
+ },
+ "mcd11": {
+  "tcgcsv": 1401,
+  "name": "McDonald's Promos 2011"
+ },
+ "mcd12": {
+  "tcgcsv": 1427,
+  "name": "McDonald's Promos 2012"
+ },
+ "mcd14": {
+  "tcgcsv": 1692,
+  "name": "McDonald's Promos 2014"
+ },
+ "mcd15": {
+  "tcgcsv": 1694,
+  "name": "McDonald's Promos 2015"
+ },
+ "mcd16": {
+  "tcgcsv": 3087,
+  "name": "McDonald's Promos 2016"
+ },
+ "mcd17": {
+  "tcgcsv": 2148,
+  "name": "McDonald's Promos 2017"
+ },
+ "mcd18": {
+  "tcgcsv": 2364,
+  "name": "McDonald's Promos 2018"
+ },
+ "mcd19": {
+  "tcgcsv": 2555,
+  "name": "McDonald's Promos 2019"
+ },
+ "mcd21": {
+  "tcgcsv": 2782,
+  "name": "McDonald's 25th Anniversary Promos"
+ },
+ "mcd22": {
+  "tcgcsv": 3150,
+  "name": "McDonald's Promos 2022"
+ },
+ "MEE": {
+  "tcgcsv": 24461,
+  "name": "MEE: Mega Evolution Energies"
+ },
+ "CL": {
+  "tcgcsv": 23323,
+  "name": "Trading Card Game Classic"
+ },
+ "SMK2": {
+  "tcgcsv": 2208,
+  "name": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales"
+ },
+ "SMK1": {
+  "tcgcsv": 2069,
+  "name": "SM Trainer Kit: Lycanroc & Alolan Raichu"
+ },
+ "BLW": {
+  "tcgcsv": 1538,
+  "name": "BW Trainer Kit: Excadrill & Zoroark"
+ },
+ "BST": {
+  "tcgcsv": 1853,
+  "name": "EX Battle Stadium"
+ },
+ "FPP": {
+  "tcgcsv": 2776,
+  "name": "First Partner Pack"
+ }
 }

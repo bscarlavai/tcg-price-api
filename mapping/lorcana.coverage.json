@@ -1,0 +1,105 @@
+{
+ "unmappedGroups": [
+  {
+   "groupId": 24257,
+   "group": "Illumineer's Quest: Palace Heist",
+   "guessSetCode": "Q2",
+   "guessSetName": "Illumineer's Quest: Palace Heist",
+   "score": 1
+  },
+  {
+   "groupId": 23528,
+   "group": "Illumineer's Quest: Deep Trouble",
+   "guessSetCode": "Q1",
+   "guessSetName": "Illumineer's Quest: Deep Trouble",
+   "score": 1
+  },
+  {
+   "groupId": 23234,
+   "group": "Disney Lorcana Promo Cards",
+   "guessSetCode": "DLPC",
+   "guessSetName": "Disney Lorcana Promo Cards",
+   "score": 1
+  },
+  {
+   "groupId": 24734,
+   "group": "Illumineer's Quest: The Great Hunny Rescue",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 17690,
+   "group": "D23 Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 24740,
+   "group": "Hyperia City",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  },
+  {
+   "groupId": 23305,
+   "group": "Disney100 Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  }
+ ],
+ "unmappedAppSets": [
+  {
+   "setCode": "P3",
+   "name": "Promo Set 3",
+   "cards": 48
+  },
+  {
+   "setCode": "P1",
+   "name": "Promo Set 1",
+   "cards": 39
+  },
+  {
+   "setCode": "Q2",
+   "name": "Illumineer's Quest: Palace Heist",
+   "cards": 39
+  },
+  {
+   "setCode": "P2",
+   "name": "Promo Set 2",
+   "cards": 38
+  },
+  {
+   "setCode": "Q1",
+   "name": "Illumineer's Quest: Deep Trouble",
+   "cards": 36
+  },
+  {
+   "setCode": "DLPC",
+   "name": "Disney Lorcana Promo Cards",
+   "cards": 19
+  },
+  {
+   "setCode": "C2",
+   "name": "Lorcana Challenge Year 3",
+   "cards": 10
+  },
+  {
+   "setCode": "D23",
+   "name": "D23 Collection",
+   "cards": 9
+  },
+  {
+   "setCode": "cp",
+   "name": "Challenge Promo",
+   "cards": 9
+  },
+  {
+   "setCode": "DIS",
+   "name": "EPCOT Festival of the Arts",
+   "cards": 3
+  }
+ ]
+}

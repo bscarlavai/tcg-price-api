@@ -686,5 +686,33 @@
  "mcd22": {
   "tcgcsv": 3150,
   "name": "McDonald's Promos 2022"
+ },
+ "MEE": {
+  "tcgcsv": 24461,
+  "name": "MEE: Mega Evolution Energies"
+ },
+ "CL": {
+  "tcgcsv": 23323,
+  "name": "Trading Card Game Classic"
+ },
+ "SMK2": {
+  "tcgcsv": 2208,
+  "name": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales"
+ },
+ "SMK1": {
+  "tcgcsv": 2069,
+  "name": "SM Trainer Kit: Lycanroc & Alolan Raichu"
+ },
+ "BLW": {
+  "tcgcsv": 1538,
+  "name": "BW Trainer Kit: Excadrill & Zoroark"
+ },
+ "BST": {
+  "tcgcsv": 1853,
+  "name": "EX Battle Stadium"
+ },
+ "FPP": {
+  "tcgcsv": 2776,
+  "name": "First Partner Pack"
  }
 }

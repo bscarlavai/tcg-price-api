@@ -1,0 +1,1334 @@
+{
+ "unmappedGroups": [
+  {
+   "groupId": 22895,
+   "group": "Legendary Collection: 25th Anniversary Edition",
+   "guessSetCode": "LC01",
+   "guessSetName": "Legendary Collection: 25th Anniversary Edition",
+   "score": 1
+  },
+  {
+   "groupId": 356,
+   "group": "Yu-Gi-Oh! GX Tag Force Promotional Cards",
+   "guessSetCode": "GX02",
+   "guessSetName": "Yu-Gi-Oh! GX Tag Force promotional cards",
+   "score": 1
+  },
+  {
+   "groupId": 242,
+   "group": "Labyrinth_of_Nightmare",
+   "guessSetCode": "LON",
+   "guessSetName": "Labyrinth of Nightmare",
+   "score": 1
+  },
+  {
+   "groupId": 229,
+   "group": "Hidden Arsenal 5: Steelswarm Invasion SE",
+   "guessSetCode": "HA05",
+   "guessSetName": "Hidden Arsenal 5: Steelswarm Invasion",
+   "score": 0.83
+  },
+  {
+   "groupId": 588,
+   "group": "Return of the Duelist SE",
+   "guessSetCode": "REDU",
+   "guessSetName": "Return of the Duelist",
+   "score": 0.8
+  },
+  {
+   "groupId": 586,
+   "group": "Ra Yellow Mega Pack SE",
+   "guessSetCode": "RYMP",
+   "guessSetName": "Ra Yellow Mega Pack",
+   "score": 0.8
+  },
+  {
+   "groupId": 192,
+   "group": "Duelist Pack Collection Tin",
+   "guessSetCode": "DPC5",
+   "guessSetName": "Duelist Pack Collection Tin 2011",
+   "score": 0.8
+  },
+  {
+   "groupId": 24351,
+   "group": "Yu-Gi-Oh! Championship Series 2025 Prize Cards",
+   "guessSetCode": "YCSW",
+   "guessSetName": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+   "score": 0.78
+  },
+  {
+   "groupId": 585,
+   "group": "Order of Chaos SE",
+   "guessSetCode": "ORCS",
+   "guessSetName": "Order of Chaos",
+   "score": 0.75
+  },
+  {
+   "groupId": 303,
+   "group": "Storm of Ragnarok SE",
+   "guessSetCode": "STOR",
+   "guessSetName": "Storm of Ragnarok",
+   "score": 0.75
+  },
+  {
+   "groupId": 211,
+   "group": "Gladiator's Assault SE",
+   "guessSetCode": "GLAS",
+   "guessSetName": "Gladiator's Assault",
+   "score": 0.75
+  },
+  {
+   "groupId": 22881,
+   "group": "Legend of Blue Eyes White Dragon (Worldwide English)",
+   "guessSetCode": "LOB",
+   "guessSetName": "Legend of Blue Eyes White Dragon",
+   "score": 0.75
+  },
+  {
+   "groupId": 23648,
+   "group": "Structure Deck: Saga of Blue Eyes White Dragon (2020 Date Reprint)",
+   "guessSetCode": "SDBE",
+   "guessSetName": "Saga of Blue-Eyes White Dragon Structure Deck",
+   "score": 0.73
+  },
+  {
+   "groupId": 352,
+   "group": "Yu-Gi-Oh! 5D's Manga Promotional Cards",
+   "guessSetCode": "WB01",
+   "guessSetName": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+   "score": 0.7
+  },
+  {
+   "groupId": 1338,
+   "group": "Yu-Gi-Oh! GX Tag Force Evolution Promo",
+   "guessSetCode": "GX05",
+   "guessSetName": "Yu-Gi-Oh! GX Tag Force Evolution promotional cards",
+   "score": 0.7
+  },
+  {
+   "groupId": 24703,
+   "group": "Limited Pack World Championship 2026",
+   "guessSetCode": "25LP",
+   "guessSetName": "Limited Pack World Championship 2025",
+   "score": 0.67
+  },
+  {
+   "groupId": 23652,
+   "group": "Speed Duel: Battle City Finals",
+   "guessSetCode": "SBCB",
+   "guessSetName": "Speed Duel: Battle City Box",
+   "score": 0.67
+  },
+  {
+   "groupId": 23484,
+   "group": "Speed Duel: Tournament Pack 7",
+   "guessSetCode": "STP1",
+   "guessSetName": "Speed Duel Tournament Pack 1",
+   "score": 0.67
+  },
+  {
+   "groupId": 23355,
+   "group": "Speed Duel GX: Midterm Destruction",
+   "guessSetCode": "SGX2",
+   "guessSetName": "Speed Duel GX: Midterm Paradox",
+   "score": 0.67
+  },
+  {
+   "groupId": 23050,
+   "group": "Legend of Blue Eyes White Dragon (25th Anniversary Edition)",
+   "guessSetCode": "LOB",
+   "guessSetName": "Legend of Blue Eyes White Dragon",
+   "score": 0.67
+  },
+  {
+   "groupId": 1162,
+   "group": "Judgment of the Light: Deluxe Edition",
+   "guessSetCode": "JOTL",
+   "guessSetName": "Judgment of the Light",
+   "score": 0.67
+  },
+  {
+   "groupId": 577,
+   "group": "Cosmo Blazer SE",
+   "guessSetCode": "CBLZ",
+   "guessSetName": "Cosmo Blazer",
+   "score": 0.67
+  },
+  {
+   "groupId": 574,
+   "group": "Abyss Rising SE",
+   "guessSetCode": "ABYR",
+   "guessSetName": "Abyss Rising",
+   "score": 0.67
+  },
+  {
+   "groupId": 579,
+   "group": "Generation Force SE",
+   "guessSetCode": "GENF",
+   "guessSetName": "Generation Force",
+   "score": 0.67
+  },
+  {
+   "groupId": 199,
+   "group": "Duelist Revolution SE",
+   "guessSetCode": "DREV",
+   "guessSetName": "Duelist Revolution",
+   "score": 0.67
+  },
+  {
+   "groupId": 145,
+   "group": "Ancient Prophecy SE",
+   "guessSetCode": "ANPR",
+   "guessSetName": "Ancient Prophecy",
+   "score": 0.67
+  },
+  {
+   "groupId": 271,
+   "group": "Raging Battle SE",
+   "guessSetCode": "RGBT",
+   "guessSetName": "Raging Battle",
+   "score": 0.67
+  },
+  {
+   "groupId": 213,
+   "group": "Gold Series 2",
+   "guessSetCode": "GLD1",
+   "guessSetName": "Gold Series",
+   "score": 0.67
+  },
+  {
+   "groupId": 22964,
+   "group": "2009 Duelist Pack Collection Tin",
+   "guessSetCode": "DPC5",
+   "guessSetName": "Duelist Pack Collection Tin 2011",
+   "score": 0.67
+  },
+  {
+   "groupId": 1325,
+   "group": "Duel Terminal",
+   "guessSetCode": "DT01",
+   "guessSetName": "Duel Terminal 1",
+   "score": 0.67
+  },
+  {
+   "groupId": 599,
+   "group": "Yu-Gi-Oh! GX Manga Promotional Cards",
+   "guessSetCode": "GX02",
+   "guessSetName": "Yu-Gi-Oh! GX Tag Force promotional cards",
+   "score": 0.67
+  },
+  {
+   "groupId": 181,
+   "group": "Duelist Genesis",
+   "guessSetCode": "TDGS",
+   "guessSetName": "The Duelist Genesis",
+   "score": 0.67
+  },
+  {
+   "groupId": 206,
+   "group": "Forbidden Legacy 1",
+   "guessSetCode": "FL1",
+   "guessSetName": "Forbidden Legacy",
+   "score": 0.67
+  },
+  {
+   "groupId": 24012,
+   "group": "Structure Deck: Realm of Light (2020 Date Reprint)",
+   "guessSetCode": "SDLI",
+   "guessSetName": "Realm of Light Structure Deck",
+   "score": 0.63
+  },
+  {
+   "groupId": 1467,
+   "group": "Super Starter: Space-Time Showdown Power-Up Pack",
+   "guessSetCode": "YS14",
+   "guessSetName": "Super Starter: Space-Time Showdown",
+   "score": 0.63
+  },
+  {
+   "groupId": 1129,
+   "group": "Super Starter: V for Victory Power-Up Pack",
+   "guessSetCode": "YS13",
+   "guessSetName": "Super Starter: V for Victory",
+   "score": 0.63
+  },
+  {
+   "groupId": 24704,
+   "group": "Ultimate Tournament Pack 1",
+   "guessSetCode": "OP01",
+   "guessSetName": "OTS Tournament Pack 1",
+   "score": 0.6
+  },
+  {
+   "groupId": 23469,
+   "group": "Legendary Decks II (2020 Reprint)",
+   "guessSetCode": "LDK2",
+   "guessSetName": "Legendary Decks II",
+   "score": 0.6
+  },
+  {
+   "groupId": 1736,
+   "group": "Breakers of Shadow: Special Edition",
+   "guessSetCode": "BOSH",
+   "guessSetName": "Breakers of Shadow",
+   "score": 0.6
+  },
+  {
+   "groupId": 1695,
+   "group": "Clash of Rebellions: Special Edition",
+   "guessSetCode": "CORE",
+   "guessSetName": "Clash of Rebellions",
+   "score": 0.6
+  },
+  {
+   "groupId": 1510,
+   "group": "The New Challengers: Super Edition",
+   "guessSetCode": "NECH",
+   "guessSetName": "The New Challengers",
+   "score": 0.6
+  },
+  {
+   "groupId": 600,
+   "group": "Yu-Gi-Oh! ZEXAL Manga Promotional Cards",
+   "guessSetCode": "ZDC1",
+   "guessSetName": "Yu-Gi-Oh! ZEXAL World Duel Carnival promotional cards",
+   "score": 0.6
+  },
+  {
+   "groupId": 22887,
+   "group": "Invasion of Chaos (Worldwide English)",
+   "guessSetCode": "IOC",
+   "guessSetName": "Invasion of Chaos",
+   "score": 0.6
+  },
+  {
+   "groupId": 275,
+   "group": "Rise of Destiny Special Edition",
+   "guessSetCode": "RDS",
+   "guessSetName": "Rise of Destiny",
+   "score": 0.6
+  },
+  {
+   "groupId": 22885,
+   "group": "Legacy of Darkness (Worldwide English)",
+   "guessSetCode": "LOD",
+   "guessSetName": "Legacy of Darkness",
+   "score": 0.6
+  },
+  {
+   "groupId": 22884,
+   "group": "Labyrinth of Nightmare (Worldwide English)",
+   "guessSetCode": "LON",
+   "guessSetName": "Labyrinth of Nightmare",
+   "score": 0.6
+  },
+  {
+   "groupId": 22883,
+   "group": "Pharaoh's Servant (Worldwide English)",
+   "guessSetCode": "PSV",
+   "guessSetName": "Pharaoh's Servant",
+   "score": 0.6
+  },
+  {
+   "groupId": 2577,
+   "group": "The Dark Side of Dimensions Movie Pack: Secret Edition",
+   "guessSetCode": "MVP1",
+   "guessSetName": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+   "score": 0.58
+  },
+  {
+   "groupId": 2322,
+   "group": "The Dark Side of Dimensions Movie Pack: Special Edition",
+   "guessSetCode": "MVP1",
+   "guessSetName": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+   "score": 0.58
+  },
+  {
+   "groupId": 1877,
+   "group": "The Dark Side of Dimensions Movie Pack: Gold Edition",
+   "guessSetCode": "MVP1",
+   "guessSetName": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+   "score": 0.58
+  },
+  {
+   "groupId": 1921,
+   "group": "Yu-Gi-Oh! Video Game Promotional Cards",
+   "guessSetCode": "FMR",
+   "guessSetName": "Yu-Gi-Oh! Forbidden Memories promotional cards",
+   "score": 0.56
+  },
+  {
+   "groupId": 24621,
+   "group": "Battles of Legend: Glorious Gallery",
+   "guessSetCode": "BLAR",
+   "guessSetName": "Battles of Legend: Armageddon",
+   "score": 0.5
+  },
+  {
+   "groupId": 24460,
+   "group": "eFootball Collaboration Promos",
+   "guessSetCode": "EFC1",
+   "guessSetName": "EFootball collaboration cards",
+   "score": 0.5
+  },
+  {
+   "groupId": 24352,
+   "group": "Retro Pack 2 (2020 Date Reprint)",
+   "guessSetCode": "RP02",
+   "guessSetName": "Retro Pack 2",
+   "score": 0.5
+  },
+  {
+   "groupId": 23579,
+   "group": "Light of Destruction (2020 Date Reprint)",
+   "guessSetCode": "LODT",
+   "guessSetName": "Light of Destruction",
+   "score": 0.5
+  },
+  {
+   "groupId": 23056,
+   "group": "Invasion of Chaos (25th Anniversary Edition)",
+   "guessSetCode": "IOC",
+   "guessSetName": "Invasion of Chaos",
+   "score": 0.5
+  },
+  {
+   "groupId": 23054,
+   "group": "Pharaoh's Servant (25th Anniversary Edition)",
+   "guessSetCode": "PSV",
+   "guessSetName": "Pharaoh's Servant",
+   "score": 0.5
+  },
+  {
+   "groupId": 1907,
+   "group": "Raging Tempest: Special Edition",
+   "guessSetCode": "RATE",
+   "guessSetName": "Raging Tempest",
+   "score": 0.5
+  },
+  {
+   "groupId": 1844,
+   "group": "The Dark Illusion: Special Edition (EU)",
+   "guessSetCode": "TDIL",
+   "guessSetName": "The Dark Illusion",
+   "score": 0.5
+  },
+  {
+   "groupId": 1803,
+   "group": "Shining Victories: Special Edition",
+   "guessSetCode": "SHVI",
+   "guessSetName": "Shining Victories",
+   "score": 0.5
+  },
+  {
+   "groupId": 1592,
+   "group": "Crossed Souls: Advanced Edition",
+   "guessSetCode": "CROS",
+   "guessSetName": "Crossed Souls",
+   "score": 0.5
+  },
+  {
+   "groupId": 1488,
+   "group": "Duelist Alliance: Deluxe Edition",
+   "guessSetCode": "DUEA",
+   "guessSetName": "Duelist Alliance",
+   "score": 0.5
+  },
+  {
+   "groupId": 142,
+   "group": "Absolute Powerforce: Special Edition",
+   "guessSetCode": "ABPF",
+   "guessSetName": "Absolute Powerforce",
+   "score": 0.5
+  },
+  {
+   "groupId": 168,
+   "group": "Dark Legends Promo Card",
+   "guessSetCode": "DLG1",
+   "guessSetName": "Dark Legends",
+   "score": 0.5
+  },
+  {
+   "groupId": 22886,
+   "group": "Dark Crisis (Worldwide English)",
+   "guessSetCode": "DCR",
+   "guessSetName": "Dark Crisis",
+   "score": 0.5
+  },
+  {
+   "groupId": 326,
+   "group": "Tactical Evolution: Special Edition",
+   "guessSetCode": "TAEV",
+   "guessSetName": "Tactical Evolution",
+   "score": 0.5
+  },
+  {
+   "groupId": 22882,
+   "group": "Metal Raiders (Worldwide English)",
+   "guessSetCode": "MRD",
+   "guessSetName": "Metal Raiders",
+   "score": 0.5
+  },
+  {
+   "groupId": 22905,
+   "group": "Spell Ruler (Worldwide English)",
+   "guessSetCode": "SRL",
+   "guessSetName": "Spell Ruler",
+   "score": 0.5
+  },
+  {
+   "groupId": 187,
+   "group": "Duelist Pack 7",
+   "guessSetCode": "DP08",
+   "guessSetName": "Duelist Pack: Yusei",
+   "score": 0.5
+  },
+  {
+   "groupId": 23984,
+   "group": "Legendary Dragon Decks (2020 Date Reprint)",
+   "guessSetCode": "LEDD",
+   "guessSetName": "Legendary Dragon Decks",
+   "score": 0.5
+  },
+  {
+   "groupId": 1342,
+   "group": "Lost Millennium SE",
+   "guessSetCode": "TLM",
+   "guessSetName": "The Lost Millennium",
+   "score": 0.5
+  },
+  {
+   "groupId": 138,
+   "group": "5D's 2008 English Starter Deck",
+   "guessSetCode": "5DS1",
+   "guessSetName": "Starter Deck: Yu-Gi-Oh! 5D's",
+   "score": 0.44
+  },
+  {
+   "groupId": 360,
+   "group": "Yugioh 5D's 2008 Starter Deck",
+   "guessSetCode": "5DS1",
+   "guessSetName": "Starter Deck: Yu-Gi-Oh! 5D's",
+   "score": 0.44
+  },
+  {
+   "groupId": 23055,
+   "group": "Dark Crisis (25th Anniversary Edition)",
+   "guessSetCode": "LC01",
+   "guessSetName": "Legendary Collection: 25th Anniversary Edition",
+   "score": 0.43
+  },
+  {
+   "groupId": 23052,
+   "group": "Metal Raiders (25th Anniversary Edition)",
+   "guessSetCode": "LC01",
+   "guessSetName": "Legendary Collection: 25th Anniversary Edition",
+   "score": 0.43
+  },
+  {
+   "groupId": 23053,
+   "group": "Spell Ruler (25th Anniversary Edition)",
+   "guessSetCode": "LC01",
+   "guessSetName": "Legendary Collection: 25th Anniversary Edition",
+   "score": 0.43
+  },
+  {
+   "groupId": 1322,
+   "group": "Yu-Gi-Oh! Tokens",
+   "guessSetCode": "AC18",
+   "guessSetName": "Yu-Gi-Oh! Advent Calendar (2018)",
+   "score": 0.43
+  },
+  {
+   "groupId": 143,
+   "group": "Yu-Gi-Oh! Duel Monsters International: Worldwide Edition",
+   "guessSetCode": "SDD",
+   "guessSetName": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+   "score": 0.43
+  },
+  {
+   "groupId": 24679,
+   "group": "Legendary Arc-V Decks",
+   "guessSetCode": "LDK2",
+   "guessSetName": "Legendary Decks II",
+   "score": 0.4
+  },
+  {
+   "groupId": 23592,
+   "group": "Retro Pack (2020 Date Reprint)",
+   "guessSetCode": "RP01",
+   "guessSetName": "Retro Pack",
+   "score": 0.4
+  },
+  {
+   "groupId": 24189,
+   "group": "King of Games: Yugi's Legendary Decks (2020 Date Reprint)",
+   "guessSetCode": "YGLD",
+   "guessSetName": "Yugi's Legendary Decks",
+   "score": 0.4
+  },
+  {
+   "groupId": 2718,
+   "group": "Miscellaneous Promotional Cards",
+   "guessSetCode": "MP1",
+   "guessSetName": "McDonald's Promotional Cards",
+   "score": 0.4
+  },
+  {
+   "groupId": 2149,
+   "group": "Judge Promotional Cards",
+   "guessSetCode": "MP1",
+   "guessSetName": "McDonald's Promotional Cards",
+   "score": 0.4
+  },
+  {
+   "groupId": 1860,
+   "group": "Invasion: Vengeance: Special Edition",
+   "guessSetCode": "DPK",
+   "guessSetName": "Duelist Pack: Special Edition",
+   "score": 0.4
+  },
+  {
+   "groupId": 1544,
+   "group": "Starter Deck: Dark Legion",
+   "guessSetCode": "SDJ",
+   "guessSetName": "Starter Deck: Joey",
+   "score": 0.4
+  },
+  {
+   "groupId": 1545,
+   "group": "Starter Deck: Saber Force",
+   "guessSetCode": "SDJ",
+   "guessSetName": "Starter Deck: Joey",
+   "score": 0.4
+  },
+  {
+   "groupId": 358,
+   "group": "Yu-Gi-Oh! R Manga Promo",
+   "guessSetCode": "YR01",
+   "guessSetName": "Yu-Gi-Oh! R Volume 1 promotional card",
+   "score": 0.4
+  },
+  {
+   "groupId": 284,
+   "group": "Sneak Preview Series 3",
+   "guessSetCode": "GLD3",
+   "guessSetName": "Gold Series 3",
+   "score": 0.4
+  },
+  {
+   "groupId": 1655,
+   "group": "Structure Deck: Deluxe Edition",
+   "guessSetCode": "SDSB",
+   "guessSetName": "Structure Deck: Soulburner",
+   "score": 0.4
+  },
+  {
+   "groupId": 182,
+   "group": "Duelist League Promo",
+   "guessSetCode": "DLDI",
+   "guessSetName": "Duelist League Demo 2010",
+   "score": 0.4
+  },
+  {
+   "groupId": 2373,
+   "group": "Yu-Gi-Oh! Value Boxes",
+   "guessSetCode": "AC18",
+   "guessSetName": "Yu-Gi-Oh! Advent Calendar (2018)",
+   "score": 0.38
+  },
+  {
+   "groupId": 280,
+   "group": "Shonen Jump Championship Series Promos",
+   "guessSetCode": "SJC",
+   "guessSetName": "Shonen Jump Championship 2004 Prize Card",
+   "score": 0.38
+  },
+  {
+   "groupId": 1686,
+   "group": "Yu-Gi-Oh! The Movie Ani-Manga Promo",
+   "guessSetCode": "MVP1",
+   "guessSetName": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+   "score": 0.38
+  },
+  {
+   "groupId": 24675,
+   "group": "Chaos Origins",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 351,
+   "group": "World Championship Series",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 2215,
+   "group": "Pharaoh Tour Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 2353,
+   "group": "World Championship JPP Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 24250,
+   "group": "Early Days Collection Promotional Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 1344,
+   "group": "Sneak Preview Series 4",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 281,
+   "group": "Shonen Jump Magazine Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 2937,
+   "group": "Advent Calendar 2011 (Adventskalender)",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 1315,
+   "group": "Sneak Preview Series 5",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 283,
+   "group": "Sneak Preview Series 2",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 2052,
+   "group": "Collector's Boxes",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 23186,
+   "group": "Advent Calendar 2014 (Adventskalender ZEXAL-Edition)",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 1158,
+   "group": "Shadow Samurai Value Box",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 126,
+   "group": "2003 Collectors Tin",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 1301,
+   "group": "Exclusive Tin 2009",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 1313,
+   "group": "The Valuable Book Volume 5",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.18
+  },
+  {
+   "groupId": 1155,
+   "group": "Poseidra Value Box",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 1154,
+   "group": "Silver Dragon Value Box",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 240,
+   "group": "Jump Award",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.14
+  },
+  {
+   "groupId": 1159,
+   "group": "Toys \"R\" Us Throwdown Promo",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.08
+  },
+  {
+   "groupId": 2889,
+   "group": "Redemption Replacement",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  }
+ ],
+ "unmappedAppSets": [
+  {
+   "setCode": "WGRT",
+   "name": "War of the Giants Reinforcements",
+   "cards": 104
+  },
+  {
+   "setCode": "YS15",
+   "name": "2-Player Starter Deck: Yuya & Declan",
+   "cards": 99
+  },
+  {
+   "setCode": "JUMP",
+   "name": "Shonen Jump May 2006 subscription bonus",
+   "cards": 85
+  },
+  {
+   "setCode": "STAX",
+   "name": "2-Player Starter Set",
+   "cards": 43
+  },
+  {
+   "setCode": "DL11",
+   "name": "Duelist League 2 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL12",
+   "name": "Duelist League 3 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL13",
+   "name": "Duelist League 13 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL14",
+   "name": "Duelist League 14 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL15",
+   "name": "Duelist League 15 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL16",
+   "name": "Duelist League 16 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL17",
+   "name": "Duelist League 17 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DL18",
+   "name": "Duelist League 18 participation cards",
+   "cards": 20
+  },
+  {
+   "setCode": "DB",
+   "name": "Dark Beginning 2",
+   "cards": 14
+  },
+  {
+   "setCode": "JMPS",
+   "name": "Shonen Jump Scholastic Edition Vol. 9, Issue 1 promotional card",
+   "cards": 9
+  },
+  {
+   "setCode": "JMP",
+   "name": "Shonen Jump Vol. 1, Issue 1 promotional card",
+   "cards": 7
+  },
+  {
+   "setCode": "WC10",
+   "name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+   "cards": 6
+  },
+  {
+   "setCode": "WCS",
+   "name": "Yu-Gi-Oh! World Championship 2004 prize cards",
+   "cards": 5
+  },
+  {
+   "setCode": "2017",
+   "name": "Yu-Gi-Oh! World Championship 2017 prize cards",
+   "cards": 4
+  },
+  {
+   "setCode": "DL1",
+   "name": "Duelist League Series 1 participation cards",
+   "cards": 4
+  },
+  {
+   "setCode": "DL2",
+   "name": "Duelist League Series 2 participation cards",
+   "cards": 4
+  },
+  {
+   "setCode": "SBPR",
+   "name": "Remote Duel at Home Sweepstakes",
+   "cards": 4
+  },
+  {
+   "setCode": "TKN1",
+   "name": "San Diego Comic-Con promotional cards",
+   "cards": 4
+  },
+  {
+   "setCode": "WCPS",
+   "name": "Yu-Gi-Oh! World Championship 2006 prize cards",
+   "cards": 4
+  },
+  {
+   "setCode": "GTP2",
+   "name": "Ghosts From the Past: The 2nd Haunting",
+   "cards": 3
+  },
+  {
+   "setCode": "GX06",
+   "name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+   "cards": 3
+  },
+  {
+   "setCode": "LOD2",
+   "name": "Yu-Gi-Oh! Legacy of the Duelist: Link Evolution promotional cards",
+   "cards": 3
+  },
+  {
+   "setCode": "OPTP",
+   "name": "Trials of the Pharaoh - Trials of the Kingdom promotional card",
+   "cards": 3
+  },
+  {
+   "setCode": "SJC",
+   "name": "Shonen Jump Championship 2004 Prize Card",
+   "cards": 3
+  },
+  {
+   "setCode": "WQ11",
+   "name": "Yu-Gi-Oh! World Championship Qualifier National Championships 2011 prize cards",
+   "cards": 3
+  },
+  {
+   "setCode": "YDB1",
+   "name": "Yu-Gi-Oh! GX Card Almanac promotional cards",
+   "cards": 3
+  },
+  {
+   "setCode": "2018",
+   "name": "Yu-Gi-Oh! World Championship 2018 prize cards",
+   "cards": 2
+  },
+  {
+   "setCode": "2019",
+   "name": "Yu-Gi-Oh! World Championship 2019 Japanese National Qualifiers prize cards",
+   "cards": 2
+  },
+  {
+   "setCode": "H5SE",
+   "name": "Hidden Arsenal 5: Steelswarm Invasion: Special Edition",
+   "cards": 2
+  },
+  {
+   "setCode": "MOV2",
+   "name": "Yu-Gi-Oh! 3D Bonds Beyond Time DVD promotional card",
+   "cards": 2
+  },
+  {
+   "setCode": "MVPC",
+   "name": "Yu-Gi-Oh! The Dark Side of Dimensions Blu-ray & DVD promotional card",
+   "cards": 2
+  },
+  {
+   "setCode": "NKC1",
+   "name": "Nike collaboration cards",
+   "cards": 2
+  },
+  {
+   "setCode": "PT02",
+   "name": "Pharaoh Tour 2006 promotional cards",
+   "cards": 2
+  },
+  {
+   "setCode": "PT03",
+   "name": "Pharaoh Tour 2007 promotional cards",
+   "cards": 2
+  },
+  {
+   "setCode": "PT1",
+   "name": "Pharaoh Tour 2005 promotional cards",
+   "cards": 2
+  },
+  {
+   "setCode": "SP02",
+   "name": "Power of the Duelist Sneak Peek Participation Card",
+   "cards": 2
+  },
+  {
+   "setCode": "SP2",
+   "name": "Shadow of Infinity Sneak Peek Participation Card",
+   "cards": 2
+  },
+  {
+   "setCode": "YR01",
+   "name": "Yu-Gi-Oh! R Volume 1 promotional card",
+   "cards": 2
+  },
+  {
+   "setCode": "2020",
+   "name": "KC Grand Tournament prize card",
+   "cards": 1
+  },
+  {
+   "setCode": "2021",
+   "name": "KC Grand Tournament 2021 prize card",
+   "cards": 1
+  },
+  {
+   "setCode": "21CC",
+   "name": "Yu-Gi-Oh! TCG Remote Duel Extravaganza participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "25TH",
+   "name": "Battle of Chaos",
+   "cards": 1
+  },
+  {
+   "setCode": "DB13",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB14",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB18",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB32",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB40",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB43",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB46",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB47",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB48",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB49",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB5",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DB9",
+   "name": "Dark Beginning 1",
+   "cards": 1
+  },
+  {
+   "setCode": "DL10",
+   "name": "Duelist League Series 10 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL3",
+   "name": "Duelist League Series 3 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL4",
+   "name": "Duelist League Series 4 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL5",
+   "name": "Duelist League Series 5 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL6",
+   "name": "Duelist League Series 6 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL7",
+   "name": "Duelist League Series 7 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL8",
+   "name": "Duelist League Series 8 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "DL9",
+   "name": "Duelist League Series 9 participation card",
+   "cards": 1
+  },
+  {
+   "setCode": "EFC1",
+   "name": "EFootball collaboration cards",
+   "cards": 1
+  },
+  {
+   "setCode": "EM1",
+   "name": "Yu-Gi-Oh! Trading Card Game Tour 2004 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "GSE",
+   "name": "Yu-Gi-Oh! GX Special Edition",
+   "cards": 1
+  },
+  {
+   "setCode": "KACB",
+   "name": "Yugi & Kaiba Collector Box",
+   "cards": 1
+  },
+  {
+   "setCode": "TYL",
+   "name": "Make-A-Wish Foundation promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA02",
+   "name": "Yu-Gi-Oh! ARC-V Volume 2 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA03",
+   "name": "Yu-Gi-Oh! ARC-V Volume 3 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA04",
+   "name": "Yu-Gi-Oh! ARC-V Volume 4 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA05",
+   "name": "Yu-Gi-Oh! ARC-V Volume 5 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA06",
+   "name": "Yu-Gi-Oh! ARC-V Volume 6 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YA07",
+   "name": "Yu-Gi-Oh! ARC-V Volume 7 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF01",
+   "name": "Yu-Gi-Oh! 5D's Volume 1 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF02",
+   "name": "Yu-Gi-Oh! 5D's Volume 2 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF03",
+   "name": "Yu-Gi-Oh! 5D's Volume 3 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF04",
+   "name": "Yu-Gi-Oh! 5D's Volume 4 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF05",
+   "name": "Yu-Gi-Oh! 5D's Volume 5 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF06",
+   "name": "Yu-Gi-Oh! 5D's Volume 6 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF07",
+   "name": "Yu-Gi-Oh! 5D's Volume 7 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF08",
+   "name": "Yu-Gi-Oh! 5D's volume 8 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YF09",
+   "name": "Yu-Gi-Oh! 5D's Volume 9 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG01",
+   "name": "Yu-Gi-Oh! GX Volume 1 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG02",
+   "name": "Yu-Gi-Oh! GX Volume 2 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG03",
+   "name": "Yu-Gi-Oh! GX Volume 3 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG04",
+   "name": "Yu-Gi-Oh! GX Volume 4 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG05",
+   "name": "Yu-Gi-Oh! GX Volume 5 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG06",
+   "name": "Yu-Gi-Oh! GX Volume 6 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG07",
+   "name": "Yu-Gi-Oh! GX Volume 7 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG08",
+   "name": "Yu-Gi-Oh! GX Volume 8 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YG09",
+   "name": "Yu-Gi-Oh! GX Volume 9 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YR04",
+   "name": "Yu-Gi-Oh! R Volume 4 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YR05",
+   "name": "Yu-Gi-Oh! R Volume 5 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ01",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 1 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ02",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 2 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ03",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 3 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ04",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 4 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ05",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 5 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ06",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 6 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ07",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 7 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ08",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 8 promotional card",
+   "cards": 1
+  },
+  {
+   "setCode": "YZ09",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 9 promotional card",
+   "cards": 1
+  }
+ ]
+}

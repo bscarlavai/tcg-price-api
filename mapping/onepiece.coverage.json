@@ -1,0 +1,228 @@
+{
+ "unmappedGroups": [
+  {
+   "groupId": 24749,
+   "group": "Starter Deck 31: RED Monkey.D.Luffy",
+   "guessSetCode": "ST-08",
+   "guessSetName": "STARTER DECK -Monkey D. Luffy",
+   "score": 0.71
+  },
+  {
+   "groupId": 17660,
+   "group": "Super Pre-Release Starter Deck 3: The Seven Warlords of the Sea",
+   "guessSetCode": "ST-03",
+   "guessSetName": "STARTER DECK -The Seven Warlords of the Sea",
+   "score": 0.64
+  },
+  {
+   "groupId": 24752,
+   "group": "Starter Deck 34: PURPLE Charlotte Katakuri",
+   "guessSetCode": "ST-20",
+   "guessSetName": "STARTER DECK -Yellow Charlotte Katakuri",
+   "score": 0.57
+  },
+  {
+   "groupId": 17659,
+   "group": "Super Pre-Release Starter Deck 1: Straw Hat Crew",
+   "guessSetCode": "ST-01",
+   "guessSetName": "STARTER DECK -Straw Hat Crew",
+   "score": 0.56
+  },
+  {
+   "groupId": 17661,
+   "group": "Super Pre-Release Starter Deck 4: Animal Kingdom Pirates",
+   "guessSetCode": "ST-04",
+   "guessSetName": "STARTER DECK -Animal Kingdom Pirates",
+   "score": 0.56
+  },
+  {
+   "groupId": 24751,
+   "group": "Starter Deck 33: BLUE Kuzan",
+   "guessSetCode": "ST-25",
+   "guessSetName": "STARTER DECK -BLUE Buggy",
+   "score": 0.5
+  },
+  {
+   "groupId": 24638,
+   "group": "Adventure on Kami's Island Release Event Cards",
+   "guessSetCode": "OP15-EB04",
+   "guessSetName": "BOOSTER PACK -ADVENTURE ON KAMI’S ISLAND",
+   "score": 0.5
+  },
+  {
+   "groupId": 24579,
+   "group": "The Azure Sea's Seven Release Event Cards",
+   "guessSetCode": "OP14-EB04",
+   "guessSetName": "BOOSTER PACK -THE AZURE SEA’S SEVEN",
+   "score": 0.5
+  },
+  {
+   "groupId": 24242,
+   "group": "A Fist of Divine Speed Release Event Cards",
+   "guessSetCode": "OP-11",
+   "guessSetName": "BOOSTER PACK -A FIST OF DIVINE SPEED",
+   "score": 0.5
+  },
+  {
+   "groupId": 23512,
+   "group": "500 Years in the Future Pre-Release Cards",
+   "guessSetCode": "OP-07",
+   "guessSetName": "BOOSTER PACK -500 YEARS IN THE FUTURE",
+   "score": 0.5
+  },
+  {
+   "groupId": 17658,
+   "group": "Super Pre-Release Starter Deck 2: Worst Generation",
+   "guessSetCode": "ST-02",
+   "guessSetName": "STARTER DECK -Worst Generation",
+   "score": 0.5
+  },
+  {
+   "groupId": 23590,
+   "group": "Emperors in the New World: 2nd Anniversary Tournament Cards",
+   "guessSetCode": "OP-09",
+   "guessSetName": "BOOSTER PACK -EMPERORS IN THE NEW WORLD",
+   "score": 0.45
+  },
+  {
+   "groupId": 23368,
+   "group": "Awakening of the New Era: 1st Anniversary Tournament Cards",
+   "guessSetCode": "OP-05",
+   "guessSetName": "BOOSTER PACK -AWAKENING OF THE NEW ERA",
+   "score": 0.45
+  },
+  {
+   "groupId": 24677,
+   "group": "The Time of Battle Release Event Cards",
+   "guessSetCode": "OP-16",
+   "guessSetName": "BOOSTER PACK -THE TIME OF BATTLE",
+   "score": 0.44
+  },
+  {
+   "groupId": 24406,
+   "group": "Legacy of the Master Release Event Cards",
+   "guessSetCode": "OP-12",
+   "guessSetName": "BOOSTER PACK -LEGACY OF THE MASTER",
+   "score": 0.44
+  },
+  {
+   "groupId": 23424,
+   "group": "Wings of the Captain Pre-Release Cards",
+   "guessSetCode": "OP-06",
+   "guessSetName": "BOOSTER PACK -WINGS OF THE CAPTAIN",
+   "score": 0.44
+  },
+  {
+   "groupId": 24750,
+   "group": "Starter Deck 32: GREEN Roronoa Zoro",
+   "guessSetCode": "ST-16",
+   "guessSetName": "STARTER DECK -Green Uta",
+   "score": 0.43
+  },
+  {
+   "groupId": 24753,
+   "group": "Starter Deck 35: RED/BLACK Sabo",
+   "guessSetCode": "ST-19",
+   "guessSetName": "STARTER DECK -Black Smoker",
+   "score": 0.43
+  },
+  {
+   "groupId": 24498,
+   "group": "Carrying On His Will: 3rd Anniversary Tournament Cards",
+   "guessSetCode": "OP-13",
+   "guessSetName": "BOOSTER PACK -CARRYING ON HIS WILL",
+   "score": 0.4
+  },
+  {
+   "groupId": 23907,
+   "group": "One Piece Demo Deck Cards",
+   "guessSetCode": "ST-05",
+   "guessSetName": "STARTER DECK -ONE PIECE FILM edition",
+   "score": 0.38
+  },
+  {
+   "groupId": 23297,
+   "group": "Kingdoms of Intrigue Pre-Release Cards",
+   "guessSetCode": "OP-04",
+   "guessSetName": "BOOSTER PACK -KINGDOMS OF INTRIGUE",
+   "score": 0.38
+  },
+  {
+   "groupId": 23232,
+   "group": "Pillars of Strength Pre-Release Cards",
+   "guessSetCode": "OP-03",
+   "guessSetName": "BOOSTER PACK -PILLARS OF STRENGTH",
+   "score": 0.38
+  },
+  {
+   "groupId": 24754,
+   "group": "Starter Deck 36: YELLOW Eustass”Captain”Kid",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 24068,
+   "group": "Royal Blood Release Event Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 23737,
+   "group": "Two Legends Pre-Release Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 22934,
+   "group": "Paramount War Pre-Release Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 23890,
+   "group": "Revision Pack Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 23304,
+   "group": "One Piece Collection Sets",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 24708,
+   "group": "Set Sail Deck Set",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 24736,
+   "group": "The World's Strongest Warriors",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 24306,
+   "group": "Learn Together Deck Set",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  }
+ ],
+ "unmappedAppSets": [
+  {
+   "setCode": "OTHER",
+   "name": "Other Product Cards",
+   "cards": 172
+  }
+ ]
+}

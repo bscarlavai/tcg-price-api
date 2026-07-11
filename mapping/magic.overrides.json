@@ -1,0 +1,326 @@
+{
+ "SOA": {
+  "tcgcsv": 24603,
+  "name": "Secrets of Strixhaven: Mystical Archive"
+ },
+ "PZA": {
+  "tcgcsv": 24497,
+  "name": "Teenage Mutant Ninja Turtles Source Material"
+ },
+ "EOS": {
+  "tcgcsv": 24361,
+  "name": "Edge of Eternities: Stellar Sights"
+ },
+ "WOT": {
+  "tcgcsv": 23273,
+  "name": "Wilds of Eldraine: Enchanting Tales"
+ },
+ "SCD": {
+  "tcgcsv": 17662,
+  "name": "Starter Commander Decks"
+ },
+ "CC2": {
+  "tcgcsv": 2905,
+  "name": "Commander Collection: Black"
+ },
+ "C21": {
+  "tcgcsv": 2801,
+  "name": "Commander 2021"
+ },
+ "CC1": {
+  "tcgcsv": 2699,
+  "name": "Commander Collection: Green"
+ },
+ "ZNE": {
+  "tcgcsv": 2713,
+  "name": "Zendikar Rising Expeditions"
+ },
+ "SS3": {
+  "tcgcsv": 2633,
+  "name": "Signature Spellbook: Chandra"
+ },
+ "C20": {
+  "tcgcsv": 2634,
+  "name": "Commander 2020"
+ },
+ "UND": {
+  "tcgcsv": 2598,
+  "name": "Unsanctioned"
+ },
+ "C19": {
+  "tcgcsv": 2481,
+  "name": "Commander 2019"
+ },
+ "SS2": {
+  "tcgcsv": 2447,
+  "name": "Signature Spellbook: Gideon"
+ },
+ "C18": {
+  "tcgcsv": 2251,
+  "name": "Commander 2018"
+ },
+ "GS1": {
+  "tcgcsv": 2247,
+  "name": "Global Series Jiang Yanggu & Mu Yanling"
+ },
+ "SS1": {
+  "tcgcsv": 2220,
+  "name": "Signature Spellbook: Jace"
+ },
+ "CM2": {
+  "tcgcsv": 2246,
+  "name": "Commander Anthology Volume II"
+ },
+ "DDU": {
+  "tcgcsv": 2207,
+  "name": "Duel Decks: Elves vs. Inventors"
+ },
+ "E02": {
+  "tcgcsv": 2077,
+  "name": "Explorers of Ixalan"
+ },
+ "V17": {
+  "tcgcsv": 2078,
+  "name": "From the Vault: Transform"
+ },
+ "DDT": {
+  "tcgcsv": 2076,
+  "name": "Duel Decks: Merfolk vs. Goblins"
+ },
+ "C17": {
+  "tcgcsv": 2009,
+  "name": "Commander 2017"
+ },
+ "E01": {
+  "tcgcsv": 1904,
+  "name": "Archenemy: Nicol Bolas"
+ },
+ "CMA": {
+  "tcgcsv": 1933,
+  "name": "Commander Anthology"
+ },
+ "W17": {
+  "tcgcsv": 1930,
+  "name": "Welcome Deck 2017"
+ },
+ "DDS": {
+  "tcgcsv": 1905,
+  "name": "Duel Decks: Mind vs. Might"
+ },
+ "PCA": {
+  "tcgcsv": 1793,
+  "name": "Planechase Anthology"
+ },
+ "C16": {
+  "tcgcsv": 1792,
+  "name": "Commander 2016"
+ },
+ "DDR": {
+  "tcgcsv": 1835,
+  "name": "Duel Decks: Nissa vs. Ob Nixilis"
+ },
+ "V16": {
+  "tcgcsv": 1821,
+  "name": "From the Vault: Lore"
+ },
+ "W16": {
+  "tcgcsv": 1765,
+  "name": "Welcome Deck 2016"
+ },
+ "DDQ": {
+  "tcgcsv": 1726,
+  "name": "Duel Decks: Blessed vs. Cursed"
+ },
+ "C15": {
+  "tcgcsv": 1673,
+  "name": "Commander 2015"
+ },
+ "EXP": {
+  "tcgcsv": 1649,
+  "name": "Zendikar Expeditions"
+ },
+ "DDP": {
+  "tcgcsv": 1641,
+  "name": "Duel Decks: Zendikar vs. Eldrazi"
+ },
+ "V15": {
+  "tcgcsv": 1577,
+  "name": "From the Vault: Angels"
+ },
+ "DDO": {
+  "tcgcsv": 1511,
+  "name": "Duel Decks: Elspeth vs. Kiora"
+ },
+ "C14": {
+  "tcgcsv": 1476,
+  "name": "Commander 2014"
+ },
+ "DDN": {
+  "tcgcsv": 1477,
+  "name": "Duel Decks: Speed vs. Cunning"
+ },
+ "V14": {
+  "tcgcsv": 1475,
+  "name": "From the Vault: Annihilation"
+ },
+ "DDM": {
+  "tcgcsv": 1166,
+  "name": "Duel Decks: Jace vs. Vraska"
+ },
+ "C13": {
+  "tcgcsv": 1164,
+  "name": "Commander 2013"
+ },
+ "DDL": {
+  "tcgcsv": 1145,
+  "name": "Duel Decks: Heroes vs. Monsters"
+ },
+ "V13": {
+  "tcgcsv": 1141,
+  "name": "From the Vault: Twenty"
+ },
+ "DDK": {
+  "tcgcsv": 601,
+  "name": "Duel Decks: Sorin vs. Tibalt"
+ },
+ "CM1": {
+  "tcgcsv": 568,
+  "name": "Commander's Arsenal"
+ },
+ "DDJ": {
+  "tcgcsv": 365,
+  "name": "Duel Decks: Izzet vs. Golgari"
+ },
+ "V12": {
+  "tcgcsv": 368,
+  "name": "From the Vault: Realms"
+ },
+ "PC2": {
+  "tcgcsv": 363,
+  "name": "Planechase 2012"
+ },
+ "DDI": {
+  "tcgcsv": 367,
+  "name": "Duel Decks: Venser vs. Koth"
+ },
+ "PD3": {
+  "tcgcsv": 90,
+  "name": "Premium Deck Series: Graveborn"
+ },
+ "DDH": {
+  "tcgcsv": 30,
+  "name": "Duel Decks: Ajani vs. Nicol Bolas"
+ },
+ "V11": {
+  "tcgcsv": 49,
+  "name": "From the Vault: Legends"
+ },
+ "DDG": {
+  "tcgcsv": 36,
+  "name": "Duel Decks: Knights vs. Dragons"
+ },
+ "PD2": {
+  "tcgcsv": 89,
+  "name": "Premium Deck Series: Fire and Lightning"
+ },
+ "DDF": {
+  "tcgcsv": 32,
+  "name": "Duel Decks: Elspeth vs. Tezzeret"
+ },
+ "V10": {
+  "tcgcsv": 50,
+  "name": "From the Vault: Relics"
+ },
+ "ARC": {
+  "tcgcsv": 12,
+  "name": "Archenemy"
+ },
+ "DDE": {
+  "tcgcsv": 37,
+  "name": "Duel Decks: Phyrexia vs. the Coalition"
+ },
+ "H09": {
+  "tcgcsv": 91,
+  "name": "Premium Deck Series: Slivers"
+ },
+ "DDD": {
+  "tcgcsv": 34,
+  "name": "Duel Decks: Garruk vs. Liliana"
+ },
+ "HOP": {
+  "tcgcsv": 84,
+  "name": "Planechase"
+ },
+ "V09": {
+  "tcgcsv": 48,
+  "name": "From the Vault: Exiled"
+ },
+ "DPA": {
+  "tcgcsv": 1274,
+  "name": "Duels of the Planeswalkers"
+ },
+ "DDC": {
+  "tcgcsv": 31,
+  "name": "Duel Decks: Divine vs. Demonic"
+ },
+ "DD2": {
+  "tcgcsv": 35,
+  "name": "Duel Decks: Jace vs. Chandra"
+ },
+ "DRB": {
+  "tcgcsv": 47,
+  "name": "From the Vault: Dragons"
+ },
+ "DD1": {
+  "tcgcsv": 33,
+  "name": "Duel Decks: Elves vs. Goblins"
+ },
+ "BTD": {
+  "tcgcsv": 16,
+  "name": "Beatdown Box Set"
+ },
+ "SPE": {
+  "tcgcsv": 24246,
+  "name": "Marvel's Spider-Man: Eternal-Legal"
+ },
+ "GN3": {
+  "tcgcsv": 3129,
+  "name": "Magic Game Night: Free-For-All"
+ },
+ "GN2": {
+  "tcgcsv": 2562,
+  "name": "Magic Game Night 2019"
+ },
+ "STA": {
+  "tcgcsv": 2791,
+  "name": "Strixhaven: Mystical Archive"
+ },
+ "GNT": {
+  "tcgcsv": 2359,
+  "name": "Magic Game Night"
+ },
+ "MD1": {
+  "tcgcsv": 1346,
+  "name": "Magic Modern Event Deck"
+ },
+ "MP2": {
+  "tcgcsv": 1909,
+  "name": "Masterpiece Series: Amonkhet Invocations"
+ },
+ "MPS": {
+  "tcgcsv": 1837,
+  "name": "Masterpiece Series: Kaladesh Inventions"
+ },
+ "DVD": {
+  "tcgcsv": 1490,
+  "name": "Duel Decks: Anthology"
+ },
+ "BLC": {
+  "tcgcsv": 25,
+  "name": "Commander"
+ },
+ "PGRU": {
+  "tcgcsv": 56,
+  "name": "Guru Lands"
+ }
+}

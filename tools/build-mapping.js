@@ -8,6 +8,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { listGroups } from '../ingest/sources/tcgcsv.js';
+import { tokens, jaccard, normAbbrev } from './lib/match.js';
 
 const GAMES = {
   pokemon: {
@@ -43,17 +44,7 @@ const cfg = GAMES[game];
 const setsPath = pathArg ?? new URL(`../../${cfg.defaultPath.replace('../', '')}`, import.meta.url).pathname;
 
 const stop = new Set(GAMES[process.argv[2]]?.stopTokens ?? []);
-const tokens = (s) => new Set(
-  (s ?? '').toLowerCase().replace(/^[a-z0-9&.-]+:\s*/, '').replace(/[^a-z0-9 ]/g, ' ')
-    .split(/\s+/).filter((t) => t && !stop.has(t))
-);
-const jaccard = (a, b) => {
-  const inter = [...a].filter((t) => b.has(t)).length;
-  return inter / (a.size + b.size - inter || 1);
-};
 const days = (a, b) => Math.abs(new Date(a) - new Date(b)) / 86400000;
-// "ST-30" / "st30" / "ME03" all compare equal.
-const normAbbrev = (s) => (s == null ? null : String(s).toUpperCase().replace(/[^A-Z0-9]/g, '')) || null;
 
 const parsed = JSON.parse(readFileSync(setsPath, 'utf8'));
 const rawSets = Array.isArray(parsed) ? parsed : parsed.data ?? parsed.sets;
@@ -75,11 +66,11 @@ for (const s of appSets) {
 const mapping = {};
 const review = [];
 for (const s of appSets) {
-  const sTok = tokens(s.name);
+  const sTok = tokens(s.name, stop);
   const sAbbrevs = new Set(s.abbrevs.map(normAbbrev).filter(Boolean));
   let best = null;
   for (const g of groups) {
-    const gTok = tokens(g.name);
+    const gTok = tokens(g.name, stop);
     const gAbbrev = normAbbrev(g.abbreviation);
     let score = 0;
     if (gAbbrev && sAbbrevs.has(gAbbrev)) {

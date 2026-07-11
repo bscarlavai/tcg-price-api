@@ -1,0 +1,465 @@
+{
+ "unmappedGroups": [
+  {
+   "groupId": 24722,
+   "group": "ME: 30th Celebration",
+   "guessSetCode": "30C",
+   "guessSetName": "ME: 30th Celebration",
+   "score": 1
+  },
+  {
+   "groupId": 24451,
+   "group": "ME: Mega Evolution Promo",
+   "guessSetCode": "MEP",
+   "guessSetName": "ME: Mega Evolution Promo",
+   "score": 1
+  },
+  {
+   "groupId": 24461,
+   "group": "MEE: Mega Evolution Energies",
+   "guessSetCode": "MEE",
+   "guessSetName": "MEE: Mega Evolution Energies",
+   "score": 1
+  },
+  {
+   "groupId": 24163,
+   "group": "McDonald's Promos 2024",
+   "guessSetCode": "M24",
+   "guessSetName": "McDonald's Promos 2024",
+   "score": 1
+  },
+  {
+   "groupId": 23323,
+   "group": "Trading Card Game Classic",
+   "guessSetCode": "CL",
+   "guessSetName": "Trading Card Game Classic",
+   "score": 1
+  },
+  {
+   "groupId": 23306,
+   "group": "McDonald's Promos 2023",
+   "guessSetCode": "M23",
+   "guessSetName": "McDonald's Promos 2023",
+   "score": 1
+  },
+  {
+   "groupId": 2208,
+   "group": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales",
+   "guessSetCode": "SMK2",
+   "guessSetName": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales",
+   "score": 1
+  },
+  {
+   "groupId": 2069,
+   "group": "SM Trainer Kit: Lycanroc & Alolan Raichu",
+   "guessSetCode": "SMK1",
+   "guessSetName": "SM Trainer Kit: Lycanroc & Alolan Raichu",
+   "score": 1
+  },
+  {
+   "groupId": 1538,
+   "group": "BW Trainer Kit: Excadrill & Zoroark",
+   "guessSetCode": "BLW",
+   "guessSetName": "BW Trainer Kit: Excadrill & Zoroark",
+   "score": 1
+  },
+  {
+   "groupId": 2155,
+   "group": "Countdown Calendar Promos",
+   "guessSetCode": "CCP",
+   "guessSetName": "Countdown Calendar Promos",
+   "score": 1
+  },
+  {
+   "groupId": 1853,
+   "group": "EX Battle Stadium",
+   "guessSetCode": "BST",
+   "guessSetName": "EX Battle Stadium",
+   "score": 1
+  },
+  {
+   "groupId": 2214,
+   "group": "Kids WB Promos",
+   "guessSetCode": "KWBP",
+   "guessSetName": "Kids WB Promos",
+   "score": 1
+  },
+  {
+   "groupId": 24493,
+   "group": "e-Reader Sample Cards",
+   "guessSetCode": "SAMPLE",
+   "guessSetName": "e-Reader Sample Cards",
+   "score": 1
+  },
+  {
+   "groupId": 2776,
+   "group": "First Partner Pack",
+   "guessSetCode": "FPP",
+   "guessSetName": "First Partner Pack",
+   "score": 1
+  },
+  {
+   "groupId": 2205,
+   "group": "Pikachu World Collection Promos",
+   "guessSetCode": "PWCP",
+   "guessSetName": "Pikachu World Collection Promos",
+   "score": 1
+  },
+  {
+   "groupId": 2332,
+   "group": "Professor Program Promos",
+   "guessSetCode": "PPP",
+   "guessSetName": "Professor Program Promos",
+   "score": 1
+  },
+  {
+   "groupId": 1536,
+   "group": "XY Trainer Kit: Latias & Latios",
+   "guessSetCode": "tk1a",
+   "guessSetName": "EX Trainer Kit Latias",
+   "score": 0.5
+  },
+  {
+   "groupId": 1465,
+   "group": "Legendary Treasures: Radiant Collection",
+   "guessSetCode": "base6",
+   "guessSetName": "Legendary Collection",
+   "score": 0.5
+  },
+  {
+   "groupId": 1663,
+   "group": "Base Set (Shadowless)",
+   "guessSetCode": "base4",
+   "guessSetName": "Base Set 2",
+   "score": 0.5
+  },
+  {
+   "groupId": 24584,
+   "group": "First Partner Collection 2026",
+   "guessSetCode": "FPP",
+   "guessSetName": "First Partner Pack",
+   "score": 0.4
+  },
+  {
+   "groupId": 1540,
+   "group": "HGSS Trainer Kit: Gyarados & Raichu",
+   "guessSetCode": "SMK1",
+   "guessSetName": "SM Trainer Kit: Lycanroc & Alolan Raichu",
+   "score": 0.38
+  },
+  {
+   "groupId": 24688,
+   "group": "ME05: Pitch Black",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 2686,
+   "group": "Battle Academy",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 1729,
+   "group": "Generations: Radiant Collection",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.33
+  },
+  {
+   "groupId": 1533,
+   "group": "XY Trainer Kit: Bisharp & Wigglytuff",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 1532,
+   "group": "XY Trainer Kit: Sylveon & Noivern",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 1541,
+   "group": "DP Trainer Kit: Manaphy & Lucario",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.29
+  },
+  {
+   "groupId": 23520,
+   "group": "Battle Academy 2024",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 23330,
+   "group": "My First Battle",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 3051,
+   "group": "Battle Academy 2022",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 23095,
+   "group": "Ash vs Team Rocket Deck Kit (JP Exclusive)",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 1796,
+   "group": "XY Trainer Kit: Pikachu Libre & Suicune",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 1938,
+   "group": "Alternate Art Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 2175,
+   "group": "Burger King Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
+  },
+  {
+   "groupId": 24529,
+   "group": "Player Placement Trainer Promos",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 1528,
+   "group": "Jumbo Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.2
+  },
+  {
+   "groupId": 22880,
+   "group": "Prize Pack Series Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 2282,
+   "group": "World Championship Decks",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 1539,
+   "group": "League & Championship Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 2374,
+   "group": "Miscellaneous Cards & Products",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.17
+  },
+  {
+   "groupId": 609,
+   "group": "DP Training Kit 1 Blue",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.14
+  },
+  {
+   "groupId": 610,
+   "group": "DP Training Kit 1 Gold",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.14
+  },
+  {
+   "groupId": 23561,
+   "group": "Trick or Trade BOOster Bundle 2024",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.11
+  },
+  {
+   "groupId": 23266,
+   "group": "Trick or Trade BOOster Bundle 2023",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.11
+  },
+  {
+   "groupId": 3179,
+   "group": "Trick or Trade BOOster Bundle",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  },
+  {
+   "groupId": 1840,
+   "group": "Deck Exclusives",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  },
+  {
+   "groupId": 2289,
+   "group": "Blister Exclusives",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0
+  }
+ ],
+ "unmappedAppSets": [
+  {
+   "setCode": "PR",
+   "name": "Nintendo Promos",
+   "cards": 401
+  },
+  {
+   "setCode": "CL",
+   "name": "Trading Card Game Classic",
+   "cards": 102
+  },
+  {
+   "setCode": "MEP",
+   "name": "ME: Mega Evolution Promo",
+   "cards": 89
+  },
+  {
+   "setCode": "BLW",
+   "name": "BW Trainer Kit: Excadrill & Zoroark",
+   "cards": 60
+  },
+  {
+   "setCode": "SMK1",
+   "name": "SM Trainer Kit: Lycanroc & Alolan Raichu",
+   "cards": 60
+  },
+  {
+   "setCode": "BST",
+   "name": "EX Battle Stadium",
+   "cards": 49
+  },
+  {
+   "setCode": "SMK2",
+   "name": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales",
+   "cards": 34
+  },
+  {
+   "setCode": "SVP",
+   "name": "SV: Scarlet & Violet Promo Cards",
+   "cards": 31
+  },
+  {
+   "setCode": "PPP",
+   "name": "Professor Program Promos",
+   "cards": 25
+  },
+  {
+   "setCode": "FPP",
+   "name": "First Partner Pack",
+   "cards": 24
+  },
+  {
+   "setCode": "30C",
+   "name": "ME: 30th Celebration",
+   "cards": 19
+  },
+  {
+   "setCode": "AQ",
+   "name": "Aquapolis",
+   "cards": 17
+  },
+  {
+   "setCode": "RUM",
+   "name": "Rumble",
+   "cards": 16
+  },
+  {
+   "setCode": "SWSD",
+   "name": "SWSH: Sword & Shield Promo Cards",
+   "cards": 15
+  },
+  {
+   "setCode": "M24",
+   "name": "McDonald's Promos 2024",
+   "cards": 12
+  },
+  {
+   "setCode": "M23",
+   "name": "McDonald's Promos 2023",
+   "cards": 11
+  },
+  {
+   "setCode": "PWCP",
+   "name": "Pikachu World Collection Promos",
+   "cards": 10
+  },
+  {
+   "setCode": "SK",
+   "name": "Skyridge",
+   "cards": 9
+  },
+  {
+   "setCode": "MEE",
+   "name": "MEE: Mega Evolution Energies",
+   "cards": 8
+  },
+  {
+   "setCode": "SVE",
+   "name": "SVE: Scarlet & Violet Energies",
+   "cards": 8
+  },
+  {
+   "setCode": "fut20",
+   "name": "Pokémon Futsal Collection",
+   "cards": 5
+  },
+  {
+   "setCode": "SMP",
+   "name": "SM Promos",
+   "cards": 4
+  },
+  {
+   "setCode": "BLK",
+   "name": "SV: Black Bolt",
+   "cards": 2
+  },
+  {
+   "setCode": "KWBP",
+   "name": "Kids WB Promos",
+   "cards": 2
+  },
+  {
+   "setCode": "CCP",
+   "name": "Countdown Calendar Promos",
+   "cards": 1
+  },
+  {
+   "setCode": "SAMPLE",
+   "name": "e-Reader Sample Cards",
+   "cards": 1
+  }
+ ]
+}
