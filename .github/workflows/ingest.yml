@@ -16,8 +16,8 @@ jobs:
   ingest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with: { node-version: 22 }
       # tcgcsv.com/docs usage guidelines: check last-updated.txt and only sync on fresh
       # data. If their refresh is late, wait (up to ~2h); if it never lands, fail loudly
