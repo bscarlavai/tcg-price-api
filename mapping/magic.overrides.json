@@ -322,5 +322,35 @@
  "PGRU": {
   "tcgcsv": 56,
   "name": "Guru Lands"
+ },
+ "SLD": {
+  "discover": "secret-lair",
+  "keyBy": "productId",
+  "name": "Secret Lair Drop"
+ },
+ "SLC": {
+  "discover": "secret-lair",
+  "keyBy": "productId",
+  "name": "Secret Lair Countdown"
+ },
+ "SLP": {
+  "discover": "secret-lair",
+  "keyBy": "productId",
+  "name": "Secret Lair Promo"
+ },
+ "SLU": {
+  "discover": "secret-lair",
+  "keyBy": "productId",
+  "name": "Secret Lair: Ultimate Edition"
+ },
+ "PLST": {
+  "discover": "the-list",
+  "keyBy": "productId",
+  "name": "The List"
+ },
+ "ULST": {
+  "discover": "the-list",
+  "keyBy": "productId",
+  "name": "The List (Unfinity Foil Edition)"
  }
 }

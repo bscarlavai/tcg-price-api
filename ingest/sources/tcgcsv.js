@@ -99,6 +99,7 @@ export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
       continue;
     }
     rows.push({
+      productId: pr.productId,   // stable printing id — the key for productId-keyed sets (Secret Lair)
       number: card.number,
       name: card.name,
       finish,

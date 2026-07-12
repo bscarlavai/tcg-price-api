@@ -7,7 +7,7 @@
 //   node ingest/run.js --game pokemon --push --force     # override coverage ratchet
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { fetchSetRows } from './sources/tcgcsv.js';
+import { fetchSetRows, listGroups } from './sources/tcgcsv.js';
 import { buildSetBlob, historyRows } from './lib/normalize.js';
 import { auditCoverage } from './lib/audit.js';
 
@@ -26,6 +26,31 @@ const sets = Object.entries(mapping).filter(([code]) => !only || only.includes(c
 const updatedAt = new Date().toISOString();
 const date = updatedAt.slice(0, 10);
 
+// Discovery: some app sets (Secret Lair, The List) fold a growing, fragmented family of upstream
+// groups whose collector numbers collide. Rather than hand-list groupIds, resolve them by name from
+// the live group list so new drops are ingested automatically. Every set code in a family shares the
+// family's full group set (they join by productId, so over-inclusion is harmless).
+const DISCOVERY_PATTERNS = {
+  'secret-lair': /secret lair/i,
+  'the-list': /\bthe list\b/i,
+};
+const discovered = {};
+if (sets.some(([, refs]) => refs.discover)) {
+  const groups = await listGroups(game);
+  for (const [family, re] of Object.entries(DISCOVERY_PATTERNS))
+    discovered[family] = groups.filter((g) => re.test(g.name)).map((g) => g.groupId);
+  for (const [code, refs] of sets)
+    if (refs.discover && !discovered[refs.discover]?.length)
+      console.warn(`  [discovery] ${game}:${code} — no groups matched family "${refs.discover}"`);
+}
+
+// Family sets share overlapping groups; fetch each group's rows at most once.
+const rowCache = new Map();
+const fetchGroup = (id) => {
+  if (!rowCache.has(id)) rowCache.set(id, fetchSetRows(game, id, { unknownSubtypes }));
+  return rowCache.get(id);
+};
+
 const unknownSubtypes = new Set();
 const blobs = [];
 let cardCount = 0;
@@ -38,13 +63,15 @@ async function workOne() {
   if (!next) return;
   const [setCode, refs] = next;
   try {
-    // A ref may be an array: some app sets fold multiple upstream groups (e.g. a host
-    // set + its Radiant Collection / Shiny Vault subset). Distinct number ranges.
-    const groupIds = [refs[SOURCE]].flat();
-    const rows = (await Promise.all(groupIds.map((id) => fetchSetRows(game, id, { unknownSubtypes })))).flat();
+    const keyBy = refs.keyBy ?? 'number';
+    // groupIds come from name-discovery (Secret Lair / The List) or the static ref, which may itself
+    // be an array — some app sets fold multiple upstream groups (a host set + its Shiny Vault subset).
+    const groupIds = refs.discover ? (discovered[refs.discover] ?? []) : [refs[SOURCE]].flat();
+    if (!groupIds.length) return workOne();
+    const rows = (await Promise.all(groupIds.map(fetchGroup))).flat();
     if (rows.length) {
-      blobs.push({ setCode, blob: buildSetBlob(game, setCode, rows, { [SOURCE]: groupIds }, updatedAt), rows });
-      cardCount += new Set(rows.map((r) => r.number)).size;
+      blobs.push({ setCode, blob: buildSetBlob(game, setCode, rows, { [SOURCE]: groupIds }, updatedAt, keyBy), rows });
+      cardCount += new Set(rows.map((r) => (keyBy === 'productId' ? r.productId : r.number))).size;
     }
   } catch (e) {
     failures++;
@@ -80,12 +107,14 @@ auditCoverage(game, previous, coverage, { force: has('force') })
 // paid, but unchanged writes would churn updatedAt and defeat client caching honesty).
 const changed = [];
 const history = [];
+const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
 for (const { setCode, blob, rows } of blobs) {
   const existing = await kvGet(`${game}:${setCode}`);
-  if (!existing || JSON.stringify(existing.cards) !== JSON.stringify(blob.cards)) {
+  if (!existing || JSON.stringify(content(existing)) !== JSON.stringify(content(blob))) {
     changed.push([`${game}:${setCode}`, blob]);
   }
-  history.push(...historyRows(game, setCode, rows, date, SOURCE));
+  // History is number-keyed; productId sets (Secret Lair / The List) defer history to a follow-up.
+  if (blob.keyBy !== 'productId') history.push(...historyRows(game, setCode, rows, date, SOURCE));
 }
 
 await kvPutMany([...changed, [`meta:coverage:${game}`, coverage]]);
