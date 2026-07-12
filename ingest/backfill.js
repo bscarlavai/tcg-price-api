@@ -40,6 +40,10 @@ for (const game of games) {
     const perSet = {};
     let n = 0;
     for (const [setCode, refs] of Object.entries(mapping)) {
+      // Discovery / productId-keyed sets (Secret Lair, The List) aren't hand-mapped to a groupId and
+      // their history is productId-keyed — skip the archive backfill for now (forward daily ingest
+      // accrues their history going forward; a productId-aware backfill is a later step).
+      if (refs.discover || refs[SOURCE] == null) continue;
       perSet[setCode] = {};
       for (const gid of [refs[SOURCE]].flat()) {
         perSet[setCode][gid] = [...(await fetchProducts(game, gid))]; // paced in the adapter

@@ -68,9 +68,11 @@ for these sets (its number-keying is meaningless here).
 4. **Mapping schema.** Extend the per-set ref, e.g.
    `"SLD": { "tcgcsv": [2576, 2632, 22970, …], "keyBy": "productId", "name": "Secret Lair Drop" }`
    (or a `"discover": "secret-lair"` rule that resolves to the groupIds at ingest time).
-5. **History (D1).** `historyRows` is number-keyed. Either (a) key these sets' history by productId
-   too, or (b) ship prices now and defer history for SL/List (charts show "no history yet" until we
-   backfill). Recommend (b) first — prices are the value; history is additive.
+5. **History (D1).** DONE — `historyRows` stores the productId in the `number` column for these sets
+   (no schema/PK change; the number slot is meaningless there and queries always scope by set). The
+   worker `/v1/history` and the app query unchanged; the app's `MagicProfile.priceNumberKey` returns
+   the tcgplayer_id for these sets so its history request keys match. The forward daily ingest accrues
+   history from now; `backfill.js` skips these sets (a productId-aware 180-day backfill is a later step).
 6. **Coverage audit.** These sets now count as covered; the ratchet should rise, not trip.
 
 ### Client (`riplist`)

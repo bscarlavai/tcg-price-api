@@ -113,8 +113,8 @@ for (const { setCode, blob, rows } of blobs) {
   if (!existing || JSON.stringify(content(existing)) !== JSON.stringify(content(blob))) {
     changed.push([`${game}:${setCode}`, blob]);
   }
-  // History is number-keyed; productId sets (Secret Lair / The List) defer history to a follow-up.
-  if (blob.keyBy !== 'productId') history.push(...historyRows(game, setCode, rows, date, SOURCE));
+  // Number-keyed by default; productId sets (Secret Lair / The List) record history under productId.
+  history.push(...historyRows(game, setCode, rows, date, SOURCE, blob.keyBy));
 }
 
 await kvPutMany([...changed, [`meta:coverage:${game}`, coverage]]);
