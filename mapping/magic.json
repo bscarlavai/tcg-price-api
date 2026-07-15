@@ -1111,5 +1111,105 @@
   "discover": "the-list",
   "keyBy": "productId",
   "name": "The List (Unfinity Foil Edition)"
+ },
+ "NCC": {
+  "tcgcsv": 3031,
+  "name": "New Capenna Commander"
+ },
+ "SOC": {
+  "tcgcsv": 24602,
+  "name": "Secrets of Strixhaven Commander"
+ },
+ "TDC": {
+  "tcgcsv": 24234,
+  "name": "Tarkir: Dragonstorm Commander"
+ },
+ "M3C": {
+  "tcgcsv": 23445,
+  "name": "Modern Horizons 3 Commander"
+ },
+ "LCC": {
+  "tcgcsv": 23316,
+  "name": "The Lost Caverns of Ixalan Commander"
+ },
+ "MKC": {
+  "tcgcsv": 23363,
+  "name": "Murders at Karlov Manor Commander"
+ },
+ "OTC": {
+  "tcgcsv": 23440,
+  "name": "Outlaws of Thunder Junction Commander"
+ },
+ "DSC": {
+  "tcgcsv": 23551,
+  "name": "Duskmourn: House of Horror Commander"
+ },
+ "AFC": {
+  "tcgcsv": 2870,
+  "name": "Forgotten Realms Commander"
+ },
+ "DMC": {
+  "tcgcsv": 3140,
+  "name": "Dominaria United Commander"
+ },
+ "BRC": {
+  "tcgcsv": 3159,
+  "name": "The Brothers' War Commander"
+ },
+ "EOC": {
+  "tcgcsv": 24236,
+  "name": "Edge of Eternities Commander"
+ },
+ "VOC": {
+  "tcgcsv": 2900,
+  "name": "Crimson Vow Commander"
+ },
+ "MIC": {
+  "tcgcsv": 2893,
+  "name": "Midnight Hunt Commander"
+ },
+ "DRC": {
+  "tcgcsv": 23929,
+  "name": "Aetherdrift Commander"
+ },
+ "NEC": {
+  "tcgcsv": 2967,
+  "name": "Neon Dynasty Commander"
+ },
+ "ECC": {
+  "tcgcsv": 24464,
+  "name": "Lorwyn Eclipsed Commander"
+ },
+ "ONC": {
+  "tcgcsv": 17685,
+  "name": "Phyrexia: All Will Be One Commander"
+ },
+ "WOC": {
+  "tcgcsv": 23164,
+  "name": "Wilds of Eldraine Commander"
+ },
+ "ZNC": {
+  "tcgcsv": 2716,
+  "name": "Zendikar Rising Commander"
+ },
+ "KHC": {
+  "tcgcsv": 2766,
+  "name": "Kaldheim Commander"
+ },
+ "PLTC": {
+  "tcgcsv": 23071,
+  "name": "Tales of Middle-earth Deluxe Commander Kit"
+ },
+ "FDC": {
+  "tcgcsv": 23814,
+  "name": "Foundations Commander"
+ },
+ "MOC": {
+  "tcgcsv": 22979,
+  "name": "March of the Machine Commander"
+ },
+ "CMD": {
+  "tcgcsv": 25,
+  "name": "Commander 2011"
  }
 }
