@@ -33,6 +33,10 @@ const date = updatedAt.slice(0, 10);
 const DISCOVERY_PATTERNS = {
   'secret-lair': /secret lair/i,
   'the-list': /\bthe list\b/i,
+  // Lorcana promos: the app splits them into P1/P2/P3/D23/etc. with their own numbering, but
+  // TCGplayer groups them by campaign ("Disney Lorcana Promo Cards", "Disney100 Promos", "D23
+  // Promos") — number-misaligned, so they price by productId like Secret Lair.
+  'lorcana-promo': /promo/i,
 };
 const discovered = {};
 if (sets.some(([, refs]) => refs.discover)) {

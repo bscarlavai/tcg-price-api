@@ -12,7 +12,43 @@
   "name": "Illumineer's Quest: Palace Heist"
  },
  "DLPC": {
-  "tcgcsv": 23234,
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
   "name": "Disney Lorcana Promo Cards"
+ },
+ "P1": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "Promo Set 1"
+ },
+ "P2": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "Promo Set 2"
+ },
+ "P3": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "Promo Set 3"
+ },
+ "D23": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "D23 Collection"
+ },
+ "cp": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "Challenge Promo"
+ },
+ "C2": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "Lorcana Challenge Year 3"
+ },
+ "DIS": {
+  "discover": "lorcana-promo",
+  "keyBy": "productId",
+  "name": "EPCOT Festival of the Arts"
  }
 }
