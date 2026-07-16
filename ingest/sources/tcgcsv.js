@@ -130,6 +130,11 @@ export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
       isBase: card.isBase,
       marketCents: pr.marketPrice != null ? Math.round(pr.marketPrice * 100) : null,
       lowCents: pr.lowPrice != null ? Math.round(pr.lowPrice * 100) : null,
+      // mid/high are the listing midpoint and ceiling. Carried into the blob (not D1 history) so the
+      // client can flag a THIN MARKET: an illiquid card's sale-weighted `market` can sit far below what
+      // near-mint copies actually list for, and `market` << `mid` is the tell. See normalize.js.
+      midCents: pr.midPrice != null ? Math.round(pr.midPrice * 100) : null,
+      highCents: pr.highPrice != null ? Math.round(pr.highPrice * 100) : null,
     });
   }
   return rows;
