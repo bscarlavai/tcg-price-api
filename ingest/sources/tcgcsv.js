@@ -36,13 +36,36 @@ const UA = 'lavailabs-tcg-price-api/1.0 (github.com/bscarlavai/tcg-price-api)';
 const PACE_MS = 100;
 let paceChain = Promise.resolve();
 
+// Transient upstream blips (a momentary 503/429 or a dropped connection) used to drop one set,
+// shrink coverage, and trip the audit ratchet — failing the whole run over a single flaky group.
+// Retry those with exponential backoff so they self-heal in-run. 4xx (except 429) stays fatal:
+// a 404 is a real mapping error, not something a retry fixes.
+const MAX_ATTEMPTS = 4;
+const isTransient = (status) => status === 429 || status >= 500;
+
 async function getJSON(url) {
-  const turn = paceChain.then(() => new Promise((r) => setTimeout(r, PACE_MS)));
-  paceChain = turn;
-  await turn;
-  const res = await fetch(url, { headers: { 'user-agent': UA } });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return (await res.json()).results;
+  for (let attempt = 1; ; attempt++) {
+    // Pace every attempt (including retries) through the global chain to honor the rate limit.
+    const turn = paceChain.then(() => new Promise((r) => setTimeout(r, PACE_MS)));
+    paceChain = turn;
+    await turn;
+
+    let res, netErr;
+    try {
+      res = await fetch(url, { headers: { 'user-agent': UA } });
+    } catch (e) {
+      netErr = e; // fetch() rejects on network-level failures (DNS, connection reset) — transient
+    }
+    if (res?.ok) return (await res.json()).results;
+
+    // A 4xx other than 429 (e.g. a 404 from a bad group mapping) is a real error a retry won't fix.
+    if (!netErr && !isTransient(res.status)) throw new Error(`${res.status} ${url}`);
+    if (attempt >= MAX_ATTEMPTS) throw netErr ?? new Error(`${res.status} ${url}`);
+
+    const backoffMs = 500 * 2 ** (attempt - 1); // 0.5s, 1s, 2s
+    console.error(`  ↻ retry ${attempt}/${MAX_ATTEMPTS - 1} in ${backoffMs}ms — ${url}`);
+    await new Promise((r) => setTimeout(r, backoffMs));
+  }
 }
 
 export async function listGroups(game) {
