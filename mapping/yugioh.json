@@ -2174,5 +2174,25 @@
  "MAMO": {
   "tcgcsv": 24707,
   "name": "Magnificent Monsters"
+ },
+ "CORI": {
+  "tcgcsv": 24675,
+  "name": "Chaos Origins"
+ },
+ "BLGG": {
+  "tcgcsv": 24621,
+  "name": "Battles of Legend: Glorious Gallery"
+ },
+ "UP01": {
+  "tcgcsv": 24704,
+  "name": "Ultimate Tournament Pack 1"
+ },
+ "25YC": {
+  "tcgcsv": 24351,
+  "name": "Yu-Gi-Oh! Championship Series 2025 Prize Cards"
+ },
+ "STAX": {
+  "tcgcsv": 23269,
+  "name": "2-Player Starter Set"
  }
 }
