@@ -97,6 +97,11 @@ export function parseProducts(game, products) {
     numberById.set(p.productId, {
       number: normalizeNumber(game, ext.Number),
       name: p.name,
+      // Card identity within a set is (number, rarity): products sharing both are the same
+      // card in different finishes/patterns (a Pokémon common's Normal base + its reverse-holo
+      // "Energy Symbol Pattern" + the Poké Ball / Team Rocket stamp reverse holos all carry
+      // one number + one rarity). buildSetBlob uses this to union their subtypes into finishes.
+      rarity: ext.Rarity ?? null,
       // The printing descriptor becomes the `variants` key: Konami's rarity name for
       // yugioh ("Quarter Century Secret Rare"), the art descriptor for one piece
       // ("Parallel", "Alternate Art"). Game vocabulary, not source vocabulary.
@@ -125,6 +130,7 @@ export function joinPrices(numberById, prices, { unknownSubtypes } = {}) {
       productId: pr.productId,   // stable printing id — the key for productId-keyed sets (Secret Lair)
       number: card.number,
       name: card.name,
+      rarity: card.rarity,
       finish,
       variant: card.variant,
       isBase: card.isBase,

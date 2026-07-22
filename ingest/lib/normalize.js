@@ -104,8 +104,24 @@ export function buildSetBlob(game, setCode, rows, sourceRefs, updatedAt, keyBy =
 
   const cards = {};
   for (const [number, numberRows] of byNumber) {
-    const baseRows = numberRows.some((r) => r.isBase) ? numberRows.filter((r) => r.isBase) : numberRows;
-    const { finishes, headline } = pickFinishes(baseRows, order);
+    // Which rows define this card's finishes. Pokémon models a card's reverse holo (and the
+    // Poké Ball / Team Rocket stamp reverse holos) as SEPARATE same-number products carrying
+    // the Reverse Holofoil subtype — the descriptor-less base product is often Normal-only, so
+    // base-only finishes would drop the reverse holo entirely. There the subtype IS the finish,
+    // so a card's finishes are the union of every same-(number, rarity) product's subtype
+    // (rarity guards against a stray same-number/different-rarity product contaminating it;
+    // each finish still prices at its cheapest product via pickFinishes). Other games keep
+    // base-only finishes: their descriptors are genuine alt-arts / rarity reprints (One Piece
+    // "Alternate Art", Yu-Gi-Oh "Quarter Century Secret Rare") the app tracks as `variants`,
+    // not extra finishes of the base card.
+    let finishRows;
+    if (game === 'pokemon') {
+      const cardRarity = (numberRows.find((r) => r.isBase) ?? numberRows[0]).rarity;
+      finishRows = numberRows.filter((r) => cardRarity == null || r.rarity == null || r.rarity === cardRarity);
+    } else {
+      finishRows = numberRows.some((r) => r.isBase) ? numberRows.filter((r) => r.isBase) : numberRows;
+    }
+    const { finishes, headline } = pickFinishes(finishRows, order);
     const card = headlinePrice(finishes, headline);
     // Always carry the finishes map — even for a single-finish card. Omitting it for single-finish
     // cards (the old `> 1` guard) lost the finish IDENTITY: a holo-only vintage card looked
