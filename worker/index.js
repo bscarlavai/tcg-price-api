@@ -66,11 +66,15 @@ export default {
       if (body.byteLength === 0 || body.byteLength > 1_500_000) return json({ error: 'bad size' }, 413);
       const now = new Date();
       const day = now.toISOString().slice(0, 10);
-      // Global daily ceiling (best-effort KV counter, 2-day TTL) — a HARD cap on total images/day across
-      // ALL IPs, so even if the app secret leaks and someone rotates IPs past the per-IP limit, they
-      // can't run up unbounded R2 cost. Reports are rare in normal use; a few hundred/day is generous.
+      // Advisory daily circuit-breaker (NOT a hard cap): a non-atomic read-modify-write on an
+      // eventually-consistent KV counter, so a concurrent flood can overshoot it. It catches the
+      // common runaway — a client retry loop — and loosely bounds sustained abuse; it does not hold
+      // against parallel requests. The real per-request throttle is REPORT_LIMITER (6/min/IP); a
+      // genuine global ceiling belongs in a WAF rate-limiting rule or a Durable Object, not here.
+      // Kept in its own KV namespace (REPORT_META) so it never spends the PRICES data-plane write
+      // budget (DESIGN D14), and guarded so a missing/unavailable binding can't fail an upload.
       const dayKey = `report:count:${day}`;
-      const count = parseInt((await env.PRICES.get(dayKey)) || '0', 10);
+      const count = env.REPORT_META ? parseInt((await env.REPORT_META.get(dayKey)) || '0', 10) : 0;
       if (count >= 500) return json({ error: 'daily cap reached' }, 429);
       const key = `reports/${day}/`
         + `${now.toISOString().replace(/[:.]/g, '-')}-${Math.random().toString(36).slice(2, 8)}`
@@ -88,7 +92,9 @@ export default {
           ua: (request.headers.get('user-agent') || '').slice(0, 120),
         },
       });
-      await env.PRICES.put(dayKey, String(count + 1), { expirationTtl: 172800 });
+      // Best-effort increment — skip silently if the counter namespace isn't bound (the upload has
+      // already succeeded; an advisory cap must never turn an accepted report into a failure).
+      if (env.REPORT_META) await env.REPORT_META.put(dayKey, String(count + 1), { expirationTtl: 172800 });
       return json({ ok: true, key }, 200, 'no-store');
     }
 

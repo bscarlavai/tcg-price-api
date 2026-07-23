@@ -32,6 +32,14 @@ simple = { limit = 6, period = 60 }
 binding = "PRICES"
 id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
 
+# Operational metadata for /v1/report (today just the advisory daily-count circuit-breaker), kept OUT
+# of the PRICES data-plane namespace so it never spends its write budget (DESIGN D14). One-time setup:
+# `wrangler kv namespace create report-meta`, paste the id below, and uncomment. Until then the worker
+# runs without the advisory cap (it guards on this binding); REPORT_LIMITER still throttles per-IP.
+# [[kv_namespaces]]
+# binding = "REPORT_META"
+# id = "REPLACE_ME"
+
 [[d1_databases]]
 binding = "HISTORY"
 database_name = "tcg-price-history"
