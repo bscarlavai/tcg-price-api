@@ -21,6 +21,13 @@ name = "RATE_LIMITER"
 namespace_id = "1001"
 simple = { limit = 200, period = 60 }
 
+# Strict per-IP limit for the /v1/report WRITE endpoint — reports are occasional, so 6/min caps how
+# many images one IP can push (separate from the 200/min read limit above).
+[[ratelimits]]
+name = "REPORT_LIMITER"
+namespace_id = "1002"
+simple = { limit = 6, period = 60 }
+
 [[kv_namespaces]]
 binding = "PRICES"
 id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
@@ -29,3 +36,9 @@ id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
 binding = "HISTORY"
 database_name = "tcg-price-history"
 database_id = "6a8750db-5159-45a0-92ec-dd8fe0509009"
+
+# Scan-issue reports: when a card won't scan, the app POSTs the rendered diagnostic image (+ metadata)
+# to /v1/report and it lands here — the real-world failure corpus that drives catalog/ORB fixes.
+[[r2_buckets]]
+binding = "REPORTS"
+bucket_name = "riplist-scan-reports"

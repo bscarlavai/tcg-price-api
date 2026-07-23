@@ -31,6 +31,50 @@ export default {
     const { success } = await env.RATE_LIMITER.limit({ key: ip });
     if (!success) return json({ error: 'rate limited' }, 429);
 
+    // Scan-issue intake (write). The app renders the diagnostic (card crop + OCR + top matches) to an
+    // image and POSTs it here when a user reports a card that won't scan. We drop the image in R2 keyed
+    // by date, with the game/app/note as object metadata, so the failure corpus is browsable per day.
+    if (url.pathname === '/v1/report') {
+      if (request.method !== 'POST') return json({ error: 'POST required' }, 405);
+      // Shared-secret gate: only the app knows this key, so random internet clients can't POST at all.
+      // It ships in the binary so it's not unbreakable, but combined with the strict per-IP limit below
+      // it stops casual/bot spam. App Attest (DeviceCheck) is the upgrade path if real abuse shows up.
+      if (!env.REPORT_KEY || request.headers.get('x-report-key') !== env.REPORT_KEY)
+        return json({ error: 'unauthorized' }, 401);
+      // A MUCH stricter per-IP limit than the 200/min read limiter — reports are occasional, so this
+      // caps how many images any single IP can push and keeps the bucket from being spammed/filled.
+      const rl = await env.REPORT_LIMITER.limit({ key: ip });
+      if (!rl.success) return json({ error: 'rate limited' }, 429);
+      const ct = request.headers.get('content-type') || '';
+      if (!ct.startsWith('image/')) return json({ error: 'image body required' }, 415);
+      const body = await request.arrayBuffer();
+      // The rendered diagnostic is well under 1 MB; cap tight so a single request can't be huge.
+      if (body.byteLength === 0 || body.byteLength > 1_500_000) return json({ error: 'bad size' }, 413);
+      const now = new Date();
+      const day = now.toISOString().slice(0, 10);
+      // Global daily ceiling (best-effort KV counter, 2-day TTL) — a HARD cap on total images/day across
+      // ALL IPs, so even if the app secret leaks and someone rotates IPs past the per-IP limit, they
+      // can't run up unbounded R2 cost. Reports are rare in normal use; a few hundred/day is generous.
+      const dayKey = `report:count:${day}`;
+      const count = parseInt((await env.PRICES.get(dayKey)) || '0', 10);
+      if (count >= 500) return json({ error: 'daily cap reached' }, 429);
+      const key = `reports/${day}/`
+        + `${now.toISOString().replace(/[:.]/g, '-')}-${Math.random().toString(36).slice(2, 8)}`
+        + (ct.includes('png') ? '.png' : '.jpg');
+      await env.REPORTS.put(key, body, {
+        httpMetadata: { contentType: ct },
+        customMetadata: {
+          game: (q('game') || '').slice(0, 40),
+          app: (q('app') || '').slice(0, 20),
+          note: (q('note') || '').slice(0, 240),
+          ua: (request.headers.get('user-agent') || '').slice(0, 120),
+          ip,
+        },
+      });
+      await env.PRICES.put(dayKey, String(count + 1), { expirationTtl: 172800 });
+      return json({ ok: true, key }, 200, 'no-store');
+    }
+
     if (url.pathname === '/v1/prices' || url.pathname === '/v1/price') {
       const game = q('game');
       let set = q('set');
