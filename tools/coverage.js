@@ -13,6 +13,7 @@
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { listGroups, CATEGORY_IDS } from '../ingest/sources/tcgcsv.js';
+import { canonicalSetKey } from '../ingest/lib/normalize.js';
 import { tokens, jaccard } from './lib/match.js';
 
 const [game, catalogArg] = process.argv.slice(2);
@@ -43,15 +44,12 @@ for (const c of cards) {
   appSets.set(code, e);
 }
 
-// Mirror the worker's set-key normalization so a catalog set isn't reported "unmapped" just because
-// its app-native code is spelled differently than the mapping key. Only One Piece diverges today
-// ("OP-13" → "OP13"); every other game's priceSetKey is the set_code verbatim.
-const normalizeSetKey = (g, code) =>
-  g === 'onepiece' ? String(code).toUpperCase().replace(/^([A-Z]+)-(?=\d)/, '$1') : code;
-
 const mapping = JSON.parse(readFileSync(new URL(`../mapping/${game}.json`, import.meta.url), 'utf8'));
 const mappedGroupIds = new Set(Object.values(mapping).flatMap((v) => [v.tcgcsv].flat()));
-const mappedSetCodes = new Set(Object.keys(mapping));
+// Canonicalize BOTH sides through the shared helper (imported, not re-mirrored — the old local copy
+// drifted from the worker), so a catalog set isn't reported "unmapped" just because its app-native
+// code is cased differently than the mapping key — exactly what the worker resolves at query time.
+const mappedSetCodes = new Set(Object.keys(mapping).map((k) => canonicalSetKey(game, k)));
 
 const groups = await listGroups(game);
 const appSetTok = [...appSets].map(([code, e]) => ({ code, name: e.name, tok: tokens(e.name) }));
@@ -79,7 +77,7 @@ unmappedGroups.sort((a, b) => b.score - a.score);
 
 // 2) Catalog sets with NO mapping at all — new sets (e.g. Lorcana set 13) surface here.
 const unmappedAppSets = [...appSets]
-  .filter(([code]) => !mappedSetCodes.has(normalizeSetKey(game, code)))
+  .filter(([code]) => !mappedSetCodes.has(canonicalSetKey(game, code)))
   .map(([code, e]) => ({ setCode: code, name: e.name, cards: e.count }))
   .sort((a, b) => b.cards - a.cards);
 

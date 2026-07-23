@@ -4,7 +4,30 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildSetBlob } from '../ingest/lib/normalize.js';
+import { buildSetBlob, canonicalSetKey } from '../ingest/lib/normalize.js';
+
+test('canonicalSetKey: any case of a set code collapses to one canonical key', () => {
+  // The invariant that kills the false-404 class: however the app or a mapping cases a code, the
+  // storage key is the same. So an ingest that wrote key K, and a query in any case, meet.
+  assert.equal(canonicalSetKey('magic', 'EMN'), 'emn');
+  assert.equal(canonicalSetKey('magic', 'emn'), 'emn');
+  assert.equal(canonicalSetKey('pokemon', 'MEP'), 'mep');
+  assert.equal(canonicalSetKey('pokemon', 'me5'), 'me5');
+  assert.equal(canonicalSetKey('yugioh', 'PHNI'), 'phni');
+});
+
+test('canonicalSetKey: One Piece collapses the code/number dash, then lowercases', () => {
+  assert.equal(canonicalSetKey('onepiece', 'OP-12'), 'op12');
+  assert.equal(canonicalSetKey('onepiece', 'OP12'), 'op12');
+  assert.equal(canonicalSetKey('onepiece', 'op-12'), 'op12');
+  // Combined-set codes don't match the leading-letters-then-digit dash and keep their inner dash.
+  assert.equal(canonicalSetKey('onepiece', 'OP14-EB04'), 'op14-eb04');
+});
+
+test('canonicalSetKey: null/undefined pass through (no crash on a missing code)', () => {
+  assert.equal(canonicalSetKey('magic', null), null);
+  assert.equal(canonicalSetKey('magic', undefined), undefined);
+});
 
 // Minimal row in the shape joinPrices emits (tcgcsv.js). Cents are the stored unit.
 const row = (o) => ({

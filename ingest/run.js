@@ -8,7 +8,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fetchSetRows, listGroups } from './sources/tcgcsv.js';
-import { buildSetBlob, historyRows } from './lib/normalize.js';
+import { buildSetBlob, historyRows, canonicalSetKey } from './lib/normalize.js';
 import { auditCoverage } from './lib/audit.js';
 
 const args = process.argv.slice(2);
@@ -113,12 +113,16 @@ const changed = [];
 const history = [];
 const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
 for (const { setCode, blob, rows } of blobs) {
-  const existing = await kvGet(`${game}:${setCode}`);
+  // Store under the canonical (lowercase) key so a query in any case resolves; blob.set keeps the
+  // original display casing. See canonicalSetKey — the Worker and coverage.js resolve the same way.
+  const kvKey = canonicalSetKey(game, setCode);
+  const existing = await kvGet(`${game}:${kvKey}`);
   if (!existing || JSON.stringify(content(existing)) !== JSON.stringify(content(blob))) {
-    changed.push([`${game}:${setCode}`, blob]);
+    changed.push([`${game}:${kvKey}`, blob]);
   }
   // Number-keyed by default; productId sets (Secret Lair / The List) record history under productId.
-  history.push(...historyRows(game, setCode, rows, date, SOURCE, blob.keyBy));
+  // set_code is canonical too, so /v1/history seeks match /v1/prices keys.
+  history.push(...historyRows(game, kvKey, rows, date, SOURCE, blob.keyBy));
 }
 
 await kvPutMany([...changed, [`meta:coverage:${game}`, coverage]]);

@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync, rmSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { fetchProducts, CATEGORY_IDS } from './sources/tcgcsv.js';
-import { historyRows } from './lib/normalize.js';
+import { historyRows, canonicalSetKey } from './lib/normalize.js';
 import { historyInsertStatements } from './lib/cloudflare.js';
 
 const args = process.argv.slice(2);
@@ -94,7 +94,8 @@ for (const date of dates) {
         const prices = JSON.parse(readFileSync(priceFile, 'utf8')).results;
         setRows.push(...joinPrices(new Map(entries), prices, { unknownSubtypes }));
       }
-      if (setRows.length) rows.push(...historyRows(game, setCode, setRows, date, SOURCE));
+      // Canonical set_code — matches run.js and the Worker's /v1/history seek (see canonicalSetKey).
+      if (setRows.length) rows.push(...historyRows(game, canonicalSetKey(game, setCode), setRows, date, SOURCE));
     }
   }
   rmSync(tmp, { recursive: true, force: true });

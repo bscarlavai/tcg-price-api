@@ -27,6 +27,22 @@ export function normalizeNumber(game, raw) {
   return head;
 }
 
+// Canonical storage identity for a set code: lowercase, so the KV key + D1 set_code a set lives under
+// never depends on whether the app or a mapping happened to type it upper- or lower-case (magic/yugioh
+// mappings are uppercase, pokemon mostly lowercase, lorcana mixed). One Piece additionally collapses a
+// dash between its leading letters and digits ("OP-12"→"op12"); combined-set codes like "OP14-EB04"
+// don't match and pass through. This is the SINGLE source of truth — ingest builds keys with it, the
+// Worker resolves queries with it, coverage.js audits with it — so the three can't drift (they did:
+// the old worker-only lowercase fallback resolved uppercase→lowercase but not the reverse, and the
+// coverage audit reported as "unmapped" sets the worker actually served). The blob's `set` field and
+// the API response keep the ORIGINAL casing for display; only the storage key is canonical.
+export function canonicalSetKey(game, code) {
+  if (code == null) return code;
+  let c = String(code).trim();
+  if (game === 'onepiece') c = c.replace(/^([A-Za-z]+)-(?=\d)/, '$1');
+  return c.toLowerCase();
+}
+
 const dollars = (cents) => (cents == null ? null : Math.round(cents) / 100);
 
 // The top-level headline price: the chosen headline finish's market/low, plus mid/high so a client can

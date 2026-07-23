@@ -4,7 +4,7 @@
 // and an hour bounds how stale a just-computed board can look).
 
 import { DEFAULT_FINISH_ORDER } from '../ingest/lib/finishes.js';
-import { normalizeNumber } from '../ingest/lib/normalize.js';
+import { normalizeNumber, canonicalSetKey } from '../ingest/lib/normalize.js';
 
 const CACHE = 'public, max-age=86400';
 const CACHE_MARKET = 'public, max-age=3600';
@@ -94,23 +94,17 @@ export default {
 
     if (url.pathname === '/v1/prices' || url.pathname === '/v1/price') {
       const game = q('game');
-      let set = q('set');
+      const set = q('set');
       if (!GAMES.has(game) || !set) return json({ error: 'game and set required' }, 400);
-      // One piece has two app vocabularies for the same sets: dashless "OP12" (Bandai
-      // card codes, one-rip) and dashed "OP-12" (Bandai set codes, riplist). Canonical
-      // KV keys are dashless; collapse a dash between the leading letters and digits.
-      // Combined-set codes like "OP14-EB04" don't match the pattern and pass through.
-      if (game === 'onepiece') set = set.toUpperCase().replace(/^([A-Z]+)-(?=\d)/, '$1');
-
-      let blob = await env.PRICES.get(`${game}:${set}`, 'json');
-      // Case-insensitive fallback. Catalog set codes are mixed-case — pokemontcg.io ships lowercase
-      // ("me5") while TCGplayer gap-fill sets carry uppercase abbreviations ("MEP", "SVP") — but the
-      // mapping/KV keys are lowercase. Try the exact case first (preserves any intentionally-cased
-      // key, e.g. One Piece's), then lowercase, so an uppercase query for a lowercase-keyed set
-      // resolves instead of 404ing. Prevents the whole class of "unmapped" false 404s.
-      if (!blob && set !== set.toLowerCase()) {
-        blob = await env.PRICES.get(`${game}:${set.toLowerCase()}`, 'json');
-      }
+      // Resolve the KV key through the shared canonical form (lowercase; One Piece "OP-12"→"op12"),
+      // so any case the app sends resolves regardless of how the mapping key was typed — see
+      // canonicalSetKey. The uppercase retry covers set blobs written BEFORE canonicalization
+      // (magic/yugioh/one-piece keys were stored upper-case); a full re-ingest re-keys them
+      // lower-case and the retry then rarely fires — one KV read on the common hit.
+      const key = canonicalSetKey(game, set);
+      let blob = await env.PRICES.get(`${game}:${key}`, 'json');
+      if (!blob && key !== key.toUpperCase())
+        blob = await env.PRICES.get(`${game}:${key.toUpperCase()}`, 'json');
       if (!blob) return json({ error: 'unknown set' }, 404);
       const { sourceRefs, ...publicBlob } = blob;
 
@@ -145,17 +139,24 @@ export default {
       if (!GAMES.has(game) || !set || !number || !days)
         return json({ error: 'game, set, number required; window=7d|30d|90d|180d' }, 400);
       const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+      // INDEXED BY forces a direct seek on the PK prefix (game, set_code, number). Without the
+      // hint the planner picks idx_history_date and scans every row for the game in the window —
+      // ~7.5s / millions of rows for a 180d Magic lookup (past the client's 8s timeout). With it,
+      // ~80ms / ~700 rows. A dedicated composite index would be cleaner but D1 OOMs building one
+      // over a table this size; the PK's autoindex already covers the equality prefix.
+      const seek = (setCode) => env.HISTORY.prepare(
+        `SELECT date, finish, market_cents FROM price_history INDEXED BY sqlite_autoindex_price_history_1
+         WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
+      ).bind(game, setCode, number, q('variant') ?? '', since).all();
+      const key = canonicalSetKey(game, set);
       let results;
       try {
-        // INDEXED BY forces a direct seek on the PK prefix (game, set_code, number). Without the
-        // hint the planner picks idx_history_date and scans every row for the game in the window —
-        // ~7.5s / millions of rows for a 180d Magic lookup (past the client's 8s timeout). With it,
-        // ~80ms / ~700 rows. A dedicated composite index would be cleaner but D1 OOMs building one
-        // over a table this size; the PK's autoindex already covers the equality prefix.
-        ({ results } = await env.HISTORY.prepare(
-          `SELECT date, finish, market_cents FROM price_history INDEXED BY sqlite_autoindex_price_history_1
-           WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
-        ).bind(game, set, number, q('variant') ?? '', since).all());
+        ({ results } = await seek(key));
+        // Rows written before canonicalization carry the raw mapping case (upper for magic/yugioh/
+        // one-piece). Retry uppercase when the canonical seek is empty — keeps the exact single-seek
+        // shape (NOT a COLLATE NOCASE scan, which would defeat the index). New rows are canonical, so
+        // this is the uncommon path; a one-time `UPDATE set_code = lower(set_code)` retires it.
+        if (!results.length && key !== key.toUpperCase()) ({ results } = await seek(key.toUpperCase()));
       } catch {
         // D1 is briefly unavailable during bulk imports/maintenance. Clients treat
         // this like any failure: keep cached values, retry later.
