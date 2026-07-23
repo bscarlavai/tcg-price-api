@@ -35,12 +35,18 @@ export default {
     // image and POSTs it here when a user reports a card that won't scan. We drop the image in R2 keyed
     // by date, with the game/app/note as object metadata, so the failure corpus is browsable per day.
     if (url.pathname === '/v1/report') {
-      if (request.method !== 'POST') return json({ error: 'POST required' }, 405);
-      // Shared-secret gate: only the app knows this key, so random internet clients can't POST at all.
-      // It ships in the binary so it's not unbreakable, but combined with the strict per-IP limit below
-      // it stops casual/bot spam. App Attest (DeviceCheck) is the upgrade path if real abuse shows up.
+      // Shared-secret gate (guards both the list + the upload): only the app, or an operator holding the
+      // key, gets in. It ships in the binary so it's not unbreakable, but with the strict per-IP limit
+      // below it stops casual/bot spam. App Attest is the upgrade path if real abuse shows up.
       if (!env.REPORT_KEY || request.headers.get('x-report-key') !== env.REPORT_KEY)
         return json({ error: 'unauthorized' }, 401);
+      // Key-gated admin list — verify reports are landing (newest keys carry game/app/note metadata).
+      if (request.method === 'GET') {
+        const list = await env.REPORTS.list({ prefix: 'reports/', limit: 200, include: ['customMetadata'] });
+        return json({ count: list.objects.length, items: list.objects.map((o) => ({
+          key: o.key, size: o.size, uploaded: o.uploaded, ...o.customMetadata })) }, 200, 'no-store');
+      }
+      if (request.method !== 'POST') return json({ error: 'GET or POST required' }, 405);
       // A MUCH stricter per-IP limit than the 200/min read limiter — reports are occasional, so this
       // caps how many images any single IP can push and keeps the bucket from being spammed/filled.
       const rl = await env.REPORT_LIMITER.limit({ key: ip });
