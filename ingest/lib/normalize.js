@@ -116,8 +116,14 @@ export function buildSetBlob(game, setCode, rows, sourceRefs, updatedAt, keyBy =
     // not extra finishes of the base card.
     let finishRows;
     if (game === 'pokemon') {
+      // Anchor on the base product's rarity (or the first row when no descriptor-less base exists)
+      // and union ONLY the same-rarity products — that's the (number, rarity) identity above. A
+      // strict equality is deliberate: `rarity == null` escape hatches would re-admit a same-number
+      // product of a DIFFERENT card (a Basic Energy, an alt-rarity reprint) whose cheaper subtype
+      // would then overwrite this card's real finish price. `null === null` still unions a genuinely
+      // rarity-less base with its rarity-less siblings.
       const cardRarity = (numberRows.find((r) => r.isBase) ?? numberRows[0]).rarity;
-      finishRows = numberRows.filter((r) => cardRarity == null || r.rarity == null || r.rarity === cardRarity);
+      finishRows = numberRows.filter((r) => r.rarity === cardRarity);
     } else {
       finishRows = numberRows.some((r) => r.isBase) ? numberRows.filter((r) => r.isBase) : numberRows;
     }

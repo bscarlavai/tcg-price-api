@@ -52,9 +52,17 @@ export default {
       const rl = await env.REPORT_LIMITER.limit({ key: ip });
       if (!rl.success) return json({ error: 'rate limited' }, 429);
       const ct = request.headers.get('content-type') || '';
-      if (!ct.startsWith('image/')) return json({ error: 'image body required' }, 415);
+      // Allowlist concrete raster types only — NOT a loose `image/` prefix, which admits
+      // image/svg+xml (active content that could execute if an object is ever served back).
+      if (!(ct.startsWith('image/jpeg') || ct.startsWith('image/png')))
+        return json({ error: 'jpeg or png body required' }, 415);
+      // Reject oversized uploads by DECLARED length before buffering, so a huge body can't be read
+      // into the isolate just to be dropped (the 1.5 MB cap below only bounds what reaches R2).
+      if (parseInt(request.headers.get('content-length') || '0', 10) > 1_500_000)
+        return json({ error: 'bad size' }, 413);
       const body = await request.arrayBuffer();
-      // The rendered diagnostic is well under 1 MB; cap tight so a single request can't be huge.
+      // The rendered diagnostic is well under 1 MB; cap tight so a single request can't be huge
+      // (post-read backstop for a chunked upload that omitted content-length).
       if (body.byteLength === 0 || body.byteLength > 1_500_000) return json({ error: 'bad size' }, 413);
       const now = new Date();
       const day = now.toISOString().slice(0, 10);
@@ -69,12 +77,15 @@ export default {
         + (ct.includes('png') ? '.png' : '.jpg');
       await env.REPORTS.put(key, body, {
         httpMetadata: { contentType: ct },
+        // NO client IP here (DESIGN.md §8b — "no PII/GDPR surface"): the key-gated GET list spreads
+        // this metadata straight into its response, so a stored IP would be a persisted, re-servable
+        // PII surface. Per-IP abuse is already throttled at request time by REPORT_LIMITER without
+        // persisting anything. `ua` is app/device diagnostics (which OS/build won't scan), not PII.
         customMetadata: {
           game: (q('game') || '').slice(0, 40),
           app: (q('app') || '').slice(0, 20),
           note: (q('note') || '').slice(0, 240),
           ua: (request.headers.get('user-agent') || '').slice(0, 120),
-          ip,
         },
       });
       await env.PRICES.put(dayKey, String(count + 1), { expirationTtl: 172800 });
