@@ -114,5 +114,65 @@
  "FPP": {
   "tcgcsv": 2776,
   "name": "First Partner Pack"
+ },
+ "mep": {
+  "tcgcsv": 24451,
+  "name": "ME: Mega Evolution Promo"
+ },
+ "ppp": {
+  "tcgcsv": 2332,
+  "name": "Professor Program Promos"
+ },
+ "30c": {
+  "tcgcsv": 24722,
+  "name": "ME: 30th Celebration"
+ },
+ "m24": {
+  "tcgcsv": 24163,
+  "name": "McDonald's Promos 2024"
+ },
+ "m23": {
+  "tcgcsv": 23306,
+  "name": "McDonald's Promos 2023"
+ },
+ "ccp": {
+  "tcgcsv": 2155,
+  "name": "Countdown Calendar Promos"
+ },
+ "kwbp": {
+  "tcgcsv": 2214,
+  "name": "Kids WB Promos"
+ },
+ "sample": {
+  "tcgcsv": 24493,
+  "name": "e-Reader Sample Cards"
+ },
+ "pwcp": {
+  "tcgcsv": 2205,
+  "name": "Pikachu World Collection Promos"
+ },
+ "aq": {
+  "tcgcsv": 1397,
+  "name": "Aquapolis"
+ },
+ "sk": {
+  "tcgcsv": 1372,
+  "name": "Skyridge"
+ },
+ "rum": {
+  "tcgcsv": 1433,
+  "name": "Rumble"
+ },
+ "swsd": {
+  "tcgcsv": 2545,
+  "name": "SWSH: Sword & Shield Promo Cards"
+ },
+ "sve": {
+  "tcgcsv": 24382,
+  "name": "SVE: Scarlet & Violet Energies"
+ },
+ "blk": {
+  "tcgcsv": 24325,
+  "name": "SV: Black Bolt"
  }
 }

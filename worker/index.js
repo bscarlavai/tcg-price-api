@@ -41,7 +41,15 @@ export default {
       // Combined-set codes like "OP14-EB04" don't match the pattern and pass through.
       if (game === 'onepiece') set = set.toUpperCase().replace(/^([A-Z]+)-(?=\d)/, '$1');
 
-      const blob = await env.PRICES.get(`${game}:${set}`, 'json');
+      let blob = await env.PRICES.get(`${game}:${set}`, 'json');
+      // Case-insensitive fallback. Catalog set codes are mixed-case — pokemontcg.io ships lowercase
+      // ("me5") while TCGplayer gap-fill sets carry uppercase abbreviations ("MEP", "SVP") — but the
+      // mapping/KV keys are lowercase. Try the exact case first (preserves any intentionally-cased
+      // key, e.g. One Piece's), then lowercase, so an uppercase query for a lowercase-keyed set
+      // resolves instead of 404ing. Prevents the whole class of "unmapped" false 404s.
+      if (!blob && set !== set.toLowerCase()) {
+        blob = await env.PRICES.get(`${game}:${set.toLowerCase()}`, 'json');
+      }
       if (!blob) return json({ error: 'unknown set' }, 404);
       const { sourceRefs, ...publicBlob } = blob;
 
