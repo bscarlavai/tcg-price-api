@@ -150,28 +150,40 @@ export default {
       // ~7.5s / millions of rows for a 180d Magic lookup (past the client's 8s timeout). With it,
       // ~80ms / ~700 rows. A dedicated composite index would be cleaner but D1 OOMs building one
       // over a table this size; the PK's autoindex already covers the equality prefix.
-      const seek = (setCode) => env.HISTORY.prepare(
-        `SELECT date, finish, market_cents FROM price_history INDEXED BY sqlite_autoindex_price_history_1
-         WHERE game=? AND set_code=? AND number=? AND variant=? AND date>=? ORDER BY date`,
-      ).bind(game, setCode, number, q('variant') ?? '', since).all();
+      // History rows are SPLIT by set_code case: everything written before canonicalization
+      // (2026-07-23) carries the raw mapping case — upper for magic/yugioh/one-piece, mixed for
+      // lorcana, 920 of 1121 sets — and everything after carries the canonical lower case. So seek
+      // BOTH cases in one statement. An earlier "retry uppercase only when the canonical seek comes
+      // back empty" truncated every affected chart to just the post-cutover rows, because once daily
+      // ingest writes canonical rows the canonical seek is never empty: 6 months of history sat
+      // invisible behind 3 days of new rows. `IN` on the PK prefix is still an index seek (measured
+      // against prod: 772 rows read, ~100ms for a 180d Magic card — a COLLATE NOCASE predicate would
+      // scan the table instead). A per-set `UPDATE set_code=lower(set_code)` retires the 2nd value.
       const key = canonicalSetKey(game, set);
       let results;
       try {
-        ({ results } = await seek(key));
-        // Rows written before canonicalization carry the raw mapping case (upper for magic/yugioh/
-        // one-piece). Retry uppercase when the canonical seek is empty — keeps the exact single-seek
-        // shape (NOT a COLLATE NOCASE scan, which would defeat the index). New rows are canonical, so
-        // this is the uncommon path; a one-time `UPDATE set_code = lower(set_code)` retires it.
-        if (!results.length && key !== key.toUpperCase()) ({ results } = await seek(key.toUpperCase()));
+        ({ results } = await env.HISTORY.prepare(
+          `SELECT date, finish, market_cents, set_code FROM price_history INDEXED BY sqlite_autoindex_price_history_1
+           WHERE game=? AND set_code IN (?, ?) AND number=? AND variant=? AND date>=? ORDER BY date`,
+        ).bind(game, key, key.toUpperCase(), number, q('variant') ?? '', since).all());
       } catch {
         // D1 is briefly unavailable during bulk imports/maintenance. Clients treat
         // this like any failure: keep cached values, retry later.
         return json({ error: 'history temporarily unavailable' }, 503);
       }
-      if (!results.length) return json({ error: 'no history for card' }, 404);
-      const finishes = new Set(results.map((r) => r.finish));
-      const finish = q('finish') ?? (DEFAULT_FINISH_ORDER[game] ?? ['normal']).find((f) => finishes.has(f)) ?? results[0].finish;
-      const points = results.filter((r) => r.finish === finish)
+      // One point per (finish, date). The two cases don't overlap today (upper ends 07-22, lower
+      // starts 07-23), but they will mid-migration or if an old date is re-ingested — collapse to
+      // the canonical row so a chart can't get two values on one x.
+      const byDate = new Map();
+      for (const r of results) {
+        const k = `${r.finish}|${r.date}`;
+        if (!byDate.has(k) || r.set_code === key) byDate.set(k, r);
+      }
+      const rows = [...byDate.values()];
+      if (!rows.length) return json({ error: 'no history for card' }, 404);
+      const finishes = new Set(rows.map((r) => r.finish));
+      const finish = q('finish') ?? (DEFAULT_FINISH_ORDER[game] ?? ['normal']).find((f) => finishes.has(f)) ?? rows[0].finish;
+      const points = rows.filter((r) => r.finish === finish)
         .map((r) => ({ date: r.date, market: r.market_cents / 100 }));
       return json({ game, set, number, finish, window: q('window') ?? '90d', points }, 200, CACHE_MARKET);
     }
