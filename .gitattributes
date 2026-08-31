@@ -1,0 +1,5 @@
+# ingest/movers.js delimits composite Map keys with a literal NUL (`${set_code}\0${number}`),
+# which trips git's binary heuristic — every change to it would render as "Binary files differ"
+# and land unreviewable in a PR. Force a textual diff; the byte itself is load-bearing and
+# in-memory only, so it must NOT be "cleaned up" out of the source.
+*.js diff

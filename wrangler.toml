@@ -7,12 +7,13 @@
 name = "tcg-price-api"
 main = "worker/index.js"
 compatibility_date = "2026-07-01"
-# rip-prices.lavailabs.com is the ONLY URL that ever ships in an app binary
+# tcg-prices.com is the canonical host and the ONLY URL that ships in new app binaries
 # (workers.dev never does). The worker also tolerates an /api path prefix, so the API
 # could later be mounted under another host's /api without a client-visible change.
+# rip-prices.lavailabs.com joins this list in migration Phase C — see docs/account-migration.md.
 workers_dev = false
 
-routes = [{ pattern = "rip-prices.lavailabs.com", custom_domain = true }]
+routes = [{ pattern = "tcg-prices.com", custom_domain = true }]
 
 # Per-IP rate limit (best-effort, per-colo). 200/min lets the bundle pipeline pull all
 # ~172 sets in one burst while capping what any single IP can cost us.
@@ -30,22 +31,22 @@ simple = { limit = 6, period = 60 }
 
 [[kv_namespaces]]
 binding = "PRICES"
-id = "ab23471a070b4fe9ac1fb38b1e0bda4d"
+id = "a7ce2fb4306846189ca42f8f28c27abc"
 
 # Operational metadata for /v1/report (today just the advisory daily-count circuit-breaker), kept OUT
 # of the PRICES data-plane namespace so it never spends its write budget (DESIGN D14). Counter keys
 # carry a 48h TTL, so this namespace stays at ~2 keys and never needs pruning.
 [[kv_namespaces]]
 binding = "REPORT_META"
-id = "cdd8b314f31e421d8a5b217e12247e80"
+id = "5b084195b42146d2ad814aaf9fdbd2a3"
 
 [[d1_databases]]
 binding = "HISTORY"
 database_name = "tcg-price-history"
-database_id = "6a8750db-5159-45a0-92ec-dd8fe0509009"
+database_id = "24797de7-7877-43b0-8aa6-c53ca237fba2"
 
 # Scan-issue reports: when a card won't scan, the app POSTs the rendered diagnostic image (+ metadata)
 # to /v1/report and it lands here — the real-world failure corpus that drives catalog/ORB fixes.
 [[r2_buckets]]
 binding = "REPORTS"
-bucket_name = "riplist-scan-reports"
+bucket_name = "tcg-scan-reports"

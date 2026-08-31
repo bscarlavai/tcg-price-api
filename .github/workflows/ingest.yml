@@ -46,7 +46,17 @@ jobs:
           node ingest/movers.js || failed=1
           exit $failed
         env:
+          # PRIMARY = the live stack. Its failure fails the run; the coverage ratchet reads it.
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
           D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          # SECONDARY (account migration, Phase B only — docs/account-migration.md): mirrors
+          # every write to the new account from the SAME TCGCSV pull, because a second ingest
+          # run would double our traffic against a free service we've promised one pull/day.
+          # Absent/empty, behavior is identical to before. Deleting these four secrets IS the
+          # Phase C rollback. A secondary-only failure logs + exits 1 without touching primary.
+          CF_ACCOUNT_ID_2: ${{ secrets.CF_ACCOUNT_ID_NEW }}
+          CF_API_TOKEN_2: ${{ secrets.CF_API_TOKEN_NEW }}
+          KV_NAMESPACE_ID_2: ${{ secrets.KV_NAMESPACE_ID_NEW }}
+          D1_DATABASE_ID_2: ${{ secrets.D1_DATABASE_ID_NEW }}

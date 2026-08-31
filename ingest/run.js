@@ -101,30 +101,52 @@ if (!push) {
   process.exit(0);
 }
 
-const { kvGet, kvPutMany, d1InsertHistory } = await import('./lib/cloudflare.js');
+const { kvGet, kvPutMany, d1InsertHistory, targets } = await import('./lib/cloudflare.js');
 
+// Ratchet reads the PRIMARY only. During the account migration the secondary is still
+// filling, so gating promotion on its coverage would block on its own incompleteness.
 const previous = await kvGet(`meta:coverage:${game}`);
 auditCoverage(game, previous, coverage, { force: has('force') })
   .forEach((w) => console.warn(`  [forced past] ${w}`));
 
-// Diff: only write sets whose card payload actually changed (KV writes are cheap on
-// paid, but unchanged writes would churn updatedAt and defeat client caching honesty).
-const changed = [];
+// History rows are target-independent — same pull, same date, same source.
 const history = [];
-const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
 for (const { setCode, blob, rows } of blobs) {
-  // Store under the canonical (lowercase) key so a query in any case resolves; blob.set keeps the
-  // original display casing. See canonicalSetKey — the Worker and coverage.js resolve the same way.
-  const kvKey = canonicalSetKey(game, setCode);
-  const existing = await kvGet(`${game}:${kvKey}`);
-  if (!existing || JSON.stringify(content(existing)) !== JSON.stringify(content(blob))) {
-    changed.push([`${game}:${kvKey}`, blob]);
-  }
   // Number-keyed by default; productId sets (Secret Lair / The List) record history under productId.
   // set_code is canonical too, so /v1/history seeks match /v1/prices keys.
-  history.push(...historyRows(game, kvKey, rows, date, SOURCE, blob.keyBy));
+  history.push(...historyRows(game, canonicalSetKey(game, setCode), rows, date, SOURCE, blob.keyBy));
 }
 
-await kvPutMany([...changed, [`meta:coverage:${game}`, coverage]]);
-await d1InsertHistory(history);
-console.log(`pushed: ${changed.length} changed sets → KV, ${history.length} rows → D1`);
+const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
+let secondaryFailed = false;
+
+for (const { t, label } of targets()) {
+  // Diff: only write sets whose card payload actually changed (KV writes are cheap on
+  // paid, but unchanged writes would churn updatedAt and defeat client caching honesty).
+  // Diffed PER TARGET rather than mirroring the primary's changed-list, so a write that
+  // failed against one account is picked up on the next run instead of leaving that set
+  // stale there until its price happens to move again.
+  try {
+    const changed = [];
+    for (const { setCode, blob } of blobs) {
+      // Store under the canonical (lowercase) key so a query in any case resolves; blob.set keeps the
+      // original display casing. See canonicalSetKey — the Worker and coverage.js resolve the same way.
+      const kvKey = canonicalSetKey(game, setCode);
+      const existing = await kvGet(`${game}:${kvKey}`, t);
+      if (!existing || JSON.stringify(content(existing)) !== JSON.stringify(content(blob))) {
+        changed.push([`${game}:${kvKey}`, blob]);
+      }
+    }
+    await kvPutMany([...changed, [`meta:coverage:${game}`, coverage]], t);
+    await d1InsertHistory(history, t);
+    console.log(`pushed [${label}]: ${changed.length} changed sets → KV, ${history.length} rows → D1`);
+  } catch (e) {
+    // The primary is the live stack — its failure is the run's failure. A secondary failure
+    // must not roll back or mask a good primary write, but it can't pass silently either.
+    if (!t) throw e;
+    console.error(`push failed [${label}]: ${e.message}`);
+    secondaryFailed = true;
+  }
+}
+
+if (secondaryFailed) process.exit(1);
