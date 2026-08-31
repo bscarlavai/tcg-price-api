@@ -220,5 +220,9 @@
  "PROMO": {
   "tcgcsv": 17675,
   "name": "One Piece Promotion Cards"
+ },
+ "OP17": {
+  "tcgcsv": 24736,
+  "name": "The World's Strongest Warriors"
  }
 }
