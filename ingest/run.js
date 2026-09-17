@@ -118,7 +118,7 @@ for (const { setCode, blob, rows } of blobs) {
 }
 
 const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
-let secondaryFailed = false;
+const failed = [];
 
 for (const { t, label } of targets()) {
   // Diff: only write sets whose card payload actually changed (KV writes are cheap on
@@ -141,12 +141,20 @@ for (const { t, label } of targets()) {
     await d1InsertHistory(history, t);
     console.log(`pushed [${label}]: ${changed.length} changed sets → KV, ${history.length} rows → D1`);
   } catch (e) {
-    // The primary is the live stack — its failure is the run's failure. A secondary failure
-    // must not roll back or mask a good primary write, but it can't pass silently either.
-    if (!t) throw e;
-    console.error(`push failed [${label}]: ${e.message}`);
-    secondaryFailed = true;
+    // Every target is attempted before the run gives up. The accounts are independent
+    // destinations for the same pull, so one being degraded is no reason to starve the
+    // other — and `targets()` puts the primary first, so aborting here aborted the
+    // SECONDARY. That is how a full D1 on the old account silently froze the new one for
+    // five days mid-migration: primary KV wrote, primary D1 threw, and the secondary
+    // iteration never ran. Neither target may mask or roll back the other's good write.
+    console.error(`push failed [${label}]:`, e);
+    failed.push(label);
   }
 }
 
-if (secondaryFailed) process.exit(1);
+// Any failed target fails the run: the primary is the live stack, and a secondary quietly
+// falling behind is the exact drift the Phase B dual-write exists to prevent.
+if (failed.length) {
+  console.error(`push failed on ${failed.join(' + ')} — see errors above`);
+  process.exit(1);
+}
