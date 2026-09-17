@@ -36,6 +36,13 @@
    "score": 0.56
   },
   {
+   "groupId": 24820,
+   "group": "Extra Booster: One Piece Heroine's Edition Vol. 2",
+   "guessSetCode": "EB-03",
+   "guessSetName": "EXTRA BOOSTER -ONE PIECE HEROINES EDITION",
+   "score": 0.5
+  },
+  {
    "groupId": 24751,
    "group": "Starter Deck 33: BLUE Kuzan",
    "guessSetCode": "ST-25",
@@ -156,7 +163,7 @@
   },
   {
    "groupId": 24754,
-   "group": "Starter Deck 36: YELLOW Eustass”Captain”Kid",
+   "group": "Starter Deck 36: YELLOW Eustass\"Captain\"Kid",
    "guessSetCode": null,
    "guessSetName": null,
    "score": 0.33
@@ -181,6 +188,13 @@
    "guessSetCode": null,
    "guessSetName": null,
    "score": 0.29
+  },
+  {
+   "groupId": 24833,
+   "group": "The Dominance of God",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.25
   },
   {
    "groupId": 23890,
@@ -211,11 +225,25 @@
    "score": 0.2
   },
   {
+   "groupId": 24834,
+   "group": "The Dominance of God Release Event Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.18
+  },
+  {
    "groupId": 24306,
    "group": "Learn Together Deck Set",
    "guessSetCode": null,
    "guessSetName": null,
    "score": 0.17
+  },
+  {
+   "groupId": 24775,
+   "group": "The World's Strongest Warriors Release Event Cards",
+   "guessSetCode": null,
+   "guessSetName": null,
+   "score": 0.15
   }
  ],
  "unmappedAppSets": [

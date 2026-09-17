@@ -50,13 +50,6 @@
    "score": 0.8
   },
   {
-   "groupId": 24351,
-   "group": "Yu-Gi-Oh! Championship Series 2025 Prize Cards",
-   "guessSetCode": "YCSW",
-   "guessSetName": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
-   "score": 0.78
-  },
-  {
    "groupId": 585,
    "group": "Order of Chaos SE",
    "guessSetCode": "ORCS",
@@ -253,13 +246,6 @@
    "score": 0.63
   },
   {
-   "groupId": 24704,
-   "group": "Ultimate Tournament Pack 1",
-   "guessSetCode": "OP01",
-   "guessSetName": "OTS Tournament Pack 1",
-   "score": 0.6
-  },
-  {
    "groupId": 23469,
    "group": "Legendary Decks II (2020 Reprint)",
    "guessSetCode": "LDK2",
@@ -356,13 +342,6 @@
    "guessSetCode": "FMR",
    "guessSetName": "Yu-Gi-Oh! Forbidden Memories promotional cards",
    "score": 0.56
-  },
-  {
-   "groupId": 24621,
-   "group": "Battles of Legend: Glorious Gallery",
-   "guessSetCode": "BLAR",
-   "guessSetName": "Battles of Legend: Armageddon",
-   "score": 0.5
   },
   {
    "groupId": 24460,
@@ -652,13 +631,6 @@
    "score": 0.38
   },
   {
-   "groupId": 24675,
-   "group": "Chaos Origins",
-   "guessSetCode": null,
-   "guessSetName": null,
-   "score": 0.33
-  },
-  {
    "groupId": 351,
    "group": "World Championship Series",
    "guessSetCode": null,
@@ -814,11 +786,6 @@
    "setCode": "JUMP",
    "name": "Shonen Jump May 2006 subscription bonus",
    "cards": 85
-  },
-  {
-   "setCode": "STAX",
-   "name": "2-Player Starter Set",
-   "cards": 43
   },
   {
    "setCode": "DL11",

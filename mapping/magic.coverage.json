@@ -1,13 +1,6 @@
 {
  "unmappedGroups": [
   {
-   "groupId": 24690,
-   "group": "Commander: The Hobbit",
-   "guessSetCode": "HOB",
-   "guessSetName": "The Hobbit",
-   "score": 1
-  },
-  {
    "groupId": 24689,
    "group": "Commander: Reality Fracture",
    "guessSetCode": "FRA",
@@ -29,66 +22,10 @@
    "score": 1
   },
   {
-   "groupId": 24602,
-   "group": "Commander: Secrets of Strixhaven",
-   "guessSetCode": "SOS",
-   "guessSetName": "Secrets of Strixhaven",
-   "score": 1
-  },
-  {
-   "groupId": 24603,
-   "group": "Secrets of Strixhaven: Mystical Archive",
-   "guessSetCode": "SOA",
-   "guessSetName": "Secrets of Strixhaven Mystical Archive",
-   "score": 1
-  },
-  {
    "groupId": 24496,
    "group": "Commander: Teenage Mutant Ninja Turtles",
    "guessSetCode": "TMT",
    "guessSetName": "Teenage Mutant Ninja Turtles",
-   "score": 1
-  },
-  {
-   "groupId": 24497,
-   "group": "Teenage Mutant Ninja Turtles Source Material",
-   "guessSetCode": "PZA",
-   "guessSetName": "Teenage Mutant Ninja Turtles Source Material",
-   "score": 1
-  },
-  {
-   "groupId": 24464,
-   "group": "Commander: Lorwyn Eclipsed",
-   "guessSetCode": "ECL",
-   "guessSetName": "Lorwyn Eclipsed",
-   "score": 1
-  },
-  {
-   "groupId": 24236,
-   "group": "Commander: Edge of Eternities",
-   "guessSetCode": "EOE",
-   "guessSetName": "Edge of Eternities",
-   "score": 1
-  },
-  {
-   "groupId": 24361,
-   "group": "Edge of Eternities: Stellar Sights",
-   "guessSetCode": "EOS",
-   "guessSetName": "Edge of Eternities: Stellar Sights",
-   "score": 1
-  },
-  {
-   "groupId": 23929,
-   "group": "Commander: Aetherdrift",
-   "guessSetCode": "DFT",
-   "guessSetName": "Aetherdrift",
-   "score": 1
-  },
-  {
-   "groupId": 23814,
-   "group": "Commander: Foundations",
-   "guessSetCode": "FDN",
-   "guessSetName": "Foundations",
    "score": 1
   },
   {
@@ -99,563 +36,10 @@
    "score": 1
   },
   {
-   "groupId": 23445,
-   "group": "Commander: Modern Horizons 3",
-   "guessSetCode": "MH3",
-   "guessSetName": "Modern Horizons 3",
-   "score": 1
-  },
-  {
-   "groupId": 23440,
-   "group": "Commander: Outlaws of Thunder Junction",
-   "guessSetCode": "OTJ",
-   "guessSetName": "Outlaws of Thunder Junction",
-   "score": 1
-  },
-  {
-   "groupId": 23363,
-   "group": "Commander: Murders at Karlov Manor",
-   "guessSetCode": "MKM",
-   "guessSetName": "Murders at Karlov Manor",
-   "score": 1
-  },
-  {
-   "groupId": 23316,
-   "group": "Commander: The Lost Caverns of Ixalan",
-   "guessSetCode": "LCI",
-   "guessSetName": "The Lost Caverns of Ixalan",
-   "score": 1
-  },
-  {
-   "groupId": 23164,
-   "group": "Commander: Wilds of Eldraine",
-   "guessSetCode": "WOE",
-   "guessSetName": "Wilds of Eldraine",
-   "score": 1
-  },
-  {
-   "groupId": 23273,
-   "group": "Wilds of Eldraine: Enchanting Tales",
-   "guessSetCode": "WOT",
-   "guessSetName": "Wilds of Eldraine: Enchanting Tales",
-   "score": 1
-  },
-  {
-   "groupId": 22979,
-   "group": "Commander: March of the Machine",
-   "guessSetCode": "MOM",
-   "guessSetName": "March of the Machine",
-   "score": 1
-  },
-  {
    "groupId": 23109,
    "group": "Planechase: March of the Machine",
    "guessSetCode": "MOM",
    "guessSetName": "March of the Machine",
-   "score": 1
-  },
-  {
-   "groupId": 17662,
-   "group": "Starter Commander Decks",
-   "guessSetCode": "SCD",
-   "guessSetName": "Starter Commander Decks",
-   "score": 1
-  },
-  {
-   "groupId": 3159,
-   "group": "Commander: The Brothers' War",
-   "guessSetCode": "BRO",
-   "guessSetName": "The Brothers' War",
-   "score": 1
-  },
-  {
-   "groupId": 3140,
-   "group": "Commander: Dominaria United",
-   "guessSetCode": "DMU",
-   "guessSetName": "Dominaria United",
-   "score": 1
-  },
-  {
-   "groupId": 3031,
-   "group": "Commander: Streets of New Capenna",
-   "guessSetCode": "SNC",
-   "guessSetName": "Streets of New Capenna",
-   "score": 1
-  },
-  {
-   "groupId": 2905,
-   "group": "Commander Collection: Black",
-   "guessSetCode": "CC2",
-   "guessSetName": "Commander Collection: Black",
-   "score": 1
-  },
-  {
-   "groupId": 2870,
-   "group": "Commander: Adventures in the Forgotten Realms",
-   "guessSetCode": "AFR",
-   "guessSetName": "Adventures in the Forgotten Realms",
-   "score": 1
-  },
-  {
-   "groupId": 2801,
-   "group": "Commander 2021",
-   "guessSetCode": "C21",
-   "guessSetName": "Commander 2021",
-   "score": 1
-  },
-  {
-   "groupId": 2766,
-   "group": "Commander: Kaldheim",
-   "guessSetCode": "KHM",
-   "guessSetName": "Kaldheim",
-   "score": 1
-  },
-  {
-   "groupId": 2699,
-   "group": "Commander Collection: Green",
-   "guessSetCode": "CC1",
-   "guessSetName": "Commander Collection: Green",
-   "score": 1
-  },
-  {
-   "groupId": 2716,
-   "group": "Commander: Zendikar Rising",
-   "guessSetCode": "ZNR",
-   "guessSetName": "Zendikar Rising",
-   "score": 1
-  },
-  {
-   "groupId": 2713,
-   "group": "Zendikar Rising Expeditions",
-   "guessSetCode": "ZNE",
-   "guessSetName": "Zendikar Rising Expeditions",
-   "score": 1
-  },
-  {
-   "groupId": 2633,
-   "group": "Signature Spellbook: Chandra",
-   "guessSetCode": "SS3",
-   "guessSetName": "Signature Spellbook: Chandra",
-   "score": 1
-  },
-  {
-   "groupId": 2634,
-   "group": "Commander 2020",
-   "guessSetCode": "C20",
-   "guessSetName": "Commander 2020",
-   "score": 1
-  },
-  {
-   "groupId": 2598,
-   "group": "Unsanctioned",
-   "guessSetCode": "UND",
-   "guessSetName": "Unsanctioned",
-   "score": 1
-  },
-  {
-   "groupId": 2481,
-   "group": "Commander 2019",
-   "guessSetCode": "C19",
-   "guessSetName": "Commander 2019",
-   "score": 1
-  },
-  {
-   "groupId": 2447,
-   "group": "Signature Spellbook: Gideon",
-   "guessSetCode": "SS2",
-   "guessSetName": "Signature Spellbook: Gideon",
-   "score": 1
-  },
-  {
-   "groupId": 2251,
-   "group": "Commander 2018",
-   "guessSetCode": "C18",
-   "guessSetName": "Commander 2018",
-   "score": 1
-  },
-  {
-   "groupId": 2247,
-   "group": "Global Series Jiang Yanggu & Mu Yanling",
-   "guessSetCode": "GS1",
-   "guessSetName": "Global Series Jiang Yanggu & Mu Yanling",
-   "score": 1
-  },
-  {
-   "groupId": 2220,
-   "group": "Signature Spellbook: Jace",
-   "guessSetCode": "SS1",
-   "guessSetName": "Signature Spellbook: Jace",
-   "score": 1
-  },
-  {
-   "groupId": 2246,
-   "group": "Commander Anthology Volume II",
-   "guessSetCode": "CM2",
-   "guessSetName": "Commander Anthology Volume II",
-   "score": 1
-  },
-  {
-   "groupId": 2207,
-   "group": "Duel Decks: Elves vs. Inventors",
-   "guessSetCode": "DDU",
-   "guessSetName": "Duel Decks: Elves vs. Inventors",
-   "score": 1
-  },
-  {
-   "groupId": 2077,
-   "group": "Explorers of Ixalan",
-   "guessSetCode": "E02",
-   "guessSetName": "Explorers of Ixalan",
-   "score": 1
-  },
-  {
-   "groupId": 2078,
-   "group": "From the Vault: Transform",
-   "guessSetCode": "V17",
-   "guessSetName": "From the Vault: Transform",
-   "score": 1
-  },
-  {
-   "groupId": 2076,
-   "group": "Duel Decks: Merfolk vs. Goblins",
-   "guessSetCode": "DDT",
-   "guessSetName": "Duel Decks: Merfolk vs. Goblins",
-   "score": 1
-  },
-  {
-   "groupId": 2009,
-   "group": "Commander 2017",
-   "guessSetCode": "C17",
-   "guessSetName": "Commander 2017",
-   "score": 1
-  },
-  {
-   "groupId": 1904,
-   "group": "Archenemy: Nicol Bolas",
-   "guessSetCode": "E01",
-   "guessSetName": "Archenemy: Nicol Bolas",
-   "score": 1
-  },
-  {
-   "groupId": 1933,
-   "group": "Commander Anthology",
-   "guessSetCode": "CMA",
-   "guessSetName": "Commander Anthology",
-   "score": 1
-  },
-  {
-   "groupId": 1930,
-   "group": "Welcome Deck 2017",
-   "guessSetCode": "W17",
-   "guessSetName": "Welcome Deck 2017",
-   "score": 1
-  },
-  {
-   "groupId": 1905,
-   "group": "Duel Decks: Mind vs. Might",
-   "guessSetCode": "DDS",
-   "guessSetName": "Duel Decks: Mind vs. Might",
-   "score": 1
-  },
-  {
-   "groupId": 1793,
-   "group": "Planechase Anthology",
-   "guessSetCode": "PCA",
-   "guessSetName": "Planechase Anthology",
-   "score": 1
-  },
-  {
-   "groupId": 1792,
-   "group": "Commander 2016",
-   "guessSetCode": "C16",
-   "guessSetName": "Commander 2016",
-   "score": 1
-  },
-  {
-   "groupId": 1835,
-   "group": "Duel Decks: Nissa vs. Ob Nixilis",
-   "guessSetCode": "DDR",
-   "guessSetName": "Duel Decks: Nissa vs. Ob Nixilis",
-   "score": 1
-  },
-  {
-   "groupId": 1821,
-   "group": "From the Vault: Lore",
-   "guessSetCode": "V16",
-   "guessSetName": "From the Vault: Lore",
-   "score": 1
-  },
-  {
-   "groupId": 1765,
-   "group": "Welcome Deck 2016",
-   "guessSetCode": "W16",
-   "guessSetName": "Welcome Deck 2016",
-   "score": 1
-  },
-  {
-   "groupId": 1726,
-   "group": "Duel Decks: Blessed vs. Cursed",
-   "guessSetCode": "DDQ",
-   "guessSetName": "Duel Decks: Blessed vs. Cursed",
-   "score": 1
-  },
-  {
-   "groupId": 1673,
-   "group": "Commander 2015",
-   "guessSetCode": "C15",
-   "guessSetName": "Commander 2015",
-   "score": 1
-  },
-  {
-   "groupId": 1649,
-   "group": "Zendikar Expeditions",
-   "guessSetCode": "EXP",
-   "guessSetName": "Zendikar Expeditions",
-   "score": 1
-  },
-  {
-   "groupId": 1641,
-   "group": "Duel Decks: Zendikar vs. Eldrazi",
-   "guessSetCode": "DDP",
-   "guessSetName": "Duel Decks: Zendikar vs. Eldrazi",
-   "score": 1
-  },
-  {
-   "groupId": 1577,
-   "group": "From the Vault: Angels",
-   "guessSetCode": "V15",
-   "guessSetName": "From the Vault: Angels",
-   "score": 1
-  },
-  {
-   "groupId": 1511,
-   "group": "Duel Decks: Elspeth vs. Kiora",
-   "guessSetCode": "DDO",
-   "guessSetName": "Duel Decks: Elspeth vs. Kiora",
-   "score": 1
-  },
-  {
-   "groupId": 1476,
-   "group": "Commander 2014",
-   "guessSetCode": "C14",
-   "guessSetName": "Commander 2014",
-   "score": 1
-  },
-  {
-   "groupId": 1477,
-   "group": "Duel Decks: Speed vs. Cunning",
-   "guessSetCode": "DDN",
-   "guessSetName": "Duel Decks: Speed vs. Cunning",
-   "score": 1
-  },
-  {
-   "groupId": 1475,
-   "group": "From the Vault: Annihilation",
-   "guessSetCode": "V14",
-   "guessSetName": "From the Vault: Annihilation",
-   "score": 1
-  },
-  {
-   "groupId": 1166,
-   "group": "Duel Decks: Jace vs. Vraska",
-   "guessSetCode": "DDM",
-   "guessSetName": "Duel Decks: Jace vs. Vraska",
-   "score": 1
-  },
-  {
-   "groupId": 1164,
-   "group": "Commander 2013",
-   "guessSetCode": "C13",
-   "guessSetName": "Commander 2013",
-   "score": 1
-  },
-  {
-   "groupId": 1145,
-   "group": "Duel Decks: Heroes vs. Monsters",
-   "guessSetCode": "DDL",
-   "guessSetName": "Duel Decks: Heroes vs. Monsters",
-   "score": 1
-  },
-  {
-   "groupId": 1141,
-   "group": "From the Vault: Twenty",
-   "guessSetCode": "V13",
-   "guessSetName": "From the Vault: Twenty",
-   "score": 1
-  },
-  {
-   "groupId": 601,
-   "group": "Duel Decks: Sorin vs. Tibalt",
-   "guessSetCode": "DDK",
-   "guessSetName": "Duel Decks: Sorin vs. Tibalt",
-   "score": 1
-  },
-  {
-   "groupId": 568,
-   "group": "Commander's Arsenal",
-   "guessSetCode": "CM1",
-   "guessSetName": "Commander's Arsenal",
-   "score": 1
-  },
-  {
-   "groupId": 365,
-   "group": "Duel Decks: Izzet vs. Golgari",
-   "guessSetCode": "DDJ",
-   "guessSetName": "Duel Decks: Izzet vs. Golgari",
-   "score": 1
-  },
-  {
-   "groupId": 368,
-   "group": "From the Vault: Realms",
-   "guessSetCode": "V12",
-   "guessSetName": "From the Vault: Realms",
-   "score": 1
-  },
-  {
-   "groupId": 363,
-   "group": "Planechase 2012",
-   "guessSetCode": "PC2",
-   "guessSetName": "Planechase 2012",
-   "score": 1
-  },
-  {
-   "groupId": 367,
-   "group": "Duel Decks: Venser vs. Koth",
-   "guessSetCode": "DDI",
-   "guessSetName": "Duel Decks: Venser vs. Koth",
-   "score": 1
-  },
-  {
-   "groupId": 90,
-   "group": "Premium Deck Series: Graveborn",
-   "guessSetCode": "PD3",
-   "guessSetName": "Premium Deck Series: Graveborn",
-   "score": 1
-  },
-  {
-   "groupId": 30,
-   "group": "Duel Decks: Ajani vs. Nicol Bolas",
-   "guessSetCode": "DDH",
-   "guessSetName": "Duel Decks: Ajani vs. Nicol Bolas",
-   "score": 1
-  },
-  {
-   "groupId": 49,
-   "group": "From the Vault: Legends",
-   "guessSetCode": "V11",
-   "guessSetName": "From the Vault: Legends",
-   "score": 1
-  },
-  {
-   "groupId": 36,
-   "group": "Duel Decks: Knights vs. Dragons",
-   "guessSetCode": "DDG",
-   "guessSetName": "Duel Decks: Knights vs. Dragons",
-   "score": 1
-  },
-  {
-   "groupId": 89,
-   "group": "Premium Deck Series: Fire and Lightning",
-   "guessSetCode": "PD2",
-   "guessSetName": "Premium Deck Series: Fire and Lightning",
-   "score": 1
-  },
-  {
-   "groupId": 32,
-   "group": "Duel Decks: Elspeth vs. Tezzeret",
-   "guessSetCode": "DDF",
-   "guessSetName": "Duel Decks: Elspeth vs. Tezzeret",
-   "score": 1
-  },
-  {
-   "groupId": 50,
-   "group": "From the Vault: Relics",
-   "guessSetCode": "V10",
-   "guessSetName": "From the Vault: Relics",
-   "score": 1
-  },
-  {
-   "groupId": 12,
-   "group": "Archenemy",
-   "guessSetCode": "ARC",
-   "guessSetName": "Archenemy",
-   "score": 1
-  },
-  {
-   "groupId": 37,
-   "group": "Duel Decks: Phyrexia vs. the Coalition",
-   "guessSetCode": "DDE",
-   "guessSetName": "Duel Decks: Phyrexia vs. the Coalition",
-   "score": 1
-  },
-  {
-   "groupId": 91,
-   "group": "Premium Deck Series: Slivers",
-   "guessSetCode": "H09",
-   "guessSetName": "Premium Deck Series: Slivers",
-   "score": 1
-  },
-  {
-   "groupId": 34,
-   "group": "Duel Decks: Garruk vs. Liliana",
-   "guessSetCode": "DDD",
-   "guessSetName": "Duel Decks: Garruk vs. Liliana",
-   "score": 1
-  },
-  {
-   "groupId": 84,
-   "group": "Planechase",
-   "guessSetCode": "HOP",
-   "guessSetName": "Planechase",
-   "score": 1
-  },
-  {
-   "groupId": 48,
-   "group": "From the Vault: Exiled",
-   "guessSetCode": "V09",
-   "guessSetName": "From the Vault: Exiled",
-   "score": 1
-  },
-  {
-   "groupId": 1274,
-   "group": "Duels of the Planeswalkers",
-   "guessSetCode": "DPA",
-   "guessSetName": "Duels of the Planeswalkers",
-   "score": 1
-  },
-  {
-   "groupId": 31,
-   "group": "Duel Decks: Divine vs. Demonic",
-   "guessSetCode": "DDC",
-   "guessSetName": "Duel Decks: Divine vs. Demonic",
-   "score": 1
-  },
-  {
-   "groupId": 35,
-   "group": "Duel Decks: Jace vs. Chandra",
-   "guessSetCode": "DD2",
-   "guessSetName": "Duel Decks: Jace vs. Chandra",
-   "score": 1
-  },
-  {
-   "groupId": 47,
-   "group": "From the Vault: Dragons",
-   "guessSetCode": "DRB",
-   "guessSetName": "From the Vault: Dragons",
-   "score": 1
-  },
-  {
-   "groupId": 33,
-   "group": "Duel Decks: Elves vs. Goblins",
-   "guessSetCode": "DD1",
-   "guessSetName": "Duel Decks: Elves vs. Goblins",
-   "score": 1
-  },
-  {
-   "groupId": 16,
-   "group": "Beatdown Box Set",
-   "guessSetCode": "BTD",
-   "guessSetName": "Beatdown Box Set",
    "score": 1
   },
   {
@@ -708,13 +92,6 @@
    "score": 1
   },
   {
-   "groupId": 24246,
-   "group": "Marvel's Spider-Man: Eternal-Legal",
-   "guessSetCode": "SPE",
-   "guessSetName": "Marvel's Spider-Man Eternal",
-   "score": 0.83
-  },
-  {
    "groupId": 17665,
    "group": "The Brothers' War: Retro Frame Artifacts",
    "guessSetCode": "BRR",
@@ -722,32 +99,11 @@
    "score": 0.83
   },
   {
-   "groupId": 3129,
-   "group": "Magic Game Night: Free-For-All",
-   "guessSetCode": "GN3",
-   "guessSetName": "Game Night: Free-for-All",
-   "score": 0.83
-  },
-  {
-   "groupId": 17685,
-   "group": "Commander: Phyrexia: All Will Be One",
-   "guessSetCode": "ONE",
-   "guessSetName": "Phyrexia: All Will Be One",
-   "score": 0.8
-  },
-  {
    "groupId": 3048,
    "group": "Art Series: Commander Legends: Battle for Baldur's Gate",
    "guessSetCode": "CLB",
    "guessSetName": "Commander Legends: Battle for Baldur's Gate",
    "score": 0.78
-  },
-  {
-   "groupId": 23551,
-   "group": "Commander: Duskmourn: House of Horror",
-   "guessSetCode": "DSK",
-   "guessSetName": "Duskmourn: House of Horror",
-   "score": 0.75
   },
   {
    "groupId": 17667,
@@ -761,13 +117,6 @@
    "group": "30th Anniversary Promos",
    "guessSetCode": "P30A",
    "guessSetName": "30th Anniversary Play Promos",
-   "score": 0.75
-  },
-  {
-   "groupId": 2562,
-   "group": "Magic Game Night 2019",
-   "guessSetCode": "GN2",
-   "guessSetName": "Game Night 2019",
    "score": 0.75
   },
   {
@@ -818,6 +167,13 @@
    "guessSetCode": "AFR",
    "guessSetName": "Adventures in the Forgotten Realms",
    "score": 0.71
+  },
+  {
+   "groupId": 24770,
+   "group": "Commander: Star Trek",
+   "guessSetCode": "TRC",
+   "guessSetName": "Star Trek Commander",
+   "score": 0.67
   },
   {
    "groupId": 24766,
@@ -918,45 +274,10 @@
    "score": 0.67
   },
   {
-   "groupId": 2967,
-   "group": "Commander: Kamigawa: Neon Dynasty",
-   "guessSetCode": "NEO",
-   "guessSetName": "Kamigawa: Neon Dynasty",
-   "score": 0.67
-  },
-  {
-   "groupId": 2900,
-   "group": "Commander: Innistrad: Crimson Vow",
-   "guessSetCode": "VOW",
-   "guessSetName": "Innistrad: Crimson Vow",
-   "score": 0.67
-  },
-  {
-   "groupId": 2893,
-   "group": "Commander: Innistrad: Midnight Hunt",
-   "guessSetCode": "MID",
-   "guessSetName": "Innistrad: Midnight Hunt",
-   "score": 0.67
-  },
-  {
-   "groupId": 2791,
-   "group": "Strixhaven: Mystical Archive",
-   "guessSetCode": "STA",
-   "guessSetName": "Strixhaven Mystical Archive",
-   "score": 0.67
-  },
-  {
    "groupId": 2444,
    "group": "Mythic Edition: War of the Spark",
    "guessSetCode": "WAR",
    "guessSetName": "War of the Spark",
-   "score": 0.67
-  },
-  {
-   "groupId": 2359,
-   "group": "Magic Game Night",
-   "guessSetCode": "GNT",
-   "guessSetName": "Game Night",
    "score": 0.67
   },
   {
@@ -1100,13 +421,6 @@
    "score": 0.6
   },
   {
-   "groupId": 1346,
-   "group": "Magic Modern Event Deck",
-   "guessSetCode": "MD1",
-   "guessSetName": "Modern Event Deck 2014",
-   "score": 0.6
-  },
-  {
    "groupId": 52,
    "group": "Game Day & Store Championship Promos",
    "guessSetCode": "GDY",
@@ -1142,6 +456,20 @@
    "score": 0.57
   },
   {
+   "groupId": 24690,
+   "group": "Art Series: The Hobbit",
+   "guessSetCode": "HOB",
+   "guessSetName": "The Hobbit",
+   "score": 0.5
+  },
+  {
+   "groupId": 24771,
+   "group": "Star Trek: Stardates",
+   "guessSetCode": "TRC",
+   "guessSetName": "Star Trek Commander",
+   "score": 0.5
+  },
+  {
    "groupId": 24691,
    "group": "The Hobbit: Eternal-Legal",
    "guessSetCode": "HOB",
@@ -1174,13 +502,6 @@
    "group": "Art Series: FINAL FANTASY",
    "guessSetCode": "FIN",
    "guessSetName": "Final Fantasy",
-   "score": 0.5
-  },
-  {
-   "groupId": 24234,
-   "group": "Commander: Tarkir: Dragonstorm",
-   "guessSetCode": "TDM",
-   "guessSetName": "Tarkir: Dragonstorm",
    "score": 0.5
   },
   {
@@ -1275,45 +596,10 @@
    "score": 0.5
   },
   {
-   "groupId": 1909,
-   "group": "Masterpiece Series: Amonkhet Invocations",
-   "guessSetCode": "MP2",
-   "guessSetName": "Amonkhet Invocations",
-   "score": 0.5
-  },
-  {
-   "groupId": 1837,
-   "group": "Masterpiece Series: Kaladesh Inventions",
-   "guessSetCode": "MPS",
-   "guessSetName": "Kaladesh Inventions",
-   "score": 0.5
-  },
-  {
-   "groupId": 1490,
-   "group": "Duel Decks: Anthology",
-   "guessSetCode": "DVD",
-   "guessSetName": "Duel Decks Anthology: Divine vs. Demonic",
-   "score": 0.5
-  },
-  {
-   "groupId": 25,
-   "group": "Commander",
-   "guessSetCode": "BLC",
-   "guessSetName": "Bloomburrow Commander",
-   "score": 0.5
-  },
-  {
    "groupId": 2988,
    "group": "Magic Encyclopedia 2011 (Salvat)",
    "guessSetCode": "M11",
    "guessSetName": "Magic 2011",
-   "score": 0.5
-  },
-  {
-   "groupId": 56,
-   "group": "Guru Lands",
-   "guessSetCode": "PGRU",
-   "guessSetName": "Guru",
    "score": 0.5
   },
   {
@@ -1371,6 +657,13 @@
    "guessSetCode": "ACR",
    "guessSetName": "Assassin's Creed",
    "score": 0.43
+  },
+  {
+   "groupId": 24777,
+   "group": "Mystery Booster: Commander Edition",
+   "guessSetCode": "MB2",
+   "guessSetName": "Mystery Booster 2",
+   "score": 0.4
   },
   {
    "groupId": 17666,
@@ -1823,139 +1116,9 @@
  ],
  "unmappedAppSets": [
   {
-   "setCode": "PLST",
-   "name": "The List",
-   "cards": 5041
-  },
-  {
-   "setCode": "SLD",
-   "name": "Secret Lair Drop",
-   "cards": 2511
-  },
-  {
    "setCode": "UNK",
    "name": "Unknown Event",
    "cards": 512
-  },
-  {
-   "setCode": "NCC",
-   "name": "New Capenna Commander",
-   "cards": 447
-  },
-  {
-   "setCode": "SOC",
-   "name": "Secrets of Strixhaven Commander",
-   "cards": 426
-  },
-  {
-   "setCode": "TDC",
-   "name": "Tarkir: Dragonstorm Commander",
-   "cards": 413
-  },
-  {
-   "setCode": "C21",
-   "name": "Commander 2021",
-   "cards": 409
-  },
-  {
-   "setCode": "MOC",
-   "name": "March of the Machine Commander",
-   "cards": 400
-  },
-  {
-   "setCode": "M3C",
-   "name": "Modern Horizons 3 Commander",
-   "cards": 398
-  },
-  {
-   "setCode": "LCC",
-   "name": "The Lost Caverns of Ixalan Commander",
-   "cards": 370
-  },
-  {
-   "setCode": "MKC",
-   "name": "Murders at Karlov Manor Commander",
-   "cards": 358
-  },
-  {
-   "setCode": "BLC",
-   "name": "Bloomburrow Commander",
-   "cards": 356
-  },
-  {
-   "setCode": "C13",
-   "name": "Commander 2013",
-   "cards": 356
-  },
-  {
-   "setCode": "SCD",
-   "name": "Starter Commander Decks",
-   "cards": 352
-  },
-  {
-   "setCode": "C16",
-   "name": "Commander 2016",
-   "cards": 351
-  },
-  {
-   "setCode": "C15",
-   "name": "Commander 2015",
-   "cards": 342
-  },
-  {
-   "setCode": "OTC",
-   "name": "Outlaws of Thunder Junction Commander",
-   "cards": 342
-  },
-  {
-   "setCode": "C14",
-   "name": "Commander 2014",
-   "cards": 337
-  },
-  {
-   "setCode": "DSC",
-   "name": "Duskmourn: House of Horror Commander",
-   "cards": 333
-  },
-  {
-   "setCode": "AFC",
-   "name": "Forgotten Realms Commander",
-   "cards": 331
-  },
-  {
-   "setCode": "C20",
-   "name": "Commander 2020",
-   "cards": 322
-  },
-  {
-   "setCode": "CMA",
-   "name": "Commander Anthology",
-   "cards": 320
-  },
-  {
-   "setCode": "CMD",
-   "name": "Commander 2011",
-   "cards": 318
-  },
-  {
-   "setCode": "CM2",
-   "name": "Commander Anthology Volume II",
-   "cards": 312
-  },
-  {
-   "setCode": "C17",
-   "name": "Commander 2017",
-   "cards": 309
-  },
-  {
-   "setCode": "C18",
-   "name": "Commander 2018",
-   "cards": 307
-  },
-  {
-   "setCode": "C19",
-   "name": "Commander 2019",
-   "cards": 302
   },
   {
    "setCode": "MUL",
@@ -1968,74 +1131,14 @@
    "cards": 241
   },
   {
-   "setCode": "DMC",
-   "name": "Dominaria United Commander",
-   "cards": 240
-  },
-  {
-   "setCode": "BRC",
-   "name": "The Brothers' War Commander",
-   "cards": 209
-  },
-  {
-   "setCode": "EOC",
-   "name": "Edge of Eternities Commander",
-   "cards": 191
-  },
-  {
    "setCode": "BRR",
    "name": "The Brothers' War Retro Artifacts",
    "cards": 189
   },
   {
-   "setCode": "VOC",
-   "name": "Crimson Vow Commander",
-   "cards": 188
-  },
-  {
-   "setCode": "MIC",
-   "name": "Midnight Hunt Commander",
-   "cards": 187
-  },
-  {
-   "setCode": "DRC",
-   "name": "Aetherdrift Commander",
-   "cards": 184
-  },
-  {
-   "setCode": "EOS",
-   "name": "Edge of Eternities: Stellar Sights",
-   "cards": 180
-  },
-  {
    "setCode": "PMKM",
    "name": "Murders at Karlov Manor Promos",
    "cards": 180
-  },
-  {
-   "setCode": "NEC",
-   "name": "Neon Dynasty Commander",
-   "cards": 179
-  },
-  {
-   "setCode": "ECC",
-   "name": "Lorwyn Eclipsed Commander",
-   "cards": 176
-  },
-  {
-   "setCode": "ONC",
-   "name": "Phyrexia: All Will Be One Commander",
-   "cards": 174
-  },
-  {
-   "setCode": "WOC",
-   "name": "Wilds of Eldraine Commander",
-   "cards": 173
-  },
-  {
-   "setCode": "HOP",
-   "name": "Planechase",
-   "cards": 169
   },
   {
    "setCode": "PBRO",
@@ -2103,16 +1206,6 @@
    "cards": 157
   },
   {
-   "setCode": "PC2",
-   "name": "Planechase 2012",
-   "cards": 156
-  },
-  {
-   "setCode": "PCA",
-   "name": "Planechase Anthology",
-   "cards": 156
-  },
-  {
    "setCode": "PMID",
    "name": "Innistrad: Midnight Hunt Promos",
    "cards": 155
@@ -2123,11 +1216,6 @@
    "cards": 153
   },
   {
-   "setCode": "ARC",
-   "name": "Archenemy",
-   "cards": 150
-  },
-  {
    "setCode": "PNEO",
    "name": "Kamigawa: Neon Dynasty Promos",
    "cards": 148
@@ -2136,11 +1224,6 @@
    "setCode": "PM20",
    "name": "Core Set 2020 Promos",
    "cards": 144
-  },
-  {
-   "setCode": "ZNC",
-   "name": "Zendikar Rising Commander",
-   "cards": 142
   },
   {
    "setCode": "PWAR",
@@ -2176,11 +1259,6 @@
    "setCode": "PLCI",
    "name": "The Lost Caverns of Ixalan Promos",
    "cards": 136
-  },
-  {
-   "setCode": "GN3",
-   "name": "Game Night: Free-for-All",
-   "cards": 135
   },
   {
    "setCode": "PMOM",
@@ -2228,24 +1306,9 @@
    "cards": 120
   },
   {
-   "setCode": "KHC",
-   "name": "Kaldheim Commander",
-   "cards": 119
-  },
-  {
    "setCode": "PDOM",
    "name": "Dominaria Promos",
    "cards": 117
-  },
-  {
-   "setCode": "DPA",
-   "name": "Duels of the Planeswalkers",
-   "cards": 113
-  },
-  {
-   "setCode": "E01",
-   "name": "Archenemy: Nicol Bolas",
-   "cards": 106
   },
   {
    "setCode": "PFDN",
@@ -2258,19 +1321,9 @@
    "cards": 104
   },
   {
-   "setCode": "WOT",
-   "name": "Wilds of Eldraine: Enchanting Tales",
-   "cards": 103
-  },
-  {
    "setCode": "PRIX",
    "name": "Rivals of Ixalan Promos",
    "cards": 98
-  },
-  {
-   "setCode": "UND",
-   "name": "Unsanctioned",
-   "cards": 96
   },
   {
    "setCode": "BIG",
@@ -2293,16 +1346,6 @@
    "cards": 92
   },
   {
-   "setCode": "BTD",
-   "name": "Beatdown Box Set",
-   "cards": 90
-  },
-  {
-   "setCode": "DDJ",
-   "name": "Duel Decks: Izzet vs. Golgari",
-   "cards": 90
-  },
-  {
    "setCode": "PBFZ",
    "name": "Battle for Zendikar Promos",
    "cards": 90
@@ -2311,11 +1354,6 @@
    "setCode": "PSOI",
    "name": "Shadows over Innistrad Promos",
    "cards": 90
-  },
-  {
-   "setCode": "DDM",
-   "name": "Duel Decks: Jace vs. Vraska",
-   "cards": 88
   },
   {
    "setCode": "PLTR",
@@ -2338,44 +1376,14 @@
    "cards": 84
   },
   {
-   "setCode": "SLC",
-   "name": "Secret Lair Countdown",
-   "cards": 84
-  },
-  {
    "setCode": "PKLD",
    "name": "Kaladesh Promos",
    "cards": 83
   },
   {
-   "setCode": "DDG",
-   "name": "Duel Decks: Knights vs. Dragons",
-   "cards": 81
-  },
-  {
-   "setCode": "DDL",
-   "name": "Duel Decks: Heroes vs. Monsters",
-   "cards": 81
-  },
-  {
-   "setCode": "DDN",
-   "name": "Duel Decks: Speed vs. Cunning",
-   "cards": 81
-  },
-  {
    "setCode": "PRNA",
    "name": "Ravnica Allegiance Promos",
    "cards": 81
-  },
-  {
-   "setCode": "DDH",
-   "name": "Duel Decks: Ajani vs. Nicol Bolas",
-   "cards": 80
-  },
-  {
-   "setCode": "DDK",
-   "name": "Duel Decks: Sorin vs. Tibalt",
-   "cards": 80
   },
   {
    "setCode": "OTP",
@@ -2398,29 +1406,9 @@
    "cards": 80
   },
   {
-   "setCode": "DDF",
-   "name": "Duel Decks: Elspeth vs. Tezzeret",
-   "cards": 79
-  },
-  {
-   "setCode": "DDI",
-   "name": "Duel Decks: Venser vs. Koth",
-   "cards": 77
-  },
-  {
    "setCode": "PAKH",
    "name": "Amonkhet Promos",
    "cards": 77
-  },
-  {
-   "setCode": "DDQ",
-   "name": "Duel Decks: Blessed vs. Cursed",
-   "cards": 76
-  },
-  {
-   "setCode": "DDU",
-   "name": "Duel Decks: Elves vs. Inventors",
-   "cards": 76
   },
   {
    "setCode": "PEMN",
@@ -2428,34 +1416,14 @@
    "cards": 76
   },
   {
-   "setCode": "DDP",
-   "name": "Duel Decks: Zendikar vs. Eldrazi",
-   "cards": 75
-  },
-  {
    "setCode": "PNCC",
    "name": "New Capenna Commander Promos",
    "cards": 75
   },
   {
-   "setCode": "DDE",
-   "name": "Duel Decks: Phyrexia vs. the Coalition",
-   "cards": 71
-  },
-  {
-   "setCode": "DDR",
-   "name": "Duel Decks: Nissa vs. Ob Nixilis",
-   "cards": 70
-  },
-  {
    "setCode": "DCI",
    "name": "DCI Promos",
    "cards": 69
-  },
-  {
-   "setCode": "GNT",
-   "name": "Game Night",
-   "cards": 68
   },
   {
    "setCode": "PSPM",
@@ -2466,16 +1434,6 @@
    "setCode": "ITP",
    "name": "Introductory Two-Player Set",
    "cards": 67
-  },
-  {
-   "setCode": "DDO",
-   "name": "Duel Decks: Elspeth vs. Kiora",
-   "cards": 65
-  },
-  {
-   "setCode": "DDS",
-   "name": "Duel Decks: Mind vs. Might",
-   "cards": 65
   },
   {
    "setCode": "PAER",
@@ -2493,58 +1451,13 @@
    "cards": 65
   },
   {
-   "setCode": "SOA",
-   "name": "Secrets of Strixhaven Mystical Archive",
-   "cards": 65
-  },
-  {
-   "setCode": "GN2",
-   "name": "Game Night 2019",
-   "cards": 64
-  },
-  {
-   "setCode": "DDD",
-   "name": "Duel Decks: Garruk vs. Liliana",
-   "cards": 63
-  },
-  {
-   "setCode": "DDT",
-   "name": "Duel Decks: Merfolk vs. Goblins",
-   "cards": 63
-  },
-  {
    "setCode": "GVL",
    "name": "Duel Decks Anthology: Garruk vs. Liliana",
    "cards": 63
   },
   {
-   "setCode": "STA",
-   "name": "Strixhaven Mystical Archive",
-   "cards": 63
-  },
-  {
    "setCode": "CST",
    "name": "Coldsnap Theme Decks",
-   "cards": 62
-  },
-  {
-   "setCode": "DD1",
-   "name": "Duel Decks: Elves vs. Goblins",
-   "cards": 62
-  },
-  {
-   "setCode": "DD2",
-   "name": "Duel Decks: Jace vs. Chandra",
-   "cards": 62
-  },
-  {
-   "setCode": "DDC",
-   "name": "Duel Decks: Divine vs. Demonic",
-   "cards": 62
-  },
-  {
-   "setCode": "DVD",
-   "name": "Duel Decks Anthology: Divine vs. Demonic",
    "cards": 62
   },
   {
@@ -2563,11 +1476,6 @@
    "cards": 62
   },
   {
-   "setCode": "ULST",
-   "name": "The List (Unfinity Foil Edition)",
-   "cards": 62
-  },
-  {
    "setCode": "PHUK",
    "name": "Hachette UK",
    "cards": 60
@@ -2583,23 +1491,8 @@
    "cards": 56
   },
   {
-   "setCode": "MP2",
-   "name": "Amonkhet Invocations",
-   "cards": 54
-  },
-  {
-   "setCode": "MPS",
-   "name": "Kaladesh Inventions",
-   "cards": 54
-  },
-  {
    "setCode": "PORI",
    "name": "Magic Origins Promos",
-   "cards": 54
-  },
-  {
-   "setCode": "SLP",
-   "name": "Secret Lair Promo",
    "cards": 54
   },
   {
@@ -2623,29 +1516,9 @@
    "cards": 48
   },
   {
-   "setCode": "E02",
-   "name": "Explorers of Ixalan",
-   "cards": 47
-  },
-  {
-   "setCode": "EXP",
-   "name": "Zendikar Expeditions",
-   "cards": 45
-  },
-  {
    "setCode": "PFRF",
    "name": "Fate Reforged Promos",
    "cards": 43
-  },
-  {
-   "setCode": "H09",
-   "name": "Premium Deck Series: Slivers",
-   "cards": 41
-  },
-  {
-   "setCode": "GS1",
-   "name": "Global Series Jiang Yanggu & Mu Yanling",
-   "cards": 40
   },
   {
    "setCode": "H1R",
@@ -2663,39 +1536,9 @@
    "cards": 39
   },
   {
-   "setCode": "PD2",
-   "name": "Premium Deck Series: Fire and Lightning",
-   "cards": 34
-  },
-  {
-   "setCode": "PD3",
-   "name": "Premium Deck Series: Graveborn",
-   "cards": 30
-  },
-  {
    "setCode": "SLX",
    "name": "Universes Within",
    "cards": 30
-  },
-  {
-   "setCode": "W17",
-   "name": "Welcome Deck 2017",
-   "cards": 30
-  },
-  {
-   "setCode": "ZNE",
-   "name": "Zendikar Rising Expeditions",
-   "cards": 30
-  },
-  {
-   "setCode": "MD1",
-   "name": "Modern Event Deck 2014",
-   "cards": 26
-  },
-  {
-   "setCode": "SPE",
-   "name": "Marvel's Spider-Man Eternal",
-   "cards": 26
   },
   {
    "setCode": "UGIN",
@@ -2728,29 +1571,14 @@
    "cards": 20
   },
   {
-   "setCode": "PZA",
-   "name": "Teenage Mutant Ninja Turtles Source Material",
-   "cards": 20
-  },
-  {
    "setCode": "S00",
    "name": "Starter 2000",
-   "cards": 20
-  },
-  {
-   "setCode": "V13",
-   "name": "From the Vault: Twenty",
    "cards": 20
   },
   {
    "setCode": "PF25",
    "name": "MagicFest 2025",
    "cards": 19
-  },
-  {
-   "setCode": "CM1",
-   "name": "Commander's Arsenal",
-   "cards": 18
   },
   {
    "setCode": "PPRO",
@@ -2783,26 +1611,6 @@
    "cards": 16
   },
   {
-   "setCode": "SLU",
-   "name": "Secret Lair: Ultimate Edition",
-   "cards": 16
-  },
-  {
-   "setCode": "V17",
-   "name": "From the Vault: Transform",
-   "cards": 16
-  },
-  {
-   "setCode": "W16",
-   "name": "Welcome Deck 2016",
-   "cards": 16
-  },
-  {
-   "setCode": "DRB",
-   "name": "From the Vault: Dragons",
-   "cards": 15
-  },
-  {
    "setCode": "PALP",
    "name": "Asia Pacific Land Program",
    "cards": 15
@@ -2815,41 +1623,6 @@
   {
    "setCode": "PW26",
    "name": "Wizards Play Network 2026",
-   "cards": 15
-  },
-  {
-   "setCode": "V09",
-   "name": "From the Vault: Exiled",
-   "cards": 15
-  },
-  {
-   "setCode": "V10",
-   "name": "From the Vault: Relics",
-   "cards": 15
-  },
-  {
-   "setCode": "V11",
-   "name": "From the Vault: Legends",
-   "cards": 15
-  },
-  {
-   "setCode": "V12",
-   "name": "From the Vault: Realms",
-   "cards": 15
-  },
-  {
-   "setCode": "V14",
-   "name": "From the Vault: Annihilation",
-   "cards": 15
-  },
-  {
-   "setCode": "V15",
-   "name": "From the Vault: Angels",
-   "cards": 15
-  },
-  {
-   "setCode": "V16",
-   "name": "From the Vault: Lore",
    "cards": 15
   },
   {
@@ -3108,16 +1881,6 @@
    "cards": 9
   },
   {
-   "setCode": "CC1",
-   "name": "Commander Collection: Green",
-   "cards": 8
-  },
-  {
-   "setCode": "CC2",
-   "name": "Commander Collection: Black",
-   "cards": 8
-  },
-  {
    "setCode": "G10",
    "name": "Judge Gift Cards 2010",
    "cards": 8
@@ -3175,21 +1938,6 @@
   {
    "setCode": "PMAT",
    "name": "March of the Machine: The Aftermath Promos",
-   "cards": 8
-  },
-  {
-   "setCode": "SS1",
-   "name": "Signature Spellbook: Jace",
-   "cards": 8
-  },
-  {
-   "setCode": "SS2",
-   "name": "Signature Spellbook: Gideon",
-   "cards": 8
-  },
-  {
-   "setCode": "SS3",
-   "name": "Signature Spellbook: Chandra",
    "cards": 8
   },
   {
@@ -3368,11 +2116,6 @@
    "cards": 5
   },
   {
-   "setCode": "PGRU",
-   "name": "Guru",
-   "cards": 5
-  },
-  {
    "setCode": "PH18",
    "name": "2018 Heroes of the Realm",
    "cards": 5
@@ -3498,11 +2241,6 @@
    "cards": 4
   },
   {
-   "setCode": "PLTC",
-   "name": "Tales of Middle-earth Deluxe Commander Kit",
-   "cards": 4
-  },
-  {
    "setCode": "PM11",
    "name": "Magic 2011 Promos",
    "cards": 4
@@ -3541,11 +2279,6 @@
    "setCode": "PZEN",
    "name": "Zendikar Promos",
    "cards": 4
-  },
-  {
-   "setCode": "FDC",
-   "name": "Foundations Commander",
-   "cards": 3
   },
   {
    "setCode": "G03",
