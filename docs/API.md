@@ -49,6 +49,17 @@ All prices are **USD dollars** (floats, 2dp); every priced payload carries
 - **`byName`** (magic pre-2002 only): cards with no upstream collector number, keyed by
   lowercased name (trailing parenthetical stripped). Same-name art variants resolve to
   the cheapest.
+- **`ambiguous: true` + `byCardName`** — a collector number that is NOT one card.
+  Reprint sets that keep each card's ORIGINAL number collide once normalized: pokemon
+  `me55c` #106 is Shining Celebi (106/105), Palkia LV.X (106/106) *and* M Gardevoir EX
+  (106/160); `cel25c` #15 folds four. The number keeps serving one of them — unchanged,
+  so existing clients don't break — and marks itself `ambiguous`. **If you see that flag,
+  re-resolve by name through `byCardName`**, which holds every colliding card keyed by
+  lowercased name with all non-alphanumerics removed (`"Genesect-EX"` and TCGplayer's
+  `"Genesect EX (Team Plasma)"` both → `genesectex`). Each entry carries `number` so you
+  can confirm it collided where you expected. Joining by number alone on these sets is a
+  real mispricing, not a rounding error: `cel25c` #15 serves Claydol's $0.44 for
+  Venusaur's $10.53.
 
 ## Endpoints
 
@@ -67,6 +78,12 @@ prefer this over per-card calls.
     "121": { "market": 152.02, "low": 147.48 }
   }
   // magic pre-2002 sets additionally: "byName": { "forest": {"market":31.51,"low":21.5} }
+  //
+  // reprint sets whose numbers collide (pokemon cel25c / me55c) additionally:
+  //   "cards":       { "106": { "market": 11.00, "ambiguous": true, ... } }
+  //   "byCardName":  { "shiningcelebi": { "market": 40.12, "number": "106", ... },
+  //                    "palkialvx":     { "market": 16.08, "number": "106", ... },
+  //                    "mgardevoirex":  { "market": 11.00, "number": "106", ... } }
 }
 ```
 Errors: `400` missing/invalid params · `404` unmapped set.

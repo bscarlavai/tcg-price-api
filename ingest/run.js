@@ -117,7 +117,10 @@ for (const { setCode, blob, rows } of blobs) {
   history.push(...historyRows(game, canonicalSetKey(game, setCode), rows, date, SOURCE, blob.keyBy));
 }
 
-const content = (b) => b?.byProductId ?? b?.cards;   // productId-keyed sets carry no `cards` map
+// What the diff below compares. productId-keyed sets carry no `cards` map; the name-keyed maps
+// must be in here too, or a set whose ONLY change is a byName/byCardName price never gets
+// rewritten and the fix that introduced it silently never ships.
+const content = (b) => b?.byProductId ?? [b?.cards, b?.byName, b?.byCardName];
 const failed = [];
 
 for (const { t, label } of targets()) {

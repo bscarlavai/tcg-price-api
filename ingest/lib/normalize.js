@@ -80,8 +80,18 @@ function pickFinishes(rows, order) {
 }
 
 // Shared key for cards TCGPlayer carries without a collector number (pre-2002 Magic).
-// Clients and the history store use the same normalization.
+// Clients and the history store use the same normalization. FROZEN: this is a D1 primary-key
+// component (historyRows) and the published `byName` contract — changing it orphans history.
 export const nameKey = (name) => name.toLowerCase().replace(/\s*\(.*\)$/, '').trim();
+
+// Key for `byCardName`, the collision-recovery map below. Deliberately looser than nameKey:
+// it also drops every non-alphanumeric, because the two sides spell the same card differently
+// — TCGplayer writes "Genesect EX" / "M Gardevoir EX", the app bundles write "Genesect-EX" /
+// "M Gardevoir-EX". nameKey alone matches neither, so a name lookup would miss exactly the
+// cards this map exists to recover. Separate function, not a loosened nameKey, because nameKey
+// is frozen (see above).
+export const looseNameKey = (name) =>
+  name.toLowerCase().replace(/\s*\(.*\)$/, '').replace(/[^a-z0-9]/g, '');
 
 export function buildSetBlob(game, setCode, rows, sourceRefs, updatedAt, keyBy = 'number') {
   const order = DEFAULT_FINISH_ORDER[game] ?? ['normal'];
@@ -119,6 +129,16 @@ export function buildSetBlob(game, setCode, rows, sourceRefs, updatedAt, keyBy =
   }
 
   const cards = {};
+  // Collision recovery. A normalized number is NOT always one card: Classic Collection sets
+  // reprint cards at their ORIGINAL numbers, so "106/105" (Shining Celebi), "106/106" (Palkia
+  // LV.X) and "106/160" (M Gardevoir EX) all normalize to "106" and collapse into one entry —
+  // the app then shows one card's price for three, and the two losers vanish from the blob
+  // entirely. cel25c has done this since 2021 (#15 folds four cards); me55c inherits it.
+  //
+  // The bare number stays as-is (the contract every client already joins on) and the losers get
+  // published alongside it, keyed by name — the only identity the two sides share. Neither
+  // productId nor the printed denominator works here: the app bundles carry neither.
+  const byCardName = {};
   for (const [number, numberRows] of byNumber) {
     // Which rows define this card's finishes. Pokémon models a card's reverse holo (and the
     // Poké Ball / Team Rocket stamp reverse holos) as SEPARATE same-number products carrying
@@ -160,10 +180,34 @@ export function buildSetBlob(game, setCode, rows, sourceRefs, updatedAt, keyBy =
         card.variants[v] = picked.finishes[picked.headline];
       }
     }
+    // Distinct NAMES under one number mean distinct cards. Same-name siblings do not: a Pokémon
+    // reverse holo, a One Piece "(Alternate Art)" and a Yu-Gi-Oh rarity reprint are all the same
+    // card and already resolve through `finishes`/`variants` — the trailing parenthetical that
+    // marks them is what looseNameKey strips, so they collapse to one key and never land here.
+    const nameGroups = new Map();
+    for (const r of numberRows) {
+      const k = looseNameKey(r.name);
+      if (!nameGroups.has(k)) nameGroups.set(k, []);
+      nameGroups.get(k).push(r);
+    }
+    if (nameGroups.size > 1) {
+      // Flag the number itself: a client that joins by number alone can't tell it got one of
+      // several cards, and silence is what made this expensive. `ambiguous` says "look in
+      // byCardName"; it rides in `cards`, so the ingest's KV diff sees it appear.
+      card.ambiguous = true;
+      for (const [key, nRows] of nameGroups) {
+        const picked = pickFinishes(nRows, order);
+        const entry = headlinePrice(picked.finishes, picked.headline);
+        entry.finishes = picked.finishes;   // always explicit — see above
+        entry.number = number;
+        byCardName[key] = entry;
+      }
+    }
     cards[number] = card;
   }
 
   const blob = { game, set: setCode, sourceRefs, updatedAt, currency: 'USD', cards };
+  if (Object.keys(byCardName).length) blob.byCardName = byCardName;
   if (nameless.size) {
     const order2 = DEFAULT_FINISH_ORDER[game] ?? ['normal'];
     blob.byName = {};

@@ -4,7 +4,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildSetBlob, canonicalSetKey } from '../ingest/lib/normalize.js';
+import { buildSetBlob, canonicalSetKey, looseNameKey } from '../ingest/lib/normalize.js';
 
 test('canonicalSetKey: any case of a set code collapses to one canonical key', () => {
   // The invariant that kills the false-404 class: however the app or a mapping cases a code, the
@@ -84,4 +84,66 @@ test('pokemon: no descriptor-less base — a null-rarity same-number product is 
   const card = blob.cards['3'];
   assert.ok(card.finishes.holo, 'anchor-rarity finish kept');
   assert.ok(!card.finishes.reverseHolo, 'different-rarity contaminant excluded from finishes');
+});
+
+// --- Collision recovery (byCardName) -------------------------------------------------
+// Classic Collection sets reprint cards at their ORIGINAL numbers, so several genuinely
+// different cards normalize to one key and all but one vanish from `cards`. Real case:
+// me55c #106 is Shining Celebi (106/105), Palkia LV.X (106/106) and M Gardevoir EX
+// (106/160); cel25c #15 folds four. These pin that the losers stay reachable.
+
+test('collided number: every distinct card is recoverable by name, and the number says so', () => {
+  const rows = [
+    row({ productId: 1, number: '106', name: 'Shining Celebi', rarity: 'Classic Collection', finish: 'holo', isBase: true, marketCents: 5206 }),
+    row({ productId: 2, number: '106', name: 'Palkia LV.X', rarity: 'Classic Collection', finish: 'holo', isBase: true, marketCents: 2933 }),
+    row({ productId: 3, number: '106', name: 'M Gardevoir EX', rarity: 'Classic Collection', finish: 'holo', isBase: true, marketCents: 2099 }),
+  ];
+  const blob = buildSetBlob('pokemon', 'test', rows, {}, 'test');
+
+  // The bare number keeps serving ONE card — that contract is what every shipped client joins
+  // on — but it must admit it is one of several rather than passing silently.
+  assert.equal(Object.keys(blob.cards).length, 1);
+  assert.equal(blob.cards['106'].ambiguous, true);
+
+  // The two cards the number drops are the whole point: without this map, Shining Celebi's
+  // $52.06 is simply absent from the blob and the app shows it as M Gardevoir's $20.99.
+  assert.equal(blob.byCardName.shiningcelebi.market, 52.06);
+  assert.equal(blob.byCardName.palkialvx.market, 29.33);
+  assert.equal(blob.byCardName.mgardevoirex.market, 20.99);
+  // Each entry carries the number it collided on, so a client can prove it resolved the card
+  // it meant rather than a same-named card elsewhere in the set.
+  assert.equal(blob.byCardName.shiningcelebi.number, '106');
+  assert.ok(blob.byCardName.shiningcelebi.finishes.holo, 'finishes stay explicit');
+});
+
+test('looseNameKey bridges the two sides\' spelling of the same card', () => {
+  // TCGplayer writes "Genesect EX (Team Plasma)"; the app bundles write "Genesect-EX". nameKey
+  // (frozen — it is a D1 key) matches neither to the other, which would make byCardName miss
+  // exactly the cards it exists to recover.
+  assert.equal(looseNameKey('Genesect EX (Team Plasma)'), looseNameKey('Genesect-EX'));
+  assert.equal(looseNameKey('M Gardevoir EX'), looseNameKey('M Gardevoir-EX'));
+  assert.equal(looseNameKey('Metagross (Delta Species)'), looseNameKey('Metagross'));
+  assert.equal(looseNameKey("Rocket's Zapdos"), 'rocketszapdos');
+  // Distinct cards must stay distinct — the key is loose, not blind.
+  assert.notEqual(looseNameKey('Venusaur'), looseNameKey('Venusaur EX'));
+});
+
+test('same-name siblings are NOT a collision: reverse holos and alt arts stay one card', () => {
+  // The rule keys on distinct NAMES, and looseNameKey strips the trailing parenthetical that
+  // marks a printing. So a Pokémon reverse holo and a One Piece "(Alternate Art)" — same card,
+  // already served by finishes/variants — must not trip `ambiguous` or bloat byCardName.
+  // Measured against real data: 0 of 756 numbers across me5/sv8/base1/cel25/me55 fire this.
+  const pk = buildSetBlob('pokemon', 'test', [
+    row({ productId: 1, number: '25', name: 'Pikachu', rarity: 'Common', finish: 'normal', isBase: true, marketCents: 100 }),
+    row({ productId: 2, number: '25', name: 'Pikachu', rarity: 'Common', finish: 'reverseHolo', variant: 'Reverse Holofoil', marketCents: 300 }),
+  ], {}, 'test');
+  assert.ok(!pk.cards['25'].ambiguous, 'reverse holo is the same card');
+  assert.ok(!pk.byCardName, 'no recovery map when nothing collided');
+
+  const op = buildSetBlob('onepiece', 'test', [
+    row({ productId: 3, number: 'OP01-001', name: 'Monkey D. Luffy', rarity: 'Leader', finish: 'normal', isBase: true, marketCents: 400 }),
+    row({ productId: 4, number: 'OP01-001', name: 'Monkey D. Luffy (Alternate Art)', rarity: 'Leader', finish: 'normal', variant: 'Alternate Art', marketCents: 9000 }),
+  ], {}, 'test');
+  assert.ok(!op.cards['OP01-001'].ambiguous, 'alt art is the same card');
+  assert.equal(op.cards['OP01-001'].variants['Alternate Art'].market, 90, 'still served as a variant');
 });
