@@ -23,17 +23,25 @@ jobs:
       # data. If their refresh is late, wait (up to ~2h); if it never lands, fail loudly
       # rather than re-ingest yesterday's prices stamped with today's date.
       # Manual dispatches skip the guard — re-runs after a fix are the operator's call.
+      #
+      # "Fresh" = refreshed within the last 20h, NOT "stamped with today's UTC date". GitHub's
+      # cron queue routinely starts this 2-4h late, and from 2026-09-28 every run began after
+      # 00:00 UTC: the date had rolled over, so the evening's 20:00 refresh never matched
+      # "today", the loop timed out at 2h10m, and prices froze for 10+ days. An age check is
+      # immune to the start slipping past midnight; 20h still rejects yesterday's refresh
+      # (~24h old) if today's is late.
       - name: Wait for today's TCGCSV refresh
         if: github.event_name == 'schedule'
         run: |
-          today=$(date -u +%F)
           for i in $(seq 1 13); do
             stamp=$(curl -sf -A "lavailabs-tcg-price-api/1.0" https://tcgcsv.com/last-updated.txt || echo unreachable)
-            if [[ "$stamp" == "$today"* ]]; then echo "fresh: $stamp"; exit 0; fi
+            # Age in seconds, parsed by node (set up above) rather than GNU date; -1 = unparseable.
+            age=$(STAMP="$stamp" node -e 'const t=Date.parse(process.env.STAMP); console.log(Number.isNaN(t) ? -1 : Math.floor((Date.now()-t)/1000))')
+            if (( age >= 0 && age < 72000 )); then echo "fresh: $stamp (${age}s old)"; exit 0; fi
             echo "not refreshed yet ($stamp); retry $i/13 in 10m"
             sleep 600
           done
-          echo "TCGCSV never refreshed today — refusing to ingest stale prices" >&2
+          echo "TCGCSV hasn't refreshed in the last 20h — refusing to ingest stale prices" >&2
           exit 1
       - name: Ingest all games
         # Sequential on purpose: one polite stream of requests to tcgcsv, and a failure
