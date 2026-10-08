@@ -26,5 +26,9 @@
  "STAX": {
   "tcgcsv": 23269,
   "name": "2-Player Starter Set"
+ },
+ "BETB": {
+  "tcgcsv": 24815,
+  "name": "Beyond the Brave"
  }
 }
